@@ -1736,8 +1736,4 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 1.
 material_override = ExtResource("5_lcnd1")
 size = Vector3(4, 4, 4)
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-supersampling = true
-directional = true
-
 [connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]

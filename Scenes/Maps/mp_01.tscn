@@ -315,6 +315,13 @@ material = SubResource("ShaderMaterial_4p1ba")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416103, -0.517889, -1.4783e-15)
 aabb = AABB(-6.42174, -1.96661, -2.11125, 12.8435, 3.93321, 4.22249)
 
+[node name="DecoCube" parent="Environment/BrokenRoom/OffPiece" instance=ExtResource("4_4xti5")]
+transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, -2.5945, -0.5, -0.331414)
+state = true
+
+[node name="Button" parent="Environment/BrokenRoom/OffPiece" instance=ExtResource("3_7cm6w")]
+transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, 0.3118, -1.39688, -0.779766)
+
 [node name="Floor" type="CSGBox3D" parent="Environment/BrokenRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.75, -0.45, -4.06576e-20)
 material_override = ExtResource("7_4xti5")
@@ -395,13 +402,6 @@ transform = Transform3D(1, 0, -6.77626e-21, 0, 1, 0, 0, 0, 1, 16.7475, 2.298, -1
 material_override = ExtResource("7_4xti5")
 use_collision = true
 size = Vector3(1.5, 0.505, 0.1)
-
-[node name="DecoCube" parent="Environment/BrokenRoom" instance=ExtResource("4_4xti5")]
-transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, 24.4055, 1, -0.331414)
-state = true
-
-[node name="Button" parent="Environment/BrokenRoom" instance=ExtResource("3_7cm6w")]
-transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, 27.3118, 0.103119, -0.779766)
 
 [node name="LongHallway" type="Node3D" parent="Environment"]
 

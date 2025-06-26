@@ -120,24 +120,6 @@ material_override = ExtResource("2_ig341")
 use_collision = true
 size = Vector3(2, 4.5, 0.1)
 
-[node name="Wall23" type="CSGBox3D" parent="Environment/LongerHall"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 21.5, -0.75, -11.75)
-material_override = ExtResource("2_ig341")
-use_collision = true
-size = Vector3(1, 4, 0.1)
-
-[node name="Wall24" type="CSGBox3D" parent="Environment/LongerHall"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 24.5, -0.75, -11.75)
-material_override = ExtResource("2_ig341")
-use_collision = true
-size = Vector3(1, 4, 0.1)
-
-[node name="Wall25" type="CSGBox3D" parent="Environment/LongerHall"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 23, 0.25, -11.75)
-material_override = ExtResource("2_ig341")
-use_collision = true
-size = Vector3(2, 2, 0.1)
-
 [node name="Wall21" type="CSGBox3D" parent="Environment/LongerHall"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 23.125, 0.5, 2.05)
 material_override = ExtResource("2_ig341")
@@ -238,12 +220,6 @@ transform = Transform3D(-0.0233188, 0.0204493, -0.999518, -0.0783672, 0.996677, 
 use_collision = true
 size = Vector3(0.25, 1, 4.5)
 material = ExtResource("1_qa0ah")
-
-[node name="Support21" type="CSGBox3D" parent="Environment"]
-transform = Transform3D(-0.0233188, 0.0204493, -0.999518, -0.0783672, 0.996677, 0.0222195, 0.996652, 0.0788477, -0.0216388, 37.0818, 3.06937, -40.1932)
-material_override = ExtResource("2_ig341")
-use_collision = true
-size = Vector3(0.25, 2.25, 4.5)
 
 [node name="Support13" type="CSGBox3D" parent="Environment"]
 transform = Transform3D(0.118752, -0.0456317, -0.991874, -0.0762875, 0.995571, -0.0549353, 0.989989, 0.0821914, 0.114745, 37.115, 4.68897, -45.0651)
@@ -498,107 +474,138 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 1.
 material_override = ExtResource("1_qa0ah")
 size = Vector3(40, 24, 40)
 
-[node name="P1" type="Node3D" parent="."]
+[node name="Puzzle1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 1.25, -37)
 
-[node name="Cube" parent="P1" instance=ExtResource("9_1udq4")]
-transform = Transform3D(0.99664, 0.0819037, 0, -0.0807429, 0.982515, -0.167767, -0.0137407, 0.167203, 0.985827, -35.4387, 6.0813, -36.9008)
+[node name="Cube" parent="Puzzle1" instance=ExtResource("9_1udq4")]
+transform = Transform3D(0.99664, 0.0819037, 0, -0.0807429, 0.982515, -0.167767, -0.0137407, 0.167203, 0.985827, 2.5956, 4.78392, 0.240101)
 
-[node name="VisibleOnScreenNotifier3D" type="Node3D" parent="P1" node_paths=PackedStringArray("object")]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -44.5903, 2.941, -37)
-script = ExtResource("11_mxl0q")
-object = NodePath("../Button")
-
-[node name="VisibleOnScreenNotifier3D2" type="VisibleOnScreenNotifier3D" parent="P1/VisibleOnScreenNotifier3D"]
-transform = Transform3D(1, 4.37114e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, -1.52588e-05, 1.83841, -2.83317)
-aabb = AABB(-0.5, -0.05, -0.5, 1.018, 0.225, 1.02)
-script = ExtResource("11_yiq1o")
-
-[node name="VisibleOnScreenNotifier3D3" type="VisibleOnScreenNotifier3D" parent="P1/VisibleOnScreenNotifier3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 8.35187e-23, 0, 8.35187e-23, 1, 0, -0.0679436, 0)
-aabb = AABB(-0.5, -0.05, -0.5, 1.018, 0.225, 1.02)
-script = ExtResource("11_yiq1o")
-
-[node name="VisibleOnScreenNotifier3D4" type="VisibleOnScreenNotifier3D" parent="P1/VisibleOnScreenNotifier3D"]
-transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 8.74228e-08, -1, -8.74228e-08, 3.82137e-15, -8.74228e-08, 1, -3.43323e-05, 4.2352, 2.38419e-07)
-aabb = AABB(-0.5, -0.05, -0.5, 1.018, 0.225, 1.02)
-script = ExtResource("11_yiq1o")
-
-[node name="Button" type="StaticBody3D" parent="P1" node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.75, 0.1, -37)
-script = ExtResource("10_lfsqj")
-target = NodePath("../Door")
-
-[node name="Base" type="MeshInstance3D" parent="P1/Button"]
-mesh = SubResource("BoxMesh_p3102")
-surface_material_override/0 = ExtResource("11_3x3cv")
-
-[node name="BaseColl" type="CollisionShape3D" parent="P1/Button"]
-shape = SubResource("BoxShape3D_p3102")
-
-[node name="ButtonColl" type="MeshInstance3D" parent="P1/Button"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-mesh = SubResource("BoxMesh_a506e")
-skeleton = NodePath("../Detector")
-
-[node name="Detector" type="Area3D" parent="P1/Button"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="P1/Button/Detector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-shape = SubResource("BoxShape3D_a506e")
-
-[node name="Door" parent="P1" instance=ExtResource("7_3x3cv")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -44.75, 1.05, -37)
-
-[node name="ResetCubeButton01" parent="P1" node_paths=PackedStringArray("cube") instance=ExtResource("14_yiq1o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.125, 0.0302342, -35.6308)
-cube = NodePath("../Cube")
-
-[node name="P2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.25, 1.25, -37)
-
-[node name="Cube" parent="P2" instance=ExtResource("9_1udq4")]
-transform = Transform3D(0.99664, 0.0819037, 0, -0.0807429, 0.982515, -0.167767, -0.0137407, 0.167203, 0.985827, 0.7206, 4.78392, 0.240101)
-
-[node name="ResetCubeButton02" parent="P2" node_paths=PackedStringArray("cube") instance=ExtResource("14_yiq1o")]
+[node name="ResetCubeButton02" parent="Puzzle1" node_paths=PackedStringArray("cube") instance=ExtResource("14_yiq1o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.625, -1.33017, 1.62809)
 cube = NodePath("../Cube")
 
-[node name="Button" parent="P2" node_paths=PackedStringArray("target") instance=ExtResource("15_47pig")]
+[node name="Button" parent="Puzzle1" node_paths=PackedStringArray("target") instance=ExtResource("15_47pig")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25, 0.375, 0)
 target = NodePath("../Door")
 
-[node name="MeshInstance3D" type="CSGBox3D" parent="P2/Button"]
+[node name="MeshInstance3D" type="CSGBox3D" parent="Puzzle1/Button"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.858606, 0)
 use_collision = true
 size = Vector3(1.125, 1.625, 3.875)
 material = ExtResource("1_qa0ah")
 
-[node name="MeshInstance3D2" type="CSGBox3D" parent="P2/Button"]
+[node name="MeshInstance3D2" type="CSGBox3D" parent="Puzzle1/Button"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.875, -1.23361, 0)
 use_collision = true
 size = Vector3(0.625, 0.875, 3.875)
 material = ExtResource("1_qa0ah")
 
-[node name="Door" parent="P2" instance=ExtResource("7_3x3cv")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.75, -0.2, 0)
+[node name="Door" parent="Puzzle1" instance=ExtResource("7_3x3cv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.74485, -0.2, 0)
 
-[node name="Wall" type="CSGBox3D" parent="P2"]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -9.75, 2.0625, -1.50007)
+[node name="Wall" type="CSGBox3D" parent="Puzzle1"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -7.74485, 0.75, -1.50007)
 material_override = ExtResource("2_ig341")
 use_collision = true
-size = Vector3(1, 6.625, 0.1)
+size = Vector3(1, 4, 0.1)
 
-[node name="Wall2" type="CSGBox3D" parent="P2"]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -9.75, 2.0625, 1.49993)
+[node name="Wall2" type="CSGBox3D" parent="Puzzle1"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -7.74485, 0.75, 1.49993)
 material_override = ExtResource("2_ig341")
 use_collision = true
-size = Vector3(1, 6.625, 0.1)
+size = Vector3(1, 4, 0.1)
 
-[node name="Wall3" type="CSGBox3D" parent="P2"]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -9.75, 3.0625, -7.24792e-05)
+[node name="Wall3" type="CSGBox3D" parent="Puzzle1"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -7.74485, 1.75, -7.24792e-05)
 material_override = ExtResource("2_ig341")
 use_collision = true
-size = Vector3(2, 4.625, 0.1)
+size = Vector3(2, 2, 0.1)
+
+[node name="Puzzle2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, 0)
+
+[node name="Cube" parent="Puzzle2" instance=ExtResource("9_1udq4")]
+transform = Transform3D(0.99664, 0.0819037, 0, -0.0807429, 0.982515, -0.167767, -0.0137407, 0.167203, 0.985827, -39.228, 6.0813, -36.9008)
+
+[node name="VisibleOnScreenNotifier3D" type="Node3D" parent="Puzzle2" node_paths=PackedStringArray("object")]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -44.5903, 2.941, -37)
+script = ExtResource("11_mxl0q")
+object = NodePath("../Button")
+
+[node name="VisibleOnScreenNotifier3D2" type="VisibleOnScreenNotifier3D" parent="Puzzle2/VisibleOnScreenNotifier3D"]
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, -1.52588e-05, 1.83841, -2.83317)
+aabb = AABB(-0.5, -0.05, -0.5, 1.018, 0.225, 1.02)
+script = ExtResource("11_yiq1o")
+
+[node name="VisibleOnScreenNotifier3D3" type="VisibleOnScreenNotifier3D" parent="Puzzle2/VisibleOnScreenNotifier3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 8.35189e-23, 0, 8.35188e-23, 1, 0, 0.180244, 0.195959)
+aabb = AABB(-0.5, -0.05, -0.5, 1.018, 0.225, 1.02)
+script = ExtResource("11_yiq1o")
+
+[node name="VisibleOnScreenNotifier3D4" type="VisibleOnScreenNotifier3D" parent="Puzzle2/VisibleOnScreenNotifier3D"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 8.74228e-08, -1, -8.74228e-08, 3.82137e-15, -8.74228e-08, 1, -3.43323e-05, 4.8602, 2.38419e-07)
+aabb = AABB(-0.5, -0.05, -0.5, 1.018, 0.225, 1.02)
+script = ExtResource("11_yiq1o")
+
+[node name="Button" type="StaticBody3D" parent="Puzzle2" node_paths=PackedStringArray("target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.75, 0.1, -37)
+script = ExtResource("10_lfsqj")
+target = NodePath("../Door")
+
+[node name="Base" type="MeshInstance3D" parent="Puzzle2/Button"]
+mesh = SubResource("BoxMesh_p3102")
+surface_material_override/0 = ExtResource("11_3x3cv")
+
+[node name="BaseColl" type="CollisionShape3D" parent="Puzzle2/Button"]
+shape = SubResource("BoxShape3D_p3102")
+
+[node name="ButtonColl" type="MeshInstance3D" parent="Puzzle2/Button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+mesh = SubResource("BoxMesh_a506e")
+skeleton = NodePath("../Detector")
+
+[node name="Detector" type="Area3D" parent="Puzzle2/Button"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle2/Button/Detector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_a506e")
+
+[node name="ResetCubeButton01" parent="Puzzle2" node_paths=PackedStringArray("cube") instance=ExtResource("14_yiq1o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.125, 0.0302342, -35.6308)
+cube = NodePath("../Cube")
+
+[node name="Wall25" type="CSGBox3D" parent="Puzzle2"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -44.5018, 3.25846, -37.0062)
+material_override = ExtResource("2_ig341")
+use_collision = true
+size = Vector3(3.875, 1.875, 0.1)
+
+[node name="Support21" type="CSGBox3D" parent="Puzzle2"]
+transform = Transform3D(0.996652, 0.0788477, -0.0216389, -0.0783672, 0.996677, 0.0222195, 0.0233189, -0.0204493, 0.999518, -39.5693, 3.08656, -36.9244)
+material_override = ExtResource("2_ig341")
+use_collision = true
+size = Vector3(0.25, 2.25, 4.5)
+
+[node name="Door" parent="Puzzle2" instance=ExtResource("7_3x3cv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -49.8699, 1.05, -37)
+
+[node name="Wall" type="CSGBox3D" parent="Puzzle2"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -49.8699, 2, -38.5001)
+material_override = ExtResource("2_ig341")
+use_collision = true
+size = Vector3(1, 4, 0.1)
+
+[node name="Wall2" type="CSGBox3D" parent="Puzzle2"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -49.8699, 2, -35.5001)
+material_override = ExtResource("2_ig341")
+use_collision = true
+size = Vector3(1, 4, 0.1)
+
+[node name="Wall3" type="CSGBox3D" parent="Puzzle2"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -49.8699, 3, -37.0001)
+material_override = ExtResource("2_ig341")
+use_collision = true
+size = Vector3(2, 2, 0.1)
 
 [node name="P3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 1.25, -37)
@@ -631,5 +638,5 @@ shadow_normal_bias = 4.0
 spot_range = 26.99
 spot_angle = 83.92
 
-[connection signal="body_entered" from="P1/Button/Detector" to="P1/Button" method="_on_detector_body_entered"]
-[connection signal="body_exited" from="P1/Button/Detector" to="P1/Button" method="_on_detector_body_exited"]
+[connection signal="body_entered" from="Puzzle2/Button/Detector" to="Puzzle2/Button" method="_on_detector_body_entered"]
+[connection signal="body_exited" from="Puzzle2/Button/Detector" to="Puzzle2/Button" method="_on_detector_body_exited"]
