@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://85bhe7spa2nd"]
+
+[ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_b038h"]
+[ext_resource type="Material" uid="uid://segypnc7ytsf" path="res://Assets/Materials/Carpet.tres" id="2_b038h"]
+
+[node name="BrokenFloor" type="Node3D"]
+
+[node name="Floor9" type="CSGBox3D" parent="."]
+transform = Transform3D(0.99685, -0.0376836, -0.0697874, 0.0793117, 0.473636, 0.877142, 0, -0.879914, 0.475133, 1.03695, -3.26038, 0.73366)
+use_collision = true
+size = Vector3(1, 0.1, 1)
+material = ExtResource("1_b038h")
+
+[node name="Floor12" type="CSGBox3D" parent="."]
+transform = Transform3D(0.99685, -0.0792795, -0.00225879, 0.0793116, 0.996446, 0.0283902, 0, -0.0284799, 0.999594, 0.500446, -2.82144, 1.4998)
+use_collision = true
+size = Vector3(2, 0.1, 1)
+material = ExtResource("1_b038h")
+
+[node name="Floor14" type="CSGBox3D" parent="."]
+transform = Transform3D(0.99685, -0.0792795, -0.00225879, 0.0793116, 0.996446, 0.0283902, 0, -0.0284799, 0.999594, 0.701868, -0.300566, 1.54024)
+use_collision = true
+size = Vector3(1, 0.1, 1)
+material = ExtResource("1_b038h")
+
+[node name="Floor11" type="CSGBox3D" parent="."]
+transform = Transform3D(0.989719, 0.141439, 0.0212492, -0.143026, 0.978735, 0.147041, 9.31323e-10, -0.148569, 0.988902, -0.881053, -1.61206, 1.03538)
+use_collision = true
+size = Vector3(1, 0.1, 2)
+material = ExtResource("1_b038h")
+
+[node name="Floor10" type="CSGBox3D" parent="."]
+transform = Transform3D(0.997949, -0.0485516, 0.0417147, 0.0507847, 0.997235, -0.0542527, -0.0389653, 0.0562599, 0.997656, 0.0279842, -0.028525, -0.971826)
+use_collision = true
+size = Vector3(2.30579, 0.02, 1.95959)
+material = ExtResource("2_b038h")
+
+[node name="Floor13" type="CSGBox3D" parent="."]
+transform = Transform3D(0.997949, -0.0485516, 0.0417147, 0.0507847, 0.997235, -0.0542527, -0.0389653, 0.0562599, 0.997656, 5.74892e-05, -0.0686863, -1.00007)
+use_collision = true
+size = Vector3(3, 0.0976318, 2)
+material = ExtResource("1_b038h")

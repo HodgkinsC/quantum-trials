@@ -1,0 +1,139 @@
+[gd_scene load_steps=6 format=3 uid="uid://rscipotivdde"]
+
+[ext_resource type="Script" uid="uid://byp6lglw5nj83" path="res://Scripts/SceneManager.gd" id="1_hjya1"]
+[ext_resource type="PackedScene" uid="uid://30qufw5s2dgm" path="res://Scenes/Player.tscn" id="2_ebsso"]
+[ext_resource type="Environment" uid="uid://bee8wbjwdbhfl" path="res://Assets/Materials/Skybox.tres" id="2_hjya1"]
+[ext_resource type="Script" uid="uid://cumh5fg82g820" path="res://Scripts/QuantRandRot.gd" id="3_7xrkh"]
+[ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="3_83gc0"]
+
+[node name="SceneManager" type="Node3D"]
+script = ExtResource("1_hjya1")
+
+[node name="Player" parent="." instance=ExtResource("2_ebsso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0741522, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+shadow_enabled = true
+
+[node name="Debris" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(2.61956, 0, 0, 0, 2.32657, 0, 0, 0, 2.41347, -4.75891, -3.76291, 132.671)
+gi_mode = 2
+size = Vector3(2, 3, 13)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris"]
+aabb = AABB(-1, -1.50561, -6.49904, 2, 3.01122, 12.9981)
+
+[node name="Debris2" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(2.61956, 0, 0, 0, 2.4295, 0.56243, 0, -2.74122, 0.498472, 105.263, 35.2184, 53.0507)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris2"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="Debris3" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(-0.547419, -1.05972, -1.21013, -0.781389, 3.70166, 0.0537766, 0.98407, 2.34976, -0.630469, -91.6886, -22.9458, -87.556)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris3"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="Debris4" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(1.24658, 0.874231, 0.90545, -0.451978, 0.427012, -2.20392, -3.56987, 0.251213, 0.595214, 33.9505, -85.6212, 13.6127)
+gi_mode = 2
+size = Vector3(2, 3, 13)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris4"]
+aabb = AABB(-1, -1.50561, -6.49904, 2, 3.01122, 12.9981)
+
+[node name="Debris5" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.95978, 0.978591, 0.997122, -0.347992, 3.09838, -0.30861, -2.74856, -0.0505651, 0.387262, 76.2889, -11.7752, -90.5973)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris5"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="Debris6" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(-0.657937, 3.57896, -0.206381, -1.5251, -0.392245, 0.25976, 0.737654, 2.38122, 0.352978, -101.424, 105.906, 30.3418)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris6"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="Debris7" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.479413, -2.24729, 0.441695, 2.47564, 0.521486, 0.574292, -0.709551, 0.30108, 2.30216, 30.6132, 23.6089, 128.179)
+gi_mode = 2
+size = Vector3(2, 3, 13)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris7"]
+aabb = AABB(-1, -1.50561, -6.49904, 2, 3.01122, 12.9981)
+
+[node name="Debris8" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.479413, -2.84839, -0.452039, 2.47564, -0.107725, 0.244678, -0.70955, -2.30039, 0.548265, -1.476, 117.378, 27.4743)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris8"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="Debris9" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.834677, -3.33943, -0.388797, -0.458325, 0.387343, -1.28161, 0.985842, 3.00746, -0.26665, -7.07112, -115.248, -60.827)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris9"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="Debris10" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.0113858, -0.206491, 2.40346, 0.227322, 0.98169, 0.503343, -3.80136, 0.0580865, 0.0372983, 94.9774, 13.5135, -6.46655)
+gi_mode = 2
+size = Vector3(2, 3, 13)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris10"]
+aabb = AABB(-1, -1.50561, -6.49904, 2, 3.01122, 12.9981)
+
+[node name="Debris11" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.00876598, -2.82297, 0.551455, 0.175022, 1.60728, 0.965317, -2.92679, 0.0876601, 0.0593777, 12.3244, 45.2808, -107.782)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris11"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="Debris12" type="CSGBox3D" parent="DirectionalLight3D"]
+transform = Transform3D(1.48772, 1.46967, -0.22408, -0.788106, 3.86103, -0.0528262, 0.684482, 1.25121, 0.426215, -111.738, -67.5133, 70.9449)
+gi_mode = 2
+size = Vector3(2, 3, 7)
+material = ExtResource("3_83gc0")
+script = ExtResource("3_7xrkh")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="DirectionalLight3D/Debris12"]
+aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_hjya1")

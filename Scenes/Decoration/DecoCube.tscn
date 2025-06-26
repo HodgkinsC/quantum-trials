@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm3kk87b1gku3"]
+
+[ext_resource type="Material" uid="uid://bsgpsfaiihwni" path="res://Assets/Materials/CubeOff.tres" id="1_1nk82"]
+[ext_resource type="Script" uid="uid://bfaqr3234kaaj" path="res://Scripts/DecoCube.gd" id="1_lmltq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lmltq"]
+size = Vector3(0.75, 0.75, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2xgp5"]
+size = Vector3(0.75, 0.75, 0.75)
+
+[node name="DecoCube" type="StaticBody3D"]
+script = ExtResource("1_lmltq")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_lmltq")
+surface_material_override/0 = ExtResource("1_1nk82")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2xgp5")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+aabb = AABB(-0.375, -0.375, -0.375, 0.75, 0.75, 0.75)

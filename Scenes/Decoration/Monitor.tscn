@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvqbdard4xqcy"]
+
+[ext_resource type="PackedScene" uid="uid://qopra23vi87r" path="res://Scenes/PuzzleElements/ComputerScreen.tscn" id="1_1btdj"]
+[ext_resource type="Script" uid="uid://7ikubwaysu8h" path="res://Scripts/Monitor.gd" id="1_h8e6h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_b5apk"]
+size = Vector3(0.1, 0.4, 0.7)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_h8e6h"]
+viewport_path = NodePath("Monitor/Screen/SubViewport")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8e6h"]
+size = Vector3(0.1, 0.4, 0.7)
+
+[node name="Monitor" type="StaticBody3D" groups=["Interactable"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_h8e6h")
+
+[node name="Monitor" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_b5apk")
+
+[node name="Screen" type="Sprite3D" parent="Monitor"]
+transform = Transform3D(-1.11464e-08, 0, 0.255, 0, 0.255, 0, -0.255, 0, -1.11464e-08, 0.0500342, 0, 0)
+pixel_size = 0.002
+texture = SubResource("ViewportTexture_h8e6h")
+
+[node name="SubViewport" type="SubViewport" parent="Monitor/Screen"]
+size = Vector2i(1283, 723)
+
+[node name="ComputerScreen" parent="Monitor/Screen/SubViewport" instance=ExtResource("1_1btdj")]
+
+[node name="Camera3D" type="Node3D" parent="."]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 0.291838, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_h8e6h")

@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c16aii8xf5t6p"]
+
+[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="1_giu6l"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_giu6l")
+shader_parameter/albedo = Color(0.861024, 0.947079, 0.954067, 0.227451)
+shader_parameter/roughness = 0.15
+shader_parameter/normal_strength = 1.0
+shader_parameter/edge_color = Color(0.339817, 0.39157, 0.416702, 1)

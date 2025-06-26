@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bel4griigla08"]
+
+[ext_resource type="Texture2D" uid="uid://dkwyqdm3d4g1h" path="res://Assets/Textures/DevTextures/small.jpg" id="1_mkxwm"]
+
+[resource]
+albedo_texture = ExtResource("1_mkxwm")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cved14fdsuvgy"]
+
+[ext_resource type="Script" uid="uid://b12qr0te2hqyn" path="res://Scripts/WarningLight.gd" id="1_geudp"]
+[ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="2_geudp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qnqhw"]
+size = Vector3(0.065, 0.01, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_geb16"]
+material = ExtResource("2_geudp")
+size = Vector3(0.05, 0.075, 0.05)
+
+[node name="WarningLight" type="Node3D"]
+script = ExtResource("1_geudp")
+
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0358716, 0)
+mesh = SubResource("BoxMesh_qnqhw")
+skeleton = NodePath("../..")
+
+[node name="SpinningPart" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SpinningPart"]
+mesh = SubResource("BoxMesh_geb16")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SpinningPart"]
+light_color = Color(1, 0, 0, 1)
+spot_angle = 31.0639
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SpinningPart"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+light_color = Color(1, 0, 0, 1)
+spot_angle = 31.0639

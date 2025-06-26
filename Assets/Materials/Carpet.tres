@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://segypnc7ytsf"]
+
+[ext_resource type="Texture2D" uid="uid://db6nq1a422s2b" path="res://Assets/Textures/carpet.jpg" id="1_i6hvw"]
+
+[resource]
+albedo_color = Color(0.992449, 1, 0.849619, 1)
+albedo_texture = ExtResource("1_i6hvw")
+uv1_triplanar = true
+texture_filter = 0

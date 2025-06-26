@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://yblk1iood2a1"]
+
+[ext_resource type="Script" uid="uid://b2gvgm0hlktl2" path="res://Scripts/Button.gd" id="1_p3102"]
+[ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="2_a506e"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p3102"]
+material = ExtResource("2_a506e")
+size = Vector3(1, 0.1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3102"]
+size = Vector3(1, 0.1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3102"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a506e"]
+material = SubResource("StandardMaterial3D_p3102")
+size = Vector3(0.75, 0.1, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a506e"]
+size = Vector3(0.75, 0.15, 0.75)
+
+[node name="Button" type="StaticBody3D"]
+script = ExtResource("1_p3102")
+
+[node name="Base" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_p3102")
+
+[node name="BaseColl" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_p3102")
+
+[node name="ButtonColl" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+mesh = SubResource("BoxMesh_a506e")
+skeleton = NodePath("../Detector")
+
+[node name="Detector" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_a506e")
+
+[connection signal="body_entered" from="Detector" to="." method="_on_detector_body_entered"]
+[connection signal="body_exited" from="Detector" to="." method="_on_detector_body_exited"]

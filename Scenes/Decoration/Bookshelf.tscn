@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://ebmw2lmftays"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_utjb7"]
+size = Vector3(1, 1.75, 0.35)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utjb7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_utjb7"]
+material = SubResource("StandardMaterial3D_utjb7")
+size = Vector3(1, 1.75, 0.03)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vk0cg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vk0cg"]
+material = SubResource("StandardMaterial3D_vk0cg")
+size = Vector3(1, 0.03, 0.35)
+
+[node name="Bookshelf" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_utjb7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16)
+mesh = SubResource("BoxMesh_utjb7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.86, 0)
+mesh = SubResource("BoxMesh_vk0cg")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.505, 0)
+mesh = SubResource("BoxMesh_vk0cg")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.155, 0)
+mesh = SubResource("BoxMesh_vk0cg")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.195, 0)
+mesh = SubResource("BoxMesh_vk0cg")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.545, 0)
+mesh = SubResource("BoxMesh_vk0cg")

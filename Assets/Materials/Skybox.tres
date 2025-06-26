@@ -1,0 +1,15 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://bee8wbjwdbhfl"]
+
+[ext_resource type="Texture2D" uid="uid://btvgnnhtjtsw8" path="res://Assets/Textures/ESO_-_Milky_Way.jpg" id="1_j31rf"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_00yff"]
+panorama = ExtResource("1_j31rf")
+
+[sub_resource type="Sky" id="Sky_bcy4r"]
+sky_material = SubResource("PanoramaSkyMaterial_00yff")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_bcy4r")
+ambient_light_sky_contribution = 0.75
+ambient_light_energy = 0.0

@@ -1,0 +1,242 @@
+[gd_scene load_steps=10 format=3 uid="uid://qopra23vi87r"]
+
+[ext_resource type="Script" uid="uid://bqvv8mb62gqhr" path="res://Scripts/ComputerScreen.gd" id="1_0637o"]
+[ext_resource type="Texture2D" uid="uid://6c13khxiqw8" path="res://Assets/Textures/shared.png" id="1_weu2g"]
+[ext_resource type="Script" uid="uid://djcksrm1orrbh" path="res://Scripts/file.gd" id="2_thxbl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ap8u"]
+font_size = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0637o"]
+
+[sub_resource type="Theme" id="Theme_0637o"]
+default_font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_0637o"]
+font_size = 36
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_thxbl"]
+font_size = 36
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvn66"]
+
+[node name="ComputerScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0637o")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.0632718, 0.0694999, 0.11181, 1)
+
+[node name="FileContents" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 247.0
+offset_right = 359.0
+offset_bottom = 35.0
+text = "File Contents"
+label_settings = SubResource("LabelSettings_1ap8u")
+
+[node name="Background2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 220.0
+offset_right = 247.0
+offset_bottom = 720.0
+color = Color(0.0361592, 0.0421693, 0.075608, 1)
+
+[node name="SelectionList" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 720.0
+
+[node name="Text Files" type="Label" parent="SelectionList"]
+layout_mode = 2
+text = "Text Files"
+label_settings = SubResource("LabelSettings_1ap8u")
+
+[node name="TODO" type="Button" parent="SelectionList"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0637o")
+text = "TODO.txt"
+alignment = 0
+script = ExtResource("2_thxbl")
+
+[node name="To do" type="RichTextLabel" parent="SelectionList/TODO"]
+visible = false
+layout_mode = 0
+offset_left = 247.0
+offset_right = 1280.0
+offset_bottom = 681.0
+theme = SubResource("Theme_0637o")
+text = "Check trajectory ✓
+Check life support ✓
+Check hull integrity
+Restart generators ✓
+Prepare thrusters for activation ✓
+"
+
+[node name="Employee List" type="Button" parent="SelectionList"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0637o")
+text = "Employee_List.txt"
+icon = ExtResource("1_weu2g")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("2_thxbl")
+
+[node name="List" type="RichTextLabel" parent="SelectionList/Employee List"]
+visible = false
+layout_mode = 0
+offset_left = 247.0
+offset_top = -35.0
+offset_right = 1280.0
+offset_bottom = 646.0
+theme = SubResource("Theme_0637o")
+text = "Captain
+Captain crew 01
+Captain crew 02
+Captain crew 03
+Cook 01
+Cook 02
+Janitor Jimmy
+Maintenance crew 01
+Maintenance crew 02
+Maintenance crew 03
+Maintenance crew 04
+That one other maintenance guy that snuck on last minute."
+
+[node name="Not Passwords" type="Button" parent="SelectionList"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0637o")
+text = "Not_Passwords.txt"
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("2_thxbl")
+
+[node name="Passwords" type="RichTextLabel" parent="SelectionList/Not Passwords"]
+visible = false
+layout_mode = 0
+offset_left = 247.0
+offset_top = -70.0
+offset_right = 1280.0
+offset_bottom = 611.0
+theme = SubResource("Theme_0637o")
+text = "Door code:
+31589
+
+Wifi Password:
+C0nle5"
+
+[node name="Programs" type="Label" parent="SelectionList"]
+layout_mode = 2
+text = "Program Files"
+label_settings = SubResource("LabelSettings_1ap8u")
+
+[node name="Wifi Connections" type="Button" parent="SelectionList"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0637o")
+text = "Wifi_Connections.exe"
+icon = ExtResource("1_weu2g")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("2_thxbl")
+
+[node name="ColorRect" type="ColorRect" parent="SelectionList/Wifi Connections"]
+visible = false
+layout_mode = 0
+offset_left = 247.0
+offset_top = -183.0
+offset_right = 1280.0
+offset_bottom = 537.0
+color = Color(2.40955e-06, 0.00464891, 0.108095, 1)
+
+[node name="Label" type="Label" parent="SelectionList/Wifi Connections/ColorRect"]
+layout_mode = 0
+offset_right = 1033.0
+offset_bottom = 720.0
+text = "Station network currently offline"
+label_settings = SubResource("LabelSettings_0637o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ask The AI" type="Button" parent="SelectionList"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0637o")
+text = "Ask_The_AI.exe"
+icon = ExtResource("1_weu2g")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("2_thxbl")
+
+[node name="ColorRect" type="ColorRect" parent="SelectionList/Ask The AI"]
+visible = false
+layout_mode = 0
+offset_left = 247.0
+offset_top = -218.0
+offset_right = 1280.0
+offset_bottom = 502.0
+color = Color(2.40955e-06, 0.00464891, 0.108095, 1)
+
+[node name="Label" type="Label" parent="SelectionList/Ask The AI/ColorRect"]
+layout_mode = 0
+offset_right = 1033.0
+offset_bottom = 720.0
+text = "Station network currently offline
+No connection to station AI"
+label_settings = SubResource("LabelSettings_0637o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Remote Door" type="Button" parent="SelectionList"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0637o")
+text = "Remote_Door_Controls"
+icon = ExtResource("1_weu2g")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("2_thxbl")
+
+[node name="ColorRect" type="ColorRect" parent="SelectionList/Remote Door"]
+visible = false
+layout_mode = 0
+offset_left = 247.0
+offset_top = -253.0
+offset_right = 1280.0
+offset_bottom = 467.0
+color = Color(2.40955e-06, 0.00464891, 0.108095, 1)
+
+[node name="Label" type="Label" parent="SelectionList/Remote Door/ColorRect"]
+layout_mode = 0
+offset_right = 1033.0
+offset_bottom = 720.0
+text = "Door Code:"
+label_settings = SubResource("LabelSettings_thxbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="SelectionList/Remote Door/ColorRect/Label"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 381.0
+offset_right = 618.0
+offset_bottom = 459.0
+theme_override_font_sizes/font_size = 51
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cvn66")
+placeholder_text = "12345"
+max_length = 5
+context_menu_enabled = false
+emoji_menu_enabled = false
+
+[connection signal="text_submitted" from="SelectionList/Remote Door/ColorRect/Label/LineEdit" to="." method="_on_line_edit_text_submitted"]
