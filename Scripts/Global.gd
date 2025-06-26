@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _ready() -> void:
-	change_map("mp_03")
+	change_map("mp_01")
 	root.usemapenv(false)
 	await get_tree().process_frame
 	spawnplayer(current_map.get_node("SpawnPoint").global_transform)
