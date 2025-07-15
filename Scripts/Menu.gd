@@ -66,8 +66,10 @@ func _on_save_pressed() -> void:
 
 func _on_load_pressed() -> void:
 	SaveSystem.ready_save(0)
+	Global.loading_save.emit()
 	Global.change_map(SaveSystem.read_save("current_map"))
 	await get_tree().process_frame
 	Global.player.global_position = SaveSystem.read_save("plrloc")
 	Global.player.global_rotation.y = SaveSystem.read_save("plrroty")
 	Global.player.Camera3Dm.global_rotation.x = SaveSystem.read_save("plrrotx")
+	Global.player.velocity = SaveSystem.read_save("plrvel")

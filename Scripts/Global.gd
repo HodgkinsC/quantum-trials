@@ -3,10 +3,15 @@ extends Node
 var paused = false
 var usingcomputer = false
 
+signal loading_save
+
 var player : CharacterBody3D
 @onready var root = get_tree().root.get_node("/root/SceneManager")
-var current_map
-var current_map_name
+var current_map : Node3D
+var current_map_name : String
+
+var skyrotation
+var orbitangle
 
 var thatonedoor : Node3D
 
