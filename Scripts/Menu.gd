@@ -15,6 +15,17 @@ func _ready() -> void:
 		$Resume.visible = true
 		if Global.current_map.name == "menu":
 			disabled = true
+	#await get_tree().process_frame
+	#for save in DirAccess.get_files_at("user://saves/"):
+		#SaveSystem.ready_save(save)
+		#var savefile = load("res://Scenes/SaveFile.tscn")
+		#var instance = savefile.instantiate()
+		#$SaveMenu/ScrollContainer/VBoxContainer.add_child.call_deferred(instance)
+		#instance.file = 1
+		#instance.map = SaveSystem.read_save("current_map")
+		#instance.date = SaveSystem.read_save("date")
+		#instance.update()
+	#SaveSystem.ready_save(0)
 
 func _process(_delta: float) -> void:
 	process_debug()
@@ -58,14 +69,18 @@ func _on_save_load_pressed() -> void:
 	$SaveMenu.visible = !$SaveMenu.visible
 
 func _on_save_pressed() -> void:
-	SaveSystem.ready_save(0)
+	SaveSystem.ready_save(SaveSystem.savecount + 1)
 	SaveSystem.write_save()
 	var savefile = load("res://Scenes/SaveFile.tscn")
 	var instance = savefile.instantiate()
-	$SaveMenu/BoxContainer.add_child.call_deferred(instance)
+	$SaveMenu/ScrollContainer/VBoxContainer.add_child.call_deferred(instance)
+	instance.file = SaveSystem.savecount
+	instance.map = SaveSystem.read_save("current_map")
+	instance.date = SaveSystem.read_save("date")
+	instance.update()
 
 func _on_load_pressed() -> void:
-	SaveSystem.ready_save(0)
+	SaveSystem.ready_save(1)
 	Global.loading_save.emit()
 	Global.change_map(SaveSystem.read_save("current_map"))
 	await get_tree().process_frame
@@ -73,3 +88,7 @@ func _on_load_pressed() -> void:
 	Global.player.global_rotation.y = SaveSystem.read_save("plrroty")
 	Global.player.Camera3Dm.global_rotation.x = SaveSystem.read_save("plrrotx")
 	Global.player.velocity = SaveSystem.read_save("plrvel")
+
+
+func _on_override_save_pressed() -> void:
+	pass

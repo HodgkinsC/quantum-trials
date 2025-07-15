@@ -6,6 +6,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_loocw"]
 
 [node name="SaveFile" type="ColorRect"]
+custom_minimum_size = Vector2(635, 60)
 anchors_preset = -1
 anchor_right = 0.496
 anchor_bottom = 0.083
@@ -21,19 +22,27 @@ position = Vector2(30, 30)
 scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("1_dh6bm")
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
-layout_mode = 0
+[node name="Id" type="Label" parent="."]
+layout_mode = 2
+offset_left = 60.0
+offset_right = 628.0
+offset_bottom = 23.0
+text = "Save Id: 0"
+horizontal_alignment = 2
+
+[node name="Date" type="Label" parent="."]
+layout_mode = 2
 offset_left = 67.0
 offset_right = 635.0
-offset_bottom = 60.0
-vertical = true
+offset_bottom = 23.0
+text = "0000–00–00"
 
-[node name="Date" type="Label" parent="BoxContainer"]
+[node name="Map" type="Label" parent="."]
 layout_mode = 2
-text = "00/00/00"
-
-[node name="Date2" type="Label" parent="BoxContainer"]
-layout_mode = 2
+offset_left = 67.0
+offset_top = 23.0
+offset_right = 635.0
+offset_bottom = 46.0
 text = "dev_test"
 
 [node name="Button" type="Button" parent="."]
@@ -56,3 +65,5 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 0)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_loocw")
 toggle_mode = true
 flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

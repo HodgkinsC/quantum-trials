@@ -1,19 +1,30 @@
 extends Node
 
-var save_location = "user://"
+var save_location = "user://saves"
 var save_nodes
-var curspos
+var savecount
+var savenum
 
 signal writeobjects
 
-func ready_save(savenum):
-	save_location = "user://" + str(savenum) + "gmesave.dat"
+func _ready() -> void:
+	if !DirAccess.open("user://saves"):
+		DirAccess.open("user://").make_dir("user://saves")
+	
+	savecount = DirAccess.open("user://saves").get_files().size()
+
+func ready_save(savenumber):
+	savenum = savenumber
+	save_location = "user://saves/" + str(savenum) + "gmesave.dat"
 	save_nodes = get_tree().get_nodes_in_group("Persist")
+	
 
 func write_save():
 	#Open file
 	var file = FileAccess.open(save_location, FileAccess.WRITE)
 	#Save player and map
+	file.store_line("date")
+	file.store_line(Time.get_date_string_from_system())
 	file.store_line("current_map")
 	file.store_line(Global.current_map_name)
 	file.store_var(Global.skyrotation)
@@ -44,6 +55,8 @@ func write_save():
 	file.close()
 
 func read_save(content):
+	var saveid
+	var date
 	var current_map
 	var skyrot
 	var orbitang
@@ -55,6 +68,8 @@ func read_save(content):
 	var plrrotx
 	var plrvel
 	var file = FileAccess.open(save_location, FileAccess.READ)
+	if file.get_line() == "date":
+		date = file.get_line()
 	if file.get_line() == "current_map":
 		current_map = file.get_line()
 		skyrot = file.get_var()
@@ -79,7 +94,10 @@ func read_save(content):
 	
 	file.close()
 	
-	if content == "current_map": return current_map
+	
+	if content == "id": return saveid
+	elif content == "date": return date
+	elif content == "current_map": return current_map
 	elif content == "skyrot": return skyrot
 	elif content == "orbitang": return orbitang
 	elif content == "plrloc": return plrloc
