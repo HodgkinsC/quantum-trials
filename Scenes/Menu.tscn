@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://78nastiglwp7"]
+[gd_scene load_steps=19 format=3 uid="uid://78nastiglwp7"]
 
 [ext_resource type="Script" uid="uid://ow2fiuxg28t3" path="res://Scripts/Menu.gd" id="1_kld02"]
 [ext_resource type="Shader" uid="uid://b3du4l67beylj" path="res://Assets/Materials/Blur.gdshader" id="2_s2c3o"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://dl7l55kt8v6f" path="res://Assets/Materials/Vignette.gdshader" id="3_ma218"]
 [ext_resource type="FontFile" uid="uid://nbfn5ru7msph" path="res://Assets/Screener W01 Regular.ttf" id="3_s2c3o"]
 [ext_resource type="Script" uid="uid://begbqr0ipkp26" path="res://Scripts/Terminal.gd" id="6_idohh"]
+[ext_resource type="PackedScene" uid="uid://c85soswycymvf" path="res://Scenes/SaveFile.tscn" id="6_wfhf6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ma218"]
 shader = ExtResource("2_s2c3o")
@@ -24,6 +25,15 @@ font_size = 110
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gqyd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bq36i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wfhf6"]
+font_size = 35
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idohh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfhf6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3jcrr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_idohh"]
 font = ExtResource("3_s2c3o")
@@ -117,13 +127,42 @@ text = "Resume"
 flat = true
 alignment = 0
 
-[node name="Settings" type="Button" parent="."]
+[node name="Save_Load" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 10.0
 offset_top = 280.0
-offset_right = 107.0
+offset_right = 112.0
 offset_bottom = 320.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.593134, 0.593134, 0.593134, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.476578, 0.476578, 0.476578, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_s2c3o")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bq36i")
+text = "Save/Load"
+flat = true
+alignment = 0
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 308.0
+offset_right = 112.0
+offset_bottom = 348.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
@@ -150,9 +189,9 @@ alignment = 0
 layout_mode = 1
 anchors_preset = -1
 offset_left = 10.0
-offset_top = 310.0
+offset_top = 338.0
 offset_right = 107.0
-offset_bottom = 350.0
+offset_bottom = 378.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
@@ -198,10 +237,89 @@ offset_bottom = 480.0
 [node name="Settings" type="Label" parent="SettingsMenu/BoxContainer"]
 layout_mode = 2
 text = "Settings"
+label_settings = SubResource("LabelSettings_wfhf6")
+horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="SettingsMenu/BoxContainer"]
+[node name="DebugMode" type="Label" parent="SettingsMenu/BoxContainer"]
 layout_mode = 2
-text = "Whuh"
+text = "Debug Mode (Basically sv_cheats)"
+
+[node name="CheckButton" type="CheckButton" parent="SettingsMenu/BoxContainer/DebugMode"]
+layout_mode = 0
+offset_right = 53.0
+offset_bottom = 31.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_idohh")
+button_pressed = true
+text = "                                                                                                                                           "
+flat = true
+
+[node name="CameraSensitivity" type="Label" parent="SettingsMenu/BoxContainer"]
+layout_mode = 2
+text = "Camera Sensitivity"
+
+[node name="SensSlider" type="HSlider" parent="SettingsMenu/BoxContainer/CameraSensitivity"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 7.0
+offset_right = 619.0
+offset_bottom = 23.0
+min_value = 1.0
+max_value = 20.0
+step = 0.1
+value = 6.0
+
+[node name="SaveMenu" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 330.0
+offset_top = 120.0
+offset_right = 370.0
+offset_bottom = 160.0
+
+[node name="ColorRect" type="ColorRect" parent="SaveMenu"]
+layout_mode = 2
+offset_right = 635.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+color = Color(0.0936694, 0.0936694, 0.0936694, 0.768627)
+
+[node name="Save_Load" type="Label" parent="SaveMenu"]
+layout_mode = 2
+offset_right = 640.0
+offset_bottom = 49.0
+text = "Save/Load"
+label_settings = SubResource("LabelSettings_wfhf6")
+horizontal_alignment = 1
+
+[node name="BoxContainer" type="VBoxContainer" parent="SaveMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.225
+anchor_right = 15.875
+anchor_bottom = 10.7
+offset_right = -6.10352e-05
+offset_bottom = -3.05176e-05
+
+[node name="SaveFile" parent="SaveMenu/BoxContainer" instance=ExtResource("6_wfhf6")]
+layout_mode = 2
+
+[node name="Save" type="Button" parent="SaveMenu"]
+layout_mode = 0
+offset_top = 428.0
+offset_right = 316.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wfhf6")
+text = "Save"
+
+[node name="Load" type="Button" parent="SaveMenu"]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 428.0
+offset_right = 635.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3jcrr")
+text = "Load"
 
 [node name="DebugBG" type="ColorRect" parent="."]
 layout_mode = 2
@@ -242,6 +360,11 @@ script = ExtResource("6_idohh")
 
 [connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Save_Load" to="." method="_on_save_load_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="SettingsMenu/BoxContainer/DebugMode/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_changed" from="SettingsMenu/BoxContainer/CameraSensitivity/SensSlider" to="." method="_on_sens_slider_value_changed"]
+[connection signal="pressed" from="SaveMenu/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="SaveMenu/Load" to="." method="_on_load_pressed"]
 [connection signal="text_submitted" from="Console" to="Console" method="_on_text_submitted"]

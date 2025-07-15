@@ -6,6 +6,7 @@ var usingcomputer = false
 var player : CharacterBody3D
 @onready var root = get_tree().root.get_node("/root/SceneManager")
 var current_map
+var current_map_name
 
 var thatonedoor : Node3D
 
@@ -17,8 +18,9 @@ func _process(_delta: float) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _ready() -> void:
-	change_map("mp_01")
+	change_map("menu")
 	root.usemapenv(false)
+	paused = true
 	await get_tree().process_frame
 	spawnplayer(current_map.get_node("SpawnPoint").global_transform)
 
@@ -28,6 +30,7 @@ func change_map(mapname : String):
 	var instance = map.instantiate()
 	root.add_child.call_deferred(instance)
 	current_map = instance
+	current_map_name = mapname
 
 func spawnplayer(pos):
 	player.global_transform = pos

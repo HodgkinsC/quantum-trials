@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var debug_mode = true
+
 @onready var camera = %Camera3D
 
 @export var look_sensitivity : float = 0.006
@@ -175,7 +177,7 @@ func _handle_crouch(delta) -> void:
 	$PlayerColl.position.y = $PlayerColl.shape.height / 2
 
 func _handle_noclip(delta) -> bool:
-	if Input.is_action_just_pressed("noclip"):
+	if Input.is_action_just_pressed("noclip") and debug_mode:
 		noclip = !noclip
 	
 	$PlayerColl.disabled = noclip

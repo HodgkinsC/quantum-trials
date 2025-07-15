@@ -1,7 +1,9 @@
 extends Node3D
 
 @onready var env = $WorldEnvironment
-@onready var sun = $DirectionalLight3D
+@onready var sun = $Skybox
+@onready var planet = $Skybox/Orbit/Planet
+@onready var orbit = $Skybox/Orbit
 
 func _ready() -> void:
 	Global.root = self
@@ -19,9 +21,11 @@ func usemapenv(use : bool):
 			if Global.current_map.has_node("DirectionalLight3D"): Global.current_map.get_node("DirectionalLight3D").queue_free()
 
 func _process(_delta: float) -> void:
-	env.environment.sky_rotation.y += 0.0002
-	env.environment.sky_rotation.x += 0.0001
-	sun.rotation.y += 0.0002
-	sun.rotation.x += 0.0001
+	env.environment.sky_rotation.y += 0.0005
+	env.environment.sky_rotation.x += 0.0003
+	sun.rotation.y += 0.0005
+	sun.rotation.x += 0.0003
+	planet.rotation_degrees.y += 0.005
+	orbit.rotation_degrees.y -= 0.005
 	if env.environment.sky_rotation.y >= 360:
 		env.environment.sky_rotation.y = 0
