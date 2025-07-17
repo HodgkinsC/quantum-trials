@@ -5,13 +5,31 @@ var save_nodes
 var savecount
 var savenum
 
-signal writeobjects
+var container
 
 func _ready() -> void:
 	if !DirAccess.open("user://saves"):
 		DirAccess.open("user://").make_dir("user://saves")
 	
 	savecount = DirAccess.open("user://saves").get_files().size()
+	
+	get_files()
+
+func get_files():
+	await get_tree().process_frame
+	print(DirAccess.open("user://saves").get_files())
+	var i = 0
+	for save in DirAccess.open("user://saves").get_files():
+		i += 1
+		print(i)
+		ready_save(i)
+		var savefile = load("res://Scenes/SaveFile.tscn")
+		var instance = savefile.instantiate()
+		container.add_child.call_deferred(instance)
+		instance.file = read_save("id")
+		instance.map = read_save("current_map")
+		instance.date = read_save("date")
+		instance.update()
 
 func ready_save(savenumber):
 	savenum = savenumber
@@ -23,6 +41,8 @@ func write_save():
 	#Open file
 	var file = FileAccess.open(save_location, FileAccess.WRITE)
 	#Save player and map
+	file.store_line("id")
+	file.store_32(savenum)
 	file.store_line("date")
 	file.store_line(Time.get_date_string_from_system())
 	file.store_line("current_map")
@@ -68,6 +88,8 @@ func read_save(content):
 	var plrrotx
 	var plrvel
 	var file = FileAccess.open(save_location, FileAccess.READ)
+	if file.get_line() == "id":
+		saveid = file.get_32()
 	if file.get_line() == "date":
 		date = file.get_line()
 	if file.get_line() == "current_map":
@@ -86,15 +108,6 @@ func read_save(content):
 		if file.get_line() == "player velocity":
 			plrvel = file.get_var()
 	
-	if file.get_line() == "`" and file.get_line() == "objects":
-		var objectsamt = file.get_64()
-		print("Amount of saved objects" + str(objectsamt))
-		for obj in objectsamt:
-			pass
-	
-	file.close()
-	
-	
 	if content == "id": return saveid
 	elif content == "date": return date
 	elif content == "current_map": return current_map
@@ -104,3 +117,25 @@ func read_save(content):
 	elif content == "plrroty": return plrroty
 	elif content == "plrrotx": return plrrotx
 	elif content == "plrvel": return plrvel
+	
+	if file.get_line() == "`" and file.get_line() == "objects" and content == "objects":
+		get_objects(file.get_position())
+	
+	file.close()
+
+func get_objects(pos):
+	var file = FileAccess.open(save_location, FileAccess.READ)
+	file.seek(pos)
+	Global.load_objects.emit()
+	var objectsamt = file.get_64()
+	print("Amount of saved objects" + str(objectsamt))
+	for obj in objectsamt:
+		var cube = load("res://Scenes/PuzzleElements/Cube.tscn")
+		var instance : RigidBody3D = cube.instantiate()
+		Global.current_map.add_child.call_deferred(instance)
+		await get_tree().process_frame
+		instance.name = file.get_line()
+		instance.global_position = file.get_var()
+		instance.global_rotation = file.get_var()
+		instance.linear_velocity = file.get_var()
+		instance.angular_velocity = file.get_var()

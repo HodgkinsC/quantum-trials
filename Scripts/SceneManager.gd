@@ -9,7 +9,7 @@ func _ready() -> void:
 	Global.root = self
 	env.environment.sky_rotation.y += deg_to_rad(-45)
 	sun.rotation.y += deg_to_rad(-45)
-	Global.loading_save.connect(load_save)
+	Global.load_objects.connect(load_save)
 
 func usemapenv(use : bool):
 	await Global.current_map.ready
@@ -34,5 +34,5 @@ func _process(_delta: float) -> void:
 	Global.orbitangle = orbit.rotation_degrees
 
 func load_save():
-	env.environment.sky_rotation = SaveSystem.read_save("skyrot")
-	orbit.rotation_degrees = SaveSystem.read_save("orbitang")
+	env.environment.sky_rotation = await SaveSystem.read_save("skyrot")
+	orbit.rotation_degrees = await SaveSystem.read_save("orbitang")

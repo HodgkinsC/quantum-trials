@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 var debug_mode = true
+var disabled = false
 
 @onready var camera = %Camera3D
 
@@ -59,20 +60,21 @@ func _ready():
 	$HeadOriginalPosition/Head/CamSmooth/Camera3D/HeadMesh.visible = false
 
 func _unhandled_input(event):
-	#if Input.is_action_just_pressed("flashlight"):
-		#Flashlightm.visible = !Flashlightm.visible
-	
-	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		if event is InputEventMouseMotion:
-			rotate_y(-event.relative.x * look_sensitivity)
-			Camera3Dm.rotate_x(-event.relative.y * look_sensitivity)
-			Camera3Dm.rotation.x = clamp(Camera3Dm.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-	
-	if event is InputEventMouseButton and event.is_pressed():
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			noclip_speed_mult = min(100.0, noclip_speed_mult * 1.1)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			noclip_speed_mult = max(0.1, noclip_speed_mult * 0.9)
+	if !disabled:
+		#if Input.is_action_just_pressed("flashlight"):
+			#Flashlightm.visible = !Flashlightm.visible
+		
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			if event is InputEventMouseMotion:
+				rotate_y(-event.relative.x * look_sensitivity)
+				Camera3Dm.rotate_x(-event.relative.y * look_sensitivity)
+				Camera3Dm.rotation.x = clamp(Camera3Dm.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		
+		if event is InputEventMouseButton and event.is_pressed():
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				noclip_speed_mult = min(100.0, noclip_speed_mult * 1.1)
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+				noclip_speed_mult = max(0.1, noclip_speed_mult * 0.9)
 
 func _headbob_effect(delta):
 	headbob_time += delta * self.velocity.length()
@@ -251,8 +253,9 @@ func _handle_ground_physics(delta) -> void:
 func _physics_process(delta):
 	
 	if is_on_floor(): _last_frame_was_on_floor = Engine.get_physics_frames()
-	
-	var input_dir = Input.get_vector("left", "right", "forward", "back").normalized()
+	var input_dir = Vector3.ZERO
+	if !disabled:
+		input_dir = Input.get_vector("left", "right", "forward", "back").normalized()
 	# Direction of movement vs direction player is facing
 	wish_dir = self.global_transform.basis * Vector3(input_dir.x, 0., input_dir.y)
 	cam_aligned_wish_dir = Camera3Dm.global_transform.basis * Vector3(input_dir.x, 0., input_dir.y)

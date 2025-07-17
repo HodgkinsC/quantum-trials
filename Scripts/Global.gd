@@ -2,8 +2,9 @@ extends Node
 
 var paused = false
 var usingcomputer = false
+var mouse_free
 
-signal loading_save
+signal load_objects
 
 var player : CharacterBody3D
 @onready var root = get_tree().root.get_node("/root/SceneManager")
@@ -17,7 +18,7 @@ var thatonedoor : Node3D
 
 func _process(_delta: float) -> void:
 	await get_tree().process_frame
-	if paused or usingcomputer:
+	if paused or usingcomputer or mouse_free:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
