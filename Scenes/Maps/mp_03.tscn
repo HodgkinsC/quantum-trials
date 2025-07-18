@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c2e8xxh3c36mj"]
+[gd_scene load_steps=32 format=3 uid="uid://c2e8xxh3c36mj"]
 
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_qa0ah"]
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="2_ig341"]
@@ -15,7 +15,9 @@
 [ext_resource type="Script" uid="uid://bfwbivm8snsl2" path="res://Scripts/QuantPossibleLoc.gd" id="11_yiq1o"]
 [ext_resource type="PackedScene" uid="uid://d3u7cyqli0022" path="res://Scenes/PuzzleElements/ResetCubeButton.tscn" id="14_yiq1o"]
 [ext_resource type="PackedScene" uid="uid://yblk1iood2a1" path="res://Scenes/PuzzleElements/Button.tscn" id="15_47pig"]
+[ext_resource type="Script" uid="uid://032mrwjqt2o3" path="res://Scripts/Cube.gd" id="16_jxjgq"]
 [ext_resource type="Script" uid="uid://cheg3ddkw364t" path="res://Scripts/LevelEndTrigger.gd" id="16_xc28b"]
+[ext_resource type="Material" uid="uid://bsgpsfaiihwni" path="res://Assets/Materials/CubeOff.tres" id="17_xc17m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mw28t"]
 size = Vector3(2, 2, 0.075)
@@ -58,6 +60,12 @@ size = Vector3(0.75, 0.1, 0.75)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a506e"]
 size = Vector3(0.75, 0.15, 0.75)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sry2l"]
+size = Vector3(0.75, 0.75, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sfu72"]
+size = Vector3(0.75, 0.75, 0.75)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0r63w"]
 size = Vector3(4, 3, 3.5)
@@ -686,18 +694,6 @@ spot_angle = 83.92
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.875, -1.125, 0)
 target = NodePath("../Door")
 
-[node name="Cube" parent="Puzzle3" instance=ExtResource("9_1udq4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 1, 0)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
-sleeping = true
-freeze = true
-locked = true
-
 [node name="VisibleOnScreenNotifier3D" type="Node3D" parent="Puzzle3" node_paths=PackedStringArray("object")]
 transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -0.715302, 0.566, 0)
 script = ExtResource("11_mxl0q")
@@ -762,6 +758,19 @@ size = Vector3(1.125, 1.125, 1.72546)
 transform = Transform3D(-1, -3.82137e-15, 8.74228e-08, -8.74228e-08, 4.37114e-08, -1, 0, -1, -4.37114e-08, 1.125, 4.3125, 0)
 use_collision = true
 size = Vector3(1.125, 1.125, 2.125)
+
+[node name="Cube2" type="StaticBody3D" parent="Puzzle3" groups=["Cube", "Element"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 1, 0)
+script = ExtResource("16_jxjgq")
+locked = true
+
+[node name="Mesh" type="MeshInstance3D" parent="Puzzle3/Cube2"]
+gi_mode = 2
+mesh = SubResource("BoxMesh_sry2l")
+surface_material_override/0 = ExtResource("17_xc17m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puzzle3/Cube2"]
+shape = SubResource("BoxShape3D_sfu72")
 
 [node name="Door3" parent="." instance=ExtResource("7_3x3cv")]
 transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, -78.995, 1.05, -35.045)

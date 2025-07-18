@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://78nastiglwp7"]
+[gd_scene load_steps=19 format=3 uid="uid://78nastiglwp7"]
 
 [ext_resource type="Script" uid="uid://ow2fiuxg28t3" path="res://Scripts/Menu.gd" id="1_kld02"]
 [ext_resource type="Shader" uid="uid://b3du4l67beylj" path="res://Assets/Materials/Blur.gdshader" id="2_s2c3o"]
@@ -33,6 +33,9 @@ font_size = 35
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfhf6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3jcrr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3jcrr"]
+font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_idohh"]
 font = ExtResource("3_s2c3o")
@@ -303,7 +306,7 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="SaveMenu"]
 layout_mode = 0
 offset_top = 428.0
-offset_right = 635.0
+offset_right = 846.0
 offset_bottom = 480.0
 theme_override_constants/separation = 0
 
@@ -314,19 +317,57 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wfhf6")
 text = "New Save"
 
-[node name="OverrideSave" type="Button" parent="SaveMenu/HBoxContainer"]
-custom_minimum_size = Vector2(212, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_wfhf6")
-text = "Override Save"
-
 [node name="Load" type="Button" parent="SaveMenu/HBoxContainer"]
-custom_minimum_size = Vector2(211, 0)
+custom_minimum_size = Vector2(212, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3jcrr")
 text = "Load"
+
+[node name="DeleteSave" type="Button" parent="SaveMenu/HBoxContainer"]
+custom_minimum_size = Vector2(211, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3jcrr")
+text = "Delete Save"
+
+[node name="AreYouSure" type="ColorRect" parent="SaveMenu"]
+visible = false
+layout_mode = 0
+offset_right = 635.0
+offset_bottom = 480.0
+color = Color(0.355567, 0.136339, 0.181908, 1)
+
+[node name="Warning" type="Label" parent="SaveMenu/AreYouSure"]
+layout_mode = 0
+offset_right = 635.0
+offset_bottom = 228.0
+text = "!!! WARNING !!!
+Are you sure you 
+want to delete save: "
+label_settings = SubResource("LabelSettings_3jcrr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SaveMenu/AreYouSure"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 334.0
+offset_right = 632.0
+offset_bottom = 427.0
+
+[node name="Yes" type="Button" parent="SaveMenu/AreYouSure/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3jcrr")
+text = "YES YES YES YES YES"
+
+[node name="No" type="Button" parent="SaveMenu/AreYouSure/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3jcrr")
+text = "NO NO NO NO NO NO"
 
 [node name="DebugBG" type="ColorRect" parent="."]
 layout_mode = 2
@@ -373,6 +414,8 @@ script = ExtResource("6_idohh")
 [connection signal="toggled" from="SettingsMenu/BoxContainer/DebugMode/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="value_changed" from="SettingsMenu/BoxContainer/CameraSensitivity/SensSlider" to="." method="_on_sens_slider_value_changed"]
 [connection signal="pressed" from="SaveMenu/HBoxContainer/NewSave" to="." method="_on_save_pressed"]
-[connection signal="pressed" from="SaveMenu/HBoxContainer/OverrideSave" to="." method="_on_override_save_pressed"]
 [connection signal="pressed" from="SaveMenu/HBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="SaveMenu/HBoxContainer/DeleteSave" to="." method="_on_delete_save_pressed"]
+[connection signal="pressed" from="SaveMenu/AreYouSure/HBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="SaveMenu/AreYouSure/HBoxContainer/No" to="." method="_on_no_pressed"]
 [connection signal="text_submitted" from="Console" to="Console" method="_on_text_submitted"]

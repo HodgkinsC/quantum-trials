@@ -72,17 +72,21 @@ func _on_sens_slider_value_changed(value: float) -> void:
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	Global.player.debug_mode = toggled_on
+	$Console.visible = toggled_on
+	$Debug.visible = toggled_on
+	$DebugBG.visible = toggled_on
 
 func _on_save_load_pressed() -> void:
 	$SaveMenu.visible = !$SaveMenu.visible
 
 func _on_save_pressed() -> void:
-	SaveSystem.ready_save(SaveSystem.savecount + 1)
+	var savenum = SaveSystem.savecount + 1
+	SaveSystem.ready_save(savenum)
 	SaveSystem.write_save()
 	var savefile = load("res://Scenes/SaveFile.tscn")
 	var instance = savefile.instantiate()
 	$SaveMenu/ScrollContainer/VBoxContainer.add_child.call_deferred(instance)
-	instance.file = SaveSystem.savecount
+	instance.file = savenum
 	instance.map = SaveSystem.read_save("current_map")
 	instance.date = SaveSystem.read_save("date")
 	instance.update()
@@ -100,6 +104,17 @@ func _on_load_pressed() -> void:
 	visible = false
 	changemenu(1)
 
+func _on_delete_save_pressed() -> void:
+	$SaveMenu/AreYouSure.visible = true
 
-func _on_override_save_pressed() -> void:
-	SaveSystem.write_save()
+func _on_yes_pressed() -> void:
+	if $SaveMenu/AreYouSure.visible:
+		SaveSystem.delete_save()
+		$SaveMenu/AreYouSure.visible = false
+		for file in $SaveMenu/ScrollContainer/VBoxContainer.get_children():
+			if file.file == SaveSystem.savenum:
+				file.queue_free()
+
+func _on_no_pressed() -> void:
+	if $SaveMenu/AreYouSure.visible:
+		$SaveMenu/AreYouSure.visible = false

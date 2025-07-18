@@ -11,12 +11,11 @@ func _ready() -> void:
 	if !DirAccess.open("user://saves"):
 		DirAccess.open("user://").make_dir("user://saves")
 	
-	savecount = DirAccess.open("user://saves").get_files().size()
-	
 	get_files()
 
 func get_files():
 	await get_tree().process_frame
+	savecount = DirAccess.open("user://saves").get_files().size()
 	print(DirAccess.open("user://saves").get_files())
 	var i = 0
 	for save in DirAccess.open("user://saves").get_files():
@@ -32,6 +31,7 @@ func get_files():
 		instance.update()
 
 func ready_save(savenumber):
+	savecount = DirAccess.open("user://saves").get_files().size()
 	savenum = savenumber
 	save_location = "user://saves/" + str(savenum) + "gmesave.dat"
 	save_nodes = get_tree().get_nodes_in_group("Persist")
@@ -61,18 +61,10 @@ func write_save():
 	file.store_var(Global.player.velocity)
 	file.store_line("`")
 	#Save the objects
-	file.store_line("objects")
-	file.store_64(save_nodes.size())
-	for node in save_nodes:
-		if node.is_in_group("Cube"):
-			for i : RigidBody3D in save_nodes:
-				file.store_line(i.name)
-				file.store_var(i.global_position)
-				file.store_var(i.global_rotation)
-				file.store_var(i.linear_velocity)
-				file.store_var(i.angular_velocity)
+	store_objects(file.get_position())
 	
 	file.close()
+	savecount = DirAccess.open("user://saves").get_files().size()
 
 func read_save(content):
 	var saveid
@@ -123,6 +115,21 @@ func read_save(content):
 	
 	file.close()
 
+func store_objects(pos):
+	var file = FileAccess.open(save_location, FileAccess.WRITE)
+	file.seek(pos)
+	file.store_line("objects")
+	file.store_64(save_nodes.size())
+	for node in save_nodes:
+		if node.is_in_group("Cube"):
+			for i : RigidBody3D in save_nodes:
+				file.store_line("GCube")
+				file.store_line(i.name)
+				file.store_var(i.global_position)
+				file.store_var(i.global_rotation)
+				file.store_var(i.linear_velocity)
+				file.store_var(i.angular_velocity)
+
 func get_objects(pos):
 	var file = FileAccess.open(save_location, FileAccess.READ)
 	file.seek(pos)
@@ -130,12 +137,17 @@ func get_objects(pos):
 	var objectsamt = file.get_64()
 	print("Amount of saved objects" + str(objectsamt))
 	for obj in objectsamt:
-		var cube = load("res://Scenes/PuzzleElements/Cube.tscn")
-		var instance : RigidBody3D = cube.instantiate()
-		Global.current_map.add_child.call_deferred(instance)
-		await get_tree().process_frame
-		instance.name = file.get_line()
-		instance.global_position = file.get_var()
-		instance.global_rotation = file.get_var()
-		instance.linear_velocity = file.get_var()
-		instance.angular_velocity = file.get_var()
+		var group = file.get_line()
+		if group == "GCube":
+			var cube = load("res://Scenes/PuzzleElements/Cube.tscn")
+			var instance : RigidBody3D = cube.instantiate()
+			Global.current_map.add_child.call_deferred(instance)
+			await get_tree().process_frame
+			instance.name = file.get_line()
+			instance.global_position = file.get_var()
+			instance.global_rotation = file.get_var()
+			instance.linear_velocity = file.get_var()
+			instance.angular_velocity = file.get_var()
+
+func delete_save():
+	DirAccess.remove_absolute(save_location)

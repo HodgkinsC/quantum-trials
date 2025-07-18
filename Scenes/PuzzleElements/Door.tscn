@@ -101,7 +101,7 @@ size = Vector3(1, 2, 0.075)
 [sub_resource type="BoxShape3D" id="BoxShape3D_mw28t"]
 size = Vector3(2, 2, 0.075)
 
-[node name="Door" type="Node3D"]
+[node name="Door" type="Node3D" groups=["Door"]]
 script = ExtResource("1_38ogf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
