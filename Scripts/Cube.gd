@@ -1,4 +1,4 @@
-extends RigidBody3D
+extends Node3D
 
 @onready var mesh = $Mesh
 @export var locked : bool
