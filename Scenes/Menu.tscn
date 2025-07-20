@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://78nastiglwp7"]
+[gd_scene load_steps=25 format=3 uid="uid://78nastiglwp7"]
 
 [ext_resource type="Script" uid="uid://ow2fiuxg28t3" path="res://Scripts/Menu.gd" id="1_kld02"]
 [ext_resource type="Shader" uid="uid://b3du4l67beylj" path="res://Assets/Materials/Blur.gdshader" id="2_s2c3o"]
@@ -6,6 +6,8 @@
 [ext_resource type="Shader" uid="uid://dl7l55kt8v6f" path="res://Assets/Materials/Vignette.gdshader" id="3_ma218"]
 [ext_resource type="FontFile" uid="uid://nbfn5ru7msph" path="res://Assets/Screener W01 Regular.ttf" id="3_s2c3o"]
 [ext_resource type="Script" uid="uid://begbqr0ipkp26" path="res://Scripts/Terminal.gd" id="6_idohh"]
+[ext_resource type="AudioStream" uid="uid://bwrtixqpxfyjq" path="res://Assets/Sounds/sound_ui_buttonrollover.wav" id="7_aobxe"]
+[ext_resource type="AudioStream" uid="uid://cfexoydajyn3m" path="res://Assets/Sounds/sound_ui_buttonclickrelease.wav" id="9_sjh0l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ma218"]
 shader = ExtResource("2_s2c3o")
@@ -25,10 +27,21 @@ font_size = 110
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bq36i"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_wfhf6"]
-font_size = 35
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aobxe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aobxe"]
+font_size = 20
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idohh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ab40c"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_sjh0l"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_wfhf6"]
+font_size = 35
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfhf6"]
 
@@ -231,44 +244,114 @@ offset_bottom = 480.0
 size_flags_horizontal = 3
 color = Color(0.0936694, 0.0936694, 0.0936694, 0.768627)
 
-[node name="BoxContainer" type="VBoxContainer" parent="SettingsMenu"]
+[node name="TabContainer" type="TabContainer" parent="SettingsMenu"]
 layout_mode = 0
-offset_right = 640.0
-offset_bottom = 480.0
+offset_left = 11.0
+offset_right = 624.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 21
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_aobxe")
+current_tab = 0
 
-[node name="Settings" type="Label" parent="SettingsMenu/BoxContainer"]
+[node name="General" type="VBoxContainer" parent="SettingsMenu/TabContainer"]
 layout_mode = 2
-text = "Settings"
-label_settings = SubResource("LabelSettings_wfhf6")
-horizontal_alignment = 1
+metadata/_tab_index = 0
 
-[node name="DebugMode" type="Label" parent="SettingsMenu/BoxContainer"]
+[node name="DebugMode" type="Label" parent="SettingsMenu/TabContainer/General"]
 layout_mode = 2
 text = "Debug Mode (Basically sv_cheats)"
+label_settings = SubResource("LabelSettings_aobxe")
 
-[node name="CheckButton" type="CheckButton" parent="SettingsMenu/BoxContainer/DebugMode"]
+[node name="CheckButton" type="CheckButton" parent="SettingsMenu/TabContainer/General/DebugMode"]
 layout_mode = 0
-offset_right = 53.0
+offset_left = -13.0
+offset_right = 613.0
 offset_bottom = 31.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_idohh")
 button_pressed = true
 text = "                                                                                                                                           "
 flat = true
 
-[node name="CameraSensitivity" type="Label" parent="SettingsMenu/BoxContainer"]
+[node name="CameraSensitivity" type="Label" parent="SettingsMenu/TabContainer/General"]
 layout_mode = 2
 text = "Camera Sensitivity"
+label_settings = SubResource("LabelSettings_ab40c")
 
-[node name="SensSlider" type="HSlider" parent="SettingsMenu/BoxContainer/CameraSensitivity"]
+[node name="SensSlider" type="HSlider" parent="SettingsMenu/TabContainer/General/CameraSensitivity"]
 layout_mode = 0
-offset_left = 150.0
+offset_left = 307.0
 offset_top = 7.0
-offset_right = 619.0
+offset_right = 613.0
 offset_bottom = 23.0
 min_value = 1.0
 max_value = 20.0
 step = 0.1
 value = 6.0
+
+[node name="Audio" type="VBoxContainer" parent="SettingsMenu/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MasterAudio" type="Label" parent="SettingsMenu/TabContainer/Audio"]
+layout_mode = 2
+text = "Master"
+label_settings = SubResource("LabelSettings_sjh0l")
+
+[node name="MasterSlider" type="HSlider" parent="SettingsMenu/TabContainer/Audio/MasterAudio"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 7.0
+offset_right = 619.0
+offset_bottom = 23.0
+max_value = 1.0
+step = 0.001
+value = 0.75
+
+[node name="GameAudio" type="Label" parent="SettingsMenu/TabContainer/Audio"]
+layout_mode = 2
+text = "Game"
+label_settings = SubResource("LabelSettings_sjh0l")
+
+[node name="GameSlider" type="HSlider" parent="SettingsMenu/TabContainer/Audio/GameAudio"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 7.0
+offset_right = 619.0
+offset_bottom = 23.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="Music" type="Label" parent="SettingsMenu/TabContainer/Audio"]
+layout_mode = 2
+text = "Music"
+label_settings = SubResource("LabelSettings_sjh0l")
+
+[node name="MusicSlider" type="HSlider" parent="SettingsMenu/TabContainer/Audio/Music"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 7.0
+offset_right = 619.0
+offset_bottom = 23.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="UI" type="Label" parent="SettingsMenu/TabContainer/Audio"]
+layout_mode = 2
+text = "UI"
+label_settings = SubResource("LabelSettings_sjh0l")
+
+[node name="UISlider" type="HSlider" parent="SettingsMenu/TabContainer/Audio/UI"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 7.0
+offset_right = 619.0
+offset_bottom = 23.0
+max_value = 1.0
+step = 0.001
+value = 1.0
 
 [node name="SaveMenu" type="Control" parent="."]
 visible = false
@@ -406,13 +489,25 @@ placeholder_text = "Type a command in here"
 flat = true
 script = ExtResource("6_idohh")
 
+[node name="MenuButtonHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_aobxe")
+bus = &"UI"
+
+[node name="MenuButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_sjh0l")
+bus = &"UI"
+
 [connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Save_Load" to="." method="_on_save_load_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="toggled" from="SettingsMenu/BoxContainer/DebugMode/CheckButton" to="." method="_on_check_button_toggled"]
-[connection signal="value_changed" from="SettingsMenu/BoxContainer/CameraSensitivity/SensSlider" to="." method="_on_sens_slider_value_changed"]
+[connection signal="toggled" from="SettingsMenu/TabContainer/General/DebugMode/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_changed" from="SettingsMenu/TabContainer/General/CameraSensitivity/SensSlider" to="." method="_on_sens_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/TabContainer/Audio/MasterAudio/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/TabContainer/Audio/GameAudio/GameSlider" to="." method="_on_game_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/TabContainer/Audio/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsMenu/TabContainer/Audio/UI/UISlider" to="." method="_on_ui_slider_value_changed"]
 [connection signal="pressed" from="SaveMenu/HBoxContainer/NewSave" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="SaveMenu/HBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="SaveMenu/HBoxContainer/DeleteSave" to="." method="_on_delete_save_pressed"]

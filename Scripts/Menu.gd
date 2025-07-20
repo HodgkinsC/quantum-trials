@@ -13,7 +13,16 @@ func _ready() -> void:
 	if Global.current_map_name == "menu":
 		await get_tree().process_frame
 		changemenu(0)
-	
+	for button in get_children():
+		if button is Button:
+			button.connect("mouse_entered", mousehover)
+			button.connect("pressed", mouseup)
+
+func mouseup():
+	$MenuButtonClick.play()
+
+func mousehover():
+	$MenuButtonHover.play()
 
 func changemenu(which : int):
 	if which == 0:
@@ -25,6 +34,9 @@ func changemenu(which : int):
 		$Title.visible = true
 		$"New Game".visible = true
 		$Resume.visible = false
+		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").current = true
+		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").visible = true
+		get_tree().root.get_node("/root/SceneManager/Skybox/SkyboxStation").visible = true
 	else:
 		in_game = true
 		Global.player.disabled = false
@@ -32,6 +44,9 @@ func changemenu(which : int):
 		$Title.visible = false
 		$"New Game".visible = false
 		$Resume.visible = true
+		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").current = false
+		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").visible = false
+		get_tree().root.get_node("/root/SceneManager/Skybox/SkyboxStation").visible = false
 
 func _process(_delta: float) -> void:
 	process_debug()
@@ -118,3 +133,17 @@ func _on_yes_pressed() -> void:
 func _on_no_pressed() -> void:
 	if $SaveMenu/AreYouSure.visible:
 		$SaveMenu/AreYouSure.visible = false
+
+#//-- Audio --\\#
+
+func _on_master_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(value))
+
+func _on_game_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Game"), linear_to_db(value))
+
+func _on_music_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value))
+
+func _on_ui_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("UI"), linear_to_db(value))

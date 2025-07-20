@@ -31,8 +31,8 @@ SaveSystem="*res://Scripts/SaveSystem.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/window_width_override=640
-window/size/window_height_override=480
+window/size/window_width_override=1080
+window/size/window_height_override=608
 window/stretch/mode="viewport"
 
 [dotnet]
