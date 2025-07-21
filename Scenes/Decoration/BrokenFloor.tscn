@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://85bhe7spa2nd"]
 
-[ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_b038h"]
+[ext_resource type="Material" uid="uid://dbaixt0ovfbub" path="res://Assets/Materials/WoodFloor.tres" id="1_b038h"]
 [ext_resource type="Material" uid="uid://segypnc7ytsf" path="res://Assets/Materials/Carpet.tres" id="2_b038h"]
 
 [node name="BrokenFloor" type="Node3D"]

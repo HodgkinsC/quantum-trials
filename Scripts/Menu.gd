@@ -36,7 +36,7 @@ func changemenu(which : int):
 		$Resume.visible = false
 		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").current = true
 		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").visible = true
-		get_tree().root.get_node("/root/SceneManager/Skybox/SkyboxStation").visible = true
+		get_tree().root.get_node("/root/SceneManager/SkyboxStation").visible = true
 	else:
 		in_game = true
 		Global.player.disabled = false
@@ -46,7 +46,7 @@ func changemenu(which : int):
 		$Resume.visible = true
 		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").current = false
 		get_tree().root.get_node("/root/SceneManager/Skybox/StationCam").visible = false
-		get_tree().root.get_node("/root/SceneManager/Skybox/SkyboxStation").visible = false
+		get_tree().root.get_node("/root/SceneManager/SkyboxStation").visible = false
 
 func _process(_delta: float) -> void:
 	process_debug()

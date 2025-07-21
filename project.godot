@@ -41,8 +41,12 @@ project/assembly_name="UnnamedProject"
 
 [editor]
 
-movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials 1.avi"
-movie_writer/fps=30
+movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials 3 super speed.avi"
+movie_writer/fps=120
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/csg_converter/plugin.cfg")
 
 [global_group]
 
