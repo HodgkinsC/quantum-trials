@@ -9,7 +9,7 @@ var grabbed_item : RigidBody3D
 var pull_power = 4
 var coll : Node3D
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	
 	raycast.force_raycast_update()
 	coll = raycast.get_collider()
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		if coll and coll.is_in_group("Interactable"):
 			coll.use.emit()
 	if grabbed_item: 
-		grabbed_item.set_linear_velocity((grabPoint.global_position - grabbed_item.global_position) * pull_power)
+		grabbed_item.set_linear_velocity((grabPoint.global_position - grabbed_item.global_position) * pull_power * delta * 50)
 		grabbed_item.global_rotation.y = move_toward(grabbed_item.global_rotation.y, %Camera3D.global_rotation.y, delta*7)
 		grabbed_item.global_rotation.x = move_toward(grabbed_item.global_rotation.x, 0, delta*7)
 		grabbed_item.global_rotation.z = move_toward(grabbed_item.global_rotation.z, 0, delta*7)
