@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://30qufw5s2dgm"]
+[gd_scene load_steps=10 format=3 uid="uid://30qufw5s2dgm"]
 
 [ext_resource type="Script" uid="uid://bv46265ed7uty" path="res://Scripts/Player.gd" id="1_bfmnv"]
 [ext_resource type="Texture2D" uid="uid://c5w4sfl4y270h" path="res://Assets/Textures/Spooky.png" id="1_jlsf4"]
@@ -18,6 +18,9 @@ height = 1.75
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8j2mw"]
 albedo_texture = ExtResource("1_jlsf4")
 texture_filter = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_dewec"]
+font_size = 30
 
 [node name="Player" type="CharacterBody3D" groups=["Element", "Player"]]
 collision_layer = 4
@@ -93,3 +96,18 @@ collision_mask = 5
 [node name="Menu" parent="." instance=ExtResource("4_dewec")]
 visible = false
 in_game = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 149.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 40.0
+text = "FPS: 000.0"
+label_settings = SubResource("LabelSettings_dewec")

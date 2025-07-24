@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var fpscounter = $CanvasLayer/ColorRect/Label
+
 var debug_mode = true
 var disabled = false
 
@@ -276,3 +278,5 @@ func _physics_process(delta):
 			_snap_down_to_stairs_check()
 	
 	_slide_camera_smooth_back_to_origin(delta)
+	
+	fpscounter.text = "FPS: " + str(Engine.get_frames_per_second())
