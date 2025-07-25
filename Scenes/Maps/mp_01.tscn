@@ -1,4 +1,4 @@
-[gd_scene load_steps=229 format=4 uid="uid://v6cssdynuenx"]
+[gd_scene load_steps=233 format=4 uid="uid://v6cssdynuenx"]
 
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="1_4x1g6"]
 [ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="2_36yvi"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c71xmc47l5bwn" path="res://Scenes/PuzzleElements/AutoDoor.tscn" id="7_teifk"]
 [ext_resource type="Script" uid="uid://cheg3ddkw364t" path="res://Scripts/LevelEndTrigger.gd" id="10_1gk0d"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="12_wnig7"]
+[ext_resource type="Script" uid="uid://b8uh6frj4t0tr" path="res://Scripts/TutorialPopup.gd" id="13_nhmdo"]
+[ext_resource type="FontFile" uid="uid://nbfn5ru7msph" path="res://Assets/Screener W01 Regular.ttf" id="14_air3a"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_61mjk"]
 data = PackedVector3Array(-7, -0.5, 2, -7, -0.5, -2, -7, 0.5, -2, 7, -0.5, -2, -7, -0.5, -2, -7, -0.5, 2, -7, 0.5, -2, -7, -0.5, -2, 7, -0.5, -2, -7, 0.5, -2, -7, 0.5, 2, -7, -0.5, 2, -7, -0.5, 2, -7, 0.5, 2, 7, 0.5, 2, 7, 0.5, 2, -7, 0.5, 2, -7, 0.5, -2, -7, -0.5, 2, 7, -0.5, 2, 7, -0.5, -2, 7, 0.5, 2, 7, -0.5, 2, -7, -0.5, 2, 7, -0.5, -2, 7, -0.5, 2, 7, 0.5, 2, 7, -0.5, -2, 7, 0.5, -2, -7, 0.5, -2, -7, 0.5, -2, 7, 0.5, -2, 7, 0.5, 2, 7, 0.5, 2, 7, 0.5, -2, 7, -0.5, -2)
@@ -1533,6 +1535,16 @@ _surfaces = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_teifk"]
 size = Vector3(4, 3, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wnig7"]
+size = Vector3(3.875, 2.75, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nhmdo"]
+font = ExtResource("14_air3a")
+font_size = 50
+font_color = Color(0.933333, 1, 0, 1)
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Mp01" type="Node3D"]
 
 [node name="Environment" type="Node3D" parent="."]
@@ -2720,4 +2732,38 @@ shape = SubResource("BoxShape3D_teifk")
 [node name="SpawnPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.5, 0)
 
+[node name="Tutorial Popup" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("13_nhmdo")
+screentime = 10
+text = "Press \"E\" to pick up a cube."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tutorial Popup"]
+shape = SubResource("BoxShape3D_wnig7")
+
+[node name="Control" type="Control" parent="Tutorial Popup"]
+visible = false
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+
+[node name="Label" type="Label" parent="Tutorial Popup/Control"]
+layout_direction = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_nhmdo")
+
 [connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Tutorial Popup" to="Tutorial Popup" method="_on_body_entered"]
