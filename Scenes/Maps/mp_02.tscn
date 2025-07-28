@@ -1,6 +1,7 @@
-[gd_scene load_steps=301 format=4 uid="uid://cijo1i123438v"]
+[gd_scene load_steps=310 format=4 uid="uid://cijo1i123438v"]
 
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="1_fi4a4"]
+[ext_resource type="Material" uid="uid://b7oxajmbsuewj" path="res://Assets/Materials/SteelPlate.tres" id="2_ar717"]
 [ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="2_icwpk"]
 [ext_resource type="PackedScene" uid="uid://blaf5hsr7fi3w" path="res://Scenes/Decoration/Desk.tscn" id="2_usjvr"]
 [ext_resource type="PackedScene" uid="uid://cved14fdsuvgy" path="res://Scenes/WarningLight.tscn" id="3_18a4q"]
@@ -16,10 +17,11 @@
 [ext_resource type="Script" uid="uid://xfhbgolj4j1d" path="res://Scripts/LockedDoor.gd" id="9_ghcck"]
 [ext_resource type="Material" uid="uid://c16aii8xf5t6p" path="res://Assets/Materials/OfficeGlass.tres" id="9_icwpk"]
 [ext_resource type="PackedScene" uid="uid://85bhe7spa2nd" path="res://Scenes/Decoration/BrokenFloor.tscn" id="12_tgbo8"]
+[ext_resource type="Script" uid="uid://bua53pndy0cvp" path="res://Scripts/Decoration/BouncingLogo.gd" id="14_wyolf"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="15_2vgpe"]
 [ext_resource type="Material" uid="uid://bgiqtp2xtsj7i" path="res://Assets/Materials/SteelQuant.tres" id="15_cwci0"]
+[ext_resource type="Texture2D" uid="uid://c2j6c58ohcvon" path="res://icon.svg" id="15_pr6r3"]
 [ext_resource type="Material" uid="uid://segypnc7ytsf" path="res://Assets/Materials/Carpet.tres" id="15_yrw3h"]
-[ext_resource type="PackedScene" uid="uid://bvqbdard4xqcy" path="res://Scenes/Decoration/Monitor.tscn" id="17_cwci0"]
 [ext_resource type="Material" uid="uid://ceh8bqbuio14o" path="res://Assets/Materials/Ceiling Tiles.tres" id="17_mgc1k"]
 [ext_resource type="Script" uid="uid://b8uh6frj4t0tr" path="res://Scripts/TutorialPopup.gd" id="19_mgc1k"]
 [ext_resource type="FontFile" uid="uid://nbfn5ru7msph" path="res://Assets/Screener W01 Regular.ttf" id="20_qwt04"]
@@ -175,6 +177,7 @@ _surfaces = [{
 "aabb": AABB(-5.5, -0.05, -2, 11, 0.1, 4),
 "attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
 "format": 34359738391,
+"material": ExtResource("2_ar717"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 36,
@@ -189,6 +192,7 @@ _surfaces = [{
 "aabb": AABB(-8.5, -0.05, -2, 17, 0.1, 4),
 "attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
 "format": 34359738391,
+"material": ExtResource("3_bxoy1"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 36,
@@ -1247,9 +1251,6 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AACgvwAAkL/NzEw9AACgvwAAkL/NzEy9AACgvwAAkD/NzEy9AACgPwAAkL/NzEy9AACgvwAAkL/NzEy9AACgvwAAkL/NzEw9AACgvwAAkD/NzEy9AACgvwAAkL/NzEy9AACgPwAAkL/NzEy9AACgvwAAkD/NzEy9AACgvwAAkD/NzEw9AACgvwAAkL/NzEw9AACgvwAAkL/NzEw9AACgvwAAkD/NzEw9AACgPwAAkD/NzEw9AACgPwAAkD/NzEw9AACgvwAAkD/NzEw9AACgvwAAkD/NzEy9AACgvwAAkL/NzEw9AACgPwAAkL/NzEw9AACgPwAAkL/NzEy9AACgPwAAkD/NzEw9AACgPwAAkL/NzEw9AACgvwAAkL/NzEw9AACgPwAAkL/NzEy9AACgPwAAkL/NzEw9AACgPwAAkD/NzEw9AACgPwAAkL/NzEy9AACgPwAAkD/NzEy9AACgvwAAkD/NzEy9AACgvwAAkD/NzEy9AACgPwAAkD/NzEy9AACgPwAAkD/NzEw9AACgPwAAkD/NzEw9AACgPwAAkD/NzEy9AACgPwAAkL/NzEy9AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_cwci0"]
-size = Vector3(0.986328, 1.75, 0.35)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwt04"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cwci0"]
@@ -1329,6 +1330,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("DoSUv6J5pbwGZPk/DoSUv6J5pbwGZPm/DoSUv6J5pTwGZPm/DoSUP6J5pbwGZPm/DoSUv6J5pbwGZPm/DoSUv6J5pbwGZPk/DoSUv6J5pTwGZPm/DoSUv6J5pbwGZPm/DoSUP6J5pbwGZPm/DoSUv6J5pTwGZPm/DoSUv6J5pTwGZPk/DoSUv6J5pbwGZPk/DoSUv6J5pbwGZPk/DoSUv6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUv6J5pTwGZPk/DoSUv6J5pTwGZPm/DoSUv6J5pbwGZPk/DoSUP6J5pbwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pTwGZPk/DoSUP6J5pbwGZPk/DoSUv6J5pbwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pbwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pTwGZPm/DoSUv6J5pTwGZPm/DoSUv6J5pTwGZPm/DoSUP6J5pTwGZPm/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPm/DoSUP6J5pbwGZPm/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="BoxMesh" id="BoxMesh_b5apk"]
+size = Vector3(0.1, 0.4, 0.7)
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_62xil"]
 data = PackedVector3Array(-0.7271, -1, 0.025, -0.7271, -1, -0.025, -0.7271, 1, -0.025, 0.7271, -1, -0.025, -0.7271, -1, -0.025, -0.7271, -1, 0.025, -0.7271, 1, -0.025, -0.7271, -1, -0.025, 0.7271, -1, -0.025, -0.7271, 1, -0.025, -0.7271, 1, 0.025, -0.7271, -1, 0.025, -0.7271, -1, 0.025, -0.7271, 1, 0.025, 0.7271, 1, 0.025, 0.7271, 1, 0.025, -0.7271, 1, 0.025, -0.7271, 1, -0.025, -0.7271, -1, 0.025, 0.7271, -1, 0.025, 0.7271, -1, -0.025, 0.7271, 1, 0.025, 0.7271, -1, 0.025, -0.7271, -1, 0.025, 0.7271, -1, -0.025, 0.7271, -1, 0.025, 0.7271, 1, 0.025, 0.7271, -1, -0.025, 0.7271, 1, -0.025, -0.7271, 1, -0.025, -0.7271, 1, -0.025, 0.7271, 1, -0.025, 0.7271, 1, 0.025, 0.7271, 1, 0.025, 0.7271, 1, -0.025, 0.7271, -1, -0.025)
 
@@ -1401,6 +1405,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AACgvwAAkL/NzEw9AACgvwAAkL/NzEy9AACgvwAAkD/NzEy9AACgPwAAkL/NzEy9AACgvwAAkL/NzEy9AACgvwAAkL/NzEw9AACgvwAAkD/NzEy9AACgvwAAkL/NzEy9AACgPwAAkL/NzEy9AACgvwAAkD/NzEy9AACgvwAAkD/NzEw9AACgvwAAkL/NzEw9AACgvwAAkL/NzEw9AACgvwAAkD/NzEw9AACgPwAAkD/NzEw9AACgPwAAkD/NzEw9AACgvwAAkD/NzEw9AACgvwAAkD/NzEy9AACgvwAAkL/NzEw9AACgPwAAkL/NzEw9AACgPwAAkL/NzEy9AACgPwAAkD/NzEw9AACgPwAAkL/NzEw9AACgvwAAkL/NzEw9AACgPwAAkL/NzEy9AACgPwAAkL/NzEw9AACgPwAAkD/NzEw9AACgPwAAkL/NzEy9AACgPwAAkD/NzEy9AACgvwAAkD/NzEy9AACgvwAAkD/NzEy9AACgPwAAkD/NzEy9AACgPwAAkD/NzEw9AACgPwAAkD/NzEw9AACgPwAAkD/NzEy9AACgPwAAkL/NzEy9AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwci0"]
+size = Vector3(0.986328, 1.75, 0.35)
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7bbud"]
 data = PackedVector3Array(-1.1603, -0.0202, 1.9484, -1.1603, -0.0202, -1.9484, -1.1603, 0.0202, -1.9484, 1.1603, -0.0202, -1.9484, -1.1603, -0.0202, -1.9484, -1.1603, -0.0202, 1.9484, -1.1603, 0.0202, -1.9484, -1.1603, -0.0202, -1.9484, 1.1603, -0.0202, -1.9484, -1.1603, 0.0202, -1.9484, -1.1603, 0.0202, 1.9484, -1.1603, -0.0202, 1.9484, -1.1603, -0.0202, 1.9484, -1.1603, 0.0202, 1.9484, 1.1603, 0.0202, 1.9484, 1.1603, 0.0202, 1.9484, -1.1603, 0.0202, 1.9484, -1.1603, 0.0202, -1.9484, -1.1603, -0.0202, 1.9484, 1.1603, -0.0202, 1.9484, 1.1603, -0.0202, -1.9484, 1.1603, 0.0202, 1.9484, 1.1603, -0.0202, 1.9484, -1.1603, -0.0202, 1.9484, 1.1603, -0.0202, -1.9484, 1.1603, -0.0202, 1.9484, 1.1603, 0.0202, 1.9484, 1.1603, -0.0202, -1.9484, 1.1603, 0.0202, -1.9484, -1.1603, 0.0202, -1.9484, -1.1603, 0.0202, -1.9484, 1.1603, 0.0202, -1.9484, 1.1603, 0.0202, 1.9484, 1.1603, 0.0202, 1.9484, 1.1603, 0.0202, -1.9484, 1.1603, -0.0202, -1.9484)
 
@@ -1414,6 +1421,9 @@ _surfaces = [{
 "vertex_count": 36,
 "vertex_data": PackedByteArray("DoSUv6J5pbwGZPk/DoSUv6J5pbwGZPm/DoSUv6J5pTwGZPm/DoSUP6J5pbwGZPm/DoSUv6J5pbwGZPm/DoSUv6J5pbwGZPk/DoSUv6J5pTwGZPm/DoSUv6J5pbwGZPm/DoSUP6J5pbwGZPm/DoSUv6J5pTwGZPm/DoSUv6J5pTwGZPk/DoSUv6J5pbwGZPk/DoSUv6J5pbwGZPk/DoSUv6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUv6J5pTwGZPk/DoSUv6J5pTwGZPm/DoSUv6J5pbwGZPk/DoSUP6J5pbwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pTwGZPk/DoSUP6J5pbwGZPk/DoSUv6J5pbwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pbwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pTwGZPm/DoSUv6J5pTwGZPm/DoSUv6J5pTwGZPm/DoSUP6J5pTwGZPm/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPm/DoSUP6J5pbwGZPm/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_docfe"]
+points = PackedVector3Array(-0.05, -0.2, -0.35, 0.05, -0.2, -0.35, -0.05, -0.2, 0.349932, -0.05, 0.2, -0.35, 0.05, 0.2, -0.35, 0.05, -0.2, 0.349932, -0.05, 0.2, 0.349932, 0.05, 0.2, 0.349932)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_p078n"]
 data = PackedVector3Array(-0.7271, -1, 0.025, -0.7271, -1, -0.025, -0.7271, 1, -0.025, 0.7271, -1, -0.025, -0.7271, -1, -0.025, -0.7271, -1, 0.025, -0.7271, 1, -0.025, -0.7271, -1, -0.025, 0.7271, -1, -0.025, -0.7271, 1, -0.025, -0.7271, 1, 0.025, -0.7271, -1, 0.025, -0.7271, -1, 0.025, -0.7271, 1, 0.025, 0.7271, 1, 0.025, 0.7271, 1, 0.025, -0.7271, 1, 0.025, -0.7271, 1, -0.025, -0.7271, -1, 0.025, 0.7271, -1, 0.025, 0.7271, -1, -0.025, 0.7271, 1, 0.025, 0.7271, -1, 0.025, -0.7271, -1, 0.025, 0.7271, -1, -0.025, 0.7271, -1, 0.025, 0.7271, 1, 0.025, 0.7271, -1, -0.025, 0.7271, 1, -0.025, -0.7271, 1, -0.025, -0.7271, 1, -0.025, 0.7271, 1, -0.025, 0.7271, 1, 0.025, 0.7271, 1, 0.025, 0.7271, 1, -0.025, 0.7271, -1, -0.025)
@@ -1487,6 +1497,26 @@ _surfaces = [{
 "vertex_data": PackedByteArray("DoSUv6J5pbwGZPk/DoSUv6J5pbwGZPm/DoSUv6J5pTwGZPm/DoSUP6J5pbwGZPm/DoSUv6J5pbwGZPm/DoSUv6J5pbwGZPk/DoSUv6J5pTwGZPm/DoSUv6J5pbwGZPm/DoSUP6J5pbwGZPm/DoSUv6J5pTwGZPm/DoSUv6J5pTwGZPk/DoSUv6J5pbwGZPk/DoSUv6J5pbwGZPk/DoSUv6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUv6J5pTwGZPk/DoSUv6J5pTwGZPm/DoSUv6J5pbwGZPk/DoSUP6J5pbwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pTwGZPk/DoSUP6J5pbwGZPk/DoSUv6J5pbwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pbwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pbwGZPm/DoSUP6J5pTwGZPm/DoSUv6J5pTwGZPm/DoSUv6J5pTwGZPm/DoSUP6J5pTwGZPm/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPk/DoSUP6J5pTwGZPm/DoSUP6J5pbwGZPm/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_docfe"]
+viewport_path = NodePath("Environment/Office05/Monitor/Monitor/Screen/SubViewport")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqyv0"]
+size = Vector2(128, 128)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ar717"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wyolf"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pr6r3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nkfcu"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8e6h"]
+size = Vector3(0.1, 0.4, 0.7)
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_fi4a4"]
 viewport_path = NodePath("Environment/Cubes/Sprite3D/SubViewport")
 
@@ -1511,9 +1541,6 @@ size = Vector3(2.43445, 1.12805, 0.35)
 material = SubResource("StandardMaterial3D_docfe")
 size = Vector3(2.38, 0.03, 0.35)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_di2bw"]
-data = PackedVector3Array(0, 0, 0, 0, 0, -0.03, 0, 1, -0.03, 1, 0, 0, 1, 0, -0.03, 0, 0, -0.03, 0, 0, -0.03, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, -0.03, 1, 1, -0.03, 0, 1, -0.03, 0, 0, -0.03, 1.5, 0.5, -0.03, 0, 1, -0.03, 0, 1, 0, 0, 0, 0, 1.5, 0.5, 0, 0, 0, 0, 0, 1, 0, 1, 1, -0.03, 1, 1, 0, 0, 1, 0, 0, 0, -0.03, 1, 0, -0.03, 1.5, 0.5, -0.03, 1.5, 0.5, 0, 1.5, 0.5, -0.03, 1, 0, -0.03, 1.5, 0.5, 0, 1, 0, 0, 0, 0, 0, 1, 0, -0.03, 1, 0, 0, 1.5, 0.5, 0, 1.5, 0.5, -0.03, 1, 1, -0.03, 0, 1, -0.03, 1, 1, 0, 1, 1, -0.03, 1.5, 0.5, -0.03, 0, 1, 0, 1, 1, 0, 1.5, 0.5, 0, 1.5, 0.5, -0.03, 1.5, 0.5, 0, 1, 1, 0)
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_y0vnh"]
 _surfaces = [{
 "aabb": AABB(0, 0, -0.03, 1.5, 1, 0.03),
@@ -1530,9 +1557,6 @@ viewport_path = NodePath("Environment/OfficeSign/Sprite3D/SubViewport")
 
 [sub_resource type="LabelSettings" id="LabelSettings_yrw3h"]
 font_size = 35
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_csoyq"]
-data = PackedVector3Array(0, 0, 0, 0, 0, -0.03, 0, 1, -0.03, 0, 0, -0.03, 0, 0, 0, 2, 0, 0, 2, 1, -0.03, 0, 1, -0.03, 0, 0, -0.03, 0, 1, 0, 0, 1, -0.03, 2, 1, -0.03, 0, 1, -0.03, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 1, 0, 2, 0, 0, 2, 0, -0.03, 0, 0, -0.03, 0, 0, -0.03, 2, 0, -0.03, 2, 1, -0.03, 2, 1, 0, 2, 0, 0, 0, 0, 0, 2, 0, -0.03, 2, 0, 0, 2, 1, 0, 2, 1, 0, 2, 1, -0.03, 2, 0, -0.03, 2, 1, -0.03, 2, 1, 0, 0, 1, 0)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_advep"]
 _surfaces = [{
@@ -1551,8 +1575,8 @@ viewport_path = NodePath("Environment/TestingSign/Sprite3D/SubViewport")
 [sub_resource type="LabelSettings" id="LabelSettings_mgc1k"]
 font_size = 35
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_igcd8"]
-data = PackedVector3Array(0, 0, 0, 0, 0, -0.03, 0, 1, -0.03, 1, 0, 0, 1, 0, -0.03, 0, 0, -0.03, 0, 0, -0.03, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, -0.03, 1, 1, -0.03, 0, 1, -0.03, 0, 0, -0.03, 1.5, 0.5, -0.03, 0, 1, -0.03, 0, 1, 0, 0, 0, 0, 1.5, 0.5, 0, 0, 0, 0, 0, 1, 0, 1, 1, -0.03, 1, 1, 0, 0, 1, 0, 0, 0, -0.03, 1, 0, -0.03, 1.5, 0.5, -0.03, 1.5, 0.5, 0, 1.5, 0.5, -0.03, 1, 0, -0.03, 1.5, 0.5, 0, 1, 0, 0, 0, 0, 0, 1, 0, -0.03, 1, 0, 0, 1.5, 0.5, 0, 1.5, 0.5, -0.03, 1, 1, -0.03, 0, 1, -0.03, 1, 1, 0, 1, 1, -0.03, 1.5, 0.5, -0.03, 0, 1, 0, 1, 1, 0, 1.5, 0.5, 0, 1.5, 0.5, -0.03, 1.5, 0.5, 0, 1, 1, 0)
+[sub_resource type="ViewportTexture" id="ViewportTexture_ar717"]
+viewport_path = NodePath("Environment/OfficeSign2/Sprite3D/SubViewport")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_st81x"]
 _surfaces = [{
@@ -1957,7 +1981,7 @@ transform = Transform3D(0.995779, -0.0917797, -1.49948e-17, 0.0917797, 0.995779,
 shape = SubResource("ConcavePolygonShape3D_sslg8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Floor"]
-material_override = ExtResource("1_fi4a4")
+material_override = ExtResource("2_ar717")
 mesh = SubResource("ArrayMesh_h83se")
 
 [node name="Floor4" type="StaticBody3D" parent="Environment/LongerHall"]
@@ -1967,7 +1991,7 @@ transform = Transform3D(0.931259, -0.364357, -1.49948e-17, 0.364357, 0.931259, 3
 shape = SubResource("ConcavePolygonShape3D_38ycn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Floor4"]
-material_override = ExtResource("1_fi4a4")
+material_override = ExtResource("2_ar717")
 mesh = SubResource("ArrayMesh_uolln")
 
 [node name="Floor5" type="StaticBody3D" parent="Environment/LongerHall"]
@@ -1977,7 +2001,7 @@ transform = Transform3D(0.69884, -0.715278, -1.49948e-17, 0.715278, 0.69884, 3.2
 shape = SubResource("ConcavePolygonShape3D_j4anr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Floor5"]
-material_override = ExtResource("1_fi4a4")
+material_override = ExtResource("2_ar717")
 mesh = SubResource("ArrayMesh_t6h5b")
 
 [node name="Floor3" type="StaticBody3D" parent="Environment/LongerHall"]
@@ -1987,7 +2011,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -2.795, 0)
 shape = SubResource("ConcavePolygonShape3D_m2enk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Floor3"]
-material_override = ExtResource("1_fi4a4")
 mesh = SubResource("ArrayMesh_7chhm")
 
 [node name="Floor8" type="StaticBody3D" parent="Environment/LongerHall"]
@@ -1997,7 +2020,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, -2.795, 0)
 shape = SubResource("ConcavePolygonShape3D_garl7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Floor8"]
-material_override = ExtResource("1_fi4a4")
 mesh = SubResource("ArrayMesh_8yyme")
 
 [node name="Floor10" type="StaticBody3D" parent="Environment/LongerHall"]
@@ -2779,10 +2801,6 @@ mesh = SubResource("ArrayMesh_06jsn")
 [node name="Bookshelf" type="StaticBody3D" parent="Environment/Office02"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.06161, 0.93, 0.568958)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Office02/Bookshelf"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025145, 0)
-shape = SubResource("BoxShape3D_cwci0")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Office02/Bookshelf"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.16)
 mesh = SubResource("BoxMesh_cwci0")
@@ -2925,6 +2943,12 @@ mesh = SubResource("ArrayMesh_mcshh")
 [node name="Desk" parent="Environment/Office03" instance=ExtResource("2_usjvr")]
 transform = Transform3D(-1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, -1, -0.360714, 0.376796, -0.901741)
 
+[node name="Monitor" type="Node3D" parent="Environment/Office03" groups=["Interactable"]]
+transform = Transform3D(0.154483, -0.0108811, 0.987936, 0.0702614, 0.997529, 0, -0.985494, 0.0694137, 0.154866, -0.764099, 0.929537, -0.953098)
+
+[node name="Monitor" type="MeshInstance3D" parent="Environment/Office03/Monitor"]
+mesh = SubResource("BoxMesh_b5apk")
+
 [node name="Office04" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, -36.5)
 
@@ -3036,6 +3060,17 @@ mesh = SubResource("ArrayMesh_stc72")
 [node name="Desk" parent="Environment/Office04" instance=ExtResource("2_usjvr")]
 transform = Transform3D(-1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, -1, -0.424702, 0.374552, -0.907021)
 
+[node name="Monitor2" type="StaticBody3D" parent="Environment/Office04" groups=["Interactable"]]
+transform = Transform3D(0.0144897, 0.066661, 0.997671, -0.99631, 0.085374, 0.00876576, -0.0845908, -0.994117, 0.0676521, -0.764099, 0.778705, -0.953098)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Monitor" type="MeshInstance3D" parent="Environment/Office04/Monitor2"]
+mesh = SubResource("BoxMesh_b5apk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Office04/Monitor2"]
+shape = SubResource("ConvexPolygonShape3D_docfe")
+
 [node name="Office05" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, 0, -36.5)
 
@@ -3136,6 +3171,71 @@ mesh = SubResource("ArrayMesh_nmj1l")
 
 [node name="Desk" parent="Environment/Office05" instance=ExtResource("2_usjvr")]
 transform = Transform3D(-1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, -1, -0.424702, 0.374552, -0.907021)
+
+[node name="Monitor" type="StaticBody3D" parent="Environment/Office05"]
+transform = Transform3D(0.154483, -0.0108811, 0.987936, 0.0702614, 0.997529, 0, -0.985494, 0.0694137, 0.154866, -0.764099, 0.929537, -0.953098)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Monitor" type="MeshInstance3D" parent="Environment/Office05/Monitor"]
+mesh = SubResource("BoxMesh_b5apk")
+
+[node name="Screen" type="Sprite3D" parent="Environment/Office05/Monitor/Monitor"]
+transform = Transform3D(-1.11464e-08, 0, 0.255, 0, 0.255, 0, -0.255, 0, -1.11464e-08, 0.0500342, 0, 0)
+pixel_size = 0.002
+transparent = false
+texture_filter = 0
+texture = SubResource("ViewportTexture_docfe")
+
+[node name="SubViewport" type="SubViewport" parent="Environment/Office05/Monitor/Monitor/Screen"]
+size = Vector2i(1283, 723)
+
+[node name="Control" type="Control" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BouncingLogo" type="CharacterBody2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect"]
+texture_filter = 1
+position = Vector2(640, 360)
+script = ExtResource("14_wyolf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/BouncingLogo"]
+texture = ExtResource("15_pr6r3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/BouncingLogo"]
+shape = SubResource("RectangleShape2D_hqyv0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_ar717")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_wyolf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/StaticBody2D"]
+position = Vector2(1280, 720)
+shape = SubResource("WorldBoundaryShape2D_pr6r3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/StaticBody2D"]
+position = Vector2(1280, 720)
+shape = SubResource("WorldBoundaryShape2D_nkfcu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Office05/Monitor"]
+shape = SubResource("BoxShape3D_h8e6h")
 
 [node name="AirlockLight" type="SpotLight3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14, 2.57287, -29)
@@ -3588,11 +3688,8 @@ mesh = SubResource("BoxMesh_2vgpe")
 transform = Transform3D(0.949431, 0.313976, 2.0551e-09, -0.313976, 0.94943, -1.32454e-08, -6.1099e-09, 1.19303e-08, 1, 0.115864, 0.249803, 0)
 mesh = SubResource("BoxMesh_2vgpe")
 
-[node name="OfficeSign" type="StaticBody3D" parent="Environment"]
+[node name="OfficeSign" type="Node3D" parent="Environment"]
 transform = Transform3D(0.5, 0, 0, 0, 0.255, 0, 0, 0, 0.255, 13.7346, 0.965756, -34.8929)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/OfficeSign"]
-shape = SubResource("ConcavePolygonShape3D_di2bw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/OfficeSign"]
 mesh = SubResource("ArrayMesh_y0vnh")
@@ -3611,11 +3708,8 @@ offset_bottom = 23.0
 text = "Offices"
 label_settings = SubResource("LabelSettings_yrw3h")
 
-[node name="TestingSign" type="StaticBody3D" parent="Environment"]
+[node name="TestingSign" type="Node3D" parent="Environment"]
 transform = Transform3D(-2.18557e-08, 0, -0.255, 0, 0.255, 0, 0.5, 0, -1.11464e-08, 35.1941, 2.13033, -33.518)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/TestingSign"]
-shape = SubResource("ConcavePolygonShape3D_csoyq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/TestingSign"]
 mesh = SubResource("ArrayMesh_advep")
@@ -3634,11 +3728,29 @@ offset_bottom = 23.0
 text = "Testing Lab"
 label_settings = SubResource("LabelSettings_mgc1k")
 
-[node name="StorageSign" type="StaticBody3D" parent="Environment"]
-transform = Transform3D(-0.5, 0, -2.22928e-08, 0, 0.255, 0, 4.37114e-08, 0, -0.255, 14.4846, 0.611104, -34.9024)
+[node name="OfficeSign2" type="Node3D" parent="Environment"]
+transform = Transform3D(-2.18557e-08, 0, -0.255, 0, 0.255, 0, 0.5, 0, -1.11464e-08, 21.9441, 2.13033, -33.518)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/StorageSign"]
-shape = SubResource("ConcavePolygonShape3D_igcd8")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/OfficeSign2"]
+transform = Transform3D(0.75, 0, 1.77636e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0.254501, 0, 0)
+mesh = SubResource("ArrayMesh_advep")
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/OfficeSign2"]
+transform = Transform3D(1, 0, 1.77636e-15, 0, 1.84, 0, -7.10543e-15, 0, 1, 1.10538, 0.529826, 0.00427246)
+texture = SubResource("ViewportTexture_ar717")
+
+[node name="SubViewport" type="SubViewport" parent="Environment/OfficeSign2/Sprite3D"]
+transparent_bg = true
+size = Vector2i(145, 47)
+
+[node name="Label" type="Label" parent="Environment/OfficeSign2/Sprite3D/SubViewport"]
+offset_right = 117.0
+offset_bottom = 49.0
+text = "Offices"
+label_settings = SubResource("LabelSettings_mgc1k")
+
+[node name="StorageSign" type="Node3D" parent="Environment"]
+transform = Transform3D(-0.5, 0, -2.22928e-08, 0, 0.255, 0, 4.37114e-08, 0, -0.255, 14.4846, 0.611104, -34.9024)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StorageSign"]
 mesh = SubResource("ArrayMesh_st81x")
@@ -3657,9 +3769,6 @@ offset_bottom = 23.0
 text = "Cube
 Storage"
 label_settings = SubResource("LabelSettings_ghcck")
-
-[node name="Monitor" parent="Environment" instance=ExtResource("17_cwci0")]
-transform = Transform3D(0.154483, -0.0108811, 0.987936, 0.0702614, 0.997529, 0, -0.985494, 0.0694137, 0.154866, 27.7359, 0.929537, -37.4531)
 
 [node name="Support" type="StaticBody3D" parent="Environment"]
 transform = Transform3D(0.999984, 0, -0.00556757, 0.000177698, 0.99949, 0.0319161, 0.00556473, -0.0319166, 0.999475, 0.375164, 4.71113, -33.0584)
@@ -3809,7 +3918,7 @@ transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, -33, 1
 [node name="Auto" parent="Door4" instance=ExtResource("7_xb135")]
 
 [node name="Cube" parent="." instance=ExtResource("22_c7f46")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4958, 1.19327, -31.0187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4958, 1.31434, -30.6284)
 
 [node name="BrokenDoor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 1.31134e-07, 1.31134e-07, 0, -1, -3.55271e-15, 1, 0, -32.55, -3.95, -2.5)
@@ -3826,7 +3935,7 @@ mesh = SubResource("BoxMesh_27480")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 1, -14)
 
 [node name="Button" parent="." node_paths=PackedStringArray("target") instance=ExtResource("23_bxoy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.1731, 0.117372, -32.9572)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6731, 0.117372, -34.4572)
 target = NodePath("../Door5")
 
 [node name="Door3" parent="." instance=ExtResource("6_ewob2")]

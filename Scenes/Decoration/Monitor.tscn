@@ -12,7 +12,7 @@ viewport_path = NodePath("Monitor/Screen/SubViewport")
 [sub_resource type="BoxShape3D" id="BoxShape3D_h8e6h"]
 size = Vector3(0.1, 0.4, 0.7)
 
-[node name="Monitor" type="StaticBody3D" groups=["Interactable"]]
+[node name="Monitor" type="StaticBody3D"]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_h8e6h")
