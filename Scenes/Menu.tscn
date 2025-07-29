@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://78nastiglwp7"]
+[gd_scene load_steps=26 format=3 uid="uid://78nastiglwp7"]
 
 [ext_resource type="Script" uid="uid://ow2fiuxg28t3" path="res://Scripts/Menu.gd" id="1_kld02"]
 [ext_resource type="Shader" uid="uid://b3du4l67beylj" path="res://Assets/Materials/Blur.gdshader" id="2_s2c3o"]
@@ -36,6 +36,8 @@ font_size = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab40c"]
 font_size = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ab40c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sjh0l"]
 font_size = 20
@@ -230,7 +232,6 @@ flat = true
 alignment = 0
 
 [node name="SettingsMenu" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_left = 330.0
 offset_top = 120.0
@@ -287,6 +288,41 @@ min_value = 1.0
 max_value = 20.0
 step = 0.1
 value = 6.0
+
+[node name="FullScreen" type="Label" parent="SettingsMenu/TabContainer/General"]
+layout_mode = 2
+text = "Fullscreen"
+label_settings = SubResource("LabelSettings_ab40c")
+
+[node name="fullscreencheck" type="CheckButton" parent="SettingsMenu/TabContainer/General/FullScreen"]
+layout_mode = 0
+offset_left = 569.0
+offset_right = 613.0
+offset_bottom = 24.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ab40c")
+
+[node name="Resolution" type="Label" parent="SettingsMenu/TabContainer/General"]
+visible = false
+layout_mode = 2
+text = "Resolution"
+label_settings = SubResource("LabelSettings_ab40c")
+
+[node name="resdropdown" type="OptionButton" parent="SettingsMenu/TabContainer/General/Resolution"]
+layout_mode = 0
+offset_left = 498.0
+offset_right = 612.0
+offset_bottom = 31.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ab40c")
+selected = 0
+item_count = 4
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1366x768"
+popup/item_1/id = 3
+popup/item_2/text = "1920x1080"
+popup/item_2/id = 1
+popup/item_3/text = "4096x2160"
+popup/item_3/id = 2
 
 [node name="Audio" type="VBoxContainer" parent="SettingsMenu/TabContainer"]
 visible = false
@@ -482,8 +518,10 @@ label_settings = SubResource("LabelSettings_idohh")
 
 [node name="Console" type="LineEdit" parent="."]
 layout_mode = 0
+offset_left = 446.0
+offset_top = 689.0
 offset_right = 1280.0
-offset_bottom = 31.0
+offset_bottom = 720.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ma218")
 placeholder_text = "Type a command in here"
 flat = true
@@ -504,6 +542,8 @@ bus = &"UI"
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="SettingsMenu/TabContainer/General/DebugMode/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="value_changed" from="SettingsMenu/TabContainer/General/CameraSensitivity/SensSlider" to="." method="_on_sens_slider_value_changed"]
+[connection signal="toggled" from="SettingsMenu/TabContainer/General/FullScreen/fullscreencheck" to="." method="_on_fullscreencheck_toggled"]
+[connection signal="item_selected" from="SettingsMenu/TabContainer/General/Resolution/resdropdown" to="." method="_on_resdropdown_item_selected"]
 [connection signal="value_changed" from="SettingsMenu/TabContainer/Audio/MasterAudio/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="SettingsMenu/TabContainer/Audio/GameAudio/GameSlider" to="." method="_on_game_slider_value_changed"]
 [connection signal="value_changed" from="SettingsMenu/TabContainer/Audio/Music/MusicSlider" to="." method="_on_music_slider_value_changed"]

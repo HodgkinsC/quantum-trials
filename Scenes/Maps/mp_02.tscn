@@ -1,4 +1,4 @@
-[gd_scene load_steps=310 format=4 uid="uid://cijo1i123438v"]
+[gd_scene load_steps=311 format=4 uid="uid://cijo1i123438v"]
 
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="1_fi4a4"]
 [ext_resource type="Material" uid="uid://b7oxajmbsuewj" path="res://Assets/Materials/SteelPlate.tres" id="2_ar717"]
@@ -187,17 +187,13 @@ _surfaces = [{
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_garl7"]
 data = PackedVector3Array(-8.5, -0.05, 2, -8.5, -0.05, -2, -8.5, 0.05, -2, 8.5, -0.05, -2, -8.5, -0.05, -2, -8.5, -0.05, 2, -8.5, 0.05, -2, -8.5, -0.05, -2, 8.5, -0.05, -2, -8.5, 0.05, -2, -8.5, 0.05, 2, -8.5, -0.05, 2, -8.5, -0.05, 2, -8.5, 0.05, 2, 8.5, 0.05, 2, 8.5, 0.05, 2, -8.5, 0.05, 2, -8.5, 0.05, -2, -8.5, -0.05, 2, 8.5, -0.05, 2, 8.5, -0.05, -2, 8.5, 0.05, 2, 8.5, -0.05, 2, -8.5, -0.05, 2, 8.5, -0.05, -2, 8.5, -0.05, 2, 8.5, 0.05, 2, 8.5, -0.05, -2, 8.5, 0.05, -2, -8.5, 0.05, -2, -8.5, 0.05, -2, 8.5, 0.05, -2, 8.5, 0.05, 2, 8.5, 0.05, 2, 8.5, 0.05, -2, 8.5, -0.05, -2)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_8yyme"]
-_surfaces = [{
-"aabb": AABB(-8.5, -0.05, -2, 17, 0.1, 4),
-"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
-"format": 34359738391,
-"material": ExtResource("3_bxoy1"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 36,
-"vertex_data": PackedByteArray("AAAIwc3MTL0AAABAAAAIwc3MTL0AAADAAAAIwc3MTD0AAADAAAAIQc3MTL0AAADAAAAIwc3MTL0AAADAAAAIwc3MTL0AAABAAAAIwc3MTD0AAADAAAAIwc3MTL0AAADAAAAIQc3MTL0AAADAAAAIwc3MTD0AAADAAAAIwc3MTD0AAABAAAAIwc3MTL0AAABAAAAIwc3MTL0AAABAAAAIwc3MTD0AAABAAAAIQc3MTD0AAABAAAAIQc3MTD0AAABAAAAIwc3MTD0AAABAAAAIwc3MTD0AAADAAAAIwc3MTL0AAABAAAAIQc3MTL0AAABAAAAIQc3MTL0AAADAAAAIQc3MTD0AAABAAAAIQc3MTL0AAABAAAAIwc3MTL0AAABAAAAIQc3MTL0AAADAAAAIQc3MTL0AAABAAAAIQc3MTD0AAABAAAAIQc3MTL0AAADAAAAIQc3MTD0AAADAAAAIwc3MTD0AAADAAAAIwc3MTD0AAADAAAAIQc3MTD0AAADAAAAIQc3MTD0AAABAAAAIQc3MTD0AAABAAAAIQc3MTD0AAADAAAAIQc3MTL0AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
-}]
+[sub_resource type="BoxMesh" id="BoxMesh_wyolf"]
+material = ExtResource("3_bxoy1")
+size = Vector3(13.25, 0.1, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pr6r3"]
+material = ExtResource("1_fi4a4")
+size = Vector3(4, 0.1, 4)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gxxlh"]
 data = PackedVector3Array(-7.1649, -0.05, 2, -7.1649, -0.05, -2, -7.1649, 0.05, -2, 7.1649, -0.05, -2, -7.1649, -0.05, -2, -7.1649, -0.05, 2, -7.1649, 0.05, -2, -7.1649, -0.05, -2, 7.1649, -0.05, -2, -7.1649, 0.05, -2, -7.1649, 0.05, 2, -7.1649, -0.05, 2, -7.1649, -0.05, 2, -7.1649, 0.05, 2, 7.1649, 0.05, 2, 7.1649, 0.05, 2, -7.1649, 0.05, 2, -7.1649, 0.05, -2, -7.1649, -0.05, 2, 7.1649, -0.05, 2, 7.1649, -0.05, -2, 7.1649, 0.05, 2, 7.1649, -0.05, 2, -7.1649, -0.05, 2, 7.1649, -0.05, -2, 7.1649, -0.05, 2, 7.1649, 0.05, 2, 7.1649, -0.05, -2, 7.1649, 0.05, -2, -7.1649, 0.05, -2, -7.1649, 0.05, -2, 7.1649, 0.05, -2, 7.1649, 0.05, 2, 7.1649, 0.05, 2, 7.1649, 0.05, -2, 7.1649, -0.05, -2)
@@ -2020,7 +2016,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, -2.795, 0)
 shape = SubResource("ConcavePolygonShape3D_garl7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Floor8"]
-mesh = SubResource("ArrayMesh_8yyme")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.875, 0, 0)
+mesh = SubResource("BoxMesh_wyolf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/LongerHall/Floor8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75, 0, 0)
+mesh = SubResource("BoxMesh_pr6r3")
 
 [node name="Floor10" type="StaticBody3D" parent="Environment/LongerHall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8351, -2.795, -4)

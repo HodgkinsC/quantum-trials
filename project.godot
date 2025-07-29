@@ -19,7 +19,7 @@ _esc={
 config/name="Quantum Trials"
 run/main_scene="uid://rscipotivdde"
 config/features=PackedStringArray("4.4")
-run/max_fps=30
+run/max_fps=120
 
 [autoload]
 
@@ -31,8 +31,7 @@ SaveSystem="*res://Scripts/SaveSystem.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/window_width_override=1080
-window/size/window_height_override=608
+window/size/resizable=false
 window/stretch/mode="viewport"
 
 [dotnet]
@@ -41,7 +40,7 @@ project/assembly_name="UnnamedProject"
 
 [editor]
 
-movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials 3 super speed.avi"
+movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials 4 speedrun 4.avi"
 movie_writer/fps=120
 
 [editor_plugins]

@@ -147,3 +147,19 @@ func _on_music_slider_value_changed(value: float) -> void:
 
 func _on_ui_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("UI"), linear_to_db(value))
+
+func _on_fullscreencheck_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+#func _on_resdropdown_item_selected(index: int) -> void:
+	#if index == 0:
+		#get_window().set_size(Vector2i(1280,720))
+	#elif index == 1:
+		#get_window().set_size(Vector2i(1920,1080))
+	#elif index == 2:
+		#get_window().set_size(Vector2i(4096,2160))
+	#elif index == 3:
+		#get_window().set_size(Vector2i(1366,768))
