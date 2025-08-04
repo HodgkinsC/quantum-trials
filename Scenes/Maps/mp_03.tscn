@@ -1,4 +1,4 @@
-[gd_scene load_steps=151 format=4 uid="uid://du1emi57nlrd5"]
+[gd_scene load_steps=155 format=4 uid="uid://du1emi57nlrd5"]
 
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_qa0ah"]
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="2_ig341"]
@@ -18,6 +18,8 @@
 [ext_resource type="Script" uid="uid://032mrwjqt2o3" path="res://Scripts/Cube.gd" id="16_jxjgq"]
 [ext_resource type="Script" uid="uid://cheg3ddkw364t" path="res://Scripts/LevelEndTrigger.gd" id="16_xc28b"]
 [ext_resource type="Material" uid="uid://bsgpsfaiihwni" path="res://Assets/Materials/CubeOff.tres" id="17_xc17m"]
+[ext_resource type="Script" uid="uid://b8uh6frj4t0tr" path="res://Scripts/TutorialPopup.gd" id="19_qejud"]
+[ext_resource type="FontFile" uid="uid://nbfn5ru7msph" path="res://Assets/Screener W01 Regular.ttf" id="20_bdj55"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f1bmo"]
 data = PackedVector3Array(-25, -0.05, 2, -25, -0.05, -2, -25, 0.05, -2, 25, -0.05, -2, -25, -0.05, -2, -25, -0.05, 2, -25, 0.05, -2, -25, -0.05, -2, 25, -0.05, -2, -25, 0.05, -2, -25, 0.05, 2, -25, -0.05, 2, -25, -0.05, 2, -25, 0.05, 2, 25, 0.05, 2, 25, 0.05, 2, -25, 0.05, 2, -25, 0.05, -2, -25, -0.05, 2, 25, -0.05, 2, 25, -0.05, -2, 25, 0.05, 2, 25, -0.05, 2, -25, -0.05, 2, 25, -0.05, -2, 25, -0.05, 2, 25, 0.05, 2, 25, -0.05, -2, 25, 0.05, -2, -25, 0.05, -2, -25, 0.05, -2, 25, 0.05, -2, 25, 0.05, 2, 25, 0.05, 2, 25, 0.05, -2, 25, -0.05, -2)
@@ -961,6 +963,16 @@ size = Vector3(0.75, 0.75, 0.75)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0r63w"]
 size = Vector3(4, 3, 3.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gslac"]
+size = Vector3(1.66614, 2.75, 4.07324)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vvfx3"]
+font = ExtResource("20_bdj55")
+font_size = 50
+font_color = Color(0.933333, 1, 0, 1)
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Mp03" type="Node3D"]
 
 [node name="SpawnPoint" type="Node3D" parent="."]
@@ -1837,6 +1849,42 @@ door = NodePath("../Puzzle3/Door")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.25)
 shape = SubResource("BoxShape3D_0r63w")
 
+[node name="Tutorial Popup" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.2212, 1.25, -36.7983)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("19_qejud")
+screentime = 10
+text = "Certain objects move when you look away from them."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tutorial Popup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10443, 0, -0.150482)
+shape = SubResource("BoxShape3D_gslac")
+
+[node name="Control" type="Control" parent="Tutorial Popup"]
+visible = false
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+
+[node name="Label" type="Label" parent="Tutorial Popup/Control"]
+layout_direction = 3
+layout_mode = 0
+offset_right = 754.0
+offset_bottom = 192.0
+label_settings = SubResource("LabelSettings_vvfx3")
+autowrap_mode = 3
+
 [connection signal="body_entered" from="Puzzle2/Button/Detector" to="Puzzle2/Button" method="_on_detector_body_entered"]
 [connection signal="body_exited" from="Puzzle2/Button/Detector" to="Puzzle2/Button" method="_on_detector_body_exited"]
 [connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Tutorial Popup" to="Tutorial Popup" method="_on_body_entered"]
