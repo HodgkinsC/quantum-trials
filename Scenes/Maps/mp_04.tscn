@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cvwgsjaqa3fjm"]
+[gd_scene load_steps=16 format=4 uid="uid://cvwgsjaqa3fjm"]
 
 [ext_resource type="PackedScene" uid="uid://c32623xiovm3v" path="res://Scenes/PuzzleElements/Door.tscn" id="1_16g0q"]
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="2_1168f"]
@@ -7,6 +7,14 @@
 [ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="5_6etve"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="6_864ox"]
 [ext_resource type="PackedScene" uid="uid://c71xmc47l5bwn" path="res://Scenes/PuzzleElements/AutoDoor.tscn" id="7_1168f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6scgs"]
+render_priority = 0
+shader = ExtResource("5_6etve")
+shader_parameter/albedo = Color(0.22, 0.22, 0.22, 0.635294)
+shader_parameter/roughness = 0.15
+shader_parameter/normal_strength = 1.0
+shader_parameter/edge_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1168f"]
 render_priority = 0
@@ -98,7 +106,7 @@ size = Vector3(41.9169, 0.1, 4)
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0625, -2.795, -49.4375)
 use_collision = true
 size = Vector3(19.75, 0.1, 3)
-material = SubResource("ShaderMaterial_1168f")
+material = SubResource("ShaderMaterial_6scgs")
 
 [node name="Viewport" type="CSGBox3D" parent="Environment/LongerHall"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0629997, 0.4675, -50.95)

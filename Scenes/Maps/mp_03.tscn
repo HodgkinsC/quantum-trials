@@ -1120,9 +1120,11 @@ mesh = SubResource("ArrayMesh_grfim")
 transform = Transform3D(-1.17225e-07, 0, -1, 0, 1, 0, 1, 0, -1.17225e-07, 23.0625, 0.5, -47.95)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/Wall23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0558929)
 shape = SubResource("ConcavePolygonShape3D_58bx8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Wall23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00330353, 0, 0.0791893)
 material_override = ExtResource("2_ig341")
 mesh = SubResource("ArrayMesh_cp611")
 
