@@ -1884,7 +1884,43 @@ offset_bottom = 192.0
 label_settings = SubResource("LabelSettings_vvfx3")
 autowrap_mode = 3
 
+[node name="Tutorial Popup2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8603, 1.25, -36.7983)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("19_qejud")
+screentime = 10
+text = "You can stand on cubes to get higher."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tutorial Popup2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10443, 0, -0.150482)
+shape = SubResource("BoxShape3D_gslac")
+
+[node name="Control" type="Control" parent="Tutorial Popup2"]
+visible = false
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+
+[node name="Label" type="Label" parent="Tutorial Popup2/Control"]
+layout_direction = 3
+layout_mode = 0
+offset_right = 754.0
+offset_bottom = 192.0
+label_settings = SubResource("LabelSettings_vvfx3")
+autowrap_mode = 3
+
 [connection signal="body_entered" from="Puzzle2/Button/Detector" to="Puzzle2/Button" method="_on_detector_body_entered"]
 [connection signal="body_exited" from="Puzzle2/Button/Detector" to="Puzzle2/Button" method="_on_detector_body_exited"]
 [connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Tutorial Popup" to="Tutorial Popup" method="_on_body_entered"]
+[connection signal="body_entered" from="Tutorial Popup2" to="Tutorial Popup2" method="_on_body_entered"]

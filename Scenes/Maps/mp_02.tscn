@@ -19,8 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://85bhe7spa2nd" path="res://Scenes/Decoration/BrokenFloor.tscn" id="12_tgbo8"]
 [ext_resource type="Script" uid="uid://bua53pndy0cvp" path="res://Scripts/Decoration/BouncingLogo.gd" id="14_wyolf"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="15_2vgpe"]
+[ext_resource type="Texture2D" uid="uid://bb5ji4jb4a5c3" path="res://Assets/Textures/secret rex.jpg" id="15_ar717"]
 [ext_resource type="Material" uid="uid://bgiqtp2xtsj7i" path="res://Assets/Materials/SteelQuant.tres" id="15_cwci0"]
-[ext_resource type="Texture2D" uid="uid://c2j6c58ohcvon" path="res://icon.svg" id="15_pr6r3"]
 [ext_resource type="Material" uid="uid://segypnc7ytsf" path="res://Assets/Materials/Carpet.tres" id="15_yrw3h"]
 [ext_resource type="Material" uid="uid://ceh8bqbuio14o" path="res://Assets/Materials/Ceiling Tiles.tres" id="17_mgc1k"]
 [ext_resource type="Script" uid="uid://b8uh6frj4t0tr" path="res://Scripts/TutorialPopup.gd" id="19_mgc1k"]
@@ -1497,7 +1497,7 @@ _surfaces = [{
 viewport_path = NodePath("Environment/Office05/Monitor/Monitor/Screen/SubViewport")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqyv0"]
-size = Vector2(128, 128)
+size = Vector2(286, 222)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ar717"]
 normal = Vector2(1, 0)
@@ -3214,7 +3214,8 @@ position = Vector2(640, 360)
 script = ExtResource("14_wyolf")
 
 [node name="Sprite2D" type="Sprite2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/BouncingLogo"]
-texture = ExtResource("15_pr6r3")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("15_ar717")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect/BouncingLogo"]
 shape = SubResource("RectangleShape2D_hqyv0")
@@ -3277,6 +3278,14 @@ shadow_normal_bias = 4.0
 spot_range = 26.99
 spot_angle = 83.92
 script = ExtResource("5_tgbo8")
+
+[node name="HallLight6" type="SpotLight3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 33, 6.57287, -33)
+light_energy = 0.5
+shadow_enabled = true
+shadow_normal_bias = 4.0
+spot_range = 26.99
+spot_angle = 83.92
 
 [node name="HallLight4" type="SpotLight3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 37, 6.57287, -33)
