@@ -1857,7 +1857,7 @@ shape = SubResource("BoxShape3D_0r63w")
 
 [node name="Tutorial Popup" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.2212, 1.25, -36.7983)
-collision_layer = 4
+collision_layer = 0
 collision_mask = 4
 script = ExtResource("19_qejud")
 screentime = 10
@@ -1892,7 +1892,7 @@ autowrap_mode = 3
 
 [node name="Tutorial Popup2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8603, 1.25, -36.7983)
-collision_layer = 4
+collision_layer = 0
 collision_mask = 4
 script = ExtResource("19_qejud")
 screentime = 10

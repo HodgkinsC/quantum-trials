@@ -3881,7 +3881,7 @@ skeleton = NodePath("")
 
 [node name="Tutorial Popup" type="Area3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9949, 1.25, -33.0483)
-collision_layer = 4
+collision_layer = 0
 collision_mask = 4
 script = ExtResource("19_mgc1k")
 screentime = 10

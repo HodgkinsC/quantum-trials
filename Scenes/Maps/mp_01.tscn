@@ -2734,7 +2734,7 @@ transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.5, 
 
 [node name="Tutorial Popup" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
-collision_layer = 4
+collision_layer = 0
 collision_mask = 4
 script = ExtResource("13_nhmdo")
 screentime = 10

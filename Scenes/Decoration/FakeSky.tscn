@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://qe4yhn8a2rya"]
+
+[ext_resource type="Texture2D" uid="uid://btvgnnhtjtsw8" path="res://Assets/Textures/ESO_-_Milky_Way.jpg" id="1_o2bjr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yr1a"]
+shading_mode = 0
+albedo_texture = ExtResource("1_o2bjr")
+
+[sub_resource type="SphereMesh" id="SphereMesh_blm2p"]
+material = SubResource("StandardMaterial3D_7yr1a")
+flip_faces = true
+radius = 5.0
+height = 10.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_o2bjr"]
+
+[node name="Fakesky" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_blm2p")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.00714)
+mesh = SubResource("BoxMesh_o2bjr")
