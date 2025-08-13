@@ -4,6 +4,7 @@ extends Node3D
 @onready var sun = $Skybox
 @onready var planet = $Skybox/Orbit/Planet
 @onready var orbit = $Skybox/Orbit
+@onready var sky = $Fakesky
 
 func _ready() -> void:
 	Global.root = self
@@ -32,6 +33,7 @@ func _process(_delta: float) -> void:
 		env.environment.sky_rotation.y = 0
 	Global.skyrotation = env.environment.sky_rotation
 	Global.orbitangle = orbit.rotation_degrees
+	sky.global_position = Global.player.global_position
 
 func load_save():
 	env.environment.sky_rotation = await SaveSystem.read_save("skyrot")

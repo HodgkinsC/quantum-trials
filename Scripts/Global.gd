@@ -11,8 +11,8 @@ var player : CharacterBody3D
 var current_map : Node3D
 var current_map_name : String
 
-var skyrotation
-var orbitangle
+var skyrotation : Vector3
+var orbitangle : Vector3
 
 var thatonedoor : Node3D
 

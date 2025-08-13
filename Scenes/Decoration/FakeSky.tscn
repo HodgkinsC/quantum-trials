@@ -1,27 +1,87 @@
-[gd_scene load_steps=5 format=3 uid="uid://qe4yhn8a2rya"]
+[gd_scene load_steps=8 format=3 uid="uid://qe4yhn8a2rya"]
 
-[ext_resource type="Texture2D" uid="uid://btvgnnhtjtsw8" path="res://Assets/Textures/ESO_-_Milky_Way.jpg" id="1_o2bjr"]
+[ext_resource type="Script" uid="uid://djditohqkiyff" path="res://Scripts/FakeSky.gd" id="1_7yr1a"]
+[ext_resource type="Shader" uid="uid://7hvdu4ssouxo" path="res://Assets/Materials/FakeSky.tres" id="1_o2bjr"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yr1a"]
-shading_mode = 0
-albedo_texture = ExtResource("1_o2bjr")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yr1a"]
+render_priority = 0
+shader = ExtResource("1_o2bjr")
 
 [sub_resource type="SphereMesh" id="SphereMesh_blm2p"]
-material = SubResource("StandardMaterial3D_7yr1a")
+material = SubResource("ShaderMaterial_7yr1a")
 flip_faces = true
 radius = 5.0
 height = 10.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_o2bjr"]
+[sub_resource type="Animation" id="Animation_7yr1a"]
+resource_name = "Warp"
+length = 65.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 60, 65),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 1.5708), Vector3(-87.9646, -1.5708, 1.5708), Vector3(-87.9646, -1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 20, 35, 50, 60),
+"transitions": PackedFloat32Array(1, -2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 4.75, 0), Vector3(0, 4.75, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_blm2p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7e8nr"]
+_data = {
+&"RESET": SubResource("Animation_blm2p"),
+&"Warp": SubResource("Animation_7yr1a")
+}
 
 [node name="Fakesky" type="Node3D"]
+script = ExtResource("1_7yr1a")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("SphereMesh_blm2p")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-current = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.00714)
-mesh = SubResource("BoxMesh_o2bjr")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7e8nr")
+}
