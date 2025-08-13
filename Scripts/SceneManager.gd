@@ -33,7 +33,7 @@ func _process(_delta: float) -> void:
 		env.environment.sky_rotation.y = 0
 	Global.skyrotation = env.environment.sky_rotation
 	Global.orbitangle = orbit.rotation_degrees
-	sky.global_position = Global.player.global_position
+	sky.global_position = Global.player.Camera3Dm.global_position
 
 func load_save():
 	env.environment.sky_rotation = await SaveSystem.read_save("skyrot")

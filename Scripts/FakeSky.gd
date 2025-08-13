@@ -1,6 +1,5 @@
 extends Node3D
 
-@onready var camera = $Camera3D
 @onready var sky = $MeshInstance3D
 
 var warping = false

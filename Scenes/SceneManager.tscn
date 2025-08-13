@@ -203,7 +203,7 @@ dof_blur_amount = 0.06
 script = ExtResource("1_hjya1")
 
 [node name="Fakesky" parent="." instance=ExtResource("8_q4unc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 0, -14.352)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, -14)
 
 [node name="Player" parent="." instance=ExtResource("2_ebsso")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0741522, 0)

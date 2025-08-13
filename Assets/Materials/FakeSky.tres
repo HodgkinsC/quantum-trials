@@ -68,7 +68,6 @@ void light() {
 
 }
 "
-graph_offset = Vector2(130.613, -9.41109)
 modes/depth_draw = 2
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_7w3du")
 nodes/fragment/3/position = Vector2(120, 160)

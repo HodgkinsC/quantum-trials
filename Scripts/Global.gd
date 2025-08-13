@@ -24,7 +24,6 @@ func _process(_delta: float) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _ready() -> void:
-	load_objects
 	change_map("menu")
 	root.usemapenv(false)
 	paused = true
