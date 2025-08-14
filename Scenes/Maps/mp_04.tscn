@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmq62hk2ax73h" path="res://Assets/Textures/asteroid.jpg" id="3_74123"]
 [ext_resource type="Texture2D" uid="uid://l6w6i4o43afw" path="res://Assets/Textures/asteroidnormal.jpg" id="4_6etve"]
 [ext_resource type="Script" uid="uid://cumh5fg82g820" path="res://Scripts/QuantRandRot.gd" id="4_74123"]
-[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="5_6etve"]
+[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Shaders/Glass.gdshader" id="5_6etve"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="6_864ox"]
 [ext_resource type="PackedScene" uid="uid://c71xmc47l5bwn" path="res://Scenes/PuzzleElements/AutoDoor.tscn" id="7_1168f"]
 

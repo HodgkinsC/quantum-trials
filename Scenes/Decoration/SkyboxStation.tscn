@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_53k0d"]
 [ext_resource type="Script" uid="uid://cumh5fg82g820" path="res://Scripts/QuantRandRot.gd" id="2_jrxby"]
-[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="3_jyv7o"]
+[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Shaders/Glass.gdshader" id="3_jyv7o"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="4_jyv7o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jrxby"]

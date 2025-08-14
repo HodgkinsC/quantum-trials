@@ -1,17 +1,60 @@
-[gd_scene load_steps=8 format=3 uid="uid://qe4yhn8a2rya"]
+[gd_scene load_steps=9 format=3 uid="uid://qe4yhn8a2rya"]
 
 [ext_resource type="Script" uid="uid://djditohqkiyff" path="res://Scripts/FakeSky.gd" id="1_7yr1a"]
-[ext_resource type="Shader" uid="uid://7hvdu4ssouxo" path="res://Assets/Materials/FakeSky.tres" id="1_o2bjr"]
+[ext_resource type="Shader" uid="uid://7hvdu4ssouxo" path="res://Assets/Materials/Shaders/FakeSky.tres" id="1_o2bjr"]
+[ext_resource type="Texture2D" uid="uid://wa5grsxr2fgp" path="res://Assets/Textures/MilkywayFlipped.jpg" id="3_blm2p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7yr1a"]
 render_priority = 0
 shader = ExtResource("1_o2bjr")
+shader_parameter/Texture2DParameter = ExtResource("3_blm2p")
+shader_parameter/Texture2DParameter2 = ExtResource("3_blm2p")
 
 [sub_resource type="SphereMesh" id="SphereMesh_blm2p"]
 material = SubResource("ShaderMaterial_7yr1a")
 flip_faces = true
 radius = 5.0
 height = 10.0
+
+[sub_resource type="Animation" id="Animation_blm2p"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_7yr1a"]
 resource_name = "Warp"
@@ -53,45 +96,6 @@ tracks/2/keys = {
 "values": [Vector3(1, 1, 1), Vector3(1, 1, 1), Vector3(1, 0.25, 1), Vector3(1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_blm2p"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MeshInstance3D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MeshInstance3D:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7e8nr"]
 _data = {
 &"RESET": SubResource("Animation_blm2p"),
@@ -102,11 +106,12 @@ _data = {
 script = ExtResource("1_7yr1a")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("SphereMesh_blm2p")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_7e8nr")
 }
+autoplay = "RESET"
+playback_auto_capture_ease_type = 2
 playback_default_blend_time = 10.0

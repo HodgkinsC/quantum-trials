@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://do34h6vfeefjv"]
 
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_7thdj"]
-[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="2_xmu5x"]
+[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Shaders/Glass.gdshader" id="2_xmu5x"]
 [ext_resource type="Script" uid="uid://cumh5fg82g820" path="res://Scripts/QuantRandRot.gd" id="3_jgqc7"]
 [ext_resource type="PackedScene" uid="uid://dm3kk87b1gku3" path="res://Scenes/Decoration/DecoCube.tscn" id="4_d2su2"]
 [ext_resource type="PackedScene" uid="uid://yblk1iood2a1" path="res://Scenes/PuzzleElements/Button.tscn" id="5_jm7ph"]

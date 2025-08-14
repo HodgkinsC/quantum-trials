@@ -404,7 +404,6 @@ aabb = AABB(-1, -1.50561, -3.49094, 2, 3.01122, 6.98187)
 
 [node name="Planet" type="MeshInstance3D" parent="Skybox/Orbit"]
 transform = Transform3D(1, 0, 0, 0, 0.824975, -0.565169, 0, 0.565169, 0.824975, -5604.16, 0, 0)
-visible = false
 mesh = SubResource("SphereMesh_83gc0")
 skeleton = NodePath("")
 

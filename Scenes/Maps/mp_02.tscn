@@ -2,7 +2,7 @@
 
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="1_fi4a4"]
 [ext_resource type="Material" uid="uid://b7oxajmbsuewj" path="res://Assets/Materials/SteelPlate.tres" id="2_ar717"]
-[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="2_icwpk"]
+[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Shaders/Glass.gdshader" id="2_icwpk"]
 [ext_resource type="PackedScene" uid="uid://blaf5hsr7fi3w" path="res://Scenes/Decoration/Desk.tscn" id="2_usjvr"]
 [ext_resource type="PackedScene" uid="uid://cved14fdsuvgy" path="res://Scenes/WarningLight.tscn" id="3_18a4q"]
 [ext_resource type="Material" uid="uid://dbaixt0ovfbub" path="res://Assets/Materials/WoodFloor.tres" id="3_bxoy1"]

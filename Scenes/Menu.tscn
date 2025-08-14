@@ -1,9 +1,9 @@
 [gd_scene load_steps=26 format=3 uid="uid://78nastiglwp7"]
 
 [ext_resource type="Script" uid="uid://ow2fiuxg28t3" path="res://Scripts/Menu.gd" id="1_kld02"]
-[ext_resource type="Shader" uid="uid://b3du4l67beylj" path="res://Assets/Materials/Blur.gdshader" id="2_s2c3o"]
+[ext_resource type="Shader" uid="uid://b3du4l67beylj" path="res://Assets/Materials/Shaders/Blur.gdshader" id="2_s2c3o"]
 [ext_resource type="FontFile" uid="uid://cotghmhxxkiga" path="res://Assets/BebasNeue-Regular.ttf" id="2_syfuq"]
-[ext_resource type="Shader" uid="uid://dl7l55kt8v6f" path="res://Assets/Materials/Vignette.gdshader" id="3_ma218"]
+[ext_resource type="Shader" uid="uid://dl7l55kt8v6f" path="res://Assets/Materials/Shaders/Vignette.gdshader" id="3_ma218"]
 [ext_resource type="FontFile" uid="uid://nbfn5ru7msph" path="res://Assets/Screener W01 Regular.ttf" id="3_s2c3o"]
 [ext_resource type="Script" uid="uid://begbqr0ipkp26" path="res://Scripts/Terminal.gd" id="6_idohh"]
 [ext_resource type="AudioStream" uid="uid://bwrtixqpxfyjq" path="res://Assets/Sounds/sound_ui_buttonrollover.wav" id="7_aobxe"]
@@ -232,6 +232,7 @@ flat = true
 alignment = 0
 
 [node name="SettingsMenu" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_left = 330.0
 offset_top = 120.0

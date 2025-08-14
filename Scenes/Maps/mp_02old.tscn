@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_fnd1q"]
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="2_xiisj"]
 [ext_resource type="Texture2D" uid="uid://csqr5kdkue5t4" path="res://Assets/Textures/metalplate.jpg" id="3_hhi33"]
-[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Glass.gdshader" id="4_buotu"]
+[ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Shaders/Glass.gdshader" id="4_buotu"]
 [ext_resource type="PackedScene" uid="uid://blaf5hsr7fi3w" path="res://Scenes/Decoration/Desk.tscn" id="5_og5ov"]
 [ext_resource type="PackedScene" uid="uid://cgoq4v1247lw2" path="res://Scenes/PuzzleElements/GlassDoor.tscn" id="6_un0cc"]
 [ext_resource type="Material" uid="uid://c16aii8xf5t6p" path="res://Assets/Materials/OfficeGlass.tres" id="7_vpjhu"]
