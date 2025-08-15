@@ -5,7 +5,7 @@ var usingcomputer = false
 var mouse_free
 
 signal load_objects
-signal warpdone
+signal startwarp
 
 var player : CharacterBody3D
 @onready var root = get_tree().root.get_node("/root/SceneManager")
@@ -25,8 +25,8 @@ func _process(_delta: float) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _ready() -> void:
-	load_objects.connect(please)
-	warpdone.connect(shutup)
+	load_objects.connect(shutup)
+	startwarp.connect(shutup)
 	change_map("menu")
 	root.usemapenv(false)
 	paused = true
@@ -43,9 +43,6 @@ func change_map(mapname : String):
 
 func spawnplayer(pos):
 	player.global_transform = pos
-
-func please():
-	pass
 
 func shutup():
 	pass

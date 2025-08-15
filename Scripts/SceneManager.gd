@@ -10,11 +10,10 @@ func _ready() -> void:
 	env.environment.sky_rotation.y += deg_to_rad(-45)
 	sun.rotation.y += deg_to_rad(-45)
 	Global.load_objects.connect(load_save)
-	Global.warpdone.connect(donewarp)
+	Global.startwarp.connect(startwarp)
 
-func donewarp():
-	#env.environment.sky_rotation = $Fakesky.sky.global_rotation
-	print("rotated")
+func startwarp():
+	orbit.get_node("AnimationPlayer").play("Warp")
 
 func usemapenv(use : bool):
 	await Global.current_map.ready

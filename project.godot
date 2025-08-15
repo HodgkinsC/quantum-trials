@@ -40,8 +40,8 @@ project/assembly_name="UnnamedProject"
 
 [editor]
 
-movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials 4 speedrun 4.avi"
-movie_writer/fps=120
+movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials 5 Warpsky.avi"
+movie_writer/fps=30
 
 [editor_plugins]
 

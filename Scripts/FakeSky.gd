@@ -10,11 +10,11 @@ func _ready() -> void:
 	await get_tree().process_frame
 	while !warping:
 		if Input.is_action_just_pressed("debugbutton"):
+			Global.startwarp.emit()
 			$AnimationPlayer.play("Warp")
 			visible = true
 			warping = true
 			await $AnimationPlayer.animation_finished
-			Global.warpdone.emit()
 			print("emit")
 			warping = false
 			visible = false
