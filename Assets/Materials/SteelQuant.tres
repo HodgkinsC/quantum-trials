@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dhxwehg2es0ps" path="res://Assets/Textures/steel.jpg" id="1_wipbj"]
 
 [resource]
-albedo_color = Color(0.9604, 0.931, 0.98, 1)
+albedo_color = Color(0.940795, 0.896577, 0.97003, 1)
 albedo_texture = ExtResource("1_wipbj")
 metallic = 0.36
 roughness = 0.81

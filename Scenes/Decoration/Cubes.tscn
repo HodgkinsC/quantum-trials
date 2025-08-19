@@ -1,0 +1,603 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqdduh4363fcc"]
+
+[ext_resource type="PackedScene" uid="uid://dm3kk87b1gku3" path="res://Scenes/Decoration/DecoCube.tscn" id="1_akhaq"]
+
+[node name="Cubes" type="Node3D"]
+
+[node name="DecoCube" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.99979, 0.000437354, 0.020501, -0.00315017, 0.99118, 0.132482, -0.0202623, -0.132519, 0.990973, -3.47475, -2.43159, 38.4768)
+
+[node name="DecoCube2" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00568579, 0.0028114, -0.99998, -0.991129, 0.13277, 0.00600874, 0.132784, 0.991143, 0.00203155, -2.72541, -2.42629, 38.5015)
+state = true
+
+[node name="DecoCube3" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999999, -0.000899742, 0.000674735, 0.000276521, 0.384833, 0.922986, -0.00109011, 0.922986, -0.384832, -1.2709, -2.36362, 38.3488)
+
+[node name="DecoCube4" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.99999, 1.32374e-05, 0.00448523, -0.000586383, 0.991799, 0.127808, -0.00444676, -0.127809, 0.991789, -0.447168, -2.42789, 38.4761)
+state = true
+
+[node name="DecoCube5" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00987632, -0.996588, -0.0819437, 0.280156, 0.075908, -0.956949, 0.959904, -0.0324081, 0.27845, -1.98843, -1.73953, 38.1311)
+state = true
+
+[node name="DecoCube7" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.941241, -0.00680354, -0.337667, 0.0513354, 0.991062, 0.123128, 0.333811, -0.133227, 0.933178, -2.05005, -2.34132, 39.1294)
+state = true
+
+[node name="DecoCube9" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00301833, 0.999993, 0.00227033, -0.924606, -0.00365558, 0.380908, 0.380913, -0.000949452, 0.92461, -1.20676, -1.67306, 38.0764)
+state = true
+
+[node name="DecoCube10" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00503896, -0.999987, -0.000455829, 0.366079, -0.00142049, -0.930583, 0.93057, -0.00485604, 0.366081, -1.19837, -2.26512, 39.1258)
+state = true
+
+[node name="DecoCube11" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.998428, 0.0247608, -0.0502856, 0.0414032, -0.278938, -0.959416, -0.0377825, -0.95999, 0.277474, -1.93447, -1.59392, 38.8664)
+
+[node name="DecoCube13" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999996, -0.0026737, 0.0012799, -0.00296009, 0.923585, -0.383382, -0.00015705, -0.383385, -0.923589, -0.451403, -1.14368, 37.841)
+state = true
+
+[node name="DecoCube17" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00232411, 0.0183223, -0.99983, 0.374564, 0.927029, 0.0178589, 0.927198, -0.374541, -0.00470835, -3.4634, -1.10388, 37.8263)
+state = true
+
+[node name="DecoCube18" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00662895, 0.00022868, -0.999978, 0.133054, 0.991109, -0.000655374, 0.991087, -0.133055, -0.00660044, -3.46654, -2.32791, 39.2527)
+
+[node name="DecoCube19" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0195865, 0.0124222, 0.999731, -0.975647, -0.218257, 0.0218266, 0.21847, -0.975812, 0.00784476, -2.70774, -1.57436, 39.1164)
+state = true
+
+[node name="DecoCube21" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00385268, -0.999982, 0.00457958, 0.383417, -0.00275244, -0.923571, 0.923567, 0.00531411, 0.3834, -0.452497, -0.455431, 37.5654)
+
+[node name="DecoCube22" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00319951, -0.999994, 0.001587, 0.380874, -0.000248778, -0.924627, 0.924622, 0.0035628, 0.38087, -1.20063, -0.985398, 37.7813)
+
+[node name="DecoCube23" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(1, 0.000277989, -7.03402e-05, 0.000277475, -0.999974, -0.0072091, -7.23424e-05, 0.00720909, -0.999974, -0.449925, -1.60151, 38.6981)
+state = true
+
+[node name="DecoCube25" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00744802, 0.0237175, -0.999691, 0.393822, 0.918854, 0.0247337, 0.919157, -0.393884, -0.00249682, -1.21028, -0.287865, 37.4934)
+
+[node name="DecoCube26" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999828, -0.000766754, -0.0185525, 0.0175436, -0.366343, -0.930314, -0.00608327, -0.93048, 0.366294, -1.94894, -1.01537, 37.7961)
+state = true
+
+[node name="DecoCube27" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00582018, 0.231027, -0.97293, -0.922421, 0.374462, 0.094436, 0.386142, 0.898, 0.210925, -3.21025, 0.213037, 37.1276)
+state = true
+
+[node name="DecoCube28" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00012113, -0.00164557, -0.999999, -0.999717, -0.0237936, 0.00016025, -0.0237939, 0.999716, -0.00164222, -3.47577, -1.60516, 38.6738)
+state = true
+
+[node name="DecoCube29" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00222733, -0.999932, 0.0114056, -0.370431, 0.0114193, 0.92879, -0.928858, -0.00215627, -0.370431, -0.444847, -0.721997, 38.4828)
+
+[node name="DecoCube30" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0012569, 0.0114925, 0.999933, -0.0777132, 0.996911, -0.01136, -0.996975, -0.0776937, 0.00214614, -1.19503, -0.720997, 38.584)
+
+[node name="DecoCube31" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00250644, 0.0302088, 0.999541, -0.374815, 0.926648, -0.0289456, -0.927096, -0.374716, 0.00900012, -1.94276, -0.801907, 38.5131)
+
+[node name="DecoCube32" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.000202246, 1, 0.00029358, 0.999886, -0.00020666, 0.015112, 0.0151121, 0.00029049, -0.999886, -3.47337, -1.50798, 39.4173)
+
+[node name="DecoCube35" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-1, 0.00018544, -0.000444332, 0.000178727, 0.999887, 0.0150614, 0.000447074, 0.0150613, -0.999887, -3.47298, -1.3985, 40.1584)
+state = true
+
+[node name="DecoCube38" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.947712, -0.00824544, 0.319021, -0.032772, -0.991867, -0.122991, 0.31744, -0.127015, 0.939734, -2.21611, -0.315128, 37.1013)
+
+[node name="DecoCube39" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0197007, 0.999806, -0.000546866, 0.917615, -0.0182983, -0.397048, -0.396981, 0.0073203, -0.917798, -2.70221, -1.17664, 37.8589)
+
+[node name="DecoCube40" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999742, 0.0183517, -0.0133924, 0.0221137, 0.921201, -0.388458, 0.00520823, -0.388653, -0.921369, -3.47268, -0.415733, 37.5408)
+state = true
+
+[node name="DecoCube43" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0104696, 0.00164593, 0.999944, 0.805912, -0.591988, -0.00746366, 0.591942, 0.805945, -0.00752438, -0.444506, 1.10302, 38.4812)
+state = true
+
+[node name="DecoCube45" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.664521, 0.747269, -1.49195e-05, 0.746301, 0.663661, 0.0508702, 0.0380236, 0.0337932, -0.998705, -0.594547, -0.139114, 36.2993)
+state = true
+
+[node name="DecoCube47" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.196795, -0.785954, 0.58613, -0.817036, 0.461922, 0.34508, -0.541963, -0.410979, -0.733057, -2.91453, 0.765626, 37.8179)
+state = true
+
+[node name="DecoCube48" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.99794, -0.0641065, -0.00264283, -0.0547415, 0.872194, -0.486087, 0.0334664, -0.484941, -0.873906, -3.45167, 0.754617, 38.7679)
+state = true
+
+[node name="DecoCube49" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.439912, 0.583346, 0.682777, 0.897815, 0.268632, 0.348949, 0.0201422, 0.766515, -0.641911, -1.19935, 0.863679, 37.2918)
+
+[node name="DecoCube50" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.803422, 0.0540124, -0.592955, -0.126651, 0.957583, 0.258832, 0.581784, 0.28305, -0.762502, -1.93901, 0.971964, 38.1664)
+
+[node name="DecoCube51" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00176712, -0.0901488, -0.995927, 0.455218, 0.886827, -0.0794656, 0.890378, -0.453224, 0.0426045, -2.70016, 1.02081, 38.871)
+
+[node name="DecoCube52" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-1, 0.000528442, -0.00081976, 0.000616427, 0.993782, -0.111339, 0.000755827, -0.111339, -0.993782, -3.47478, 0.140299, 40.155)
+
+[node name="DecoCube54" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.197343, 0.159076, -0.967342, -0.978841, 0.0224653, 0.203384, 0.0540852, 0.987011, 0.151277, -2.61457, 1.03448, 40.8496)
+state = true
+
+[node name="DecoCube55" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999978, 0.00628826, 0.00228402, -0.00347533, -0.196522, -0.980493, -0.00571673, -0.980479, 0.19654, -2.71956, 0.187861, 40.9686)
+state = true
+
+[node name="DecoCube56" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00144919, -0.999998, 0.00151698, -0.991025, 0.00123341, -0.13367, 0.133668, -0.00169708, -0.991025, -3.47296, 0.224119, 40.9095)
+state = true
+
+[node name="DecoCube63" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.999954, 0.00021987, 0.00963879, 0.00959029, -0.125382, -0.992062, 0.000990408, 0.992109, -0.125378, -0.448931, 2.5978, 42.8205)
+
+[node name="DecoCube64" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999841, 0.0178081, 0.000214803, 0.0178081, 0.999841, -0.000157445, -0.000217573, -0.000153595, -1, -0.446703, 2.12831, 39.349)
+
+[node name="DecoCube66" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0136328, 0.999903, -0.0027401, -0.996603, -0.0138103, -0.0811924, -0.0812224, 0.00162391, 0.996695, -1.95864, 2.59025, 42.9085)
+
+[node name="DecoCube67" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00937994, -0.0960511, -0.995332, -0.999948, -0.00298905, 0.00971189, -0.00390793, 0.995372, -0.0960181, -2.73018, 2.69923, 42.1028)
+
+[node name="DecoCube68" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999973, 5.54867e-06, 0.0074071, 0.00397916, -0.843047, 0.537825, 0.00624751, 0.53784, 0.843024, -3.47781, 2.58693, 41.375)
+state = true
+
+[node name="DecoCube69" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.000758606, 0.999838, 0.0179849, -0.0832541, -0.0178593, 0.996368, 0.996528, -0.00225317, 0.0832271, -1.20171, 2.73838, 42.1814)
+state = true
+
+[node name="DecoCube70" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0177791, -0.00206707, -0.99984, -0.999771, 0.0119506, 0.0177532, 0.0119119, 0.999926, -0.00227907, -1.96696, 1.83602, 42.4935)
+state = true
+
+[node name="DecoCube71" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.000380289, 0.207649, -0.978203, -0.999998, 0.00180884, -4.78882e-06, 0.00176842, 0.978202, 0.207649, -2.67036, 2.72144, 41.2092)
+state = true
+
+[node name="DecoCube72" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0109948, -0.999937, -0.00228215, 0.016637, -0.00246491, 0.999859, -0.999801, 0.0109553, 0.0166631, -3.46824, 1.75325, 39.8132)
+
+[node name="DecoCube73" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.998312, 0.0213234, 0.0540249, -0.0326494, -0.975321, -0.218365, 0.0480353, -0.21976, 0.974371, -1.96989, 1.52637, 39.08)
+state = true
+
+[node name="DecoCube74" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.211246, -0.0403756, -0.976599, 0.0219931, -0.99909, 0.0365482, -0.977185, -0.0137578, 0.211942, -1.29372, 2.12467, 39.8915)
+
+[node name="DecoCube75" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999994, -0.00227911, 0.0026958, 0.00189939, -0.991072, -0.133314, 0.00297557, -0.133308, 0.99107, -3.47521, 2.31731, 38.3014)
+
+[node name="DecoCube76" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-1, -0.000245618, 0.000826322, 0.000172606, -0.996189, -0.0872245, 0.000844596, -0.0872244, 0.996188, -3.47506, 2.38692, 39.0938)
+state = true
+
+[node name="DecoCube83" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.979105, 0.17573, 0.102337, 0.0541152, -0.259942, 0.964107, 0.196024, 0.9495, 0.245001, -1.22187, 1.5887, 38.5877)
+
+[node name="DecoCube84" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00375397, -0.00830389, 0.999958, 0.0881977, 0.996066, 0.00860268, -0.996096, 0.0882264, -0.00300682, -0.449726, 1.92457, 42.0683)
+state = true
+
+[node name="DecoCube88" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999868, -3.16426e-05, -0.0162311, -0.0160819, -0.133348, 0.990939, -0.00219574, 0.991069, 0.13333, -3.47901, 1.56783, 38.2713)
+state = true
+
+[node name="DecoCube89" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.999776, -0.0208552, -0.00355531, 0.00148059, -0.0986658, 0.99512, -0.0211042, -0.994902, -0.0986128, -0.453479, 2.69844, 41.6462)
+state = true
+
+[node name="DecoCube90" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00503574, 0.0161527, 0.999857, -0.470897, 0.882032, -0.0166209, -0.882174, -0.470913, 0.00316457, -1.95443, 2.64378, 42.0259)
+
+[node name="DecoCube91" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00260995, 0.999996, 0.000787039, -0.995851, 0.00267072, -0.0909607, -0.0909624, -0.000546371, 0.995854, -3.47444, 1.64634, 39.0407)
+state = true
+
+[node name="DecoCube92" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999988, -0.00458066, 0.00173094, 0.0046874, -0.997692, 0.0677435, 0.00141664, 0.0677508, 0.997701, -3.47398, 0.971429, 39.7832)
+
+[node name="DecoCube93" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999991, -0.0030731, 0.00293527, 0.00307349, -0.999995, 0.000127366, 0.00293487, 0.000136387, 0.999996, -0.447385, 2.87379, 39.2639)
+
+[node name="DecoCube94" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999071, -0.0421871, -0.00881626, 0.00674467, 0.0489976, -0.998776, 0.0425674, -0.997908, -0.0486676, -1.97039, 2.34806, 39.1633)
+state = true
+
+[node name="DecoCube95" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0824474, -0.0313404, -0.996103, -0.0071676, -0.999461, 0.0320393, -0.99657, 0.00978123, 0.0821784, -3.33636, 1.74241, 40.5792)
+
+[node name="DecoCube96" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999912, -3.77127e-05, -0.0133011, 0.0132193, -0.113576, -0.993441, -0.00147322, -0.993529, 0.113567, -3.48004, 0.944627, 40.5523)
+
+[node name="DecoCube101" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.000325038, -0.0195368, -0.999809, 0.999731, 0.0231991, -0.000128312, 0.0231972, -0.99954, 0.0195391, -0.453466, 0.2677, 37.0621)
+
+[node name="DecoCube106" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0687107, -0.92777, -0.366771, -0.950865, -0.0503445, 0.305484, -0.301884, 0.36974, -0.878725, -2.04297, 0.383431, 37.5313)
+
+[node name="DecoCube108" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00211629, -0.999996, -0.0017152, -0.999835, 0.00214687, -0.0180289, 0.0180325, 0.00167676, -0.999836, -3.4742, -0.642605, 40.1345)
+state = true
+
+[node name="DecoCube109" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.998855, 0.0158326, -0.0451435, 0.0455459, 0.603403, -0.796135, 0.0146348, -0.797279, -0.603433, -0.472334, 0.366567, 38.0556)
+state = true
+
+[node name="DecoCube110" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.980574, 0.117797, -0.15684, -0.0827401, 0.47657, 0.875234, 0.177845, 0.871209, -0.457566, -2.51036, 0.178583, 38.8727)
+state = true
+
+[node name="DecoCube111" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0634725, -0.984265, -0.164903, -0.882133, 0.021939, -0.470489, 0.466704, 0.175329, -0.86686, -3.39544, 0.108388, 39.1542)
+state = true
+
+[node name="DecoCube113" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.320925, -0.52994, 0.784966, 0.228769, 0.76089, 0.607216, -0.91906, 0.374447, -0.122955, -1.37778, 0.915701, 40.436)
+state = true
+
+[node name="DecoCube127" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.960661, 0.179227, 0.212153, 0.0226946, -0.710682, 0.703147, 0.276797, 0.6803, 0.678657, -0.801465, -1321.88, 55.6226)
+state = true
+
+[node name="DecoCube128" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.619874, -0.628484, -0.469856, -0.55999, -0.0651506, 0.825933, -0.549697, 0.77509, -0.31156, -2.46603, -1333.95, 56.4522)
+state = true
+
+[node name="DecoCube130" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.000229714, -0.999943, 0.0106425, -0.102278, -0.0105632, -0.9947, 0.994756, -0.00131698, -0.102269, -1.19946, 2.58943, 42.9173)
+state = true
+
+[node name="DecoCube131" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0045568, 0.999724, -0.0230422, 0.0321238, -0.0228842, -0.999222, -0.999474, -0.00529346, -0.0320107, -2.72116, 1.86729, 42.7982)
+state = true
+
+[node name="DecoCube132" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00504225, 0.00397434, -0.999979, -0.106483, 0.994304, 0.00448871, 0.994302, 0.106504, -0.00459033, -3.46811, 2.46432, 42.8667)
+
+[node name="DecoCube133" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.89671, 0.145156, 0.41814, -0.0303927, -0.962659, 0.269006, 0.441574, 0.228512, 0.867637, 0.892425, -1042.78, 23.6532)
+
+[node name="DecoCube135" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.291328, -0.795414, -0.531456, 0.312224, 0.604191, -0.733123, 0.904237, 0.0476454, 0.424365, -15.5534, -1061.29, 14.3101)
+state = true
+
+[node name="DecoCube136" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.899666, 0.43506, -0.0363744, 0.312793, -0.584216, 0.748901, 0.304566, -0.685139, -0.661683, -13.9242, -1168.48, 21.5193)
+
+[node name="DecoCube137" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.972355, 0.0349253, -0.23088, -0.13376, -0.727144, -0.673327, -0.191399, 0.685596, -0.702371, 1.25841, -1163.14, 3.30937)
+state = true
+
+[node name="DecoCube138" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.435021, -0.766796, -0.471996, -0.760816, -0.593383, 0.262784, -0.481576, 0.244786, -0.841525, -8.94157, -1239.93, 16.9524)
+state = true
+
+[node name="DecoCube139" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.840165, -0.456601, -0.292642, 0.421654, -0.2106, -0.881961, 0.341073, -0.864386, 0.369466, -4.1059, -1310.86, -1.03836)
+
+[node name="DecoCube140" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.995902, 0.0864496, 0.0265767, 0.0480658, 0.754825, -0.654163, -0.0766129, -0.650205, -0.755886, -9.11259, -1330.12, 58.5327)
+
+[node name="DecoCube142" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0130478, 0.999915, -0.000187862, -0.993431, 0.0129419, -0.113698, -0.113686, 0.00167014, 0.993515, -0.76258, 1.09914, 42.7289)
+
+[node name="DecoCube143" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.849928, -0.456341, -0.263394, 0.0790938, 0.383731, -0.920052, 0.520929, -0.80281, -0.29005, -0.849249, -1325.24, 68.317)
+state = true
+
+[node name="DecoCube144" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.261964, -0.951324, -0.162353, -0.663408, -0.29969, 0.685621, -0.700903, -0.0719011, -0.709624, -17.7509, -1344.85, 65.1236)
+
+[node name="DecoCube145" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0457346, 0.0357855, -0.998313, -0.3533, -0.935349, -0.0173431, -0.934391, 0.351911, 0.0554208, -2.40662, -1299.52, 51.8711)
+state = true
+
+[node name="DecoCube146" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0171007, -0.036333, -0.999193, -0.397666, -0.917146, 0.0265437, -0.917371, 0.396891, -0.0301323, -1.30221, -1292.9, 52.5383)
+
+[node name="DecoCube147" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0527007, -0.314836, -0.947682, 0.974692, 0.222675, -0.0197737, 0.217251, -0.922656, 0.318603, -2.12347, -1309.51, 45.7147)
+
+[node name="DecoCube148" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00263303, 0.268529, -0.963268, 0.475454, 0.847092, 0.237443, 0.879737, -0.458614, -0.125443, -3.52278, -1325.7, 46.5216)
+state = true
+
+[node name="DecoCube149" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.84272, 0.0453677, -0.536438, 0.375884, -0.66376, -0.646633, -0.385402, -0.746569, 0.54231, 3.97852, -1393.15, 43.9167)
+
+[node name="DecoCube150" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.629691, 0.70671, 0.322569, 0.318163, -0.144195, 0.937006, 0.708704, 0.692654, -0.134051, 7.15567, -1336.66, 57.076)
+state = true
+
+[node name="DecoCube153" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999951, -0.00992432, 0.000604259, -0.00978347, 0.992951, 0.118121, -0.00177227, 0.118109, -0.992999, -0.453182, 1.84487, 42.8202)
+state = true
+
+[node name="DecoCube154" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.442284, 0.75429, -0.485213, 0.772116, 0.59548, 0.221903, 0.456314, -0.276496, -0.84577, 7.82001, -1324.14, 56.7977)
+state = true
+
+[node name="DecoCube155" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0142906, 0.0257829, 0.999565, -0.999815, -0.0132293, -0.013953, 0.0128638, -0.99958, 0.0259672, -2.44616, 1.09526, 42.6452)
+state = true
+
+[node name="DecoCube156" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-1, -0.000129783, 0.00022319, -0.000103833, 0.993644, 0.112571, -0.000236381, 0.112571, -0.993644, -3.47495, 1.72183, 42.8004)
+
+[node name="DecoCube160" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.257677, 0.66369, 0.702224, -0.387454, 0.73675, -0.554147, -0.885145, -0.129289, 0.446993, -2.89028, -1095.83, 9.89064)
+state = true
+
+[node name="DecoCube162" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.632162, -0.766833, 0.111074, 0.54375, -0.54117, -0.64146, 0.552003, -0.345111, 0.759073, -5.76239, -1293.54, -3.28508)
+
+[node name="DecoCube163" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.603061, -0.68669, -0.405924, -0.684423, -0.706804, 0.178867, -0.409735, 0.169956, -0.896232, 10.1799, -1279.69, 1.94351)
+
+[node name="DecoCube164" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999756, 0.0184881, 0.0120866, 0.0188965, 0.999223, 0.0345985, -0.0114375, 0.0348184, -0.999328, -2.70842, 2.6161, 42.8916)
+state = true
+
+[node name="DecoCube165" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.85352, -0.520859, -0.014483, 0.450873, -0.724332, -0.52159, 0.261185, -0.451717, 0.853073, 15.1455, -1353.61, 57.6468)
+state = true
+
+[node name="DecoCube166" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.137401, -0.869009, 0.475336, -0.973663, -0.0303489, 0.225965, -0.181939, -0.493865, -0.850291, 7.42669, -1327.76, 64.1218)
+
+[node name="DecoCube168" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.000265312, 0.00104584, -0.999999, -0.118501, 0.992953, 0.00106991, 0.992954, 0.118501, -0.00013951, -3.47473, 0.373002, 42.6271)
+
+[node name="DecoCube117" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.755552, 0.390936, 0.525653, 0.451926, -0.26984, 0.850264, 0.474241, 0.879975, 0.0272033, -2.14923, -1195.58, 24.1676)
+
+[node name="DecoCube169" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00199175, 0.999998, 0.000212664, 0.0357702, -0.000283774, 0.99936, 0.999358, -0.00198287, -0.0357707, -3.47449, -0.844751, 38.6443)
+
+[node name="DecoCube173" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999923, -0.0112634, -0.00523464, -0.00669332, 0.13364, 0.991007, -0.0104625, 0.990966, -0.133705, -2.71011, -2.25406, 39.7869)
+state = true
+
+[node name="DecoCube176" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00015683, 0.000525781, -1, -0.991114, 0.133014, 0.000225373, 0.133014, 0.991114, 0.000500248, -3.47063, -2.22792, 39.9993)
+state = true
+
+[node name="DecoCube179" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00160013, -0.999994, -0.00301725, -0.876846, 4.75431e-05, -0.480771, 0.480768, 0.00341496, -0.876841, -1.95849, -0.46279, 39.2187)
+
+[node name="DecoCube180" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999932, -0.0116287, -0.000671067, -0.0109787, 0.960153, -0.27926, 0.00389177, -0.279234, -0.960215, -2.7204, -0.895617, 38.6952)
+state = true
+
+[node name="DecoCube181" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.295128, -0.123778, -0.947406, 0.253419, -0.9662, 0.0472901, -0.921237, -0.226134, 0.31652, -1.3191, 0.775685, 38.7355)
+
+[node name="DecoCube182" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0565398, -0.134623, 0.989282, -0.237726, -0.964184, -0.117622, 0.969685, -0.228528, -0.0865183, -1.15551, 1.3548, 39.4575)
+state = true
+
+[node name="DecoCube183" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.993011, 0.118012, 0.00173809, 0.0581839, 0.47667, 0.877154, 0.102686, 0.871125, -0.480205, -1.97893, 0.522729, 39.4616)
+
+[node name="DecoCube184" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.992631, -0.0132414, -0.120448, 0.0613673, 0.802175, -0.593927, 0.104484, -0.596942, -0.795452, -2.7059, 0.518908, 39.7286)
+
+[node name="DecoCube185" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00793564, -0.0011599, -0.999968, 0.190932, 0.981603, 0.000376626, 0.981571, -0.190929, 0.00801112, -0.445921, 2.6314, 40.8545)
+
+[node name="DecoCube186" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.999304, 0.0191585, -0.0320208, -0.0365761, 0.333031, -0.942206, -0.0073873, 0.942721, 0.3335, -1.21742, 2.01973, 41.517)
+
+[node name="DecoCube187" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0115817, 0.999929, -0.00283267, 0.471565, 0.00795995, 0.881795, 0.881755, 0.00887695, -0.471624, -1.98042, 1.93909, 41.5564)
+
+[node name="DecoCube188" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.32003, 0.925972, -0.20039, 0.0225582, -0.204007, -0.97871, -0.947139, -0.317737, 0.0444001, -2.89576, 2.48055, 40.4581)
+
+[node name="DecoCube189" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-1.49757e-05, 0.999134, 0.0415963, -0.967311, 0.0105341, -0.253375, -0.253594, -0.0402403, 0.966473, -0.455277, 1.56318, 40.2486)
+state = true
+
+[node name="DecoCube190" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.19546, -0.978217, 0.0699019, 0.336943, 4.54889e-05, -0.941525, 0.921013, 0.207584, 0.329612, -1.94671, 2.63762, 41.0546)
+
+[node name="DecoCube191" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999399, -0.000195351, 0.0346527, -0.000269214, -0.99991, -0.0134011, 0.0346522, -0.0134024, 0.99931, -1.95519, 2.88016, 40.0295)
+
+[node name="DecoCube192" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0216795, -0.00084456, -0.999765, -0.389898, 0.920812, -0.00923264, 0.920603, 0.390007, 0.0196334, -2.72311, 1.81051, 39.3483)
+
+[node name="DecoCube193" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0132867, 2.74524e-06, -0.999912, -0.58745, 0.809223, -0.00780376, 0.809151, 0.587502, 0.0107535, -0.444972, 0.126912, 38.8204)
+state = true
+
+[node name="DecoCube196" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0160523, 0.999871, 0.000609384, -0.587496, 0.00992505, -0.809167, -0.809068, 0.012631, 0.587579, -2.71826, -0.748267, 39.5905)
+state = true
+
+[node name="DecoCube205" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00733045, 0.999967, -0.003405, -0.267346, 0.00524095, 0.963586, 0.963573, -0.00615321, 0.267375, -0.453073, 0.979019, 41.1195)
+
+[node name="DecoCube206" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.117208, -0.0459735, -0.992043, -0.984821, 0.134156, 0.110138, 0.128025, 0.989893, -0.061, -1.27004, 1.12142, 41.7569)
+state = true
+
+[node name="DecoCube207" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.998621, 0.0523692, -0.00377058, -0.011023, 0.138898, -0.990245, -0.0513346, 0.988921, 0.139284, -2.70533, 1.06262, 41.7692)
+
+[node name="DecoCube208" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999998, 0.00180266, -3.11292e-05, 0.00179451, 0.993515, -0.113688, -0.000174013, -0.113687, -0.993517, -3.47443, 1.02858, 41.2875)
+state = true
+
+[node name="DecoCube209" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0168221, 0.999857, -0.00170778, -0.300513, 0.0034269, -0.953772, -0.95363, 0.0165576, 0.300527, -0.456895, 2.68787, 38.0832)
+state = true
+
+[node name="DecoCube210" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00332405, 0.999001, -0.044571, 0.238394, -0.0424945, -0.970238, -0.971163, -0.0138506, -0.238015, -1.21354, 2.27179, 39.0108)
+state = true
+
+[node name="DecoCube211" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0102898, -0.243782, 0.969775, -0.857329, 0.501314, 0.116924, -0.514666, -0.830213, -0.21416, -2.65359, 1.81783, 38.3675)
+state = true
+
+[node name="DecoCube212" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.603587, -0.331435, -0.725144, 0.504169, -0.86324, -0.0251021, -0.617653, -0.380747, 0.68814, -1.78139, -1002.37, 14.6498)
+state = true
+
+[node name="DecoCube213" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.239289, 0.970948, -0.00122276, -0.497297, 0.12364, 0.858725, 0.833929, -0.204875, 0.512435, -1.26717, 2.13306, 37.8647)
+
+[node name="DecoCube214" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.247083, -0.968102, -0.0415896, 0.349876, -0.129157, 0.92785, -0.903625, 0.214704, 0.370627, -1.98085, 2.12503, 38.1091)
+state = true
+
+[node name="DecoCube216" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.999928, -0.00477257, -0.010976, -0.0102324, -0.816605, -0.577106, -0.00620881, 0.577177, -0.816595, -3.47768, 1.94841, 41.8053)
+
+[node name="DecoCube218" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00743107, -0.998384, -0.056345, -0.981118, 0.00361095, -0.193378, 0.193269, 0.056718, -0.979505, -1.9493, 0.353416, 41.6037)
+
+[node name="DecoCube219" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.000341456, 0.999976, 0.00700219, 0.989707, 0.00134001, -0.143103, -0.143109, 0.00688125, -0.989683, -2.72221, 0.306482, 41.737)
+
+[node name="DecoCube221" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999934, 0.00077449, -0.0114418, 0.00322006, 0.97654, -0.21531, 0.0110066, -0.215333, -0.976479, -3.47931, -0.10214, 38.289)
+
+[node name="DecoCube234" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00761554, 0.99997, 0.00108364, -0.011821, 0.00117362, -0.999929, -0.999901, 0.00760219, 0.0118296, -1.96966, 0.338487, 42.5229)
+
+[node name="DecoCube236" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.000212778, 0.999917, -0.0129214, -0.0900749, 0.012888, 0.995852, 0.995935, 0.000951995, 0.0900701, -0.459129, 1.18052, 41.9798)
+
+[node name="DecoCube237" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999899, 0.00135608, 0.0141413, -0.013913, 0.107689, -0.994087, -0.00287093, -0.994184, -0.10766, -1.20602, 1.87557, 42.4927)
+state = true
+
+[node name="DecoCube238" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00029302, -0.00125708, -0.999999, -0.258359, -0.966048, 0.0012901, -0.966049, 0.258359, -4.17065e-05, -3.4745, 1.10798, 42.0745)
+state = true
+
+[node name="DecoCube239" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00124465, 0.000243579, -0.999999, -0.999713, -0.0239444, -0.00125013, -0.0239447, 0.999713, 0.000213706, -3.47446, 0.262193, 41.7117)
+state = true
+
+[node name="DecoCube240" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00390016, -0.00503937, 0.99998, 0.952645, 0.304077, -0.00218316, -0.30406, 0.952634, 0.00598668, -0.448729, 1.92969, 38.1467)
+state = true
+
+[node name="DecoCube241" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.557502, -0.705101, -0.438206, -0.5964, -0.707355, 0.379416, -0.577494, 0.0498206, -0.814874, -23.1833, -1094.9, 19.7752)
+
+[node name="DecoCube243" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0122128, -0.432276, 0.901659, -0.402855, -0.827432, -0.391233, 0.915182, -0.35846, -0.18425, 1.98022, -1142.97, 14.4881)
+state = true
+
+[node name="DecoCube244" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.32611, -0.281599, 0.902416, -0.829165, -0.37327, -0.416118, 0.454023, -0.883952, -0.111765, -1.50131, -0.0175719, 36.4863)
+
+[node name="DecoCube245" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.751147, 0.567153, 0.337811, 0.560004, -0.818412, 0.12883, 0.349535, 0.0924048, -0.932356, -9.65523, -1050.06, 25.578)
+
+[node name="DecoCube246" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.525516, 0.68535, -0.504111, 0.845502, 0.486626, -0.219824, 0.0946572, -0.541748, -0.835194, -4.2395, -1176.81, 12.8534)
+state = true
+
+[node name="DecoCube247" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0131334, 0.0113956, 0.999849, 0.00187542, 0.999934, -0.0113719, -0.999912, 0.00172578, -0.0131539, -2.73135, 1.94981, 42.0424)
+state = true
+
+[node name="DecoCube248" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999995, -5.79942e-05, 0.0033061, 0.0024894, -0.67129, 0.741191, 0.00217637, 0.741195, 0.671286, -1.20136, 0.376055, 41.2209)
+state = true
+
+[node name="DecoCube249" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.12578, -0.0194262, -0.991868, -0.0142806, -0.99974, 0.0177694, -0.991955, 0.0119294, -0.126025, -1.57367, 1.07903, 42.5467)
+state = true
+
+[node name="DecoCube250" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999972, -0.00582156, -0.00460982, -0.00469206, 0.0141925, 0.999888, -0.00575548, 0.999882, -0.0142194, -2.7215, 0.349738, 42.5595)
+
+[node name="DecoCube252" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999998, 0.00175284, 0.000290353, 0.00035366, 0.0362255, 0.999344, 0.00174117, 0.999342, -0.036226, -3.47447, -0.74997, 39.3911)
+
+[node name="DecoCube257" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0862144, 0.14441, -0.985755, -0.995872, -0.0406973, 0.0811372, -0.0284005, 0.988681, 0.147322, -1.75235, 0.0744674, 38.3654)
+state = true
+
+[node name="DecoCube258" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.109517, -0.993005, -0.0441382, 0.472116, 0.0910429, -0.876823, 0.874707, 0.0751886, 0.478784, -2.69467, -0.185163, 38.2412)
+
+[node name="DecoCube267" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.00676806, 2.19899e-05, -0.999977, -0.805991, -0.591903, 0.0054421, -0.591889, 0.806009, 0.00402375, -0.442504, 0.790371, 39.1739)
+state = true
+
+[node name="DecoCube268" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.530038, -0.34353, -0.775272, 0.761125, 0.210317, -0.613559, 0.373829, -0.915289, 0.149993, -1.79455, 1.43841, 40.7611)
+state = true
+
+[node name="DecoCube269" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.188052, -0.979208, 0.0760745, 0.194141, 0.0388679, 0.980203, -0.96278, 0.199099, 0.182795, -1.89419, 1.35356, 39.8542)
+state = true
+
+[node name="DecoCube270" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0854651, -0.988524, -0.124564, -0.968668, 0.0531782, 0.242601, -0.233193, 0.141395, -0.962096, -2.6386, 1.35625, 40.0563)
+
+[node name="DecoCube271" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.999981, -0.00159513, -0.00602238, -0.00293914, -0.97312, -0.230279, -0.00549318, 0.230293, -0.973106, -0.448892, 2.51181, 40.098)
+
+[node name="DecoCube272" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.564394, 0.798208, -0.210531, 0.819008, -0.573371, 0.0217235, -0.103373, -0.184687, -0.977346, -1.17936, 1.98756, 40.6213)
+
+[node name="DecoCube273" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.277252, 0.958221, 0.0703147, -0.203801, -0.0128662, 0.978928, 0.938934, -0.28574, 0.191719, -2.19928, 2.07239, 40.2126)
+state = true
+
+[node name="DecoCube274" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0233912, -0.999718, -0.00402999, 0.273194, -0.0102697, 0.961904, -0.961675, 0.0213991, 0.273357, -2.71894, 2.57551, 39.5231)
+
+[node name="DecoCube275" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0132721, 0.99991, 0.00170875, -0.124971, -3.67247e-05, 0.99216, 0.992072, -0.0133816, 0.124959, -0.445591, 1.79917, 41.2941)
+state = true
+
+[node name="DecoCube276" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.979277, -0.202517, -0.00187134, 5.89567e-05, 0.00895496, -0.99996, 0.202526, -0.979238, -0.00875745, -1.26144, 2.87852, 40.7097)
+
+[node name="DecoCube277" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.0321387, -0.0136085, -0.999391, 0.0147786, -0.999804, 0.0131389, -0.999374, -0.0143473, 0.0323335, -1.20783, 2.87154, 39.8958)
+state = true
+
+[node name="DecoCube278" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.00547974, -0.999905, 0.0126553, 0.999955, 0.00557637, 0.00761344, -0.00768328, 0.012613, 0.999891, -2.73069, 1.88877, 41.2959)
+state = true
+
+[node name="DecoCube280" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.999996, -0.00109354, -0.00253905, -0.00170171, 0.967306, 0.253606, 0.00217871, 0.253609, -0.967304, -0.44943, 0.843117, 40.0756)
+state = true
+
+[node name="DecoCube281" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(0.0116868, -0.0281902, 0.999534, 0.395832, -0.917816, -0.0305136, 0.918249, 0.396004, 0.000432289, -1.9594, 0.159538, 40.6259)
+
+[node name="DecoCube284" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.870696, 0.0963041, -0.482301, -0.472296, 0.109855, 0.874568, 0.137207, 0.989271, -0.0501659, 0.960085, -1314.58, 21.2967)
+
+[node name="DecoCube285" parent="." instance=ExtResource("1_akhaq")]
+transform = Transform3D(-0.984023, -0.0382756, 0.173881, 0.050535, 0.87641, 0.478907, -0.170721, 0.480042, -0.860473, -1.46335, -1235.16, 26.7562)
+state = true

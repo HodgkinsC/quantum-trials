@@ -1,0 +1,925 @@
+[gd_scene load_steps=12 format=4 uid="uid://dt03mpm3jdan0"]
+
+[ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="1_yis6c"]
+[ext_resource type="PackedScene" uid="uid://dm3kk87b1gku3" path="res://Scenes/Decoration/DecoCube.tscn" id="2_yis6c"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7afbj"]
+_surfaces = [{
+"aabb": AABB(-4.66358, -0.25, -2, 9.32715, 0.5, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AjyVwAAAgL4AAABAAjyVwAAAgL4AAADAAjyVwAAAgD4AAADAAjyVQAAAgL4AAADAAjyVwAAAgL4AAADAAjyVwAAAgL4AAABAAjyVwAAAgD4AAADAAjyVwAAAgL4AAADAAjyVQAAAgL4AAADAAjyVwAAAgD4AAADAAjyVwAAAgD4AAABAAjyVwAAAgL4AAABAAjyVwAAAgL4AAABAAjyVwAAAgD4AAABAAjyVQAAAgD4AAABAAjyVQAAAgD4AAABAAjyVwAAAgD4AAABAAjyVwAAAgD4AAADAAjyVwAAAgL4AAABAAjyVQAAAgL4AAABAAjyVQAAAgL4AAADAAjyVQAAAgD4AAABAAjyVQAAAgL4AAABAAjyVwAAAgL4AAABAAjyVQAAAgL4AAADAAjyVQAAAgL4AAABAAjyVQAAAgD4AAABAAjyVQAAAgL4AAADAAjyVQAAAgD4AAADAAjyVwAAAgD4AAADAAjyVwAAAgD4AAADAAjyVQAAAgD4AAADAAjyVQAAAgD4AAABAAjyVQAAAgD4AAABAAjyVQAAAgD4AAADAAjyVQAAAgL4AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uiia8"]
+points = PackedVector3Array(-4.66358, -0.25, -2, -4.66358, 0.25, -2, 4.66358, -0.25, -2, -4.66358, -0.25, 2, -4.66358, 0.25, 2, 4.66358, 0.25, -2, 4.66358, -0.25, 2, 4.66358, 0.25, 2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rqivt"]
+_surfaces = [{
+"aabb": AABB(-0.05, -3.25, -4.67237, 0.1, 6.5, 9.34473),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zcxMvQAAUMAEhJVAzcxMvQAAUMAEhJXAzcxMvQAAUEAEhJXAzcxMPQAAUMAEhJXAzcxMvQAAUMAEhJXAzcxMvQAAUMAEhJVAzcxMvQAAUEAEhJXAzcxMvQAAUMAEhJXAzcxMPQAAUMAEhJXAzcxMvQAAUEAEhJXAzcxMvQAAUEAEhJVAzcxMvQAAUMAEhJVAzcxMvQAAUMAEhJVAzcxMvQAAUEAEhJVAzcxMPQAAUEAEhJVAzcxMPQAAUEAEhJVAzcxMvQAAUEAEhJVAzcxMvQAAUEAEhJXAzcxMvQAAUMAEhJVAzcxMPQAAUMAEhJVAzcxMPQAAUMAEhJXAzcxMPQAAUEAEhJVAzcxMPQAAUMAEhJVAzcxMvQAAUMAEhJVAzcxMPQAAUMAEhJXAzcxMPQAAUMAEhJVAzcxMPQAAUEAEhJVAzcxMPQAAUMAEhJXAzcxMPQAAUEAEhJXAzcxMvQAAUEAEhJXAzcxMvQAAUEAEhJXAzcxMPQAAUEAEhJXAzcxMPQAAUEAEhJVAzcxMPQAAUEAEhJVAzcxMPQAAUEAEhJXAzcxMPQAAUMAEhJXAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eee8m"]
+points = PackedVector3Array(-0.05, -3.25, -4.67237, 0.05, -3.25, -4.67237, -0.05, -3.25, 4.67237, -0.05, 3.25, -4.67237, 0.05, 3.25, -4.67237, 0.05, -3.25, 4.67237, -0.05, 3.25, 4.67237, 0.05, 3.25, 4.67237)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ot3xq"]
+points = PackedVector3Array(-0.05, -3.25, -4.67237, 0.05, -3.25, -4.67237, -0.05, -3.25, 4.67237, -0.05, 3.25, -4.67237, 0.05, 3.25, -4.67237, 0.05, -3.25, 4.67237, -0.05, 3.25, 4.67237, 0.05, 3.25, 4.67237)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ohiq7"]
+_surfaces = [{
+"aabb": AABB(-4.67633, -0.05, -2, 9.35266, 0.1, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("f6SVwM3MTL0AAABAf6SVwM3MTL0AAADAf6SVwM3MTD0AAADAf6SVQM3MTL0AAADAf6SVwM3MTL0AAADAf6SVwM3MTL0AAABAf6SVwM3MTD0AAADAf6SVwM3MTL0AAADAf6SVQM3MTL0AAADAf6SVwM3MTD0AAADAf6SVwM3MTD0AAABAf6SVwM3MTL0AAABAf6SVwM3MTL0AAABAf6SVwM3MTD0AAABAf6SVQM3MTD0AAABAf6SVQM3MTD0AAABAf6SVwM3MTD0AAABAf6SVwM3MTD0AAADAf6SVwM3MTL0AAABAf6SVQM3MTL0AAABAf6SVQM3MTL0AAADAf6SVQM3MTD0AAABAf6SVQM3MTL0AAABAf6SVwM3MTL0AAABAf6SVQM3MTL0AAADAf6SVQM3MTL0AAABAf6SVQM3MTD0AAABAf6SVQM3MTL0AAADAf6SVQM3MTD0AAADAf6SVwM3MTD0AAADAf6SVwM3MTD0AAADAf6SVQM3MTD0AAADAf6SVQM3MTD0AAABAf6SVQM3MTD0AAABAf6SVQM3MTD0AAADAf6SVQM3MTL0AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yis6c"]
+points = PackedVector3Array(-4.67633, -0.05, -2, -4.67633, 0.05, -2, 4.67633, -0.05, -2, -4.67633, -0.05, 2, -4.67633, 0.05, 2, 4.67633, 0.05, -2, 4.67633, -0.05, 2, 4.67633, 0.05, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_btm1e"]
+points = PackedVector3Array(-4.67633, -0.05, -2, -4.67633, 0.05, -2, 4.67633, -0.05, -2, -4.67633, -0.05, 2, -4.67633, 0.05, 2, 4.67633, 0.05, -2, 4.67633, -0.05, 2, 4.67633, 0.05, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eaanl"]
+points = PackedVector3Array(-4.67633, -0.05, -2, -4.67633, 0.05, -2, 4.67633, -0.05, -2, -4.67633, -0.05, 2, -4.67633, 0.05, 2, 4.67633, 0.05, -2, 4.67633, -0.05, 2, 4.67633, 0.05, 2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29.5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -1.14641e-14, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, 1.31134e-07, -2, 3.5, 38.7296)
+material_override = ExtResource("1_yis6c")
+mesh = SubResource("ArrayMesh_7afbj")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -1.14641e-14, 1, 8.74228e-08, -1, 0, 1, 8.74228e-08, 1.31134e-07, -2, 3.5, 38.7296)
+shape = SubResource("ConvexPolygonShape3D_uiia8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -3.90001, -2.38419e-07, 39.1074)
+material_override = ExtResource("1_yis6c")
+mesh = SubResource("ArrayMesh_rqivt")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -3.90001, -2.38419e-07, 39.1074)
+shape = SubResource("ConvexPolygonShape3D_eee8m")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -0.0250053, 0, 39.1074)
+material_override = ExtResource("1_yis6c")
+mesh = SubResource("ArrayMesh_rqivt")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -0.0250053, 0, 39.1074)
+shape = SubResource("ConvexPolygonShape3D_ot3xq")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -1.20182e-14, 1, 0.132827, -0.991139, 1.74182e-08, 0.991139, 0.132827, 1.29972e-07, -1.9796, -2.795, 38.8918)
+material_override = ExtResource("1_yis6c")
+mesh = SubResource("ArrayMesh_ohiq7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -1.20182e-14, 1, 0.132827, -0.991139, 1.74182e-08, 0.991139, 0.132827, 1.29972e-07, -1.9796, -2.795, 38.8918)
+shape = SubResource("ConvexPolygonShape3D_yis6c")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -1.20182e-14, 1, 0.991745, -0.128224, 1.30052e-07, 0.128224, 0.991745, 1.68146e-08, -1.9796, -0.92, 42.8918)
+material_override = ExtResource("1_yis6c")
+mesh = SubResource("ArrayMesh_ohiq7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -1.20182e-14, 1, 0.991745, -0.128224, 1.30052e-07, 0.128224, 0.991745, 1.68146e-08, -1.9796, -0.92, 42.8918)
+shape = SubResource("ConvexPolygonShape3D_btm1e")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -8.49591e-15, 1, 0.922989, 0.384827, 1.21035e-07, -0.384827, 0.922989, -5.0464e-08, -1.9796, -3.85598, 37.5467)
+material_override = ExtResource("1_yis6c")
+mesh = SubResource("ArrayMesh_ohiq7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1.31134e-07, -8.49591e-15, 1, 0.922989, 0.384827, 1.21035e-07, -0.384827, 0.922989, -5.0464e-08, -1.9796, -5.045, 39.0168)
+shape = SubResource("ConvexPolygonShape3D_eaanl")
+
+[node name="Cubes" type="Node3D" parent="."]
+
+[node name="DecoCube" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13071, -2.34444, 38.6802)
+
+[node name="DecoCube2" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25571, -2.34444, 38.6802)
+
+[node name="DecoCube3" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38071, -2.34444, 38.6802)
+
+[node name="DecoCube4" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.505711, -2.34444, 38.6802)
+
+[node name="DecoCube5" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.93414, 38.6624)
+
+[node name="DecoCube6" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.70768, 39.5076)
+
+[node name="DecoCube7" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.48121, 40.3527)
+
+[node name="DecoCube8" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.25474, 41.1979)
+
+[node name="DecoCube9" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.93414, 38.6624)
+
+[node name="DecoCube10" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.70768, 39.5076)
+
+[node name="DecoCube11" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.48121, 40.3527)
+
+[node name="DecoCube12" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.25474, 41.1979)
+
+[node name="DecoCube13" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.93414, 38.6624)
+
+[node name="DecoCube14" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.70768, 39.5076)
+
+[node name="DecoCube15" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.48121, 40.3527)
+
+[node name="DecoCube16" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.25474, 41.1979)
+
+[node name="DecoCube17" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.93414, 38.6624)
+
+[node name="DecoCube18" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.70768, 39.5076)
+
+[node name="DecoCube19" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.48121, 40.3527)
+
+[node name="DecoCube20" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.25474, 41.1979)
+
+[node name="DecoCube21" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578934, -0.469461, 38.2927)
+
+[node name="DecoCube22" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 39.1677)
+
+[node name="DecoCube23" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 40.0427)
+
+[node name="DecoCube24" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 40.9177)
+
+[node name="DecoCube25" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 39.6052)
+
+[node name="DecoCube26" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 39.6052)
+
+[node name="DecoCube27" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 39.6052)
+
+[node name="DecoCube28" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.674252, 39.6052)
+
+[node name="DecoCube29" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 40.2302)
+
+[node name="DecoCube30" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 40.2302)
+
+[node name="DecoCube31" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 40.2302)
+
+[node name="DecoCube32" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.674252, 40.2302)
+
+[node name="DecoCube33" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 40.8552)
+
+[node name="DecoCube34" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 40.8552)
+
+[node name="DecoCube35" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 40.8552)
+
+[node name="DecoCube36" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.674252, 40.8552)
+
+[node name="DecoCube37" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978715, 38.1052)
+
+[node name="DecoCube38" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 38.1052)
+
+[node name="DecoCube39" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 38.1052)
+
+[node name="DecoCube40" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.674252, 38.1052)
+
+[node name="DecoCube43" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 40.0427)
+
+[node name="DecoCube44" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 40.9177)
+
+[node name="DecoCube45" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 39.6052)
+
+[node name="DecoCube46" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 39.6052)
+
+[node name="DecoCube47" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 39.6052)
+
+[node name="DecoCube48" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, 0.700748, 39.6052)
+
+[node name="DecoCube49" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 40.2302)
+
+[node name="DecoCube50" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 40.2302)
+
+[node name="DecoCube51" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 40.2302)
+
+[node name="DecoCube52" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, 0.700748, 40.2302)
+
+[node name="DecoCube53" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 40.8552)
+
+[node name="DecoCube54" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 40.8552)
+
+[node name="DecoCube55" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 40.8552)
+
+[node name="DecoCube56" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, 0.700748, 40.8552)
+
+[node name="DecoCube60" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, 0.700748, 38.1052)
+
+[node name="DecoCube63" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.88909, 40.6109)
+
+[node name="DecoCube64" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.37782, 39.9008)
+
+[node name="DecoCube66" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.99908, 41.0708)
+
+[node name="DecoCube67" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 3.155, 40.9586)
+
+[node name="DecoCube68" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -3.31475, 3.31092, 40.8463)
+
+[node name="DecoCube69" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.47798, 40.6759)
+
+[node name="DecoCube70" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.63389, 40.5636)
+
+[node name="DecoCube71" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 2.78981, 40.4514)
+
+[node name="DecoCube72" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -3.31475, 2.94573, 40.3391)
+
+[node name="DecoCube73" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.11278, 40.1687)
+
+[node name="DecoCube74" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.2687, 40.0564)
+
+[node name="DecoCube75" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 2.42462, 39.9442)
+
+[node name="DecoCube76" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -3.31475, 2.58054, 39.8319)
+
+[node name="DecoCube83" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 1.78054, 40.0427)
+
+[node name="DecoCube84" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 1.78054, 40.9177)
+
+[node name="DecoCube86" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 3.50629, 40.7056)
+
+[node name="DecoCube87" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 39.6052)
+
+[node name="DecoCube88" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, 1.57575, 39.6052)
+
+[node name="DecoCube89" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.98518, 40.3107)
+
+[node name="DecoCube90" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 3.1411, 40.1984)
+
+[node name="DecoCube91" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 40.2302)
+
+[node name="DecoCube92" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, 1.57575, 40.2302)
+
+[node name="DecoCube93" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.61999, 39.8035)
+
+[node name="DecoCube94" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.77591, 39.6912)
+
+[node name="DecoCube95" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 40.8552)
+
+[node name="DecoCube96" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, 1.57575, 40.8552)
+
+[node name="DecoCube101" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578934, 0.0305393, 38.2927)
+
+[node name="DecoCube102" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 39.1677)
+
+[node name="DecoCube103" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 40.0427)
+
+[node name="DecoCube104" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 40.9177)
+
+[node name="DecoCube105" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 39.6052)
+
+[node name="DecoCube106" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 39.6052)
+
+[node name="DecoCube107" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 39.6052)
+
+[node name="DecoCube108" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 39.6052)
+
+[node name="DecoCube109" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 40.2302)
+
+[node name="DecoCube110" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 40.2302)
+
+[node name="DecoCube111" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 40.2302)
+
+[node name="DecoCube112" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 40.2302)
+
+[node name="DecoCube113" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 40.8552)
+
+[node name="DecoCube114" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 40.8552)
+
+[node name="DecoCube115" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 40.8552)
+
+[node name="DecoCube121" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.25474, 42.3229)
+
+[node name="DecoCube122" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.25474, 42.3229)
+
+[node name="DecoCube123" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.25474, 42.3229)
+
+[node name="DecoCube124" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.25474, 42.3229)
+
+[node name="DecoCube125" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 42.0427)
+
+[node name="DecoCube126" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 41.9802)
+
+[node name="DecoCube127" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 41.9802)
+
+[node name="DecoCube128" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 41.9802)
+
+[node name="DecoCube129" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 42.0427)
+
+[node name="DecoCube130" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 41.9802)
+
+[node name="DecoCube131" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 41.9802)
+
+[node name="DecoCube132" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 41.9802)
+
+[node name="DecoCube133" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 1.72048, 38.9879)
+
+[node name="DecoCube134" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 1.45544, 39.2557)
+
+[node name="DecoCube135" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 1.61136, 39.1434)
+
+[node name="DecoCube136" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 1.76727, 39.0312)
+
+[node name="DecoCube137" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.22769, 38.6227)
+
+[node name="DecoCube138" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 1.96265, 38.8905)
+
+[node name="DecoCube139" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.11857, 38.7782)
+
+[node name="DecoCube140" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 41.9802)
+
+[node name="DecoCube141" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 42.0427)
+
+[node name="DecoCube142" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 41.9802)
+
+[node name="DecoCube143" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 41.9802)
+
+[node name="DecoCube144" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 41.9802)
+
+[node name="DecoCube145" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.25474, 43.0729)
+
+[node name="DecoCube146" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.25474, 43.0729)
+
+[node name="DecoCube147" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.25474, 43.0729)
+
+[node name="DecoCube148" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.25474, 43.0729)
+
+[node name="DecoCube149" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 42.7927)
+
+[node name="DecoCube150" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 42.7302)
+
+[node name="DecoCube151" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 42.7302)
+
+[node name="DecoCube152" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 42.7302)
+
+[node name="DecoCube153" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 42.7927)
+
+[node name="DecoCube154" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 42.7302)
+
+[node name="DecoCube155" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 42.7302)
+
+[node name="DecoCube156" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 42.7302)
+
+[node name="DecoCube157" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 1.28225, 38.3792)
+
+[node name="DecoCube158" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 1.01721, 38.647)
+
+[node name="DecoCube159" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 1.17313, 38.5348)
+
+[node name="DecoCube160" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 1.32904, 38.4225)
+
+[node name="DecoCube161" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 1.78946, 38.014)
+
+[node name="DecoCube162" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 1.52442, 38.2819)
+
+[node name="DecoCube163" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 1.68034, 38.1696)
+
+[node name="DecoCube164" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 42.7302)
+
+[node name="DecoCube165" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 42.7927)
+
+[node name="DecoCube166" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 42.7302)
+
+[node name="DecoCube167" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 42.7302)
+
+[node name="DecoCube168" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 42.7302)
+
+[node name="DecoCube116" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 40.8552)
+
+[node name="DecoCube117" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 38.1052)
+
+[node name="DecoCube118" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 38.1052)
+
+[node name="DecoCube119" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 38.1052)
+
+[node name="DecoCube120" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 38.1052)
+
+[node name="DecoCube169" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 38.7302)
+
+[node name="DecoCube171" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 39.3552)
+
+[node name="DecoCube172" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 39.3552)
+
+[node name="DecoCube173" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.25474, 40.8229)
+
+[node name="DecoCube174" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.25474, 40.8229)
+
+[node name="DecoCube175" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.25474, 40.8229)
+
+[node name="DecoCube176" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.25474, 40.8229)
+
+[node name="DecoCube177" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 40.5427)
+
+[node name="DecoCube178" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 40.4802)
+
+[node name="DecoCube179" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 40.4802)
+
+[node name="DecoCube180" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 40.4802)
+
+[node name="DecoCube181" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 40.5427)
+
+[node name="DecoCube182" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 40.4802)
+
+[node name="DecoCube183" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 40.4802)
+
+[node name="DecoCube184" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 40.4802)
+
+[node name="DecoCube185" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.59694, 40.2052)
+
+[node name="DecoCube186" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.3319, 40.473)
+
+[node name="DecoCube187" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.48782, 40.3607)
+
+[node name="DecoCube188" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 2.64373, 40.2485)
+
+[node name="DecoCube189" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 1.78054, 40.5427)
+
+[node name="DecoCube190" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.83911, 40.1078)
+
+[node name="DecoCube191" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.99502, 39.9955)
+
+[node name="DecoCube192" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 40.4802)
+
+[node name="DecoCube193" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 40.5427)
+
+[node name="DecoCube194" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 40.4802)
+
+[node name="DecoCube195" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 40.4802)
+
+[node name="DecoCube196" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 40.4802)
+
+[node name="DecoCube197" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.25474, 41.5729)
+
+[node name="DecoCube198" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.25474, 41.5729)
+
+[node name="DecoCube199" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.25474, 41.5729)
+
+[node name="DecoCube200" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.25474, 41.5729)
+
+[node name="DecoCube201" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 41.2927)
+
+[node name="DecoCube202" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 41.2302)
+
+[node name="DecoCube203" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 41.2302)
+
+[node name="DecoCube204" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 41.2302)
+
+[node name="DecoCube205" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 41.2927)
+
+[node name="DecoCube206" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 41.2302)
+
+[node name="DecoCube207" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 41.2302)
+
+[node name="DecoCube208" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 41.2302)
+
+[node name="DecoCube209" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.15871, 39.5965)
+
+[node name="DecoCube210" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 1.89367, 39.8643)
+
+[node name="DecoCube211" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.04959, 39.7521)
+
+[node name="DecoCube212" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 2.2055, 39.6398)
+
+[node name="DecoCube213" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.66592, 39.2313)
+
+[node name="DecoCube214" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.40088, 39.4992)
+
+[node name="DecoCube215" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.55679, 39.3869)
+
+[node name="DecoCube216" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 41.2302)
+
+[node name="DecoCube217" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 41.2927)
+
+[node name="DecoCube218" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 41.2302)
+
+[node name="DecoCube219" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 41.2302)
+
+[node name="DecoCube220" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 41.2302)
+
+[node name="DecoCube221" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 39.3552)
+
+[node name="DecoCube222" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 36.6052)
+
+[node name="DecoCube223" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 36.6052)
+
+[node name="DecoCube224" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 36.6052)
+
+[node name="DecoCube225" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 36.6052)
+
+[node name="DecoCube226" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 40.7302)
+
+[node name="DecoCube227" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 40.7302)
+
+[node name="DecoCube228" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.25474, 41.8229)
+
+[node name="DecoCube229" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.25474, 41.8229)
+
+[node name="DecoCube230" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.25474, 41.8229)
+
+[node name="DecoCube231" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.25474, 41.8229)
+
+[node name="DecoCube232" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 41.5427)
+
+[node name="DecoCube233" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 41.4802)
+
+[node name="DecoCube234" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 41.4802)
+
+[node name="DecoCube235" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 41.4802)
+
+[node name="DecoCube236" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 41.5427)
+
+[node name="DecoCube237" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 41.4802)
+
+[node name="DecoCube238" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 41.4802)
+
+[node name="DecoCube239" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 41.4802)
+
+[node name="DecoCube240" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.01263, 39.3936)
+
+[node name="DecoCube241" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 1.74759, 39.6615)
+
+[node name="DecoCube242" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 1.90351, 39.5492)
+
+[node name="DecoCube243" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 2.05943, 39.4369)
+
+[node name="DecoCube244" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.51984, 39.0284)
+
+[node name="DecoCube245" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.2548, 39.2963)
+
+[node name="DecoCube246" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.41072, 39.184)
+
+[node name="DecoCube247" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 41.4802)
+
+[node name="DecoCube248" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 41.5427)
+
+[node name="DecoCube249" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 41.4802)
+
+[node name="DecoCube250" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 41.4802)
+
+[node name="DecoCube251" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 41.4802)
+
+[node name="DecoCube252" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 39.6052)
+
+[node name="DecoCube253" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 36.8552)
+
+[node name="DecoCube254" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 36.8552)
+
+[node name="DecoCube255" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 36.8552)
+
+[node name="DecoCube256" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 36.8552)
+
+[node name="DecoCube257" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 39.8552)
+
+[node name="DecoCube258" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 39.8552)
+
+[node name="DecoCube259" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.81821, -1.25474, 40.9479)
+
+[node name="DecoCube260" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -1.19321, -1.25474, 40.9479)
+
+[node name="DecoCube261" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -0.568211, -1.25474, 40.9479)
+
+[node name="DecoCube262" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.258819, 0.965926, -1.13133e-08, 0.965926, -0.258819, -4.2222e-08, -3.31821, -1.25474, 40.9479)
+
+[node name="DecoCube263" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, -0.469461, 40.6677)
+
+[node name="DecoCube264" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, -0.0978716, 40.6052)
+
+[node name="DecoCube265" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, -0.289998, 40.6052)
+
+[node name="DecoCube266" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, -0.482125, 40.6052)
+
+[node name="DecoCube267" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.905539, 40.6677)
+
+[node name="DecoCube268" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 1.27713, 40.6052)
+
+[node name="DecoCube269" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 1.085, 40.6052)
+
+[node name="DecoCube270" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.892875, 40.6052)
+
+[node name="DecoCube271" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -0.584306, -0.718632, 0.377034, -0.811533, 0.517417, -0.271466, -0.578935, 2.5239, 40.1037)
+
+[node name="DecoCube272" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.25886, 40.3716)
+
+[node name="DecoCube273" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.41478, 40.2593)
+
+[node name="DecoCube274" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -2.46111, 2.5707, 40.147)
+
+[node name="DecoCube275" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 1.78054, 40.6677)
+
+[node name="DecoCube276" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -0.753816, 2.76607, 40.0064)
+
+[node name="DecoCube277" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, 0.178191, -0.791728, 0.584306, -0.128298, 0.570047, 0.811533, -1.60746, 2.92199, 39.8941)
+
+[node name="DecoCube278" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 1.76788, 40.6052)
+
+[node name="DecoCube279" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-3.87075e-08, -0.464595, -0.885523, -2.03081e-08, 0.885523, -0.464595, 1, 0, -4.37114e-08, -0.578935, 0.0305393, 40.6677)
+
+[node name="DecoCube280" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 40.6052)
+
+[node name="DecoCube281" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 40.6052)
+
+[node name="DecoCube282" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 40.6052)
+
+[node name="DecoCube283" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 38.7302)
+
+[node name="DecoCube284" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -0.753816, 0.402128, 35.9802)
+
+[node name="DecoCube285" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -1.60746, 0.210002, 35.9802)
+
+[node name="DecoCube286" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -2.46111, 0.0178752, 35.9802)
+
+[node name="DecoCube287" parent="Cubes" instance=ExtResource("2_yis6c")]
+transform = Transform3D(-0.975596, -0.219574, 8.13521e-08, -0.219574, 0.975596, 2.9906e-08, -8.59334e-08, 1.13133e-08, -1, -3.31475, -0.174252, 35.9802)

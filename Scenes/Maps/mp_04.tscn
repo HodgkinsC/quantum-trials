@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=4 uid="uid://cvwgsjaqa3fjm"]
+[gd_scene load_steps=143 format=4 uid="uid://cvwgsjaqa3fjm"]
 
 [ext_resource type="PackedScene" uid="uid://c32623xiovm3v" path="res://Scenes/PuzzleElements/Door.tscn" id="1_16g0q"]
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="2_1168f"]
@@ -13,6 +13,10 @@
 [ext_resource type="Script" uid="uid://cxkdfsyucme3w" path="res://Scripts/QuantLocPuzzle.gd" id="9_00js0"]
 [ext_resource type="Script" uid="uid://bfwbivm8snsl2" path="res://Scripts/QuantPossibleLoc.gd" id="10_n15qg"]
 [ext_resource type="PackedScene" uid="uid://l2u5g0wf6g77" path="res://Scenes/PuzzleElements/Cube.tscn" id="11_00js0"]
+[ext_resource type="Material" uid="uid://bgiqtp2xtsj7i" path="res://Assets/Materials/SteelQuant.tres" id="11_tdpvn"]
+[ext_resource type="Script" uid="uid://b0dphgi2bly7t" path="res://Scripts/QuantTouchDetect.gd" id="12_g1waq"]
+[ext_resource type="PackedScene" uid="uid://dm3kk87b1gku3" path="res://Scenes/Decoration/DecoCube.tscn" id="14_7wfw2"]
+[ext_resource type="Script" uid="uid://cuuml3id31mx0" path="res://Scripts/fall_pit.gd" id="14_n15qg"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1168f"]
 data = PackedVector3Array(-4.6726, -0.05, 2, -4.6726, -0.05, -2, -4.6726, 0.05, -2, 4.6726, -0.05, -2, -4.6726, -0.05, -2, -4.6726, -0.05, 2, -4.6726, 0.05, -2, -4.6726, -0.05, -2, 4.6726, -0.05, -2, -4.6726, 0.05, -2, -4.6726, 0.05, 2, -4.6726, -0.05, 2, -4.6726, -0.05, 2, -4.6726, 0.05, 2, 4.6726, 0.05, 2, 4.6726, 0.05, 2, -4.6726, 0.05, 2, -4.6726, 0.05, -2, -4.6726, -0.05, 2, 4.6726, -0.05, 2, 4.6726, -0.05, -2, 4.6726, 0.05, 2, 4.6726, -0.05, 2, -4.6726, -0.05, 2, 4.6726, -0.05, -2, 4.6726, -0.05, 2, 4.6726, 0.05, 2, 4.6726, -0.05, -2, 4.6726, 0.05, -2, -4.6726, 0.05, -2, -4.6726, 0.05, -2, 4.6726, 0.05, -2, 4.6726, 0.05, 2, 4.6726, 0.05, 2, 4.6726, 0.05, -2, 4.6726, -0.05, -2)
@@ -496,6 +500,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AjyVwAAAgL4AAABAAjyVwAAAgL4AAADAAjyVwAAAgD4AAADAAjyVQAAAgL4AAADAAjyVwAAAgL4AAADAAjyVwAAAgL4AAABAAjyVwAAAgD4AAADAAjyVwAAAgL4AAADAAjyVQAAAgL4AAADAAjyVwAAAgD4AAADAAjyVwAAAgD4AAABAAjyVwAAAgL4AAABAAjyVwAAAgL4AAABAAjyVwAAAgD4AAABAAjyVQAAAgD4AAABAAjyVQAAAgD4AAABAAjyVwAAAgD4AAABAAjyVwAAAgD4AAADAAjyVwAAAgL4AAABAAjyVQAAAgL4AAABAAjyVQAAAgL4AAADAAjyVQAAAgD4AAABAAjyVQAAAgL4AAABAAjyVwAAAgL4AAABAAjyVQAAAgL4AAADAAjyVQAAAgL4AAABAAjyVQAAAgD4AAABAAjyVQAAAgL4AAADAAjyVQAAAgD4AAADAAjyVwAAAgD4AAADAAjyVwAAAgD4AAADAAjyVQAAAgD4AAADAAjyVQAAAgD4AAABAAjyVQAAAgD4AAABAAjyVQAAAgD4AAADAAjyVQAAAgL4AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n15qg"]
+points = PackedVector3Array(-4.66358, -0.25, -2, -4.66358, 0.25, -2, 4.66358, -0.25, -2, -4.66358, -0.25, 2, -4.66358, 0.25, 2, 4.66358, 0.25, -2, 4.66358, -0.25, 2, 4.66358, 0.25, 2)
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_50l5r"]
 data = PackedVector3Array(-0.05, -3.25, 4.6638, -0.05, -3.25, -4.6638, -0.05, 3.25, -4.6638, 0.05, -3.25, -4.6638, -0.05, -3.25, -4.6638, -0.05, -3.25, 4.6638, -0.05, 3.25, -4.6638, -0.05, -3.25, -4.6638, 0.05, -3.25, -4.6638, -0.05, 3.25, -4.6638, -0.05, 3.25, 4.6638, -0.05, -3.25, 4.6638, -0.05, -3.25, 4.6638, -0.05, 3.25, 4.6638, 0.05, 3.25, 4.6638, 0.05, 3.25, 4.6638, -0.05, 3.25, 4.6638, -0.05, 3.25, -4.6638, -0.05, -3.25, 4.6638, 0.05, -3.25, 4.6638, 0.05, -3.25, -4.6638, 0.05, 3.25, 4.6638, 0.05, -3.25, 4.6638, -0.05, -3.25, 4.6638, 0.05, -3.25, -4.6638, 0.05, -3.25, 4.6638, 0.05, 3.25, 4.6638, 0.05, -3.25, -4.6638, 0.05, 3.25, -4.6638, -0.05, 3.25, -4.6638, -0.05, 3.25, -4.6638, 0.05, 3.25, -4.6638, 0.05, 3.25, 4.6638, 0.05, 3.25, 4.6638, 0.05, 3.25, -4.6638, 0.05, -3.25, -4.6638)
 
@@ -566,19 +573,8 @@ _surfaces = [{
 "vertex_data": PackedByteArray("zczMvAAAUMAAAPBAzczMvAAAUMAAAPDAzczMvAAAUEAAAPDAzczMPAAAUMAAAPDAzczMvAAAUMAAAPDAzczMvAAAUMAAAPBAzczMvAAAUEAAAPDAzczMvAAAUMAAAPDAzczMPAAAUMAAAPDAzczMvAAAUEAAAPDAzczMvAAAUEAAAPBAzczMvAAAUMAAAPBAzczMvAAAUMAAAPBAzczMvAAAUEAAAPBAzczMPAAAUEAAAPBAzczMPAAAUEAAAPBAzczMvAAAUEAAAPBAzczMvAAAUEAAAPDAzczMvAAAUMAAAPBAzczMPAAAUMAAAPBAzczMPAAAUMAAAPDAzczMPAAAUEAAAPBAzczMPAAAUMAAAPBAzczMvAAAUMAAAPBAzczMPAAAUMAAAPDAzczMPAAAUMAAAPBAzczMPAAAUEAAAPBAzczMPAAAUMAAAPDAzczMPAAAUEAAAPDAzczMvAAAUEAAAPDAzczMvAAAUEAAAPDAzczMPAAAUEAAAPDAzczMPAAAUEAAAPBAzczMPAAAUEAAAPBAzczMPAAAUEAAAPDAzczMPAAAUMAAAPDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
-[sub_resource type="BoxMesh" id="BoxMesh_1168f"]
-size = Vector3(20, 0.1, 0.1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_74123"]
-render_priority = 0
-shader = ExtResource("5_6etve")
-shader_parameter/albedo = Color(1, 1, 1, 0.392157)
-shader_parameter/roughness = 0.242
-shader_parameter/normal_strength = 1.0
-shader_parameter/edge_color = Color(0, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_6etve"]
-size = Vector3(20, 1, 0.05)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tdpvn"]
+points = PackedVector3Array(-0.025, -3.25, -7.5, 0.025, -3.25, -7.5, -0.025, -3.25, 7.5, -0.025, 3.25, -7.5, 0.025, 3.25, -7.5, 0.025, -3.25, 7.5, -0.025, 3.25, 7.5, 0.025, 3.25, 7.5)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d76mc"]
 data = PackedVector3Array(-0.05, -3.25, 2.6875, -0.05, -3.25, -2.6875, -0.05, 3.25, -2.6875, 0.05, -3.25, -2.6875, -0.05, -3.25, -2.6875, -0.05, -3.25, 2.6875, -0.05, 3.25, -2.6875, -0.05, -3.25, -2.6875, 0.05, -3.25, -2.6875, -0.05, 3.25, -2.6875, -0.05, 3.25, 2.6875, -0.05, -3.25, 2.6875, -0.05, -3.25, 2.6875, -0.05, 3.25, 2.6875, 0.05, 3.25, 2.6875, 0.05, 3.25, 2.6875, -0.05, 3.25, 2.6875, -0.05, 3.25, -2.6875, -0.05, -3.25, 2.6875, 0.05, -3.25, 2.6875, 0.05, -3.25, -2.6875, 0.05, 3.25, 2.6875, 0.05, -3.25, 2.6875, -0.05, -3.25, 2.6875, 0.05, -3.25, -2.6875, 0.05, -3.25, 2.6875, 0.05, 3.25, 2.6875, 0.05, -3.25, -2.6875, 0.05, 3.25, -2.6875, -0.05, 3.25, -2.6875, -0.05, 3.25, -2.6875, 0.05, 3.25, -2.6875, 0.05, 3.25, 2.6875, 0.05, 3.25, 2.6875, 0.05, 3.25, -2.6875, 0.05, -3.25, -2.6875)
@@ -649,6 +645,12 @@ _surfaces = [{
 "vertex_count": 36,
 "vertex_data": PackedByteArray("zcxMvQAAUMAEhJVAzcxMvQAAUMAEhJXAzcxMvQAAUEAEhJXAzcxMPQAAUMAEhJXAzcxMvQAAUMAEhJXAzcxMvQAAUMAEhJVAzcxMvQAAUEAEhJXAzcxMvQAAUMAEhJXAzcxMPQAAUMAEhJXAzcxMvQAAUEAEhJXAzcxMvQAAUEAEhJVAzcxMvQAAUMAEhJVAzcxMvQAAUMAEhJVAzcxMvQAAUEAEhJVAzcxMPQAAUEAEhJVAzcxMPQAAUEAEhJVAzcxMvQAAUEAEhJVAzcxMvQAAUEAEhJXAzcxMvQAAUMAEhJVAzcxMPQAAUMAEhJVAzcxMPQAAUMAEhJXAzcxMPQAAUEAEhJVAzcxMPQAAUMAEhJVAzcxMvQAAUMAEhJVAzcxMPQAAUMAEhJXAzcxMPQAAUMAEhJVAzcxMPQAAUEAEhJVAzcxMPQAAUMAEhJXAzcxMPQAAUEAEhJXAzcxMvQAAUEAEhJXAzcxMvQAAUEAEhJXAzcxMPQAAUEAEhJXAzcxMPQAAUEAEhJVAzcxMPQAAUEAEhJVAzcxMPQAAUEAEhJXAzcxMPQAAUMAEhJXAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g1waq"]
+points = PackedVector3Array(-0.05, -3.25, -4.67237, 0.05, -3.25, -4.67237, -0.05, -3.25, 4.67237, -0.05, 3.25, -4.67237, 0.05, 3.25, -4.67237, 0.05, -3.25, 4.67237, -0.05, 3.25, 4.67237, 0.05, 3.25, 4.67237)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7wfw2"]
+points = PackedVector3Array(-0.05, -3.25, -4.67237, 0.05, -3.25, -4.67237, -0.05, -3.25, 4.67237, -0.05, 3.25, -4.67237, 0.05, 3.25, -4.67237, 0.05, -3.25, 4.67237, -0.05, 3.25, 4.67237, 0.05, 3.25, 4.67237)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ttk3c"]
 data = PackedVector3Array(-0.05, -3.25, 2.6875, -0.05, -3.25, -2.6875, -0.05, 3.25, -2.6875, 0.05, -3.25, -2.6875, -0.05, -3.25, -2.6875, -0.05, -3.25, 2.6875, -0.05, 3.25, -2.6875, -0.05, -3.25, -2.6875, 0.05, -3.25, -2.6875, -0.05, 3.25, -2.6875, -0.05, 3.25, 2.6875, -0.05, -3.25, 2.6875, -0.05, -3.25, 2.6875, -0.05, 3.25, 2.6875, 0.05, 3.25, 2.6875, 0.05, 3.25, 2.6875, -0.05, 3.25, 2.6875, -0.05, 3.25, -2.6875, -0.05, -3.25, 2.6875, 0.05, -3.25, 2.6875, 0.05, -3.25, -2.6875, 0.05, 3.25, 2.6875, 0.05, -3.25, 2.6875, -0.05, -3.25, 2.6875, 0.05, -3.25, -2.6875, 0.05, -3.25, 2.6875, 0.05, 3.25, 2.6875, 0.05, -3.25, -2.6875, 0.05, 3.25, -2.6875, -0.05, 3.25, -2.6875, -0.05, 3.25, -2.6875, 0.05, 3.25, -2.6875, 0.05, 3.25, 2.6875, 0.05, 3.25, 2.6875, 0.05, 3.25, -2.6875, 0.05, -3.25, -2.6875)
@@ -772,6 +774,32 @@ _surfaces = [{
 "vertex_data": PackedByteArray("zcxMvQAAIMAAAIBAzcxMvQAAIMAAAIDAzcxMvQAAIEAAAIDAzcxMPQAAIMAAAIDAzcxMvQAAIMAAAIDAzcxMvQAAIMAAAIBAzcxMvQAAIEAAAIDAzcxMvQAAIMAAAIDAzcxMPQAAIMAAAIDAzcxMvQAAIEAAAIDAzcxMvQAAIEAAAIBAzcxMvQAAIMAAAIBAzcxMvQAAIMAAAIBAzcxMvQAAIEAAAIBAzcxMPQAAIEAAAIBAzcxMPQAAIEAAAIBAzcxMvQAAIEAAAIBAzcxMvQAAIEAAAIDAzcxMvQAAIMAAAIBAzcxMPQAAIMAAAIBAzcxMPQAAIMAAAIDAzcxMPQAAIEAAAIBAzcxMPQAAIMAAAIBAzcxMvQAAIMAAAIBAzcxMPQAAIMAAAIDAzcxMPQAAIMAAAIBAzcxMPQAAIEAAAIBAzcxMPQAAIMAAAIDAzcxMPQAAIEAAAIDAzcxMvQAAIEAAAIDAzcxMvQAAIEAAAIDAzcxMPQAAIEAAAIDAzcxMPQAAIEAAAIBAzcxMPQAAIEAAAIBAzcxMPQAAIEAAAIDAzcxMPQAAIMAAAIDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_00js0"]
+points = PackedVector3Array(-4.67633, -0.05, -2, -4.67633, 0.05, -2, 4.67633, -0.05, -2, -4.67633, -0.05, 2, -4.67633, 0.05, 2, 4.67633, 0.05, -2, 4.67633, -0.05, 2, 4.67633, 0.05, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7wfw2"]
+size = Vector3(1.2, 4, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdpvn"]
+size = Vector3(100, 5, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n15qg"]
+size = Vector3(2.67676, 4.67517, 4.27637)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fsecd"]
+_surfaces = [{
+"aabb": AABB(-4.67633, -0.05, -2, 9.35266, 0.1, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("f6SVwM3MTL0AAABAf6SVwM3MTL0AAADAf6SVwM3MTD0AAADAf6SVQM3MTL0AAADAf6SVwM3MTL0AAADAf6SVwM3MTL0AAABAf6SVwM3MTD0AAADAf6SVwM3MTL0AAADAf6SVQM3MTL0AAADAf6SVwM3MTD0AAADAf6SVwM3MTD0AAABAf6SVwM3MTL0AAABAf6SVwM3MTL0AAABAf6SVwM3MTD0AAABAf6SVQM3MTD0AAABAf6SVQM3MTD0AAABAf6SVwM3MTD0AAABAf6SVwM3MTD0AAADAf6SVwM3MTL0AAABAf6SVQM3MTL0AAABAf6SVQM3MTL0AAADAf6SVQM3MTD0AAABAf6SVQM3MTL0AAABAf6SVwM3MTL0AAABAf6SVQM3MTL0AAADAf6SVQM3MTL0AAABAf6SVQM3MTD0AAABAf6SVQM3MTL0AAADAf6SVQM3MTD0AAADAf6SVwM3MTD0AAADAf6SVwM3MTD0AAADAf6SVQM3MTD0AAADAf6SVQM3MTD0AAABAf6SVQM3MTD0AAABAf6SVQM3MTD0AAADAf6SVQM3MTL0AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d76mc"]
+points = PackedVector3Array(-4.67633, -0.05, -2, -4.67633, 0.05, -2, 4.67633, -0.05, -2, -4.67633, -0.05, 2, -4.67633, 0.05, 2, 4.67633, 0.05, -2, 4.67633, -0.05, 2, 4.67633, 0.05, 2)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n15qg"]
 albedo_color = Color(0, 0, 0, 1)
 
@@ -790,6 +818,104 @@ shader_parameter/albedo = Color(0.215686, 0.215686, 0.215686, 0.956863)
 shader_parameter/roughness = 0.15
 shader_parameter/normal_strength = 1.0
 shader_parameter/edge_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_00js0"]
+data = PackedVector3Array(-2, -0.5, 2, -2, -0.5, -2, -2, 0.5, -2, 2, -0.5, -2, -2, -0.5, -2, -2, -0.5, 2, -2, 0.5, -2, -2, -0.5, -2, 2, -0.5, -2, -2, 0.5, -2, -2, 0.5, 2, -2, -0.5, 2, -2, -0.5, 2, -2, 0.5, 2, 2, 0.5, 2, 2, 0.5, 2, -2, 0.5, 2, -2, 0.5, -2, -2, -0.5, 2, 2, -0.5, 2, 2, -0.5, -2, 2, 0.5, 2, 2, -0.5, 2, -2, -0.5, 2, 2, -0.5, -2, 2, -0.5, 2, 2, 0.5, 2, 2, -0.5, -2, 2, 0.5, -2, -2, 0.5, -2, -2, 0.5, -2, 2, 0.5, -2, 2, 0.5, 2, 2, 0.5, 2, 2, 0.5, -2, 2, -0.5, -2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jusjw"]
+_surfaces = [{
+"aabb": AABB(-2, -0.5, -2, 4, 1, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAwAAAAL8AAABAAAAAwAAAAL8AAADAAAAAwAAAAD8AAADAAAAAQAAAAL8AAADAAAAAwAAAAL8AAADAAAAAwAAAAL8AAABAAAAAwAAAAD8AAADAAAAAwAAAAL8AAADAAAAAQAAAAL8AAADAAAAAwAAAAD8AAADAAAAAwAAAAD8AAABAAAAAwAAAAL8AAABAAAAAwAAAAL8AAABAAAAAwAAAAD8AAABAAAAAQAAAAD8AAABAAAAAQAAAAD8AAABAAAAAwAAAAD8AAABAAAAAwAAAAD8AAADAAAAAwAAAAL8AAABAAAAAQAAAAL8AAABAAAAAQAAAAL8AAADAAAAAQAAAAD8AAABAAAAAQAAAAL8AAABAAAAAwAAAAL8AAABAAAAAQAAAAL8AAADAAAAAQAAAAL8AAABAAAAAQAAAAD8AAABAAAAAQAAAAL8AAADAAAAAQAAAAD8AAADAAAAAwAAAAD8AAADAAAAAwAAAAD8AAADAAAAAQAAAAD8AAADAAAAAQAAAAD8AAABAAAAAQAAAAD8AAABAAAAAQAAAAD8AAADAAAAAQAAAAL8AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vm8lp"]
+data = PackedVector3Array(-2, -0.25, 2, -2, -0.25, -2, -2, 0.25, -2, 2, -0.25, -2, -2, -0.25, -2, -2, -0.25, 2, -2, 0.25, -2, -2, -0.25, -2, 2, -0.25, -2, -2, 0.25, -2, -2, 0.25, 2, -2, -0.25, 2, -2, -0.25, 2, -2, 0.25, 2, 2, 0.25, 2, 2, 0.25, 2, -2, 0.25, 2, -2, 0.25, -2, -2, -0.25, 2, 2, -0.25, 2, 2, -0.25, -2, 2, 0.25, 2, 2, -0.25, 2, -2, -0.25, 2, 2, -0.25, -2, 2, -0.25, 2, 2, 0.25, 2, 2, -0.25, -2, 2, 0.25, -2, -2, 0.25, -2, -2, 0.25, -2, 2, 0.25, -2, 2, 0.25, 2, 2, 0.25, 2, 2, 0.25, -2, 2, -0.25, -2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ttk3c"]
+_surfaces = [{
+"aabb": AABB(-2, -0.25, -2, 4, 0.5, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAwAAAgL4AAABAAAAAwAAAgL4AAADAAAAAwAAAgD4AAADAAAAAQAAAgL4AAADAAAAAwAAAgL4AAADAAAAAwAAAgL4AAABAAAAAwAAAgD4AAADAAAAAwAAAgL4AAADAAAAAQAAAgL4AAADAAAAAwAAAgD4AAADAAAAAwAAAgD4AAABAAAAAwAAAgL4AAABAAAAAwAAAgL4AAABAAAAAwAAAgD4AAABAAAAAQAAAgD4AAABAAAAAQAAAgD4AAABAAAAAwAAAgD4AAABAAAAAwAAAgD4AAADAAAAAwAAAgL4AAABAAAAAQAAAgL4AAABAAAAAQAAAgL4AAADAAAAAQAAAgD4AAABAAAAAQAAAgL4AAABAAAAAwAAAgL4AAABAAAAAQAAAgL4AAADAAAAAQAAAgL4AAABAAAAAQAAAgD4AAABAAAAAQAAAgL4AAADAAAAAQAAAgD4AAADAAAAAwAAAgD4AAADAAAAAwAAAgD4AAADAAAAAQAAAgD4AAADAAAAAQAAAgD4AAABAAAAAQAAAgD4AAABAAAAAQAAAgD4AAADAAAAAQAAAgL4AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7b54o"]
+data = PackedVector3Array(-0.05, -1.25, 2, -0.05, -1.25, -2, -0.05, 1.25, -2, 0.05, -1.25, -2, -0.05, -1.25, -2, -0.05, -1.25, 2, -0.05, 1.25, -2, -0.05, -1.25, -2, 0.05, -1.25, -2, -0.05, 1.25, -2, -0.05, 1.25, 2, -0.05, -1.25, 2, -0.05, -1.25, 2, -0.05, 1.25, 2, 0.05, 1.25, 2, 0.05, 1.25, 2, -0.05, 1.25, 2, -0.05, 1.25, -2, -0.05, -1.25, 2, 0.05, -1.25, 2, 0.05, -1.25, -2, 0.05, 1.25, 2, 0.05, -1.25, 2, -0.05, -1.25, 2, 0.05, -1.25, -2, 0.05, -1.25, 2, 0.05, 1.25, 2, 0.05, -1.25, -2, 0.05, 1.25, -2, -0.05, 1.25, -2, -0.05, 1.25, -2, 0.05, 1.25, -2, 0.05, 1.25, 2, 0.05, 1.25, 2, 0.05, 1.25, -2, 0.05, -1.25, -2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b740l"]
+_surfaces = [{
+"aabb": AABB(-0.05, -1.25, -2, 0.1, 2.5, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zcxMvQAAoL8AAABAzcxMvQAAoL8AAADAzcxMvQAAoD8AAADAzcxMPQAAoL8AAADAzcxMvQAAoL8AAADAzcxMvQAAoL8AAABAzcxMvQAAoD8AAADAzcxMvQAAoL8AAADAzcxMPQAAoL8AAADAzcxMvQAAoD8AAADAzcxMvQAAoD8AAABAzcxMvQAAoL8AAABAzcxMvQAAoL8AAABAzcxMvQAAoD8AAABAzcxMPQAAoD8AAABAzcxMPQAAoD8AAABAzcxMvQAAoD8AAABAzcxMvQAAoD8AAADAzcxMvQAAoL8AAABAzcxMPQAAoL8AAABAzcxMPQAAoL8AAADAzcxMPQAAoD8AAABAzcxMPQAAoL8AAABAzcxMvQAAoL8AAABAzcxMPQAAoL8AAADAzcxMPQAAoL8AAABAzcxMPQAAoD8AAABAzcxMPQAAoL8AAADAzcxMPQAAoD8AAADAzcxMvQAAoD8AAADAzcxMvQAAoD8AAADAzcxMPQAAoD8AAADAzcxMPQAAoD8AAABAzcxMPQAAoD8AAABAzcxMPQAAoD8AAADAzcxMPQAAoL8AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rf2l5"]
+data = PackedVector3Array(-0.05, -1.25, 2, -0.05, -1.25, -2, -0.05, 1.25, -2, 0.05, -1.25, -2, -0.05, -1.25, -2, -0.05, -1.25, 2, -0.05, 1.25, -2, -0.05, -1.25, -2, 0.05, -1.25, -2, -0.05, 1.25, -2, -0.05, 1.25, 2, -0.05, -1.25, 2, -0.05, -1.25, 2, -0.05, 1.25, 2, 0.05, 1.25, 2, 0.05, 1.25, 2, -0.05, 1.25, 2, -0.05, 1.25, -2, -0.05, -1.25, 2, 0.05, -1.25, 2, 0.05, -1.25, -2, 0.05, 1.25, 2, 0.05, -1.25, 2, -0.05, -1.25, 2, 0.05, -1.25, -2, 0.05, -1.25, 2, 0.05, 1.25, 2, 0.05, -1.25, -2, 0.05, 1.25, -2, -0.05, 1.25, -2, -0.05, 1.25, -2, 0.05, 1.25, -2, 0.05, 1.25, 2, 0.05, 1.25, 2, 0.05, 1.25, -2, 0.05, -1.25, -2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_twjoi"]
+_surfaces = [{
+"aabb": AABB(-0.05, -1.25, -2, 0.1, 2.5, 4),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zcxMvQAAoL8AAABAzcxMvQAAoL8AAADAzcxMvQAAoD8AAADAzcxMPQAAoL8AAADAzcxMvQAAoL8AAADAzcxMvQAAoL8AAABAzcxMvQAAoD8AAADAzcxMvQAAoL8AAADAzcxMPQAAoL8AAADAzcxMvQAAoD8AAADAzcxMvQAAoD8AAABAzcxMvQAAoL8AAABAzcxMvQAAoL8AAABAzcxMvQAAoD8AAABAzcxMPQAAoD8AAABAzcxMPQAAoD8AAABAzcxMvQAAoD8AAABAzcxMvQAAoD8AAADAzcxMvQAAoL8AAABAzcxMPQAAoL8AAABAzcxMPQAAoL8AAADAzcxMPQAAoD8AAABAzcxMPQAAoL8AAABAzcxMvQAAoL8AAABAzcxMPQAAoL8AAADAzcxMPQAAoL8AAABAzcxMPQAAoD8AAABAzcxMPQAAoL8AAADAzcxMPQAAoD8AAADAzcxMvQAAoD8AAADAzcxMvQAAoD8AAADAzcxMPQAAoD8AAADAzcxMPQAAoD8AAABAzcxMPQAAoD8AAABAzcxMPQAAoD8AAADAzcxMPQAAoL8AAADAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_32p8y"]
+data = PackedVector3Array(-0.05, -1, 0.45, -0.05, -1, -0.45, -0.05, 1, -0.45, 0.05, -1, -0.45, -0.05, -1, -0.45, -0.05, -1, 0.45, -0.05, 1, -0.45, -0.05, -1, -0.45, 0.05, -1, -0.45, -0.05, 1, -0.45, -0.05, 1, 0.45, -0.05, -1, 0.45, -0.05, -1, 0.45, -0.05, 1, 0.45, 0.05, 1, 0.45, 0.05, 1, 0.45, -0.05, 1, 0.45, -0.05, 1, -0.45, -0.05, -1, 0.45, 0.05, -1, 0.45, 0.05, -1, -0.45, 0.05, 1, 0.45, 0.05, -1, 0.45, -0.05, -1, 0.45, 0.05, -1, -0.45, 0.05, -1, 0.45, 0.05, 1, 0.45, 0.05, -1, -0.45, 0.05, 1, -0.45, -0.05, 1, -0.45, -0.05, 1, -0.45, 0.05, 1, -0.45, 0.05, 1, 0.45, 0.05, 1, 0.45, 0.05, 1, -0.45, 0.05, -1, -0.45)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aay5a"]
+_surfaces = [{
+"aabb": AABB(-0.05, -1, -0.45, 0.1, 2, 0.9),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zcxMvQAAgL9mZuY+zcxMvQAAgL9mZua+zcxMvQAAgD9mZua+zcxMPQAAgL9mZua+zcxMvQAAgL9mZua+zcxMvQAAgL9mZuY+zcxMvQAAgD9mZua+zcxMvQAAgL9mZua+zcxMPQAAgL9mZua+zcxMvQAAgD9mZua+zcxMvQAAgD9mZuY+zcxMvQAAgL9mZuY+zcxMvQAAgL9mZuY+zcxMvQAAgD9mZuY+zcxMPQAAgD9mZuY+zcxMPQAAgD9mZuY+zcxMvQAAgD9mZuY+zcxMvQAAgD9mZua+zcxMvQAAgL9mZuY+zcxMPQAAgL9mZuY+zcxMPQAAgL9mZua+zcxMPQAAgD9mZuY+zcxMPQAAgL9mZuY+zcxMvQAAgL9mZuY+zcxMPQAAgL9mZua+zcxMPQAAgL9mZuY+zcxMPQAAgD9mZuY+zcxMPQAAgL9mZua+zcxMPQAAgD9mZua+zcxMvQAAgD9mZua+zcxMvQAAgD9mZua+zcxMPQAAgD9mZua+zcxMPQAAgD9mZuY+zcxMPQAAgD9mZuY+zcxMPQAAgD9mZua+zcxMPQAAgL9mZua+AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pgr2m"]
+data = PackedVector3Array(-0.05, -1, 0.45, -0.05, -1, -0.45, -0.05, 1, -0.45, 0.05, -1, -0.45, -0.05, -1, -0.45, -0.05, -1, 0.45, -0.05, 1, -0.45, -0.05, -1, -0.45, 0.05, -1, -0.45, -0.05, 1, -0.45, -0.05, 1, 0.45, -0.05, -1, 0.45, -0.05, -1, 0.45, -0.05, 1, 0.45, 0.05, 1, 0.45, 0.05, 1, 0.45, -0.05, 1, 0.45, -0.05, 1, -0.45, -0.05, -1, 0.45, 0.05, -1, 0.45, 0.05, -1, -0.45, 0.05, 1, 0.45, 0.05, -1, 0.45, -0.05, -1, 0.45, 0.05, -1, -0.45, 0.05, -1, 0.45, 0.05, 1, 0.45, 0.05, -1, -0.45, 0.05, 1, -0.45, -0.05, 1, -0.45, -0.05, 1, -0.45, 0.05, 1, -0.45, 0.05, 1, 0.45, 0.05, 1, 0.45, 0.05, 1, -0.45, 0.05, -1, -0.45)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vxm3v"]
+_surfaces = [{
+"aabb": AABB(-0.05, -1, -0.45, 0.1, 2, 0.9),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zcxMvQAAgL9mZuY+zcxMvQAAgL9mZua+zcxMvQAAgD9mZua+zcxMPQAAgL9mZua+zcxMvQAAgL9mZua+zcxMvQAAgL9mZuY+zcxMvQAAgD9mZua+zcxMvQAAgL9mZua+zcxMPQAAgL9mZua+zcxMvQAAgD9mZua+zcxMvQAAgD9mZuY+zcxMvQAAgL9mZuY+zcxMvQAAgL9mZuY+zcxMvQAAgD9mZuY+zcxMPQAAgD9mZuY+zcxMPQAAgD9mZuY+zcxMvQAAgD9mZuY+zcxMvQAAgD9mZua+zcxMvQAAgL9mZuY+zcxMPQAAgL9mZuY+zcxMPQAAgL9mZua+zcxMPQAAgD9mZuY+zcxMPQAAgL9mZuY+zcxMvQAAgL9mZuY+zcxMPQAAgL9mZua+zcxMPQAAgL9mZuY+zcxMPQAAgD9mZuY+zcxMPQAAgL9mZua+zcxMPQAAgD9mZua+zcxMvQAAgD9mZua+zcxMvQAAgD9mZua+zcxMPQAAgD9mZua+zcxMPQAAgD9mZuY+zcxMPQAAgD9mZuY+zcxMPQAAgD9mZua+zcxMPQAAgL9mZua+AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8kncr"]
+data = PackedVector3Array(-0.05, -0.25, 1.9, -0.05, -0.25, -1.9, -0.05, 0.25, -1.9, 0.05, -0.25, -1.9, -0.05, -0.25, -1.9, -0.05, -0.25, 1.9, -0.05, 0.25, -1.9, -0.05, -0.25, -1.9, 0.05, -0.25, -1.9, -0.05, 0.25, -1.9, -0.05, 0.25, 1.9, -0.05, -0.25, 1.9, -0.05, -0.25, 1.9, -0.05, 0.25, 1.9, 0.05, 0.25, 1.9, 0.05, 0.25, 1.9, -0.05, 0.25, 1.9, -0.05, 0.25, -1.9, -0.05, -0.25, 1.9, 0.05, -0.25, 1.9, 0.05, -0.25, -1.9, 0.05, 0.25, 1.9, 0.05, -0.25, 1.9, -0.05, -0.25, 1.9, 0.05, -0.25, -1.9, 0.05, -0.25, 1.9, 0.05, 0.25, 1.9, 0.05, -0.25, -1.9, 0.05, 0.25, -1.9, -0.05, 0.25, -1.9, -0.05, 0.25, -1.9, 0.05, 0.25, -1.9, 0.05, 0.25, 1.9, 0.05, 0.25, 1.9, 0.05, 0.25, -1.9, 0.05, -0.25, -1.9)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_slvl5"]
+_surfaces = [{
+"aabb": AABB(-0.05, -0.25, -1.9, 0.1, 0.5, 3.8),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zcxMvQAAgL4zM/M/zcxMvQAAgL4zM/O/zcxMvQAAgD4zM/O/zcxMPQAAgL4zM/O/zcxMvQAAgL4zM/O/zcxMvQAAgL4zM/M/zcxMvQAAgD4zM/O/zcxMvQAAgL4zM/O/zcxMPQAAgL4zM/O/zcxMvQAAgD4zM/O/zcxMvQAAgD4zM/M/zcxMvQAAgL4zM/M/zcxMvQAAgL4zM/M/zcxMvQAAgD4zM/M/zcxMPQAAgD4zM/M/zcxMPQAAgD4zM/M/zcxMvQAAgD4zM/M/zcxMvQAAgD4zM/O/zcxMvQAAgL4zM/M/zcxMPQAAgL4zM/M/zcxMPQAAgL4zM/O/zcxMPQAAgD4zM/M/zcxMPQAAgL4zM/M/zcxMvQAAgL4zM/M/zcxMPQAAgL4zM/O/zcxMPQAAgL4zM/M/zcxMPQAAgD4zM/M/zcxMPQAAgL4zM/O/zcxMPQAAgD4zM/O/zcxMvQAAgD4zM/O/zcxMvQAAgD4zM/O/zcxMPQAAgD4zM/O/zcxMPQAAgD4zM/M/zcxMPQAAgD4zM/M/zcxMPQAAgD4zM/O/zcxMPQAAgL4zM/O/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
 
 [node name="Mp04" type="Node3D"]
 
@@ -1080,6 +1206,16 @@ material_override = ExtResource("2_1168f")
 mesh = SubResource("ArrayMesh_x4w30")
 skeleton = NodePath("")
 
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Environment/LongerHall/Ceiling"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 0, 8.74228e-08, 7.64274e-15, -1, 39.0991, 0, 45.8546)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_x4w30")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Environment/LongerHall/Ceiling"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 0, 8.74228e-08, 7.64274e-15, -1, 39.0991, 0, 45.8546)
+shape = SubResource("ConvexPolygonShape3D_n15qg")
+
 [node name="Wall10" type="StaticBody3D" parent="Environment/LongerHall"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 24.95, 0.5, -43.2888)
 
@@ -1130,20 +1266,15 @@ material_override = ExtResource("2_1168f")
 mesh = SubResource("ArrayMesh_k5h8o")
 skeleton = NodePath("")
 
-[node name="Barrier" type="StaticBody3D" parent="Environment/LongerHall"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.612751, 0.57251, -43.7139)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Barrier"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0288086, -2.32251, 0.53775)
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment/LongerHall/Wall16"]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 2.96462e-21, 1, 48.375, -0.25, 34.755)
 material_override = ExtResource("2_1168f")
-mesh = SubResource("BoxMesh_1168f")
+mesh = SubResource("ArrayMesh_k5h8o")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/LongerHall/Barrier"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0288086, -2.8488, 0.53775)
-material_override = SubResource("ShaderMaterial_74123")
-mesh = SubResource("BoxMesh_6etve")
-skeleton = NodePath("")
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Environment/LongerHall/Wall16"]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 2.96462e-21, 1, 48.375, -0.25, 34.755)
+shape = SubResource("ConvexPolygonShape3D_tdpvn")
 
 [node name="Wall12" type="StaticBody3D" parent="Environment/LongerHall"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0750008, 0.5, -43.95)
@@ -1221,6 +1352,24 @@ shape = SubResource("ConcavePolygonShape3D_8701n")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall/Wall13"]
 material_override = ExtResource("2_1168f")
 mesh = SubResource("ArrayMesh_rjwk2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/LongerHall/Wall13"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -3.90001, -2.38419e-07, 39.1074)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_rjwk2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Environment/LongerHall/Wall13"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -3.90001, -2.38419e-07, 39.1074)
+shape = SubResource("ConvexPolygonShape3D_g1waq")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment/LongerHall/Wall13"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -0.0250053, 0, 39.1074)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_rjwk2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/LongerHall/Wall13"]
+transform = Transform3D(-1, -1.74846e-07, -8.74228e-08, -1.74846e-07, 1, -7.64274e-15, 8.74228e-08, 7.64274e-15, -1, -0.0250053, 0, 39.1074)
+shape = SubResource("ConvexPolygonShape3D_7wfw2")
 
 [node name="Wall17" type="StaticBody3D" parent="Environment/LongerHall"]
 transform = Transform3D(-1, -8.74228e-08, -1.50996e-07, 8.74228e-08, -1, 0, -1.50996e-07, -1.32005e-14, 1, -20.9046, 0.5, -41.3375)
@@ -1300,6 +1449,8 @@ transform = Transform3D(7.35137e-08, 0, 1, 0, 1, 0, -1, 0, 7.35137e-08, 21.05, -
 [node name="Door4" parent="Environment/LongerHall" instance=ExtResource("1_16g0q")]
 transform = Transform3D(7.35137e-08, 0, 1, 0, 1, 0, -1, 0, 7.35137e-08, -20.905, -1.75, -46)
 
+[node name="Auto" parent="Environment/LongerHall/Door4" instance=ExtResource("7_1168f")]
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/LongerHall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.75, -43.95)
 mesh = SubResource("ArrayMesh_1168f")
@@ -1314,6 +1465,9 @@ mesh = SubResource("ArrayMesh_6scgs")
 
 [node name="puzzle" type="Node3D" parent="Environment/LongerHall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.875)
+
+[node name="Cube7" parent="Environment/LongerHall/puzzle" instance=ExtResource("11_00js0")]
+transform = Transform3D(-0.341226, -0.291756, 0.893557, 0.655249, -0.755404, 0.00357514, 0.673953, 0.586722, 0.448936, -22.5025, -1.38873, 38.1329)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Environment/LongerHall/puzzle"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.15024, 0.44, 0)
@@ -1365,6 +1519,503 @@ transform = Transform3D(0.983411, -0.144652, 0.109451, 0.0694319, -0.257266, -0.
 aabb = AABB(-0.5, -0.05, -0.5, 1.018, 0.225, 1.02)
 script = ExtResource("10_n15qg")
 
+[node name="Floor" type="StaticBody3D" parent="Environment/LongerHall/puzzle"]
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(-1.31134e-07, -1.20182e-14, 1, 0.132827, -0.991139, 1.74182e-08, 0.991139, 0.132827, 1.29972e-07, -22.8546, -2.795, 38.8918)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_nv3a2")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(-1.31134e-07, -1.20182e-14, 1, 0.132827, -0.991139, 1.74182e-08, 0.991139, 0.132827, 1.29972e-07, -22.8546, -2.795, 38.8918)
+shape = SubResource("ConvexPolygonShape3D_00js0")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(4.37114e-08, 4.47222e-15, -1, 0.258819, -0.965926, 1.13133e-08, -0.965926, -0.258819, -4.2222e-08, -22.8546, -4.00568, 11.7266)
+shape = SubResource("ConcavePolygonShape3D_5ykol")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(4.37114e-08, 4.47222e-15, -1, 0.258819, -0.965926, 1.13133e-08, -0.965926, -0.258819, -4.2222e-08, -22.8546, -4.00568, 11.7266)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_nv3a2")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(4.37114e-08, 7.17527e-15, -1, 0.269659, -0.962956, 1.17872e-08, -0.962956, -0.269659, -4.20921e-08, -22.8546, -10.0253, 20.6016)
+shape = SubResource("ConcavePolygonShape3D_5ykol")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(4.37114e-08, 7.17527e-15, -1, 0.269659, -0.962956, 1.17872e-08, -0.962956, -0.269659, -4.20921e-08, -22.8546, -10.0253, 20.6016)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_nv3a2")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(4.37114e-08, 4.02869e-15, -1, -0.866025, -0.5, -3.78552e-08, -0.5, 0.866025, -2.18557e-08, -22.8546, -7.43325, 31.9704)
+shape = SubResource("ConcavePolygonShape3D_5ykol")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Floor"]
+transform = Transform3D(4.37114e-08, 4.02869e-15, -1, -0.866025, -0.5, -3.78552e-08, -0.5, 0.866025, -2.18557e-08, -22.8546, -7.43325, 31.9704)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_nv3a2")
+skeleton = NodePath("")
+
+[node name="Pillar1" type="CSGBox3D" parent="Environment/LongerHall/puzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8126, -7.125, 12.5864)
+use_collision = true
+size = Vector3(1, 3.554, 1)
+material = ExtResource("11_tdpvn")
+
+[node name="TouchDetect" type="Area3D" parent="Environment/LongerHall/puzzle/Pillar1"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("12_g1waq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Pillar1/TouchDetect"]
+shape = SubResource("BoxShape3D_7wfw2")
+
+[node name="Pillar2" type="CSGBox3D" parent="Environment/LongerHall/puzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8126, -7.125, 14.4536)
+use_collision = true
+size = Vector3(1, 3.554, 1)
+material = ExtResource("11_tdpvn")
+
+[node name="TouchDetect" type="Area3D" parent="Environment/LongerHall/puzzle/Pillar2"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("12_g1waq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Pillar2/TouchDetect"]
+shape = SubResource("BoxShape3D_7wfw2")
+
+[node name="QuantPillar1" type="Node3D" parent="Environment/LongerHall/puzzle" node_paths=PackedStringArray("object")]
+script = ExtResource("9_00js0")
+object = NodePath("../Pillar1")
+
+[node name="VisibleOnScreenNotifier3D3" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar1"]
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -3.09086e-08, 0.965926, -0.258819, -5.35353e-08, 0.258819, 0.965926, -23.1653, -7.39156, 17.8786)
+aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
+script = ExtResource("10_n15qg")
+
+[node name="VisibleOnScreenNotifier3D4" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar1"]
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -5.8476e-09, 0.770825, -0.637047, -6.15401e-08, 0.637047, 0.770825, -23.1653, -9.5646, 24.3147)
+aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
+script = ExtResource("10_n15qg")
+
+[node name="VisibleOnScreenNotifier3D5" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar1"]
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -3.93805e-08, -0.0945949, 0.995516, 4.76503e-08, -0.995516, -0.0945949, -23.1653, -7.25404, 31.3442)
+aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
+script = ExtResource("10_n15qg")
+
+[node name="QuantPillar2" type="Node3D" parent="Environment/LongerHall/puzzle" node_paths=PackedStringArray("object")]
+script = ExtResource("9_00js0")
+object = NodePath("../Pillar2")
+
+[node name="VisibleOnScreenNotifier3D3" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar2"]
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -4.22861e-08, 0.999485, -0.0320911, -4.50916e-08, 0.0320911, 0.999485, -23.1653, -8.67456, 21.5208)
+aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
+script = ExtResource("10_n15qg")
+
+[node name="VisibleOnScreenNotifier3D4" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar2"]
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -6.17984e-08, 0.724364, 0.689417, -1.52757e-09, -0.689417, 0.724364, -23.1653, -9.5646, 28.8658)
+aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
+script = ExtResource("10_n15qg")
+
+[node name="VisibleOnScreenNotifier3D5" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar2"]
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -1.05619e-09, -0.694922, 0.719085, 6.18082e-08, -0.719085, -0.694922, -23.1653, -5.07539, 32.2616)
+aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
+script = ExtResource("10_n15qg")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Environment/LongerHall/puzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.125, 0, 12.75)
+omni_range = 15.0
+omni_attenuation = 0.192
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Environment/LongerHall/puzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.125, 0, 22.75)
+omni_range = 15.0
+omni_attenuation = 0.192
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Environment/LongerHall/puzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.125, 0, 32.75)
+omni_range = 15.0
+omni_attenuation = 0.192
+
+[node name="FallPit" type="Area3D" parent="Environment/LongerHall/puzzle"]
+transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, -23, -19.425, 23.625)
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("14_n15qg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/FallPit"]
+shape = SubResource("BoxShape3D_tdpvn")
+
+[node name="PlrCheck" type="Node3D" parent="Environment/LongerHall/puzzle/FallPit"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.875, 18.125, 0)
+
+[node name="PlrCheck2" type="Node3D" parent="Environment/LongerHall/puzzle/FallPit"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.25, 18.125, 0)
+
+[node name="CubeCheck" type="Node3D" parent="Environment/LongerHall/puzzle/FallPit"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.2048, 18.125, 0)
+
+[node name="CubeCheck2" type="Node3D" parent="Environment/LongerHall/puzzle/FallPit"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17.2335, 18.125, 0)
+
+[node name="PlrAcross" type="Area3D" parent="Environment/LongerHall/puzzle/FallPit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.625, 17.25, -0.125)
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/FallPit/PlrAcross"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.838379, 1.52325, 0)
+shape = SubResource("BoxShape3D_n15qg")
+
+[node name="PlrAcrossCube" type="Area3D" parent="Environment/LongerHall/puzzle/FallPit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 17.25, -0.125)
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/FallPit/PlrAcrossCube"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.838379, 1.52325, 0)
+shape = SubResource("BoxShape3D_n15qg")
+
+[node name="Deco" type="StaticBody3D" parent="Environment/LongerHall/puzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.125, 0, 18.75)
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Deco"]
+transform = Transform3D(-4.6878e-08, 2.45217e-08, 1, 0.882127, 0.471012, 0, -0.471012, 0.882126, -4.37114e-08, 4.25, -4, 22.0199)
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_fsecd")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Deco"]
+transform = Transform3D(-4.6878e-08, 2.45217e-08, 1, 0.882127, 0.471012, 0, -0.471012, 0.882126, -4.37114e-08, 4.25, -4, 22.0199)
+shape = SubResource("ConvexPolygonShape3D_d76mc")
+
+[node name="Cubes" type="Node3D" parent="Environment/LongerHall/puzzle/Deco"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19084, 0.380405, -16.5966)
+
+[node name="DecoCube21" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00385268, -0.999982, 0.00457958, 0.383417, -0.00275244, -0.923571, 0.923567, 0.00531411, 0.3834, -0.452497, -0.455431, 37.5654)
+
+[node name="DecoCube25" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00744802, 0.0237175, -0.999691, 0.393822, 0.918854, 0.0247337, 0.919157, -0.393884, -0.00249682, -1.21028, -0.287865, 37.4934)
+
+[node name="DecoCube27" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.00582018, 0.231027, -0.97293, -0.922421, 0.374462, 0.094436, 0.386142, 0.898, 0.210925, -3.21025, 0.213037, 37.1276)
+state = true
+
+[node name="DecoCube29" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.00222733, -0.999932, 0.0114056, -0.370431, 0.0114193, 0.92879, -0.928858, -0.00215627, -0.370431, -0.444847, -0.721997, 38.4828)
+
+[node name="DecoCube30" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0012569, 0.0114925, 0.999933, -0.0777132, 0.996911, -0.01136, -0.996975, -0.0776937, 0.00214614, -1.19503, -0.720997, 38.584)
+
+[node name="DecoCube31" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.00250644, 0.0302088, 0.999541, -0.374815, 0.926648, -0.0289456, -0.927096, -0.374716, 0.00900012, -1.94276, -0.801907, 38.5131)
+
+[node name="DecoCube38" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.947712, -0.00824544, 0.319021, -0.032772, -0.991867, -0.122991, 0.31744, -0.127015, 0.939734, -2.21611, -0.315128, 37.1013)
+
+[node name="DecoCube40" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999742, 0.0183517, -0.0133924, 0.0221137, 0.921201, -0.388458, 0.00520823, -0.388653, -0.921369, -3.47268, -0.415733, 37.5408)
+state = true
+
+[node name="DecoCube43" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0104696, 0.00164593, 0.999944, 0.805912, -0.591988, -0.00746366, 0.591942, 0.805945, -0.00752438, -0.444506, 1.10302, 38.4812)
+state = true
+
+[node name="DecoCube47" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.196795, -0.785954, 0.58613, -0.817036, 0.461922, 0.34508, -0.541963, -0.410979, -0.733057, -2.91453, 0.765626, 37.8179)
+state = true
+
+[node name="DecoCube48" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.99794, -0.0641065, -0.00264283, -0.0547415, 0.872194, -0.486087, 0.0334664, -0.484941, -0.873906, -3.45167, 0.754617, 38.7679)
+state = true
+
+[node name="DecoCube49" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.439912, 0.583346, 0.682777, 0.897815, 0.268632, 0.348949, 0.0201422, 0.766515, -0.641911, -1.19935, 0.863679, 37.2918)
+
+[node name="DecoCube50" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.803422, 0.0540124, -0.592955, -0.126651, 0.957583, 0.258832, 0.581784, 0.28305, -0.762502, -1.93901, 0.971964, 38.1664)
+
+[node name="DecoCube51" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00176712, -0.0901488, -0.995927, 0.455218, 0.886827, -0.0794656, 0.890378, -0.453224, 0.0426045, -2.70016, 1.02081, 38.871)
+
+[node name="DecoCube64" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999841, 0.0178081, 0.000214803, 0.0178081, 0.999841, -0.000157445, -0.000217573, -0.000153595, -1, -0.446703, 2.12831, 39.349)
+
+[node name="DecoCube68" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999973, 5.54867e-06, 0.0074071, 0.00397916, -0.843047, 0.537825, 0.00624751, 0.53784, 0.843024, -3.47781, 2.58693, 41.375)
+state = true
+
+[node name="DecoCube71" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.000380289, 0.207649, -0.978203, -0.999998, 0.00180884, -4.78882e-06, 0.00176842, 0.978202, 0.207649, -2.67036, 2.72144, 41.2092)
+state = true
+
+[node name="DecoCube72" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0109948, -0.999937, -0.00228215, 0.016637, -0.00246491, 0.999859, -0.999801, 0.0109553, 0.0166631, -3.46824, 1.75325, 39.8132)
+
+[node name="DecoCube73" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.998312, 0.0213234, 0.0540249, -0.0326494, -0.975321, -0.218365, 0.0480353, -0.21976, 0.974371, -1.96989, 1.52637, 39.08)
+state = true
+
+[node name="DecoCube74" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.211246, -0.0403756, -0.976599, 0.0219931, -0.99909, 0.0365482, -0.977185, -0.0137578, 0.211942, -1.29372, 2.12467, 39.8915)
+
+[node name="DecoCube75" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999994, -0.00227911, 0.0026958, 0.00189939, -0.991072, -0.133314, 0.00297557, -0.133308, 0.99107, -3.47521, 2.31731, 38.3014)
+
+[node name="DecoCube76" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-1, -0.000245618, 0.000826322, 0.000172606, -0.996189, -0.0872245, 0.000844596, -0.0872244, 0.996188, -3.47506, 2.38692, 39.0938)
+state = true
+
+[node name="DecoCube83" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.979105, 0.17573, 0.102337, 0.0541152, -0.259942, 0.964107, 0.196024, 0.9495, 0.245001, -1.22187, 1.5887, 38.5877)
+
+[node name="DecoCube88" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999868, -3.16426e-05, -0.0162311, -0.0160819, -0.133348, 0.990939, -0.00219574, 0.991069, 0.13333, -3.47901, 1.56783, 38.2713)
+state = true
+
+[node name="DecoCube91" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00260995, 0.999996, 0.000787039, -0.995851, 0.00267072, -0.0909607, -0.0909624, -0.000546371, 0.995854, -3.47444, 1.64634, 39.0407)
+state = true
+
+[node name="DecoCube92" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999988, -0.00458066, 0.00173094, 0.0046874, -0.997692, 0.0677435, 0.00141664, 0.0677508, 0.997701, -3.47398, 0.971429, 39.7832)
+
+[node name="DecoCube93" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999991, -0.0030731, 0.00293527, 0.00307349, -0.999995, 0.000127366, 0.00293487, 0.000136387, 0.999996, -0.447385, 2.87379, 39.2639)
+
+[node name="DecoCube94" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999071, -0.0421871, -0.00881626, 0.00674467, 0.0489976, -0.998776, 0.0425674, -0.997908, -0.0486676, -1.97039, 2.34806, 39.1633)
+state = true
+
+[node name="DecoCube95" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0824474, -0.0313404, -0.996103, -0.0071676, -0.999461, 0.0320393, -0.99657, 0.00978123, 0.0821784, -3.33636, 1.74241, 40.5792)
+
+[node name="DecoCube101" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.000325038, -0.0195368, -0.999809, 0.999731, 0.0231991, -0.000128312, 0.0231972, -0.99954, 0.0195391, -0.453466, 0.2677, 37.0621)
+
+[node name="DecoCube106" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0687107, -0.92777, -0.366771, -0.950865, -0.0503445, 0.305484, -0.301884, 0.36974, -0.878725, -2.04297, 0.383431, 37.5313)
+
+[node name="DecoCube109" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.998855, 0.0158326, -0.0451435, 0.0455459, 0.603403, -0.796135, 0.0146348, -0.797279, -0.603433, -0.472334, 0.366567, 38.0556)
+state = true
+
+[node name="DecoCube110" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.980574, 0.117797, -0.15684, -0.0827401, 0.47657, 0.875234, 0.177845, 0.871209, -0.457566, -2.51036, 0.178583, 38.8727)
+state = true
+
+[node name="DecoCube111" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0634725, -0.984265, -0.164903, -0.882133, 0.021939, -0.470489, 0.466704, 0.175329, -0.86686, -3.39544, 0.108388, 39.1542)
+state = true
+
+[node name="DecoCube127" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.960661, 0.179227, 0.212153, 0.0226946, -0.710682, 0.703147, 0.276797, 0.6803, 0.678657, -0.801465, -1321.88, 55.6226)
+state = true
+
+[node name="DecoCube128" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.619874, -0.628484, -0.469856, -0.55999, -0.0651506, 0.825933, -0.549697, 0.77509, -0.31156, -2.46603, -1333.95, 56.4522)
+state = true
+
+[node name="DecoCube133" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.89671, 0.145156, 0.41814, -0.0303927, -0.962659, 0.269006, 0.441574, 0.228512, 0.867637, 0.892425, -1042.78, 23.6532)
+
+[node name="DecoCube135" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.291328, -0.795414, -0.531456, 0.312224, 0.604191, -0.733123, 0.904237, 0.0476454, 0.424365, -15.5534, -1061.29, 14.3101)
+state = true
+
+[node name="DecoCube136" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.899666, 0.43506, -0.0363744, 0.312793, -0.584216, 0.748901, 0.304566, -0.685139, -0.661683, -13.9242, -1168.48, 21.5193)
+
+[node name="DecoCube137" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.972355, 0.0349253, -0.23088, -0.13376, -0.727144, -0.673327, -0.191399, 0.685596, -0.702371, 1.25841, -1163.14, 3.30937)
+state = true
+
+[node name="DecoCube138" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.435021, -0.766796, -0.471996, -0.760816, -0.593383, 0.262784, -0.481576, 0.244786, -0.841525, -8.94157, -1239.93, 16.9524)
+state = true
+
+[node name="DecoCube139" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.840165, -0.456601, -0.292642, 0.421654, -0.2106, -0.881961, 0.341073, -0.864386, 0.369466, -4.1059, -1310.86, -1.03836)
+
+[node name="DecoCube140" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.995902, 0.0864496, 0.0265767, 0.0480658, 0.754825, -0.654163, -0.0766129, -0.650205, -0.755886, -9.11259, -1330.12, 58.5327)
+
+[node name="DecoCube143" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.849928, -0.456341, -0.263394, 0.0790938, 0.383731, -0.920052, 0.520929, -0.80281, -0.29005, -0.849249, -1325.24, 68.317)
+state = true
+
+[node name="DecoCube144" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.261964, -0.951324, -0.162353, -0.663408, -0.29969, 0.685621, -0.700903, -0.0719011, -0.709624, -17.7509, -1344.85, 65.1236)
+
+[node name="DecoCube145" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0457346, 0.0357855, -0.998313, -0.3533, -0.935349, -0.0173431, -0.934391, 0.351911, 0.0554208, -2.40662, -1299.52, 51.8711)
+state = true
+
+[node name="DecoCube146" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0171007, -0.036333, -0.999193, -0.397666, -0.917146, 0.0265437, -0.917371, 0.396891, -0.0301323, -1.30221, -1292.9, 52.5383)
+
+[node name="DecoCube147" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0527007, -0.314836, -0.947682, 0.974692, 0.222675, -0.0197737, 0.217251, -0.922656, 0.318603, -2.12347, -1309.51, 45.7147)
+
+[node name="DecoCube148" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00263303, 0.268529, -0.963268, 0.475454, 0.847092, 0.237443, 0.879737, -0.458614, -0.125443, -3.52278, -1325.7, 46.5216)
+state = true
+
+[node name="DecoCube149" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.84272, 0.0453677, -0.536438, 0.375884, -0.66376, -0.646633, -0.385402, -0.746569, 0.54231, 3.97852, -1393.15, 43.9167)
+
+[node name="DecoCube150" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.629691, 0.70671, 0.322569, 0.318163, -0.144195, 0.937006, 0.708704, 0.692654, -0.134051, 7.15567, -1336.66, 57.076)
+state = true
+
+[node name="DecoCube154" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.442284, 0.75429, -0.485213, 0.772116, 0.59548, 0.221903, 0.456314, -0.276496, -0.84577, 7.82001, -1324.14, 56.7977)
+state = true
+
+[node name="DecoCube160" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.257677, 0.66369, 0.702224, -0.387454, 0.73675, -0.554147, -0.885145, -0.129289, 0.446993, -2.89028, -1095.83, 9.89064)
+state = true
+
+[node name="DecoCube162" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.632162, -0.766833, 0.111074, 0.54375, -0.54117, -0.64146, 0.552003, -0.345111, 0.759073, -5.76239, -1293.54, -3.28508)
+
+[node name="DecoCube163" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.603061, -0.68669, -0.405924, -0.684423, -0.706804, 0.178867, -0.409735, 0.169956, -0.896232, 10.1799, -1279.69, 1.94351)
+
+[node name="DecoCube165" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.85352, -0.520859, -0.014483, 0.450873, -0.724332, -0.52159, 0.261185, -0.451717, 0.853073, 15.1455, -1353.61, 57.6468)
+state = true
+
+[node name="DecoCube166" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.137401, -0.869009, 0.475336, -0.973663, -0.0303489, 0.225965, -0.181939, -0.493865, -0.850291, 7.42669, -1327.76, 64.1218)
+
+[node name="DecoCube117" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.755552, 0.390936, 0.525653, 0.451926, -0.26984, 0.850264, 0.474241, 0.879975, 0.0272033, -2.14923, -1195.58, 24.1676)
+
+[node name="DecoCube169" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00199179, 4.77999, 0.00220716, 0.80191, -0.00702757, -6.20145, -0.597441, 0.00650317, -8.32384, -2.099, 0.686344, 40.5957)
+
+[node name="DecoCube179" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00160013, -0.999994, -0.00301725, -0.876846, 4.75431e-05, -0.480771, 0.480768, 0.00341496, -0.876841, -1.95849, -0.46279, 39.2187)
+
+[node name="DecoCube180" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999932, -0.0116287, -0.000671067, -0.0109787, 0.960153, -0.27926, 0.00389177, -0.279234, -0.960215, -2.7204, -0.895617, 38.6952)
+state = true
+
+[node name="DecoCube181" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.295128, -0.123778, -0.947406, 0.253419, -0.9662, 0.0472901, -0.921237, -0.226134, 0.31652, -1.3191, 0.775685, 38.7355)
+
+[node name="DecoCube185" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00793564, -0.0011599, -0.999968, 0.190932, 0.981603, 0.000376626, 0.981571, -0.190929, 0.00801112, -0.445921, 2.6314, 40.8545)
+
+[node name="DecoCube188" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.32003, 0.925972, -0.20039, 0.0225582, -0.204007, -0.97871, -0.947139, -0.317737, 0.0444001, -2.89576, 2.48055, 40.4581)
+
+[node name="DecoCube190" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.19546, -0.978217, 0.0699019, 0.336943, 4.54889e-05, -0.941525, 0.921013, 0.207584, 0.329612, -1.94671, 2.63762, 41.0546)
+
+[node name="DecoCube191" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999399, -0.000195351, 0.0346527, -0.000269214, -0.99991, -0.0134011, 0.0346522, -0.0134024, 0.99931, -1.95519, 2.88016, 40.0295)
+
+[node name="DecoCube192" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0216795, -0.00084456, -0.999765, -0.389898, 0.920812, -0.00923264, 0.920603, 0.390007, 0.0196334, -2.72311, 1.81051, 39.3483)
+
+[node name="DecoCube193" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0132867, 2.74524e-06, -0.999912, -0.58745, 0.809223, -0.00780376, 0.809151, 0.587502, 0.0107535, -0.444972, 0.126912, 38.8204)
+state = true
+
+[node name="DecoCube209" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0168221, 0.999857, -0.00170778, -0.300513, 0.0034269, -0.953772, -0.95363, 0.0165576, 0.300527, -0.456895, 2.68787, 38.0832)
+state = true
+
+[node name="DecoCube210" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.00332405, 0.999001, -0.044571, 0.238394, -0.0424945, -0.970238, -0.971163, -0.0138506, -0.238015, -1.21354, 2.27179, 39.0108)
+state = true
+
+[node name="DecoCube211" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0102898, -0.243782, 0.969775, -0.857329, 0.501314, 0.116924, -0.514666, -0.830213, -0.21416, -2.65359, 1.81783, 38.3675)
+state = true
+
+[node name="DecoCube212" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.603587, -0.331435, -0.725144, 0.504169, -0.86324, -0.0251021, -0.617653, -0.380747, 0.68814, -1.78139, -1002.37, 14.6498)
+state = true
+
+[node name="DecoCube213" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.239289, 0.970948, -0.00122276, -0.497297, 0.12364, 0.858725, 0.833929, -0.204875, 0.512435, -1.26717, 2.13306, 37.8647)
+
+[node name="DecoCube214" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.247083, -0.968102, -0.0415896, 0.349876, -0.129157, 0.92785, -0.903625, 0.214704, 0.370627, -1.98085, 2.12503, 38.1091)
+state = true
+
+[node name="DecoCube221" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.999934, 0.00077449, -0.0114418, 0.00322006, 0.97654, -0.21531, 0.0110066, -0.215333, -0.976479, -3.47931, -0.10214, 38.289)
+
+[node name="DecoCube240" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00390016, -0.00503937, 0.99998, 0.952645, 0.304077, -0.00218316, -0.30406, 0.952634, 0.00598668, -0.448729, 1.92969, 38.1467)
+state = true
+
+[node name="DecoCube241" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.557502, -0.705101, -0.438206, -0.5964, -0.707355, 0.379416, -0.577494, 0.0498206, -0.814874, -23.1833, -1094.9, 19.7752)
+
+[node name="DecoCube243" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.0122128, -0.432276, 0.901659, -0.402855, -0.827432, -0.391233, 0.915182, -0.35846, -0.18425, 1.98022, -1142.97, 14.4881)
+state = true
+
+[node name="DecoCube245" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.751147, 0.567153, 0.337811, 0.560004, -0.818412, 0.12883, 0.349535, 0.0924048, -0.932356, -9.65523, -1050.06, 25.578)
+
+[node name="DecoCube246" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.525516, 0.68535, -0.504111, 0.845502, 0.486626, -0.219824, 0.0946572, -0.541748, -0.835194, -4.2395, -1176.81, 12.8534)
+state = true
+
+[node name="DecoCube257" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0862144, 0.14441, -0.985755, -0.995872, -0.0406973, 0.0811372, -0.0284005, 0.988681, 0.147322, -1.75235, 0.0744674, 38.3654)
+state = true
+
+[node name="DecoCube258" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.109517, -0.993005, -0.0441382, 0.472116, 0.0910429, -0.876823, 0.874707, 0.0751886, 0.478784, -2.69467, -0.185163, 38.2412)
+
+[node name="DecoCube269" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.188052, -0.979208, 0.0760745, 0.194141, 0.0388679, 0.980203, -0.96278, 0.199099, 0.182795, -1.89419, 1.35356, 39.8542)
+state = true
+
+[node name="DecoCube270" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0854651, -0.988524, -0.124564, -0.968668, 0.0531782, 0.242601, -0.233193, 0.141395, -0.962096, -2.6386, 1.35625, 40.0563)
+
+[node name="DecoCube271" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.999981, -0.00159513, -0.00602238, -0.00293914, -0.97312, -0.230279, -0.00549318, 0.230293, -0.973106, -0.448892, 2.51181, 40.098)
+
+[node name="DecoCube273" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.277252, 0.958221, 0.0703147, -0.203801, -0.0128662, 0.978928, 0.938934, -0.28574, 0.191719, -2.19928, 2.07239, 40.2126)
+state = true
+
+[node name="DecoCube274" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0233912, -0.999718, -0.00402999, 0.273194, -0.0102697, 0.961904, -0.961675, 0.0213991, 0.273357, -2.71894, 2.57551, 39.5231)
+
+[node name="DecoCube276" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.979277, -0.202517, -0.00187134, 5.89567e-05, 0.00895496, -0.99996, 0.202526, -0.979238, -0.00875745, -1.26144, 2.87852, 40.7097)
+
+[node name="DecoCube277" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.0321387, -0.0136085, -0.999391, 0.0147786, -0.999804, 0.0131389, -0.999374, -0.0143473, 0.0323335, -1.20783, 2.87154, 39.8958)
+state = true
+
+[node name="DecoCube278" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(0.00547974, -0.999905, 0.0126553, 0.999955, 0.00557637, 0.00761344, -0.00768328, 0.012613, 0.999891, -2.73069, 1.88877, 41.2959)
+state = true
+
+[node name="DecoCube284" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.870696, 0.0963041, -0.482301, -0.472296, 0.109855, 0.874568, 0.137207, 0.989271, -0.0501659, 0.960085, -1314.58, 21.2967)
+
+[node name="DecoCube285" parent="Environment/LongerHall/puzzle/Deco/Cubes" instance=ExtResource("14_7wfw2")]
+transform = Transform3D(-0.984023, -0.0382756, 0.173881, 0.050535, 0.87641, 0.478907, -0.170721, 0.480042, -0.860473, -1.46335, -1235.16, 26.7562)
+state = true
+
 [node name="Cube" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
 transform = Transform3D(0.449144, 0.855779, -0.256732, -0.559602, 0.493452, 0.665845, 0.696502, -0.155393, 0.700527, -1.21386, 0.325, -57.1107)
 gravity_scale = 0.0
@@ -1394,9 +2045,6 @@ locked = true
 transform = Transform3D(-0.341226, -0.291756, 0.893557, 0.655249, -0.755404, 0.00357514, 0.673953, 0.586722, 0.448936, 1.8728, 3.06843, -62.801)
 gravity_scale = 0.0
 locked = true
-
-[node name="Cube7" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
-transform = Transform3D(-3.46314e-15, 0.855229, -0.518251, 0.223131, 0.505185, 0.833667, 0.974788, -0.115638, -0.190828, 1.48498, 3.03749, -46.6082)
 
 [node name="HallLight9" type="SpotLight3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 37, 6.57287, -77.75)
@@ -1513,25 +2161,10 @@ transform = Transform3D(1.3262e-06, -0.0370451, -0.999314, -0.0547413, 0.997815,
 size = Vector3(0.0968456, 2.5, 3.625)
 material = SubResource("StandardMaterial3D_n15qg")
 
-[node name="Wall11" type="CSGBox3D" parent="Environment/SkyboxStation/secondoffshoot/BrokenPiece"]
-transform = Transform3D(-4.36459e-08, -0.0370449, -0.999314, -0.0547411, 0.997815, -0.0369893, 0.998501, 0.0547035, -0.00202792, 0.00440216, -0.391603, 10.7499)
-material_override = ExtResource("3_6scgs")
-size = Vector3(4, 4, 4)
-
 [node name="BrokenRoom" type="CSGBox3D" parent="Environment/SkyboxStation/secondoffshoot/BrokenPiece"]
 transform = Transform3D(-0.999314, -0.0370449, 8.73273e-08, -0.0369893, 0.997815, 0.0547411, -0.00202796, 0.0547035, -0.998501, 8.99821, -0.0586996, 10.7682)
 material_override = ExtResource("3_6scgs")
 size = Vector3(14, 4, 4)
-
-[node name="StartRoom" type="CSGBox3D" parent="Environment/SkyboxStation/secondoffshoot/BrokenPiece"]
-transform = Transform3D(-0.999314, -0.0370449, 8.73273e-08, -0.0369893, 0.997815, 0.0547411, -0.00202796, 0.0547035, -0.998501, -8.98943, -0.724507, 10.7317)
-material_override = ExtResource("3_6scgs")
-size = Vector3(14, 4, 4)
-
-[node name="Window" type="CSGBox3D" parent="Environment/SkyboxStation/secondoffshoot/BrokenPiece"]
-transform = Transform3D(0.999314, -0.0370449, 3.55378e-11, 0.0369893, 0.997815, -0.0547411, 0.00202788, 0.0547035, 0.998501, -6.99913, -0.318558, 8.78789)
-size = Vector3(8.259, 1.5, 0.09)
-material = SubResource("ShaderMaterial_sek52")
 
 [node name="Window4" type="CSGBox3D" parent="Environment/SkyboxStation/secondoffshoot/BrokenPiece"]
 transform = Transform3D(0.999314, -0.0370449, 3.55378e-11, 0.0369893, 0.997815, -0.0547411, 0.00202788, 0.0547035, 0.998501, 6.99125, 0.199292, 8.81628)
@@ -1553,9 +2186,102 @@ transform = Transform3D(1, 0, 0, 0, 0.997858, -0.0654205, 0, 0.0654205, 0.997858
 aabb = AABB(-15.1118, -1.72646, -14.3757, 30.2235, 3.45293, 28.7513)
 
 [node name="Main4" type="CSGBox3D" parent="Environment/SkyboxStation"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 1.05, -56.0894)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, -4.25347, -56.0894)
 material_override = ExtResource("3_6scgs")
-size = Vector3(40, 24, 40)
+size = Vector3(40, 13.3931, 40)
+
+[node name="Main6" type="CSGBox3D" parent="Environment/SkyboxStation"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5625, 4.44307, -56.0894)
+material_override = ExtResource("3_6scgs")
+size = Vector3(40, 4, 10.875)
+
+[node name="Main5" type="CSGBox3D" parent="Environment/SkyboxStation"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 9.7375, -56.0894)
+material_override = ExtResource("3_6scgs")
+size = Vector3(40, 6.625, 40)
 
 [node name="Door" parent="Environment" instance=ExtResource("1_16g0q")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 36.9999, 1.05, -71.8751)
+
+[node name="Airlock" type="Node3D" parent="."]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -74.9764, 6.05, -14.0402)
+
+[node name="Floor" type="StaticBody3D" parent="Airlock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.25, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Airlock/Floor"]
+shape = SubResource("ConcavePolygonShape3D_00js0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Airlock/Floor"]
+material_override = ExtResource("3_6scgs")
+mesh = SubResource("ArrayMesh_jusjw")
+
+[node name="Ceiling" type="StaticBody3D" parent="Airlock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Airlock/Ceiling"]
+shape = SubResource("ConcavePolygonShape3D_vm8lp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Airlock/Ceiling"]
+material_override = ExtResource("3_6scgs")
+mesh = SubResource("ArrayMesh_ttk3c")
+
+[node name="Wall" type="StaticBody3D" parent="Airlock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95, -1.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Airlock/Wall"]
+shape = SubResource("ConcavePolygonShape3D_7b54o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Airlock/Wall"]
+material_override = ExtResource("3_6scgs")
+mesh = SubResource("ArrayMesh_b740l")
+
+[node name="Wall2" type="StaticBody3D" parent="Airlock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95, -1.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Airlock/Wall2"]
+shape = SubResource("ConcavePolygonShape3D_rf2l5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Airlock/Wall2"]
+material_override = ExtResource("3_6scgs")
+mesh = SubResource("ArrayMesh_twjoi")
+
+[node name="Frame" type="StaticBody3D" parent="Airlock"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.4496, -1.75, -2.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Airlock/Frame"]
+shape = SubResource("ConcavePolygonShape3D_32p8y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Airlock/Frame"]
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_aay5a")
+
+[node name="Frame2" type="StaticBody3D" parent="Airlock"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.4504, -1.75, -2.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Airlock/Frame2"]
+shape = SubResource("ConcavePolygonShape3D_pgr2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Airlock/Frame2"]
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_vxm3v")
+
+[node name="Frame3" type="StaticBody3D" parent="Airlock"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.00039959, -0.5, -2.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Airlock/Frame3"]
+shape = SubResource("ConcavePolygonShape3D_8kncr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Airlock/Frame3"]
+material_override = ExtResource("2_1168f")
+mesh = SubResource("ArrayMesh_slvl5")
+
+[node name="Door2" parent="Airlock" instance=ExtResource("1_16g0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.75, -2.05)
+
+[connection signal="body_entered" from="Environment/LongerHall/puzzle/Pillar1/TouchDetect" to="Environment/LongerHall/puzzle/Pillar1/TouchDetect" method="_on_body_entered"]
+[connection signal="body_exited" from="Environment/LongerHall/puzzle/Pillar1/TouchDetect" to="Environment/LongerHall/puzzle/Pillar1/TouchDetect" method="_on_body_exited"]
+[connection signal="body_entered" from="Environment/LongerHall/puzzle/Pillar2/TouchDetect" to="Environment/LongerHall/puzzle/Pillar2/TouchDetect" method="_on_body_entered"]
+[connection signal="body_exited" from="Environment/LongerHall/puzzle/Pillar2/TouchDetect" to="Environment/LongerHall/puzzle/Pillar2/TouchDetect" method="_on_body_exited"]
+[connection signal="body_entered" from="Environment/LongerHall/puzzle/FallPit" to="Environment/LongerHall/puzzle/FallPit" method="_on_body_entered"]
+[connection signal="body_entered" from="Environment/LongerHall/puzzle/FallPit/PlrAcross" to="Environment/LongerHall/puzzle/FallPit" method="_on_plr_across_body_entered"]
+[connection signal="body_entered" from="Environment/LongerHall/puzzle/FallPit/PlrAcrossCube" to="Environment/LongerHall/puzzle/FallPit" method="_on_plr_across_cube_body_entered"]

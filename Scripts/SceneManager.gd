@@ -45,8 +45,6 @@ func _process(_delta: float) -> void:
 		#$Fakesky.sky.global_rotation.x += 0.0003
 		$Fakesky.sky.global_rotation = env.environment.sky_rotation
 		$Fakesky.sky.global_rotation.y  += deg_to_rad(180)
-		print($Fakesky.sky.global_rotation)
-		print(env.environment.sky_rotation)
 		#$Fakesky.sky.global_rotation.y += 180
 	elif $Fakesky and $Fakesky.warping:
 		env.environment.sky_rotation = $Fakesky.sky.global_rotation
