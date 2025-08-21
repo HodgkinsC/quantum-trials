@@ -1575,6 +1575,12 @@ script = ExtResource("12_g1waq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Pillar1/TouchDetect"]
 shape = SubResource("BoxShape3D_7wfw2")
 
+[node name="PillarBotton" type="CSGBox3D" parent="Environment/LongerHall/puzzle/Pillar1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.777, 0)
+use_collision = true
+size = Vector3(1.5, 0.25, 1.5)
+material = ExtResource("11_tdpvn")
+
 [node name="Pillar2" type="CSGBox3D" parent="Environment/LongerHall/puzzle"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8126, -7.125, 14.4536)
 use_collision = true
@@ -1588,6 +1594,12 @@ script = ExtResource("12_g1waq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Pillar2/TouchDetect"]
 shape = SubResource("BoxShape3D_7wfw2")
+
+[node name="PillarTop" type="CSGBox3D" parent="Environment/LongerHall/puzzle/Pillar2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.777, 0)
+use_collision = true
+size = Vector3(1.5, 0.25, 1.5)
+material = ExtResource("11_tdpvn")
 
 [node name="QuantPillar1" type="Node3D" parent="Environment/LongerHall/puzzle" node_paths=PackedStringArray("object")]
 script = ExtResource("9_00js0")
