@@ -1542,21 +1542,21 @@ mesh = SubResource("ArrayMesh_nv3a2")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Floor"]
-transform = Transform3D(4.37114e-08, 7.17527e-15, -1, 0.269659, -0.962956, 1.17872e-08, -0.962956, -0.269659, -4.20921e-08, -22.8546, -10.0253, 20.6016)
+transform = Transform3D(4.37114e-08, 8.60439e-15, -1, 0.996023, 0.0891025, 4.35375e-08, 0.0891025, -0.996023, 3.89483e-09, -22.8546, -9.89129, 15.7616)
 shape = SubResource("ConcavePolygonShape3D_5ykol")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Floor"]
-transform = Transform3D(4.37114e-08, 7.17527e-15, -1, 0.269659, -0.962956, 1.17872e-08, -0.962956, -0.269659, -4.20921e-08, -22.8546, -10.0253, 20.6016)
+transform = Transform3D(4.37114e-08, 8.60439e-15, -1, 0.996023, 0.0891025, 4.35375e-08, 0.0891025, -0.996023, 3.89483e-09, -22.8546, -9.89129, 15.7616)
 material_override = ExtResource("2_1168f")
 mesh = SubResource("ArrayMesh_nv3a2")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Floor"]
-transform = Transform3D(4.37114e-08, 4.02869e-15, -1, -0.866025, -0.5, -3.78552e-08, -0.5, 0.866025, -2.18557e-08, -22.8546, -7.43325, 31.9704)
+transform = Transform3D(4.37114e-08, 2.13541e-15, -1, -0.965926, -0.258819, -4.2222e-08, -0.258819, 0.965926, -1.13133e-08, -22.8546, -7.8951, 33.1031)
 shape = SubResource("ConcavePolygonShape3D_5ykol")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Floor"]
-transform = Transform3D(4.37114e-08, 4.02869e-15, -1, -0.866025, -0.5, -3.78552e-08, -0.5, 0.866025, -2.18557e-08, -22.8546, -7.43325, 31.9704)
+transform = Transform3D(4.37114e-08, 2.13541e-15, -1, -0.965926, -0.258819, -4.2222e-08, -0.258819, 0.965926, -1.13133e-08, -22.8546, -7.8951, 33.1031)
 material_override = ExtResource("2_1168f")
 mesh = SubResource("ArrayMesh_nv3a2")
 skeleton = NodePath("")
@@ -1575,8 +1575,9 @@ script = ExtResource("12_g1waq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Pillar1/TouchDetect"]
 shape = SubResource("BoxShape3D_7wfw2")
 
-[node name="PillarBotton" type="CSGBox3D" parent="Environment/LongerHall/puzzle/Pillar1"]
+[node name="PillartTop" type="CSGBox3D" parent="Environment/LongerHall/puzzle/Pillar1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.777, 0)
+visible = false
 use_collision = true
 size = Vector3(1.5, 0.25, 1.5)
 material = ExtResource("11_tdpvn")
@@ -1597,6 +1598,7 @@ shape = SubResource("BoxShape3D_7wfw2")
 
 [node name="PillarTop" type="CSGBox3D" parent="Environment/LongerHall/puzzle/Pillar2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.777, 0)
+visible = false
 use_collision = true
 size = Vector3(1.5, 0.25, 1.5)
 material = ExtResource("11_tdpvn")
@@ -1606,17 +1608,17 @@ script = ExtResource("9_00js0")
 object = NodePath("../Pillar1")
 
 [node name="VisibleOnScreenNotifier3D3" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar1"]
-transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -3.09086e-08, 0.965926, -0.258819, -5.35353e-08, 0.258819, 0.965926, -23.1653, -7.39156, 17.8786)
+transform = Transform3D(2.88022e-08, -0.866025, -0.5, 1, 1.48944e-09, 5.50247e-08, -4.69081e-08, -0.5, 0.866025, -21.2903, -4.89156, 18.2536)
 aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
 script = ExtResource("10_n15qg")
 
 [node name="VisibleOnScreenNotifier3D4" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar1"]
-transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -5.8476e-09, 0.770825, -0.637047, -6.15401e-08, 0.637047, 0.770825, -23.1653, -9.5646, 24.3147)
+transform = Transform3D(3.9389e-09, -0.995516, -0.0945954, 1, 1.96024e-10, 3.95765e-08, -3.93805e-08, -0.0945954, 0.995516, -21.6653, -5.0646, 24.3147)
 aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
 script = ExtResource("10_n15qg")
 
 [node name="VisibleOnScreenNotifier3D5" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar1"]
-transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -3.93805e-08, -0.0945949, 0.995516, 4.76503e-08, -0.995516, -0.0945949, -23.1653, -7.25404, 31.3442)
+transform = Transform3D(-7.87716e-09, -0.986078, 0.166287, -5.03714e-08, 0.166287, 0.986078, -1, -6.0858e-10, -5.098e-08, -21.6653, -4.75404, 29.7192)
 aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
 script = ExtResource("10_n15qg")
 
@@ -1625,17 +1627,17 @@ script = ExtResource("9_00js0")
 object = NodePath("../Pillar2")
 
 [node name="VisibleOnScreenNotifier3D3" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar2"]
-transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -4.22861e-08, 0.999485, -0.0320911, -4.50916e-08, 0.0320911, 0.999485, -23.1653, -8.67456, 21.5208)
+transform = Transform3D(-0.082182, -0.84666, 0.52575, 0.996617, -0.0698164, 0.0433539, -3.83378e-08, 0.527534, 0.849534, -21.1175, -5.09045, 21.1595)
 aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
 script = ExtResource("10_n15qg")
 
 [node name="VisibleOnScreenNotifier3D4" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar2"]
-transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -6.17984e-08, 0.724364, 0.689417, -1.52757e-09, -0.689417, 0.724364, -23.1653, -9.5646, 28.8658)
+transform = Transform3D(-0.258819, -0.96563, 0.0238692, -4.47459e-08, 0.0247112, 0.999694, -0.965926, 0.25874, -0.00639578, -21.558, -5.1896, 26.6378)
 aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
 script = ExtResource("10_n15qg")
 
 [node name="VisibleOnScreenNotifier3D5" type="VisibleOnScreenNotifier3D" parent="Environment/LongerHall/puzzle/QuantPillar2"]
-transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -1.05619e-09, -0.694922, 0.719085, 6.18082e-08, -0.719085, -0.694922, -23.1653, -5.07539, 32.2616)
+transform = Transform3D(1, 4.37114e-08, 4.37114e-08, -4.44518e-08, 0.0170859, 0.999854, 4.29582e-08, -0.999854, 0.0170859, -23.1653, -4.33305, 32.4906)
 aabb = AABB(-0.5, -1.77744, -0.5, 1.018, 3.67988, 1.02)
 script = ExtResource("10_n15qg")
 
