@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=4 uid="uid://cvwgsjaqa3fjm"]
+[gd_scene load_steps=148 format=4 uid="uid://cvwgsjaqa3fjm"]
 
 [ext_resource type="PackedScene" uid="uid://c32623xiovm3v" path="res://Scenes/PuzzleElements/Door.tscn" id="1_16g0q"]
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="2_1168f"]
@@ -9,8 +9,8 @@
 [ext_resource type="Shader" uid="uid://drs1nuk7bceud" path="res://Assets/Materials/Shaders/Glass.gdshader" id="5_6etve"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="6_864ox"]
 [ext_resource type="PackedScene" uid="uid://c71xmc47l5bwn" path="res://Scenes/PuzzleElements/AutoDoor.tscn" id="7_1168f"]
-[ext_resource type="PackedScene" uid="uid://yblk1iood2a1" path="res://Scenes/PuzzleElements/Button.tscn" id="8_sek52"]
 [ext_resource type="Script" uid="uid://cxkdfsyucme3w" path="res://Scripts/QuantLocPuzzle.gd" id="9_00js0"]
+[ext_resource type="Script" uid="uid://b2gvgm0hlktl2" path="res://Scripts/Button.gd" id="9_7wfw2"]
 [ext_resource type="Script" uid="uid://bfwbivm8snsl2" path="res://Scripts/QuantPossibleLoc.gd" id="10_n15qg"]
 [ext_resource type="PackedScene" uid="uid://l2u5g0wf6g77" path="res://Scenes/PuzzleElements/Cube.tscn" id="11_00js0"]
 [ext_resource type="Material" uid="uid://bgiqtp2xtsj7i" path="res://Assets/Materials/SteelQuant.tres" id="11_tdpvn"]
@@ -774,6 +774,23 @@ _surfaces = [{
 "vertex_data": PackedByteArray("zcxMvQAAIMAAAIBAzcxMvQAAIMAAAIDAzcxMvQAAIEAAAIDAzcxMPQAAIMAAAIDAzcxMvQAAIMAAAIDAzcxMvQAAIMAAAIBAzcxMvQAAIEAAAIDAzcxMvQAAIMAAAIDAzcxMPQAAIMAAAIDAzcxMvQAAIEAAAIDAzcxMvQAAIEAAAIBAzcxMvQAAIMAAAIBAzcxMvQAAIMAAAIBAzcxMvQAAIEAAAIBAzcxMPQAAIEAAAIBAzcxMPQAAIEAAAIBAzcxMvQAAIEAAAIBAzcxMvQAAIEAAAIDAzcxMvQAAIMAAAIBAzcxMPQAAIMAAAIBAzcxMPQAAIMAAAIDAzcxMPQAAIEAAAIBAzcxMPQAAIMAAAIBAzcxMvQAAIMAAAIBAzcxMPQAAIMAAAIDAzcxMPQAAIMAAAIBAzcxMPQAAIEAAAIBAzcxMPQAAIMAAAIDAzcxMPQAAIEAAAIDAzcxMvQAAIEAAAIDAzcxMvQAAIEAAAIDAzcxMPQAAIEAAAIDAzcxMPQAAIEAAAIBAzcxMPQAAIEAAAIBAzcxMPQAAIEAAAIDAzcxMPQAAIMAAAIDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="BoxMesh" id="BoxMesh_63pan"]
+material = ExtResource("11_tdpvn")
+size = Vector3(1, 0.1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3102"]
+size = Vector3(1, 0.1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3102"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a506e"]
+material = SubResource("StandardMaterial3D_p3102")
+size = Vector3(0.75, 0.1, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a506e"]
+size = Vector3(0.75, 0.15, 0.75)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_00js0"]
 points = PackedVector3Array(-4.67633, -0.05, -2, -4.67633, 0.05, -2, 4.67633, -0.05, -2, -4.67633, -0.05, 2, -4.67633, 0.05, 2, 4.67633, 0.05, -2, 4.67633, -0.05, 2, 4.67633, 0.05, 2)
 
@@ -1490,9 +1507,27 @@ material = ExtResource("2_1168f")
 [node name="Door" parent="Environment/LongerHall/puzzle" instance=ExtResource("1_16g0q")]
 transform = Transform3D(1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, 0.0774517, 1.45, 1.92471)
 
-[node name="Button" parent="Environment/LongerHall/puzzle" node_paths=PackedStringArray("target") instance=ExtResource("8_sek52")]
+[node name="Button" type="StaticBody3D" parent="Environment/LongerHall/puzzle" node_paths=PackedStringArray("target")]
 transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, -8.9779, 0.54, -0.0884094)
+script = ExtResource("9_7wfw2")
 target = NodePath("../Door")
+
+[node name="Base" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Button"]
+mesh = SubResource("BoxMesh_63pan")
+
+[node name="BaseColl" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Button"]
+shape = SubResource("BoxShape3D_p3102")
+
+[node name="ButtonColl" type="MeshInstance3D" parent="Environment/LongerHall/puzzle/Button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+mesh = SubResource("BoxMesh_a506e")
+skeleton = NodePath("../Detector")
+
+[node name="Detector" type="Area3D" parent="Environment/LongerHall/puzzle/Button"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/Button/Detector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_a506e")
 
 [node name="VisibleOnScreenNotifier3D" type="Node3D" parent="Environment/LongerHall/puzzle" node_paths=PackedStringArray("object")]
 transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0.0346985, 1.191, 0.25)
@@ -1679,7 +1714,7 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17.2335
 
 [node name="PlrAcross" type="Area3D" parent="Environment/LongerHall/puzzle/FallPit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.625, 17.25, -0.125)
-collision_layer = 5
+collision_layer = 0
 collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/FallPit/PlrAcross"]
@@ -1688,7 +1723,7 @@ shape = SubResource("BoxShape3D_n15qg")
 
 [node name="PlrAcrossCube" type="Area3D" parent="Environment/LongerHall/puzzle/FallPit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 17.25, -0.125)
-collision_layer = 5
+collision_layer = 0
 collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/LongerHall/puzzle/FallPit/PlrAcrossCube"]
@@ -2031,32 +2066,32 @@ transform = Transform3D(-0.984023, -0.0382756, 0.173881, 0.050535, 0.87641, 0.47
 state = true
 
 [node name="Cube" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
-transform = Transform3D(0.449144, 0.855779, -0.256732, -0.559602, 0.493452, 0.665845, 0.696502, -0.155393, 0.700527, -1.21386, 0.325, -57.1107)
+transform = Transform3D(0.696502, -0.155393, 0.700527, -0.559602, 0.493452, 0.665845, -0.449144, -0.855779, 0.256732, -43.0898, -1.675, -23.1248)
 gravity_scale = 0.0
 locked = true
 
 [node name="Cube2" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
-transform = Transform3D(0.65256, 0.717401, -0.243927, -0.751044, 0.655059, -0.0826532, 0.100491, 0.237136, 0.966265, 1.89882, 0.19485, -55.6145)
+transform = Transform3D(0.100491, 0.237136, 0.966265, -0.751044, 0.655059, -0.0826532, -0.65256, -0.717401, 0.243927, -41.5936, -1.80515, -26.2374)
 gravity_scale = 0.0
 locked = true
 
 [node name="Cube3" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
-transform = Transform3D(0.0662011, -0.686486, -0.724123, 0.978723, 0.185928, -0.0867865, 0.194212, -0.702971, 0.684189, -1.78377, 1.82289, -54.1219)
+transform = Transform3D(0.194212, -0.702971, 0.684189, 0.978723, 0.185928, -0.0867865, -0.0662011, 0.686486, 0.724123, -40.101, -0.17711, -22.5548)
 gravity_scale = 0.0
 locked = true
 
 [node name="Cube4" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
-transform = Transform3D(0.366085, -0.912827, -0.180911, 0.850556, 0.249349, 0.463011, -0.377539, -0.323376, 0.867694, -3.35992, 4.70842, -55.1868)
+transform = Transform3D(-0.377539, -0.323376, 0.867694, 0.850556, 0.249349, 0.463011, -0.366085, 0.912827, 0.180911, -41.1659, 2.70842, -20.9787)
 gravity_scale = 0.0
 locked = true
 
 [node name="Cube5" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
-transform = Transform3D(0.242248, -0.678584, 0.693426, 0.424223, -0.568688, -0.704718, 0.872554, 0.464883, 0.150108, 2.75769, 3.46288, -66.1185)
+transform = Transform3D(0.872554, 0.464883, 0.150108, 0.424223, -0.568688, -0.704718, -0.242248, 0.678584, -0.693426, -52.0976, 1.46288, -27.0963)
 gravity_scale = 0.0
 locked = true
 
 [node name="Cube6" parent="Environment/LongerHall" instance=ExtResource("11_00js0")]
-transform = Transform3D(-0.341226, -0.291756, 0.893557, 0.655249, -0.755404, 0.00357514, 0.673953, 0.586722, 0.448936, 1.8728, 3.06843, -62.801)
+transform = Transform3D(0.673953, 0.586722, 0.448936, 0.655249, -0.755404, 0.00357513, 0.341226, 0.291756, -0.893557, -48.7801, 1.06843, -26.2114)
 gravity_scale = 0.0
 locked = true
 
@@ -2202,16 +2237,19 @@ aabb = AABB(-15.1118, -1.72646, -14.3757, 30.2235, 3.45293, 28.7513)
 [node name="Main4" type="CSGBox3D" parent="Environment/SkyboxStation"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, -4.25347, -56.0894)
 material_override = ExtResource("3_6scgs")
+use_collision = true
 size = Vector3(40, 13.3931, 40)
 
 [node name="Main6" type="CSGBox3D" parent="Environment/SkyboxStation"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5625, 4.44307, -56.0894)
 material_override = ExtResource("3_6scgs")
+use_collision = true
 size = Vector3(40, 4, 10.875)
 
 [node name="Main5" type="CSGBox3D" parent="Environment/SkyboxStation"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 9.7375, -56.0894)
 material_override = ExtResource("3_6scgs")
+use_collision = true
 size = Vector3(40, 6.625, 40)
 
 [node name="Door" parent="Environment" instance=ExtResource("1_16g0q")]
@@ -2292,6 +2330,8 @@ mesh = SubResource("ArrayMesh_slvl5")
 [node name="Door2" parent="Airlock" instance=ExtResource("1_16g0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.75, -2.05)
 
+[connection signal="body_entered" from="Environment/LongerHall/puzzle/Button/Detector" to="Environment/LongerHall/puzzle/Button" method="_on_detector_body_entered"]
+[connection signal="body_exited" from="Environment/LongerHall/puzzle/Button/Detector" to="Environment/LongerHall/puzzle/Button" method="_on_detector_body_exited"]
 [connection signal="body_entered" from="Environment/LongerHall/puzzle/Pillar1/TouchDetect" to="Environment/LongerHall/puzzle/Pillar1/TouchDetect" method="_on_body_entered"]
 [connection signal="body_exited" from="Environment/LongerHall/puzzle/Pillar1/TouchDetect" to="Environment/LongerHall/puzzle/Pillar1/TouchDetect" method="_on_body_exited"]
 [connection signal="body_entered" from="Environment/LongerHall/puzzle/Pillar2/TouchDetect" to="Environment/LongerHall/puzzle/Pillar2/TouchDetect" method="_on_body_entered"]
