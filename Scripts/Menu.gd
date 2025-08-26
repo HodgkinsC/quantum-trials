@@ -17,6 +17,7 @@ func _ready() -> void:
 		if button is Button:
 			button.connect("mouse_entered", mousehover)
 			button.connect("pressed", mouseup)
+	Global.ChangeMap.connect(changemap)
 
 func mouseup():
 	$MenuButtonClick.play()
@@ -153,6 +154,11 @@ func _on_fullscreencheck_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+func changemap():
+	Global.paused = false
+	changemenu(1)
+	visible = false
 
 #func _on_resdropdown_item_selected(index: int) -> void:
 	#if index == 0:

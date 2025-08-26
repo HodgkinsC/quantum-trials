@@ -6,6 +6,7 @@ var mouse_free
 
 signal load_objects
 signal startwarp
+signal ChangeMap
 
 var player : CharacterBody3D
 @onready var root = get_tree().root.get_node("/root/SceneManager")
@@ -34,10 +35,11 @@ func _ready() -> void:
 	spawnplayer(current_map.get_node("SpawnPoint").global_transform)
 
 func change_map(mapname : String):
-	if current_map: current_map.queue_free()
+	ChangeMap.emit()
 	var map = load("res://Scenes/Maps/" + mapname + ".tscn")
 	var instance = map.instantiate()
 	root.add_child.call_deferred(instance)
+	if current_map: current_map.queue_free()
 	current_map = instance
 	current_map_name = mapname
 
