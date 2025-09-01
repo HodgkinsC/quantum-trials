@@ -11,6 +11,7 @@ func _ready() -> void:
 	sun.rotation.y += deg_to_rad(-45)
 	Global.load_objects.connect(load_save)
 	Global.startwarp.connect(startwarp)
+	$Fakesky.global_rotation.y += deg_to_rad(180)
 
 func startwarp():
 	orbit.get_node("AnimationPlayer").play("Warp")
@@ -41,15 +42,14 @@ func _process(_delta: float) -> void:
 	if $Fakesky:
 		$Fakesky.global_position = Global.player.Camera3Dm.global_position
 	if $Fakesky and !$Fakesky.warping:
-		#$Fakesky.sky.global_rotation.y += 0.0005
-		#$Fakesky.sky.global_rotation.x += 0.0003
-		$Fakesky.sky.global_rotation = env.environment.sky_rotation
-		$Fakesky.sky.global_rotation.y  += deg_to_rad(180)
-		#$Fakesky.sky.global_rotation.y += 180
+		$Fakesky.global_rotation.y += 0.0005
+		$Fakesky.global_rotation.x -= 0.0003
+		#$Fakesky.global_rotation = env.environment.sky_rotation
 	elif $Fakesky and $Fakesky.warping:
 		env.environment.sky_rotation = $Fakesky.sky.global_rotation
 		sun.rotation = $Fakesky.sky.global_rotation
 		env.environment.sky_rotation.y += deg_to_rad(180)
+		$Fakesky.global_rotation_degrees = Vector3(0,0,0)
 		#env.environment.sky_rotation.x += 180
 		#env.environment.sky_rotation.z += 180
 

@@ -411,7 +411,7 @@ _surfaces = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_mw28t"]
 size = Vector3(2, 2, 0.075)
 
-[sub_resource type="BoxMesh" id="BoxMesh_27480"]
+[sub_resource type="BoxMesh" id="BoxMesh_i5guk"]
 size = Vector3(1, 2, 0.075)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xp5gw"]
@@ -1351,11 +1351,11 @@ shape = SubResource("BoxShape3D_mw28t")
 
 [node name="RightDoor" type="MeshInstance3D" parent="Environment/Airlock2/BrokenDoor2"]
 transform = Transform3D(0.642039, -0.766672, -4.6941e-08, 0.766672, 0.642039, 1.00537e-07, -4.6941e-08, -1.00537e-07, 1, 0.0492477, 0, 0)
-mesh = SubResource("BoxMesh_27480")
+mesh = SubResource("BoxMesh_i5guk")
 
 [node name="LeftDoor" type="MeshInstance3D" parent="Environment/Airlock2/BrokenDoor2"]
 transform = Transform3D(0.941194, 0.335728, -0.0379663, -1.1978e-07, 0.112371, 0.993666, 0.337867, -0.935232, 0.105763, -0.156445, -0.842715, -0.804802)
-mesh = SubResource("BoxMesh_27480")
+mesh = SubResource("BoxMesh_i5guk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Airlock2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.25, 0)
@@ -1854,6 +1854,22 @@ door = NodePath("../Puzzle3/Door")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelEndTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.25)
 shape = SubResource("BoxShape3D_0r63w")
+
+[node name="ColorRect" type="ColorRect" parent="LevelEndTrigger"]
+visible = false
+offset_left = 560.0
+offset_top = 337.5
+offset_right = 720.0
+offset_bottom = 382.5
+color = Color(0, 0, 0, 0.392157)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LevelEndTrigger/ColorRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_right = 175.0
+offset_bottom = 46.0
+theme_override_font_sizes/normal_font_size = 32
+text = "Loading"
 
 [node name="Tutorial Popup" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.2212, 1.25, -36.7983)

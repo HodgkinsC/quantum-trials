@@ -22,8 +22,16 @@ func cmd(input : String):
 			Global.change_map("mp_04")
 			await get_tree().process_frame
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
+		elif input.contains("mp_05"):
+			Global.change_map("mp_05")
+			await get_tree().process_frame
+			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		elif input.contains("TEMP"):
 			Global.change_map("TEMP")
+			await get_tree().process_frame
+			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
+		elif input.contains("full_station"):
+			Global.change_map("full_station")
 			await get_tree().process_frame
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		
