@@ -19,6 +19,7 @@ height = 10.0
 [sub_resource type="Animation" id="Animation_blm2p"]
 length = 0.001
 loop_mode = 1
+capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -55,10 +56,23 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(1, 1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 2,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_7yr1a"]
 resource_name = "Warp"
 length = 65.0
+capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -90,10 +104,10 @@ tracks/2/path = NodePath("MeshInstance3D:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(10, 35, 60),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(10, 35, 50, 60),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
 "update": 0,
-"values": [Vector3(1, 1, 1), Vector3(1, 0.25, 1), Vector3(1, 1, 1)]
+"values": [Vector3(1, 1, 1), Vector3(1, 0.25, 1), Vector3(1, 0.25, 1), Vector3(1, 1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -103,8 +117,8 @@ tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(10),
-"transitions": PackedFloat32Array(1),
-"update": 0,
+"transitions": PackedFloat32Array(0.5),
+"update": 2,
 "values": [Vector3(0, 0, 0)]
 }
 

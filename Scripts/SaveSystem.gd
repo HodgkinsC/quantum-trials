@@ -21,20 +21,24 @@ func get_files():
 	for save in DirAccess.open("user://saves").get_files():
 		i += 1
 		print(i)
-		ready_save(i)
-		var savefile = load("res://Scenes/SaveFile.tscn")
-		var instance = savefile.instantiate()
-		container.add_child.call_deferred(instance)
-		instance.file = read_save("id")
-		instance.map = read_save("current_map")
-		instance.date = read_save("date")
-		instance.update()
+		if ready_save(i):
+			var savefile = load("res://Scenes/SaveFile.tscn")
+			var instance = savefile.instantiate()
+			container.add_child.call_deferred(instance)
+			instance.file = read_save("id")
+			instance.map = read_save("current_map")
+			instance.date = read_save("date")
+			instance.update()
 
 func ready_save(savenumber):
 	savecount = DirAccess.open("user://saves").get_files().size()
 	savenum = savenumber
 	save_location = "user://saves/" + str(savenum) + "gmesave.dat"
 	save_nodes = get_tree().get_nodes_in_group("Persist")
+	if !FileAccess.file_exists(save_location):
+		return false
+	else:
+		return true
 	
 
 func write_save():
