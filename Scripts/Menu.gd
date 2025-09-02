@@ -99,6 +99,12 @@ func _on_save_pressed() -> void:
 	var savenum = SaveSystem.savecount + 1
 	SaveSystem.ready_save(savenum)
 	SaveSystem.write_save()
+	
+	var dir = DirAccess.open("user://")
+	dir.make_dir("savethumbnails")
+	var img = get_viewport().get_texture().get_image()
+	img.save_jpg("user://savethumbnails/img" + str(savenum) +".jpg")
+	
 	var savefile = load("res://Scenes/SaveFile.tscn")
 	var instance = savefile.instantiate()
 	$SaveMenu/ScrollContainer/VBoxContainer.add_child.call_deferred(instance)

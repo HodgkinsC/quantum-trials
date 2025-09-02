@@ -18,6 +18,8 @@ _esc={
 
 config/name="Quantum Trials"
 run/main_scene="uid://rscipotivdde"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Quantum Trials"
 config/features=PackedStringArray("4.4")
 run/max_fps=120
 

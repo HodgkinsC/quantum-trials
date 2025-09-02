@@ -15,7 +15,6 @@ func _ready() -> void:
 			visible = true
 			warping = true
 			await $AnimationPlayer.animation_finished
-			print("emit")
 			warping = false
 			visible = false
 		await get_tree().process_frame

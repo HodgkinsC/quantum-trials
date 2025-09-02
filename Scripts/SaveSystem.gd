@@ -4,6 +4,7 @@ var save_location = "user://saves"
 var save_nodes
 var savecount
 var savenum
+var missingsaves = 0
 
 var container
 
@@ -18,7 +19,7 @@ func get_files():
 	savecount = DirAccess.open("user://saves").get_files().size()
 	print(DirAccess.open("user://saves").get_files())
 	var i = 0
-	for save in DirAccess.open("user://saves").get_files():
+	while i < savecount:
 		i += 1
 		print(i)
 		if ready_save(i):
@@ -29,9 +30,12 @@ func get_files():
 			instance.map = read_save("current_map")
 			instance.date = read_save("date")
 			instance.update()
+		else:
+			missingsaves += 1
+			savecount += 1
 
 func ready_save(savenumber):
-	savecount = DirAccess.open("user://saves").get_files().size()
+	savecount = DirAccess.open("user://saves").get_files().size() + missingsaves
 	savenum = savenumber
 	save_location = "user://saves/" + str(savenum) + "gmesave.dat"
 	save_nodes = get_tree().get_nodes_in_group("Persist")
@@ -69,6 +73,8 @@ func write_save():
 	
 	file.close()
 	savecount = DirAccess.open("user://saves").get_files().size()
+	await RenderingServer.frame_post_draw
+	
 
 func read_save(content):
 	var saveid
