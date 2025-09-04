@@ -2,7 +2,7 @@ extends Node
 
 func cmd(input : String):
 	if input.contains("map"):
-		if input.contains("dev_test"):
+		if input.contains("devtest"):
 			Global.change_map("dev_test")
 			await get_tree().process_frame
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
@@ -32,6 +32,10 @@ func cmd(input : String):
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		elif input.contains("full_station"):
 			Global.change_map("full_station")
+			await get_tree().process_frame
+			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
+		elif input.contains("secret"):
+			Global.change_map("secret")
 			await get_tree().process_frame
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		
