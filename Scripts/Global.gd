@@ -29,7 +29,7 @@ func _ready() -> void:
 	load_objects.connect(shutup)
 	startwarp.connect(shutup)
 	change_map("menu")
-	root.usemapenv(false)
+	root.usemapenv(false, null)
 	paused = true
 	await get_tree().process_frame
 	spawnplayer(current_map.get_node("SpawnPoint").global_transform)

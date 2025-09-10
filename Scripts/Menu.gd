@@ -69,7 +69,7 @@ func _on_new_game_pressed():
 	changemenu(1)
 	visible = false
 	Global.change_map("mp_01")
-	Global.root.usemapenv(false)
+	Global.root.usemapenv(false, null)
 	await get_tree().process_frame
 	Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 

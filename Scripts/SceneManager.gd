@@ -1,7 +1,7 @@
 extends Node3D
 
-@onready var env = $WorldEnvironment
-@onready var sun = $Skybox
+@onready var env : WorldEnvironment = $WorldEnvironment
+@onready var sun : Node3D = $Skybox
 @onready var planet = $Skybox/Orbit/Planet
 @onready var orbit = $Skybox/Orbit
 
@@ -16,12 +16,18 @@ func _ready() -> void:
 func startwarp():
 	orbit.get_node("AnimationPlayer").play("Warp")
 
-func usemapenv(use : bool):
-	await Global.current_map.ready
-	if use:
-		env.environment = null
+func usemapenv(use : bool, environment : Environment):
+	print('USE ENVIRONMENREMNT!!!!!!!!!!!!!')
+	await get_tree().process_frame
+	print("DONE WAITING!!!!!!!!!!!!")
+	if use == true:
+		print("ITs USING ItuwtW!!!!!!!!!")
+		env.environment = environment
 		sun.visible = false
-	else:
+	elif use == false:
+		print("it's really not...")
+		env.environment = load("res://Assets/Materials/Skybox.tres")
+		sun.visible = true
 		if Global.current_map:
 			if Global.current_map.has_node("WorldEnvironment"): Global.current_map.get_node("WorldEnvironment").queue_free()
 			if Global.current_map.has_node("DirectionalLight3D"): Global.current_map.get_node("DirectionalLight3D").queue_free()

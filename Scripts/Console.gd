@@ -26,10 +26,6 @@ func cmd(input : String):
 			Global.change_map("mp_05")
 			await get_tree().process_frame
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("TEMP"):
-			Global.change_map("TEMP")
-			await get_tree().process_frame
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		elif input.contains("full_station"):
 			Global.change_map("full_station")
 			await get_tree().process_frame
@@ -37,6 +33,16 @@ func cmd(input : String):
 		elif input.contains("secret"):
 			Global.change_map("secret")
 			await get_tree().process_frame
+			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
+		elif input.contains("surf_puzzle"):
+			Global.change_map("surf_puzzle")
+			await get_tree().process_frame
+			Global.root.usemapenv(true, load("res://Assets/Materials/SurfaceSky.tres"))
+			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
+		elif input.contains("void_puzzle"):
+			Global.change_map("void_puzzle")
+			await get_tree().process_frame
+			Global.root.usemapenv(true, load("res://Assets/Materials/VoidSky.tres"))
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		
 		

@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=4 uid="uid://bfu0gom7n1ke7"]
 
-[ext_resource type="AudioStream" uid="uid://dwwcswgt8y5mo" path="res://Assets/Sounds/wind_effect.wav" id="1_6rcaq"]
 [ext_resource type="Environment" uid="uid://cr3md08i8p3o" path="res://Assets/Materials/VoidSky.tres" id="1_pvt14"]
+[ext_resource type="AudioStream" uid="uid://ba28n47wa34gf" path="res://Assets/Sounds/wind1.wav" id="1_tmify"]
 [ext_resource type="Texture2D" uid="uid://bw1get01wwcyp" path="res://Assets/Textures/grate_albedo.png" id="1_u55aj"]
 [ext_resource type="Texture2D" uid="uid://lmuqmbdd43dx" path="res://Assets/Textures/gravel_concrete_03_diff_1k.png" id="2_pvt14"]
 [ext_resource type="Script" uid="uid://b5q7mph3ynvcj" path="res://Scripts/fall_pit_checkpoints.gd" id="5_2j0ag"]
@@ -17,16 +17,17 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_2j0ag"]
 size = Vector3(200, 5, 100)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_itgob"]
-size = Vector3(4.5, 4.67517, 4.27637)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_wa4v8"]
 size = Vector3(11, 4.67517, 10.4063)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tmify"]
+size = Vector3(30, 4.67517, 30)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbnp5"]
 transparency = 1
 albedo_texture = ExtResource("1_u55aj")
 uv1_triplanar = true
+texture_filter = 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pvt14"]
 data = PackedVector3Array(5, -0.25, -5, -3.5, -0.25, -3.5, 3.5, -0.25, -3.5, 5, 0.25, 5, 3.5, 0.25, 3.5, 5, 0.25, -5, 5, 0.25, 5, -3.5, 0.25, 3.5, 3.5, 0.25, 3.5, 5, 0.25, -5, 3.5, 0.25, 3.5, 3.5, 0.25, -3.5, 5, 0.25, 5, 5, 0.25, -5, 5, -0.25, -5, 5, 0.25, -5, 3.5, 0.25, -3.5, -5, 0.25, -5, 5, -0.25, -5, 5, 0.25, -5, -5, 0.25, -5, 5, -0.25, 5, 5, 0.25, 5, 5, -0.25, -5, 5, -0.25, 5, 3.5, -0.25, -3.5, 3.5, -0.25, 3.5, 5, 0.25, 5, 5, -0.25, 5, -5, -0.25, 5, 5, -0.25, 5, 3.5, -0.25, 3.5, -5, -0.25, 5, 5, -0.25, -5, 3.5, -0.25, -3.5, 5, -0.25, 5, -5, -0.25, -5, -3.5, -0.25, 3.5, -3.5, -0.25, -3.5, -5, 0.25, 5, -3.5, 0.25, 3.5, 5, 0.25, 5, -5, 0.25, 5, -3.5, 0.25, -3.5, -3.5, 0.25, 3.5, -5, -0.25, 5, -5, -0.25, -5, -5, 0.25, -5, -5, -0.25, -5, -3.5, -0.25, -3.5, 5, -0.25, -5, 5, -0.25, -5, -5, 0.25, -5, -5, -0.25, -5, -5, -0.25, 5, -3.5, -0.25, 3.5, -5, -0.25, -5, -5, -0.25, 5, 3.5, -0.25, 3.5, -3.5, -0.25, 3.5, -5, 0.25, -5, -3.5, 0.25, -3.5, -5, 0.25, 5, -5, 0.25, -5, 3.5, 0.25, -3.5, -3.5, 0.25, -3.5, -5, 0.25, -5, -5, 0.25, 5, -5, -0.25, 5, -5, 0.25, 5, 5, 0.25, 5, -5, -0.25, 5, -3.5, 0.25, -3.5, 3.5, 0.25, -3.5, -3.5, -0.25, -3.5, 3.5, 0.25, 3.5, 3.5, -0.25, 3.5, 3.5, -0.25, -3.5, -3.5, -0.25, 3.5, 3.5, -0.25, 3.5, -3.5, 0.25, 3.5, 3.5, 0.25, 3.5, 3.5, -0.25, -3.5, 3.5, 0.25, -3.5, 3.5, -0.25, -3.5, -3.5, -0.25, -3.5, 3.5, 0.25, -3.5, -3.5, -0.25, 3.5, -3.5, 0.25, 3.5, -3.5, 0.25, -3.5, 3.5, 0.25, 3.5, -3.5, 0.25, 3.5, 3.5, -0.25, 3.5, -3.5, -0.25, 3.5, -3.5, 0.25, -3.5, -3.5, -0.25, -3.5)
@@ -34,6 +35,7 @@ data = PackedVector3Array(5, -0.25, -5, -3.5, -0.25, -3.5, 3.5, -0.25, -3.5, 5, 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkjg0"]
 albedo_texture = ExtResource("2_pvt14")
 uv1_triplanar = true
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6rcaq"]
 _surfaces = [{
@@ -138,7 +140,7 @@ size = Vector3(0.75, 0.15, 0.75)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="Wind" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_6rcaq")
+stream = ExtResource("1_tmify")
 volume_db = -10.0
 autoplay = true
 bus = &"Game"
@@ -154,7 +156,7 @@ environment = ExtResource("1_pvt14")
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="FallPit" type="Area3D" parent="Environment"]
-transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, 0, -34.75, 0)
+transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, 0, -35, 0)
 visible = false
 collision_layer = 7
 collision_mask = 7
@@ -176,31 +178,33 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.204
 [node name="CubeCheck2" type="Node3D" parent="Environment/FallPit"]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17.2335, 18.125, 0)
 
-[node name="Checkpoint" type="Area3D" parent="Environment/FallPit"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.06501e-13, 6, -58.125)
+[node name="Checkpoint1" type="Area3D" parent="Environment/FallPit"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.013, 35, 0.025)
 collision_layer = 0
 collision_mask = 5
 script = ExtResource("6_p5pj8")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FallPit/Checkpoint"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-shape = SubResource("BoxShape3D_itgob")
-
-[node name="Checkpoint2" type="Area3D" parent="Environment/FallPit"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.013191, 34.7534, 0.0254427)
-collision_layer = 0
-collision_mask = 5
-script = ExtResource("6_p5pj8")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FallPit/Checkpoint2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FallPit/Checkpoint1"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.625, 0)
 shape = SubResource("BoxShape3D_wa4v8")
 
+[node name="Checkpoint2" type="Area3D" parent="Environment/FallPit"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.75, 35, -5.59552e-14)
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("6_p5pj8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/FallPit/Checkpoint2"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 10.025, 1.625, -14.1849)
+shape = SubResource("BoxShape3D_tmify")
+
 [node name="Platform1" type="Node3D" parent="Environment"]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Environment/Platform1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.125, 0)
-omni_range = 100.0
+[node name="SpotLight3D" type="SpotLight3D" parent="Environment/Platform1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7, 0)
+light_energy = 5.0
+spot_range = 55.9145
+spot_angle = 51.9925
 
 [node name="Grate" type="CSGBox3D" parent="Environment/Platform1"]
 use_collision = true
@@ -242,10 +246,6 @@ material = SubResource("StandardMaterial3D_qkjg0")
 [node name="Platform2" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Environment/Platform2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.125, 0)
-omni_range = 100.0
-
 [node name="Grate" type="CSGBox3D" parent="Environment/Platform2"]
 use_collision = true
 size = Vector3(7, 0.5, 7)
@@ -283,12 +283,14 @@ use_collision = true
 size = Vector3(1, 99.5, 1)
 material = SubResource("StandardMaterial3D_qkjg0")
 
-[node name="Platform3" type="Node3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+[node name="SpotLight3D" type="SpotLight3D" parent="Environment/Platform2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7, 0)
+light_energy = 5.0
+spot_range = 55.9145
+spot_angle = 51.9925
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Environment/Platform3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.125, 0)
-omni_range = 100.0
+[node name="Platform3" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
 
 [node name="Grate" type="CSGBox3D" parent="Environment/Platform3"]
 use_collision = true
@@ -327,12 +329,14 @@ use_collision = true
 size = Vector3(1, 99.5, 1)
 material = SubResource("StandardMaterial3D_qkjg0")
 
-[node name="Platform4" type="Node3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 20)
+[node name="SpotLight3D" type="SpotLight3D" parent="Environment/Platform3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7, 0)
+light_energy = 5.0
+spot_range = 55.9145
+spot_angle = 51.9925
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Environment/Platform4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.125, 0)
-omni_range = 100.0
+[node name="Platform4" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20)
 
 [node name="Grate" type="CSGBox3D" parent="Environment/Platform4"]
 use_collision = true
@@ -371,12 +375,14 @@ use_collision = true
 size = Vector3(1, 99.5, 1)
 material = SubResource("StandardMaterial3D_qkjg0")
 
-[node name="Platform5" type="Node3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 30)
+[node name="SpotLight3D" type="SpotLight3D" parent="Environment/Platform4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7, 0)
+light_energy = 5.0
+spot_range = 55.9145
+spot_angle = 51.9925
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Environment/Platform5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.125, 0)
-omni_range = 100.0
+[node name="Platform5" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 40)
 
 [node name="Grate" type="CSGBox3D" parent="Environment/Platform5"]
 use_collision = true
@@ -415,6 +421,12 @@ use_collision = true
 size = Vector3(1, 99.5, 1)
 material = SubResource("StandardMaterial3D_qkjg0")
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Environment/Platform5"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7, 0)
+light_energy = 5.0
+spot_range = 55.9145
+spot_angle = 51.9925
+
 [node name="puzzle1" type="Node3D" parent="."]
 
 [node name="Cube" parent="puzzle1" instance=ExtResource("5_pbnp5")]
@@ -434,6 +446,9 @@ mesh = SubResource("ArrayMesh_5dlbc")
 libraries = {
 &"": SubResource("AnimationLibrary_ryxpc")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="puzzle1/Bridge"]
+pitch_scale = 0.75
 
 [node name="VisibleOnScreenNotifier3D" type="Node3D" parent="puzzle1" node_paths=PackedStringArray("object")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
@@ -476,7 +491,7 @@ shape = SubResource("BoxShape3D_a506e")
 [node name="puzzle2" type="Node3D" parent="."]
 
 [connection signal="body_entered" from="Environment/FallPit" to="Environment/FallPit" method="_on_body_entered"]
-[connection signal="body_entered" from="Environment/FallPit/Checkpoint" to="Environment/FallPit/Checkpoint" method="_on_body_entered"]
+[connection signal="body_entered" from="Environment/FallPit/Checkpoint1" to="Environment/FallPit/Checkpoint1" method="_on_body_entered"]
 [connection signal="body_entered" from="Environment/FallPit/Checkpoint2" to="Environment/FallPit/Checkpoint2" method="_on_body_entered"]
 [connection signal="body_entered" from="puzzle1/Button/Detector" to="puzzle1/Button" method="_on_detector_body_entered"]
 [connection signal="body_exited" from="puzzle1/Button/Detector" to="puzzle1/Button" method="_on_detector_body_exited"]

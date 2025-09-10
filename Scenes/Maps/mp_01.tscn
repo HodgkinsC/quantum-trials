@@ -1563,6 +1563,9 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="Mp01" type="Node3D"]
 
+[node name="SpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0, 0)
+
 [node name="Environment" type="Node3D" parent="."]
 transform = Transform3D(-3.55271e-15, 0, 1, 0, 1, 0, -1, 0, -3.55271e-15, 0, 0, 0)
 
@@ -2811,9 +2814,6 @@ offset_right = 175.0
 offset_bottom = 46.0
 theme_override_font_sizes/normal_font_size = 32
 text = "Loading"
-
-[node name="SpawnPoint" type="Node3D" parent="."]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 0.5, 0)
 
 [node name="Tutorial Popup" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)

@@ -6,6 +6,7 @@ var done = false
 var blasting = false
 
 var corepos = Vector3(14.875, 3.625, 0.0)
+@onready var core = $"../../Core"
 @onready var beam : Path3D = $Teleportbeam
 @onready var audio = $Audio
 @onready var level = preload("res://Scenes/Maps/void_puzzle.tscn")
