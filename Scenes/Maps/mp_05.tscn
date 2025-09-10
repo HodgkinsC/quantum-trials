@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://bpbijsjqdaffx"]
+[gd_scene load_steps=61 format=4 uid="uid://bpbijsjqdaffx"]
 
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_llgp0"]
 [ext_resource type="Material" uid="uid://c16aii8xf5t6p" path="res://Assets/Materials/OfficeGlass.tres" id="4_dx3ca"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cwfrtibwhql0k" path="res://Assets/Textures/02.png" id="11_23qd2"]
 [ext_resource type="Script" uid="uid://blb1a1325hi0h" path="res://Scripts/containmentbutton.gd" id="11_j166a"]
 [ext_resource type="Shader" uid="uid://oymyny7len77" path="res://Assets/Materials/Shaders/LightWarp.gdshader" id="12_iqnke"]
+[ext_resource type="AudioStream" uid="uid://sxho5vi0vv04" path="res://Assets/Sounds/portal_effect.wav" id="12_vpxew"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iqnke"]
 data = PackedVector3Array(-0.05, -3.25, 10, -0.05, -3.25, -10, -0.05, 3.25, -10, 0.05, -3.25, -10, -0.05, -3.25, -10, -0.05, -3.25, 10, -0.05, 3.25, -10, -0.05, -3.25, -10, 0.05, -3.25, -10, -0.05, 3.25, -10, -0.05, 3.25, 10, -0.05, -3.25, 10, -0.05, -3.25, 10, -0.05, 3.25, 10, 0.05, 3.25, 10, 0.05, 3.25, 10, -0.05, 3.25, 10, -0.05, 3.25, -10, -0.05, -3.25, 10, 0.05, -3.25, 10, 0.05, -3.25, -10, 0.05, 3.25, 10, 0.05, -3.25, 10, -0.05, -3.25, 10, 0.05, -3.25, -10, 0.05, -3.25, 10, 0.05, 3.25, 10, 0.05, -3.25, -10, 0.05, 3.25, -10, -0.05, 3.25, -10, -0.05, 3.25, -10, 0.05, 3.25, -10, 0.05, 3.25, 10, 0.05, 3.25, 10, 0.05, 3.25, -10, 0.05, -3.25, -10)
@@ -361,7 +362,7 @@ size = Vector2(20, 20)
 [node name="Mp05" type="Node3D"]
 
 [node name="SpawnPoint" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, -75.089, 4.4875, -13.9343)
+transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, -75.089, 3.3625, -13.9343)
 
 [node name="Environment" type="Node3D" parent="."]
 transform = Transform3D(-3.55271e-15, 0, 1, 0, 1, 0, -1, 0, -3.55271e-15, 0, 0, 0)
@@ -921,6 +922,9 @@ path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 material = SubResource("StandardMaterial3D_gwr0m")
+
+[node name="Audio" type="AudioStreamPlayer" parent="Environment/ControlStation01/ContainmentButton"]
+stream = ExtResource("12_vpxew")
 
 [node name="ControlStation02" type="Node3D" parent="Environment"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.875, 4.75, -56)

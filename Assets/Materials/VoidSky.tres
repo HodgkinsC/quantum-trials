@@ -1,0 +1,6 @@
+[gd_resource type="Environment" format=3 uid="uid://cr3md08i8p3o"]
+
+[resource]
+background_mode = 1
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
