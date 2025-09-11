@@ -33,6 +33,12 @@ func _ready() -> void:
 	paused = true
 	await get_tree().process_frame
 	spawnplayer(current_map.get_node("SpawnPoint").global_transform)
+	await get_tree().create_timer(1).timeout
+	#--Launch Options--#
+	Global.change_map("void_puzzle")
+	await get_tree().process_frame
+	Global.root.usemapenv(true, load("res://Assets/Materials/VoidSky.tres"))
+	Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 
 func change_map(mapname : String):
 	ChangeMap.emit()

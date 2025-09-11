@@ -22,4 +22,5 @@ mesh = SubResource("BoxMesh_sry2l")
 surface_material_override/0 = ExtResource("2_yyyfb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("BoxShape3D_sfu72")
