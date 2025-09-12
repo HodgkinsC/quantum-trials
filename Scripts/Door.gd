@@ -5,14 +5,14 @@ extends Node3D
 
 var open = false
 
-func activate():
+func activate(_action):
 	if !open:
 		open = true
 		closedcoll.set_collision_mask_value(1, false)
 		closedcoll.set_collision_layer_value(1, false)
 		anim.play("open")
 
-func deactivate():
+func deactivate(_action):
 	if open:
 		open = false
 		closedcoll.set_collision_mask_value(1, true)
