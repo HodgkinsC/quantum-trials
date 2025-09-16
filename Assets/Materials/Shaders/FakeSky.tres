@@ -91,7 +91,6 @@ void light() {
 
 }
 "
-graph_offset = Vector2(25.1074, 536.161)
 modes/depth_draw = 2
 nodes/fragment/4/node = SubResource("VisualShaderNodeFloatOp_rewak")
 nodes/fragment/4/position = Vector2(180, 740)

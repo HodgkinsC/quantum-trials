@@ -51,8 +51,6 @@ unique_name_in_owner = true
 
 [node name="Camera3D" type="Camera3D" parent="HeadOriginalPosition/Head/CamSmooth"]
 unique_name_in_owner = true
-near = 0.005
-far = 7500.0
 
 [node name="HeadMesh" type="MeshInstance3D" parent="HeadOriginalPosition/Head/CamSmooth/Camera3D"]
 transform = Transform3D(0.62, 0, 0, 0, 0.62, 0, 0, 0, 0.62, 0, 0, 0)
