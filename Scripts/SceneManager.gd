@@ -17,15 +17,11 @@ func startwarp():
 	orbit.get_node("AnimationPlayer").play("Warp")
 
 func usemapenv(use : bool, environment : Environment):
-	print('USE ENVIRONMENREMNT!!!!!!!!!!!!!')
 	await get_tree().process_frame
-	print("DONE WAITING!!!!!!!!!!!!")
 	if use == true:
-		print("ITs USING ItuwtW!!!!!!!!!")
 		env.environment = environment
 		sun.visible = false
 	elif use == false:
-		print("it's really not...")
 		env.environment = load("res://Assets/Materials/Skybox.tres")
 		sun.visible = true
 		if Global.current_map:

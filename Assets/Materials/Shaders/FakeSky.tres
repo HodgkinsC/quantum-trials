@@ -37,7 +37,7 @@ texture_filter = 1
 
 [resource]
 code = "shader_type spatial;
-render_mode blend_mix, depth_draw_never, cull_back, diffuse_lambert, specular_schlick_ggx;
+render_mode blend_mix, depth_draw_never, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
 
 uniform sampler2D Texture2DParameter : filter_nearest;
 uniform float FloatParameter : hint_range(0.0, 1.0) = 1.0;
