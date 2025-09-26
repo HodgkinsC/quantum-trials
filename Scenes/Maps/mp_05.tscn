@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://bpbijsjqdaffx"]
+[gd_scene load_steps=73 format=4 uid="uid://bpbijsjqdaffx"]
 
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_llgp0"]
 [ext_resource type="Material" uid="uid://c16aii8xf5t6p" path="res://Assets/Materials/OfficeGlass.tres" id="4_dx3ca"]
@@ -15,6 +15,8 @@
 [ext_resource type="Script" uid="uid://blb1a1325hi0h" path="res://Scripts/containmentbutton.gd" id="11_j166a"]
 [ext_resource type="Shader" uid="uid://oymyny7len77" path="res://Assets/Materials/Shaders/LightWarp.gdshader" id="12_iqnke"]
 [ext_resource type="AudioStream" uid="uid://7fo7jdgmvarc" path="res://Assets/Sounds/beamstart5.wav" id="13_ei3fu"]
+[ext_resource type="Texture2D" uid="uid://ccltoonrlb2au" path="res://Assets/Textures/lowlasers.png" id="14_a0hx5"]
+[ext_resource type="Script" uid="uid://eqefvequup5j" path="res://Scripts/containmentbutton2.gd" id="16_1qui3"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iqnke"]
 data = PackedVector3Array(-0.05, -3.25, 10, -0.05, -3.25, -10, -0.05, 3.25, -10, 0.05, -3.25, -10, -0.05, -3.25, -10, -0.05, -3.25, 10, -0.05, 3.25, -10, -0.05, -3.25, -10, 0.05, -3.25, -10, -0.05, 3.25, -10, -0.05, 3.25, 10, -0.05, -3.25, 10, -0.05, -3.25, 10, -0.05, 3.25, 10, 0.05, 3.25, 10, 0.05, 3.25, 10, -0.05, 3.25, 10, -0.05, 3.25, -10, -0.05, -3.25, 10, 0.05, -3.25, 10, 0.05, -3.25, -10, 0.05, 3.25, 10, 0.05, -3.25, 10, -0.05, -3.25, 10, 0.05, -3.25, -10, 0.05, -3.25, 10, 0.05, 3.25, 10, 0.05, -3.25, -10, 0.05, 3.25, -10, -0.05, 3.25, -10, -0.05, 3.25, -10, 0.05, 3.25, -10, 0.05, 3.25, 10, 0.05, 3.25, 10, 0.05, 3.25, -10, 0.05, -3.25, -10)
@@ -196,6 +198,116 @@ size = Vector3(4.5, 4.67517, 4.27637)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vcech"]
 size = Vector3(6.31824, 4.67517, 10.4063)
 
+[sub_resource type="Animation" id="Animation_ei3fu"]
+resource_name = "Rotate"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Environment/ControlStation01/Beams/Beam/Axis/MeshInstance3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Environment/ControlStation01/Beams/Beam3/Axis/MeshInstance3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-4.4703484e-08, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Environment/ControlStation01/Beams/Beam6/Axis/MeshInstance3D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 2.9802322e-08), Vector3(0, 6.2831855, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Environment/ControlStation01/Beams/Beam8/Axis/MeshInstance3D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(7.45058e-08, 0, 0), Vector3(0, 6.2831855, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a0hx5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Environment/ControlStation01/Beams/Beam/Axis/MeshInstance3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.0471972, -0.7853983, 1.7129025e-07)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Environment/ControlStation01/Beams/Beam3/Axis/MeshInstance3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.4703484e-08, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Environment/ControlStation01/Beams/Beam6/Axis/MeshInstance3D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 2.9802322e-08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Environment/ControlStation01/Beams/Beam8/Axis/MeshInstance3D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(7.45058e-08, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1qui3"]
+_data = {
+&"RESET": SubResource("Animation_a0hx5"),
+&"Rotate": SubResource("Animation_ei3fu")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dx3ca"]
 transparency = 3
 alpha_hash_scale = 1.0
@@ -215,6 +327,39 @@ rings = 1
 cap_top = false
 cap_bottom = false
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1qui3"]
+data = PackedVector3Array(-1, 1.625, 0, -1, 1.625, -0.12, 1, 1.625, -0.12, -1, 1.625, -0.12, -1, 1.625, 0, 1.125, -1.625, 0, 1.125, -1.625, 0, 1.125, -1.625, -0.12, -1, 1.625, -0.12, 1.125, -1.625, -0.12, 1.125, -1.625, 0, 1, 1.625, 0, 1.125, -1.625, -0.12, 1, 1.625, -0.12, -1, 1.625, -0.12, 1, 1.625, 0, 1, 1.625, -0.12, 1.125, -1.625, -0.12, -1, 1.625, 0, 1, 1.625, 0, 1.125, -1.625, 0, 1, 1.625, -0.12, 1, 1.625, 0, -1, 1.625, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8jnrt"]
+_surfaces = [{
+"aabb": AABB(-1, -1.625, -0.12, 2.125, 3.25, 0.12),
+"attribute_data": PackedByteArray("AAAAAKuqKj4AAIA/q6oqPgAAgD+rqqo+AACAP6uqKj4AAAAAq6oqPgAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD+rqio+AACAPwAAAD8AAAAAAAAAPwAAAACrqqo+AAAAPwAAgD+Ihwc/AAAAPwAAgD8AAAA/AAAAAKuqqj4AAIA/q6qqPgAAgD8AAAA/AAAAAAAAAD/x8PA+AAAAPwAAAD8AAIA/AACAP6uqqj4AAAAAq6qqPgAAAACrqio+"),
+"format": 34359738391,
+"material": ExtResource("4_dx3ca"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAvwAA0D8AAAAAAACAvwAA0D+PwvW9AACAPwAA0D+PwvW9AACAvwAA0D+PwvW9AACAvwAA0D8AAAAAAACQPwAA0L8AAAAAAACQPwAA0L8AAAAAAACQPwAA0L+PwvW9AACAvwAA0D+PwvW9AACQPwAA0L+PwvW9AACQPwAA0L8AAAAAAACAPwAA0D8AAAAAAACQPwAA0L+PwvW9AACAPwAA0D+PwvW9AACAvwAA0D+PwvW9AACAPwAA0D8AAAAAAACAPwAA0D+PwvW9AACQPwAA0L+PwvW9AACAvwAA0D8AAAAAAACAPwAA0D8AAAAAAACQPwAA0L8AAAAAAACAPwAA0D+PwvW9AACAPwAA0D8AAAAAAACAvwAA0D8AAAAA/3//////////f/////////9/////////mjJkTf////+aMmRN/////5oyZE3/////mjJkTf////+aMmRN/////5oyZE3/////Qfu9hP////9B+72E/////0H7vYT//////////wAA/7//////AAD/v/////8AAP+/Qfu9hP////9B+72E/////0H7vYT//////3//f////7//f/9/////v/9//3////+//3//////////f/////////9/////////")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0tcnt"]
+data = PackedVector3Array(-1, 1.625, 0, -1, 1.625, -0.12, 1, 1.625, -0.12, -1, 1.625, -0.12, -1, 1.625, 0, 1.125, -1.625, 0, 1.125, -1.625, 0, 1.125, -1.625, -0.12, -1, 1.625, -0.12, 1.125, -1.625, -0.12, 1.125, -1.625, 0, 1, 1.625, 0, 1.125, -1.625, -0.12, 1, 1.625, -0.12, -1, 1.625, -0.12, 1, 1.625, 0, 1, 1.625, -0.12, 1.125, -1.625, -0.12, -1, 1.625, 0, 1, 1.625, 0, 1.125, -1.625, 0, 1, 1.625, -0.12, 1, 1.625, 0, -1, 1.625, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w0v73"]
+_surfaces = [{
+"aabb": AABB(-1, -1.625, -0.12, 2.125, 3.25, 0.12),
+"attribute_data": PackedByteArray("AAAAAKuqKj4AAIA/q6oqPgAAgD+rqqo+AACAP6uqKj4AAAAAq6oqPgAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD+rqio+AACAPwAAAD8AAAAAAAAAPwAAAACrqqo+AAAAPwAAgD+Ihwc/AAAAPwAAgD8AAAA/AAAAAKuqqj4AAIA/q6qqPgAAgD8AAAA/AAAAAAAAAD/x8PA+AAAAPwAAAD8AAIA/AACAP6uqqj4AAAAAq6qqPgAAAACrqio+"),
+"format": 34359738391,
+"material": ExtResource("4_dx3ca"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAvwAA0D8AAAAAAACAvwAA0D+PwvW9AACAPwAA0D+PwvW9AACAvwAA0D+PwvW9AACAvwAA0D8AAAAAAACQPwAA0L8AAAAAAACQPwAA0L8AAAAAAACQPwAA0L+PwvW9AACAvwAA0D+PwvW9AACQPwAA0L+PwvW9AACQPwAA0L8AAAAAAACAPwAA0D8AAAAAAACQPwAA0L+PwvW9AACAPwAA0D+PwvW9AACAvwAA0D+PwvW9AACAPwAA0D8AAAAAAACAPwAA0D+PwvW9AACQPwAA0L+PwvW9AACAvwAA0D8AAAAAAACAPwAA0D8AAAAAAACQPwAA0L8AAAAAAACAPwAA0D+PwvW9AACAPwAA0D8AAAAAAACAvwAA0D8AAAAA/3//////////f/////////9/////////mjJkTf////+aMmRN/////5oyZE3/////mjJkTf////+aMmRN/////5oyZE3/////Qfu9hP////9B+72E/////0H7vYT//////////wAA/7//////AAD/v/////8AAP+/Qfu9hP////9B+72E/////0H7vYT//////3//f////7//f/9/////v/9//3////+//3//////////f/////////9/////////")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kddxg"]
+data = PackedVector3Array(-1.9397, -0.0901, 5, -1.9397, -0.0901, -5, -1.9397, 0.0901, -5, 1.9397, -0.0901, -5, -1.9397, -0.0901, -5, -1.9397, -0.0901, 5, -1.9397, 0.0901, -5, -1.9397, -0.0901, -5, 1.9397, -0.0901, -5, -1.9397, 0.0901, -5, -1.9397, 0.0901, 5, -1.9397, -0.0901, 5, -1.9397, -0.0901, 5, -1.9397, 0.0901, 5, 1.9397, 0.0901, 5, 1.9397, 0.0901, 5, -1.9397, 0.0901, 5, -1.9397, 0.0901, -5, -1.9397, -0.0901, 5, 1.9397, -0.0901, 5, 1.9397, -0.0901, -5, 1.9397, 0.0901, 5, 1.9397, -0.0901, 5, -1.9397, -0.0901, 5, 1.9397, -0.0901, -5, 1.9397, -0.0901, 5, 1.9397, 0.0901, 5, 1.9397, -0.0901, -5, 1.9397, 0.0901, -5, -1.9397, 0.0901, -5, -1.9397, 0.0901, -5, 1.9397, 0.0901, -5, 1.9397, 0.0901, 5, 1.9397, 0.0901, 5, 1.9397, 0.0901, -5, 1.9397, -0.0901, -5)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_23qd2"]
 render_priority = 0
 shader = ExtResource("8_wtty6")
@@ -223,14 +368,26 @@ shader_parameter/roughness = 0.0
 shader_parameter/normal_strength = 1.0
 shader_parameter/edge_color = Color(0.284639, 0.414973, 0.36247, 1)
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_g48ov"]
+_surfaces = [{
+"aabb": AABB(-1.939695, -0.090088, -5, 3.87939, 0.180176, 10),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": SubResource("ShaderMaterial_23qd2"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("7Uf4vw+AuL0AAKBA7Uf4vw+AuL0AAKDA7Uf4vw+AuD0AAKDA7Uf4Pw+AuL0AAKDA7Uf4vw+AuL0AAKDA7Uf4vw+AuL0AAKBA7Uf4vw+AuD0AAKDA7Uf4vw+AuL0AAKDA7Uf4Pw+AuL0AAKDA7Uf4vw+AuD0AAKDA7Uf4vw+AuD0AAKBA7Uf4vw+AuL0AAKBA7Uf4vw+AuL0AAKBA7Uf4vw+AuD0AAKBA7Uf4Pw+AuD0AAKBA7Uf4Pw+AuD0AAKBA7Uf4vw+AuD0AAKBA7Uf4vw+AuD0AAKDA7Uf4vw+AuL0AAKBA7Uf4Pw+AuL0AAKBA7Uf4Pw+AuL0AAKDA7Uf4Pw+AuD0AAKBA7Uf4Pw+AuL0AAKBA7Uf4vw+AuL0AAKBA7Uf4Pw+AuL0AAKDA7Uf4Pw+AuL0AAKBA7Uf4Pw+AuD0AAKBA7Uf4Pw+AuL0AAKDA7Uf4Pw+AuD0AAKDA7Uf4vw+AuD0AAKDA7Uf4vw+AuD0AAKDA7Uf4Pw+AuD0AAKDA7Uf4Pw+AuD0AAKBA7Uf4Pw+AuD0AAKBA7Uf4Pw+AuD0AAKDA7Uf4Pw+AuL0AAKDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_wtty6"]
 size = Vector3(7.375, 9.875, 4)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_47ca1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ei3fu"]
 albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_e2jvk"]
-material = SubResource("StandardMaterial3D_47ca1")
+material = SubResource("StandardMaterial3D_ei3fu")
 size = Vector3(0.2, 0.15, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_npsif"]
@@ -650,6 +807,7 @@ mesh = SubResource("CylinderMesh_llgp0")
 
 [node name="FallPit" type="Area3D" parent="Environment/Core"]
 transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, -1.25, -3.60367, -0.25)
+visible = false
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("5_llgp0")
@@ -750,35 +908,54 @@ light_color = Color(0.725285, 0.584227, 0.957828, 1)
 transform = Transform3D(-0.0472658, 0.161532, -0.985735, 0.0274699, -0.986254, -0.162935, -0.998505, -0.0347794, 0.0421789, -16.875, -5.25, 0)
 visible = false
 
-[node name="Beam" type="Node3D" parent="Environment/ControlStation01/Beams"]
-transform = Transform3D(-0.0472659, 0.02747, -0.998504, 0.161533, -0.986255, -0.0347793, -0.985735, -0.162934, 0.0421788, 0, 0, 0)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/ControlStation01/Beams"]
+root_node = NodePath("../../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1qui3")
+}
+autoplay = "Rotate"
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 8.56452e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.6547, 6.25, -7.65472)
+[node name="Beam" type="Node3D" parent="Environment/ControlStation01/Beams"]
+transform = Transform3D(-0.047265913, 0.027469924, -0.998504, 0.16153304, -0.9862546, -0.034779318, -0.985735, -0.16293536, 0.042178877, 0, 0, 0)
+
+[node name="Axis" type="Node3D" parent="Environment/ControlStation01/Beams/Beam"]
+transform = Transform3D(0.7071071, 0.6123723, -0.35355344, 8.56452e-08, 0.5000001, 0.86602473, 0.707107, -0.61237216, 0.35355332, 7.6546993, 6.2500005, -7.6547203)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam/Axis"]
+transform = Transform3D(0.7071068, 0.61237234, -0.35355365, 8.5645176e-08, 0.5000003, 0.86602527, 0.70710677, -0.6123724, 0.35355356, 0, 0, 0)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
 [node name="Beam3" type="Node3D" parent="Environment/ControlStation01/Beams"]
 transform = Transform3D(-0.998504, 0.02747, 0.0472659, -0.0347793, -0.986255, -0.161533, 0.0421788, -0.162934, 0.985735, 0, 0, 0)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam3"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 5.0071e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.65471, 6.25, -7.65471)
+[node name="Axis" type="Node3D" parent="Environment/ControlStation01/Beams/Beam3"]
+transform = Transform3D(0.707107, 0.612372, -0.353553, 5.0070994e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.654709, 6.2500005, -7.654709)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam3/Axis"]
+transform = Transform3D(1, 0, 0, 0, 1, 4.470349e-08, 0, -4.4703484e-08, 1.0000001, 0, 0, 0)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
 [node name="Beam6" type="Node3D" parent="Environment/ControlStation01/Beams"]
 transform = Transform3D(0.000754479, -0.190028, 0.981778, 0.135843, 0.972698, 0.188165, -0.99073, 0.133225, 0.0265477, 0, 0, 0)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam6"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 3.72529e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.6547, 6.25, -7.65469)
+[node name="Axis" type="Node3D" parent="Environment/ControlStation01/Beams/Beam6"]
+transform = Transform3D(0.707107, 0.61237204, -0.353553, 3.7252903e-08, 0.5, 0.866025, 0.707107, -0.6123719, 0.353553, 7.6546993, 6.25, -7.654686)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam6/Axis"]
+transform = Transform3D(1, -2.9802322e-08, 0, 2.9802322e-08, 1, 0, 0, 0, 1.0000001, -3.8146973e-06, 5.722046e-06, -2.3841858e-06)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
 [node name="Beam8" type="Node3D" parent="Environment/ControlStation01/Beams"]
 transform = Transform3D(1, -4.65661e-10, 0, 6.0536e-09, 1, 4.47035e-08, 3.72529e-09, -1.49012e-08, 1, 0, 0, 0)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam8"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 8.9407e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.65472, 6.25, -7.65471)
+[node name="Axis" type="Node3D" parent="Environment/ControlStation01/Beams/Beam8"]
+transform = Transform3D(0.70710695, 0.6123719, -0.35355297, 8.940697e-08, 0.49999994, 0.86602485, 0.707107, -0.612372, 0.35355297, 7.654728, 6.25, -7.654711)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam8/Axis"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, -7.4505806e-08, 0, 7.4505806e-08, 1.0000001, -3.8146973e-06, -3.8146973e-06, 3.8146973e-06)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
@@ -821,25 +998,32 @@ size = Vector3(12, 1, 9)
 texture_albedo = ExtResource("7_wsp02")
 modulate = Color(1, 1, 1, 0.54902)
 
-[node name="WindowSide" type="CSGPolygon3D" parent="Environment/ControlStation01"]
+[node name="WindowSide" type="StaticBody3D" parent="Environment/ControlStation01"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35154, -0.00502682, -4.96964)
-use_collision = true
-polygon = PackedVector2Array(1.125, -1.625, -1, 1.625, 1, 1.625)
-depth = 0.12
-material = ExtResource("4_dx3ca")
 
-[node name="WindowSide2" type="CSGPolygon3D" parent="Environment/ControlStation01"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ControlStation01/WindowSide"]
+shape = SubResource("ConcavePolygonShape3D_1qui3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ControlStation01/WindowSide"]
+mesh = SubResource("ArrayMesh_8jnrt")
+
+[node name="WindowSide2" type="StaticBody3D" parent="Environment/ControlStation01"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35154, -0.00502682, 4.90536)
-use_collision = true
-polygon = PackedVector2Array(1.125, -1.625, -1, 1.625, 1, 1.625)
-depth = 0.12
-material = ExtResource("4_dx3ca")
 
-[node name="Window" type="CSGBox3D" parent="Environment/ControlStation01"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ControlStation01/WindowSide2"]
+shape = SubResource("ConcavePolygonShape3D_0tcnt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ControlStation01/WindowSide2"]
+mesh = SubResource("ArrayMesh_w0v73")
+
+[node name="Window" type="StaticBody3D" parent="Environment/ControlStation01"]
 transform = Transform3D(0.556281, -0.830994, 4.37114e-08, -0.830994, -0.556281, 0, 2.43158e-08, -3.63239e-08, -1, -3.35154, -0.00502682, -0.0894012)
-use_collision = true
-size = Vector3(3.87939, 0.180176, 10)
-material = SubResource("ShaderMaterial_23qd2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ControlStation01/Window"]
+shape = SubResource("ConcavePolygonShape3D_kddxg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ControlStation01/Window"]
+mesh = SubResource("ArrayMesh_g48ov")
 
 [node name="Wall" type="CSGBox3D" parent="Environment/ControlStation01"]
 transform = Transform3D(-1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, -1, -0.375, 0.0500002, -5.0269)
@@ -935,7 +1119,21 @@ material = SubResource("StandardMaterial3D_gwr0m")
 
 [node name="Audio" type="AudioStreamPlayer" parent="Environment/ControlStation01/ContainmentButton"]
 stream = ExtResource("13_ei3fu")
-volume_db = -5.0
+volume_db = -15.0
+
+[node name="Decal" type="Decal" parent="Environment/ControlStation01/ContainmentButton"]
+transform = Transform3D(-1, 1.4073501e-07, -1.1600514e-08, 1.23088455e-08, 0.0050270557, -0.99998784, -1.4067501e-07, -0.99998784, -0.0050270557, -0.089401245, 1.2873812, 1.307581)
+size = Vector3(4, 1.875, 2)
+texture_albedo = ExtResource("14_a0hx5")
+upper_fade = 1.6502387e-05
+lower_fade = 5.3616583e-05
+
+[node name="Decal2" type="Decal" parent="Environment/ControlStation01/ContainmentButton"]
+transform = Transform3D(1, -5.3312185e-08, -1.1600515e-08, -1.1867366e-08, -0.0050270567, -0.99998784, 5.3253352e-08, 0.99998784, -0.0050270567, -0.08940511, 1.1491371, 28.807247)
+size = Vector3(4, 1.875, 2)
+texture_albedo = ExtResource("14_a0hx5")
+upper_fade = 1.6502387e-05
+lower_fade = 5.3616583e-05
 
 [node name="ControlStation02" type="Node3D" parent="Environment"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.875, 4.75, -56)
@@ -1142,6 +1340,49 @@ script = ExtResource("9_vcech")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ControlStation02/Light/Trigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 5.51714e-37, 0, 5.51714e-37, 1, -0.9375, 0.0625, -1.5)
 shape = SubResource("BoxShape3D_wtty6")
+
+[node name="ContainmentButton2" type="StaticBody3D" parent="Environment/ControlStation02" node_paths=PackedStringArray("theoriginal__________________button") groups=["Interactable"]]
+transform = Transform3D(-2.1316282e-14, 0, -1, 0, 1, 0, 1, 0, -2.1316282e-14, -1.75, -1.625, -3.8146966e-06)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("16_1qui3")
+theoriginal__________________button = NodePath("../../ControlStation01/ContainmentButton")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation02/ContainmentButton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13125, 0)
+mesh = SubResource("BoxMesh_e2jvk")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/ControlStation02/ContainmentButton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_npsif")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/ControlStation02/ContainmentButton2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5625, 0)
+shape = SubResource("BoxShape3D_w2hof")
+
+[node name="Teleportbeam" type="Path3D" parent="Environment/ControlStation02/ContainmentButton2"]
+visible = false
+curve = SubResource("Curve3D_j166a")
+
+[node name="BeamPart" type="CSGPolygon3D" parent="Environment/ControlStation02/ContainmentButton2/Teleportbeam"]
+polygon = PackedVector2Array(-0.5, 0, -0.5, 0.1, 0.5, 0.1, 0.5, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 1
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 1
+path_rotation_accurate = false
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_gwr0m")
+
+[node name="Audio" type="AudioStreamPlayer" parent="Environment/ControlStation02/ContainmentButton2"]
+stream = ExtResource("13_ei3fu")
+volume_db = -15.0
 
 [node name="Airlock" type="Node3D" parent="."]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -74.9764, 6.05, -14.0402)

@@ -16,7 +16,7 @@ func _ready() -> void:
 func startwarp():
 	orbit.get_node("AnimationPlayer").play("Warp")
 
-func usemapenv(use : bool, environment : Environment):
+func usemapenv(use : bool, environment : Environment = null):
 	await get_tree().process_frame
 	if use == true:
 		env.environment = environment

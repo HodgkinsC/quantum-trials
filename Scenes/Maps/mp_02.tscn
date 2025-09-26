@@ -1,4 +1,4 @@
-[gd_scene load_steps=311 format=4 uid="uid://cijo1i123438v"]
+[gd_scene load_steps=312 format=4 uid="uid://cijo1i123438v"]
 
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="1_fi4a4"]
 [ext_resource type="Material" uid="uid://b7oxajmbsuewj" path="res://Assets/Materials/SteelPlate.tres" id="2_ar717"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://xfhbgolj4j1d" path="res://Scripts/LockedDoor.gd" id="9_ghcck"]
 [ext_resource type="Material" uid="uid://c16aii8xf5t6p" path="res://Assets/Materials/OfficeGlass.tres" id="9_icwpk"]
 [ext_resource type="PackedScene" uid="uid://85bhe7spa2nd" path="res://Scenes/Decoration/BrokenFloor.tscn" id="12_tgbo8"]
+[ext_resource type="Texture2D" uid="uid://c0vwci1ajj0gu" path="res://Assets/Textures/quantums.jpg" id="14_pr6r3"]
 [ext_resource type="Script" uid="uid://bua53pndy0cvp" path="res://Scripts/Decoration/BouncingLogo.gd" id="14_wyolf"]
 [ext_resource type="Material" uid="uid://cxe14t8x08v18" path="res://Assets/Materials/GlassFake.tres" id="15_2vgpe"]
 [ext_resource type="Texture2D" uid="uid://bb5ji4jb4a5c3" path="res://Assets/Textures/secret rex.jpg" id="15_ar717"]
@@ -3207,6 +3208,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect"]
+modulate = Color(1, 0.83, 0.83, 0.07450981)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("14_pr6r3")
 
 [node name="BouncingLogo" type="CharacterBody2D" parent="Environment/Office05/Monitor/Monitor/Screen/SubViewport/Control/ColorRect"]
 texture_filter = 1

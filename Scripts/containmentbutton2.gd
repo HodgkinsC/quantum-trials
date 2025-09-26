@@ -5,25 +5,17 @@ signal use
 var done = false
 var blasting = false
 
-var low = preload("res://Assets/Textures/lowlasers.png")
-var med = preload("res://Assets/Textures/medlasers.png")
-var high = preload("res://Assets/Textures/highlasers.png")
-
 var corepos = Vector3(14.875, 3.625, 0.0)
 @onready var core = $"../../Core"
 @onready var beam : Path3D = $Teleportbeam
 @onready var audio = $Audio
-@onready var level = preload("res://Scenes/Maps/void_puzzle.tscn")
-@onready var ui = $Decal
-@onready var ui2 = $Decal2
+@onready var level = preload("res://Scenes/Maps/surf_puzzle.tscn")
 
-var working = 0
+@export var theoriginal__________________button : StaticBody3D
 
 func _ready() -> void:
 	use.connect(activate)
 	beam.visible = false
-	ui.texture_albedo = low
-	ui2.texture_albedo = low
 
 func activate():
 	if !done:
@@ -37,23 +29,11 @@ func activate():
 		Global.root.add_child(instance)
 		instance.global_position = Vector3(100, 0, 0)
 		Global.root.sun.visible = false
-		Global.root.env.environment = load("res://Assets/Materials/VoidSky.tres")
+		Global.root.env.environment = load("res://Assets/Materials/SurfaceSky.tres")
 		blasting = false
 		Global.player.global_position = instance.get_node("SpawnPoint").global_position
 		get_parent().get_node("Beams").visible = true
-		working += 1
-		update()
-
-func update():
-	if working == 0:
-		ui.texture_albedo = low
-		ui2.texture_albedo = low
-	elif working == 1:
-		ui.texture_albedo = med
-		ui2.texture_albedo = med
-	elif working == 2:
-		ui.texture_albedo = high
-		ui2.texture_albedo = high
+		theoriginal__________________button.working += 1
 
 func beamlock():
 	beam.visible = true
