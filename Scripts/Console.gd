@@ -40,6 +40,12 @@ func cmd(input : String):
 		elif input.contains("secret"):
 			Global.change_map("secret")
 			await get_tree().process_frame
+			Global.root.sun.visible = false
+			Global.root.usemapenv(true, Global.current_map.get_node("WorldEnvironment").environment)
+			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
+		elif input.contains("cutscenetest"):
+			Global.change_map("cutscenetest")
+			await get_tree().process_frame
 			Global.root.usemapenv(false)
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		elif input.contains("surf_puzzle"):
@@ -52,8 +58,6 @@ func cmd(input : String):
 			await get_tree().process_frame
 			Global.root.usemapenv(true, load("res://Assets/Materials/VoidSky.tres"))
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		
-		
 		else:
 			print("Not a valid map name")
 	#elif input.contains("env"):
