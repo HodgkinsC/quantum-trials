@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://l2u5g0wf6g77" path="res://Scenes/PuzzleElements/Cube.tscn" id="5_pbnp5"]
 [ext_resource type="Script" uid="uid://cg5pkqgkuc35w" path="res://Scripts/checkpoint.gd" id="6_p5pj8"]
 [ext_resource type="Material" uid="uid://d1jb8e5fg8ubc" path="res://Assets/Materials/Concrete.tres" id="6_ryxpc"]
-[ext_resource type="Script" uid="uid://dbwuqixy8jh0l" path="res://Scripts/returnbuttonvoid.gd" id="7_bxcfy"]
+[ext_resource type="Script" uid="uid://dbwuqixy8jh0l" path="res://Scripts/returnbutton.gd" id="7_bxcfy"]
 [ext_resource type="Script" uid="uid://cxkdfsyucme3w" path="res://Scripts/QuantLocPuzzle.gd" id="8_6vmpg"]
 [ext_resource type="AudioStream" uid="uid://7fo7jdgmvarc" path="res://Assets/Sounds/beamstart5.wav" id="8_pyuw7"]
 [ext_resource type="Script" uid="uid://dxxik236cecym" path="res://Scripts/MovingBridge.gd" id="8_tmify"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://78nastiglwp7"]
+[gd_scene load_steps=27 format=3 uid="uid://78nastiglwp7"]
 
 [ext_resource type="Script" uid="uid://ow2fiuxg28t3" path="res://Scripts/Menu.gd" id="1_kld02"]
 [ext_resource type="Shader" uid="uid://b3du4l67beylj" path="res://Assets/Materials/Shaders/Blur.gdshader" id="2_s2c3o"]
@@ -56,6 +56,10 @@ font = ExtResource("3_s2c3o")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ma218"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_qki4b"]
+font = ExtResource("3_s2c3o")
+font_size = 25
+
 [node name="Menu" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -93,19 +97,19 @@ offset_left = 10.0
 offset_top = 250.0
 offset_right = 139.0
 offset_bottom = 290.0
-theme_override_colors/font_disabled_color = Color(0.101961, 0.101961, 0.101961, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.592157, 0.592157, 0.592157, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.478431, 0.478431, 0.478431, 1)
+theme_override_colors/font_hover_color = Color(0.592157, 0.592157, 0.592157, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.101961, 0.101961, 0.101961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("3_s2c3o")
 theme_override_font_sizes/font_size = 23
@@ -122,19 +126,19 @@ offset_left = 10.0
 offset_top = 250.0
 offset_right = 139.0
 offset_bottom = 290.0
-theme_override_colors/font_disabled_color = Color(0.101961, 0.101961, 0.101961, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.592157, 0.592157, 0.592157, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.478431, 0.478431, 0.478431, 1)
+theme_override_colors/font_hover_color = Color(0.592157, 0.592157, 0.592157, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.101961, 0.101961, 0.101961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("3_s2c3o")
 theme_override_font_sizes/font_size = 23
@@ -151,19 +155,19 @@ offset_top = 280.0
 offset_right = 112.0
 offset_bottom = 320.0
 theme_type_variation = &"FlatButton"
-theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.593134, 0.593134, 0.593134, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.476578, 0.476578, 0.476578, 1)
+theme_override_colors/font_hover_color = Color(0.593134, 0.593134, 0.593134, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("3_s2c3o")
 theme_override_font_sizes/font_size = 23
@@ -180,19 +184,19 @@ offset_top = 308.0
 offset_right = 112.0
 offset_bottom = 348.0
 theme_type_variation = &"FlatButton"
-theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.593134, 0.593134, 0.593134, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.476578, 0.476578, 0.476578, 1)
+theme_override_colors/font_hover_color = Color(0.593134, 0.593134, 0.593134, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("3_s2c3o")
 theme_override_font_sizes/font_size = 23
@@ -209,19 +213,19 @@ offset_top = 338.0
 offset_right = 107.0
 offset_bottom = 378.0
 theme_type_variation = &"FlatButton"
-theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.593134, 0.593134, 0.593134, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.476578, 0.476578, 0.476578, 1)
+theme_override_colors/font_hover_color = Color(0.593134, 0.593134, 0.593134, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.101241, 0.101241, 0.101241, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("3_s2c3o")
 theme_override_font_sizes/font_size = 23
@@ -239,7 +243,7 @@ offset_right = 370.0
 offset_bottom = 160.0
 
 [node name="ColorRect" type="ColorRect" parent="SettingsMenu"]
-layout_mode = 2
+layout_mode = 0
 offset_right = 635.0
 offset_bottom = 480.0
 size_flags_horizontal = 3
@@ -398,14 +402,14 @@ offset_right = 370.0
 offset_bottom = 160.0
 
 [node name="ColorRect" type="ColorRect" parent="SaveMenu"]
-layout_mode = 2
+layout_mode = 0
 offset_right = 635.0
 offset_bottom = 480.0
 size_flags_horizontal = 3
 color = Color(0.0936694, 0.0936694, 0.0936694, 0.768627)
 
 [node name="Save_Load" type="Label" parent="SaveMenu"]
-layout_mode = 2
+layout_mode = 0
 offset_right = 640.0
 offset_bottom = 49.0
 text = "Save/Load"
@@ -489,7 +493,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_3jcrr")
 text = "NO NO NO NO NO NO"
 
 [node name="DebugBG" type="ColorRect" parent="."]
-layout_mode = 2
+layout_mode = 0
 offset_top = 652.0
 offset_right = 446.0
 offset_bottom = 720.0
@@ -534,6 +538,14 @@ bus = &"UI"
 [node name="MenuButtonClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_sjh0l")
 bus = &"UI"
+
+[node name="PlayerPos" type="Label" parent="."]
+layout_mode = 0
+offset_left = 564.0
+offset_right = 1280.0
+offset_bottom = 31.0
+text = "WARNING: FLASHING LIGHTS AND POSSIBLE MOTION SICKNESS"
+label_settings = SubResource("LabelSettings_qki4b")
 
 [connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]

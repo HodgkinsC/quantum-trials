@@ -43,6 +43,7 @@ func activate():
 		get_parent().get_node("Beams").visible = true
 		working += 1
 		update()
+		Global.current_map.visible = false
 
 func update():
 	if working == 0:

@@ -34,6 +34,8 @@ func activate():
 		Global.player.global_position = instance.get_node("SpawnPoint").global_position
 		get_parent().get_node("Beams").visible = true
 		theoriginal__________________button.working += 1
+		theoriginal__________________button.update()
+		Global.current_map.visible = false
 
 func beamlock():
 	beam.visible = true
