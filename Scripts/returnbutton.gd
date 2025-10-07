@@ -6,6 +6,7 @@ var done = false
 var blasting = false
 
 @export var location = Vector3()
+@export var parent : Node3D
 
 @onready var beam : Path3D = $Teleportbeam
 @onready var audio = $Audio
@@ -27,7 +28,7 @@ func activate():
 		blasting = false
 		Global.player.global_position = location
 		Global.current_map.visible = true
-		get_parent().get_parent().get_parent().queue_free()
+		parent.queue_free()
 
 func beamlock():
 	beam.visible = true

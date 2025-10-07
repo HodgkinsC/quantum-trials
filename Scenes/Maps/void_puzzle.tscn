@@ -1534,12 +1534,13 @@ size = Vector3(0.375, 0.125, 0.375)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.75, 0)
 size = Vector3(0.125, 39.25, 0.125)
 
-[node name="ReturnButton" type="StaticBody3D" parent="Environment/Platform6" groups=["Interactable"]]
+[node name="ReturnButton" type="StaticBody3D" parent="Environment/Platform6" node_paths=PackedStringArray("parent") groups=["Interactable"]]
 transform = Transform3D(1, 0, 4.3711385e-08, 0, 1, 0, -4.3711385e-08, 0, 1, 0, 0.375, 4.625)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("7_bxcfy")
 location = Vector3(-56, 3.3, -30.25)
+parent = NodePath("../../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/Platform6/ReturnButton"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13125, 0)
