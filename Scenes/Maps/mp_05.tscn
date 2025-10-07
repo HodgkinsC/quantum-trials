@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=4 uid="uid://bpbijsjqdaffx"]
+[gd_scene load_steps=94 format=4 uid="uid://bpbijsjqdaffx"]
 
 [ext_resource type="Script" uid="uid://bv7c0to8gaxdm" path="res://Scripts/EndingCutscene.gd" id="1_8jnrt"]
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_llgp0"]
@@ -704,116 +704,6 @@ shader_parameter/outer_fade_end = 0.5
 [sub_resource type="QuadMesh" id="QuadMesh_vpxew"]
 size = Vector2(20, 20)
 
-[sub_resource type="Animation" id="Animation_a0hx5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Environment/ControlStation01/Beams/Beam/Axis/MeshInstance3D2:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Environment/ControlStation01/Beams/Beam3/Axis/MeshInstance3D2:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-4.4703484e-08, 0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Environment/ControlStation01/Beams/Beam6/Axis/MeshInstance3D2:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 2.9802322e-08)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Environment/ControlStation01/Beams/Beam8/Axis/MeshInstance3D2:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(7.45058e-08, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_ei3fu"]
-resource_name = "Rotate"
-length = 20.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Environment/ControlStation01/Beams/Beam/Axis/MeshInstance3D2:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 20),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Environment/ControlStation01/Beams/Beam3/Axis/MeshInstance3D2:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 20),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-4.4703484e-08, 0, 0), Vector3(0, 6.2831855, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Environment/ControlStation01/Beams/Beam6/Axis/MeshInstance3D2:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 20),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 2.9802322e-08), Vector3(0, 6.2831855, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Environment/ControlStation01/Beams/Beam8/Axis/MeshInstance3D2:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 20),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(7.45058e-08, 0, 0), Vector3(0, 6.2831855, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1qui3"]
-_data = {
-&"RESET": SubResource("Animation_a0hx5"),
-&"Rotate": SubResource("Animation_ei3fu")
-}
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpauo"]
 transparency = 3
 alpha_hash_scale = 1.0
@@ -832,6 +722,116 @@ radial_segments = 4
 rings = 1
 cap_top = false
 cap_bottom = false
+
+[sub_resource type="Animation" id="Animation_8jnrt"]
+resource_name = "Rotate"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Beam/Axis/MeshInstance3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.265732, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beam3/Axis/MeshInstance3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-4.4703484e-08, 0, 0), Vector3(0, 6.265732, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Beam6/Axis/MeshInstance3D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 2.9802322e-08), Vector3(0, 6.265732, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Beam8/Axis/MeshInstance3D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.265732, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0tcnt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Beam/Axis/MeshInstance3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beam3/Axis/MeshInstance3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.4703484e-08, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Beam6/Axis/MeshInstance3D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 2.9802322e-08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Beam8/Axis/MeshInstance3D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w0v73"]
+_data = {
+&"RESET": SubResource("Animation_0tcnt"),
+&"Rotate": SubResource("Animation_8jnrt")
+}
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1qui3"]
 data = PackedVector3Array(-1, 1.625, 0, -1, 1.625, -0.12, 1, 1.625, -0.12, -1, 1.625, -0.12, -1, 1.625, 0, 1.125, -1.625, 0, 1.125, -1.625, 0, 1.125, -1.625, -0.12, -1, 1.625, -0.12, 1.125, -1.625, -0.12, 1.125, -1.625, 0, 1, 1.625, 0, 1.125, -1.625, -0.12, 1, 1.625, -0.12, -1, 1.625, -0.12, 1, 1.625, 0, 1, 1.625, -0.12, 1.125, -1.625, -0.12, -1, 1.625, 0, 1, 1.625, 0, 1.125, -1.625, 0, 1, 1.625, -0.12, 1, 1.625, 0, -1, 1.625, 0)
@@ -908,6 +908,116 @@ _data = {
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
+
+[sub_resource type="Animation" id="Animation_a0hx5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Environment/ControlStation02/Beams/Beam/MeshInstance3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.0471972, -0.7853983, 1.7129025e-07)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Environment/ControlStation02/Beams/Beam3/MeshInstance3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.4901168e-08, -8.881785e-16, 2.980233e-08)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Environment/ControlStation02/Beams/Beam6/MeshInstance3D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.9802326e-08, -5.960466e-08, -8.940699e-08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Environment/ControlStation02/Beams/Beam8/MeshInstance3D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-4.470349e-08, 4.4703494e-08, 2.980233e-08)]
+}
+
+[sub_resource type="Animation" id="Animation_ei3fu"]
+resource_name = "Rotate"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Environment/ControlStation02/Beams/Beam/MeshInstance3D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.265732, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Environment/ControlStation02/Beams/Beam3/MeshInstance3D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.4901168e-08, -8.881785e-16, 2.980233e-08), Vector3(0, 6.265732, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Environment/ControlStation02/Beams/Beam6/MeshInstance3D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.9802326e-08, -5.960466e-08, -8.940699e-08), Vector3(0, 6.265732, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Environment/ControlStation02/Beams/Beam8/MeshInstance3D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-4.470349e-08, 4.4703494e-08, 2.980233e-08), Vector3(0, 6.265732, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1qui3"]
+_data = {
+&"RESET": SubResource("Animation_a0hx5"),
+&"Rotate": SubResource("Animation_ei3fu")
+}
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aaiu6"]
 data = PackedVector3Array(-2, -0.5, 2, -2, -0.5, -2, -2, 0.5, -2, 2, -0.5, -2, -2, -0.5, -2, -2, -0.5, 2, -2, 0.5, -2, -2, -0.5, -2, 2, -0.5, -2, -2, 0.5, -2, -2, 0.5, 2, -2, -0.5, 2, -2, -0.5, 2, -2, 0.5, 2, 2, 0.5, 2, 2, 0.5, 2, -2, 0.5, 2, -2, 0.5, -2, -2, -0.5, 2, 2, -0.5, 2, 2, -0.5, -2, 2, 0.5, 2, 2, -0.5, 2, -2, -0.5, 2, 2, -0.5, -2, 2, -0.5, 2, 2, 0.5, 2, 2, -0.5, -2, 2, 0.5, -2, -2, 0.5, -2, -2, 0.5, -2, 2, 0.5, -2, 2, 0.5, 2, 2, 0.5, 2, 2, 0.5, -2, 2, -0.5, -2)
@@ -1443,13 +1553,6 @@ light_color = Color(0.725285, 0.584227, 0.957828, 1)
 transform = Transform3D(-0.0472658, 0.161532, -0.985735, 0.0274699, -0.986254, -0.162935, -0.998505, -0.0347794, 0.0421789, -16.875, -5.25, 0)
 visible = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/ControlStation01/Beams"]
-root_node = NodePath("../../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_1qui3")
-}
-autoplay = "Rotate"
-
 [node name="Beam" type="Node3D" parent="Environment/ControlStation01/Beams"]
 transform = Transform3D(-0.047265913, 0.027469924, -0.998504, 0.16153304, -0.9862546, -0.034779318, -0.985735, -0.16293536, 0.042178877, 0, 0, 0)
 
@@ -1489,9 +1592,15 @@ transform = Transform3D(1, -4.65661e-10, 0, 6.0536e-09, 1, 4.47035e-08, 3.72529e
 transform = Transform3D(0.70710695, 0.6123719, -0.35355297, 8.940697e-08, 0.49999994, 0.86602485, 0.707107, -0.612372, 0.35355297, 7.654728, 6.25, -7.654711)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation01/Beams/Beam8/Axis"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, -7.4505806e-08, 0, 7.4505806e-08, 1.0000001, -3.8146973e-06, -3.8146973e-06, 3.8146973e-06)
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, -3.8146973e-06, -3.8146973e-06, 3.8146973e-06)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/ControlStation01/Beams"]
+libraries = {
+&"": SubResource("AnimationLibrary_w0v73")
+}
+autoplay = "Rotate"
 
 [node name="Catwalk" type="CSGBox3D" parent="Environment/ControlStation01"]
 transform = Transform3D(-1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, -1, 1.875, -1.575, 0.598099)
@@ -1731,36 +1840,43 @@ transform = Transform3D(-0.0472658, 0.161532, -0.985735, 0.0274699, -0.986254, -
 visible = false
 
 [node name="Beam" type="Node3D" parent="Environment/ControlStation02/Beams"]
-transform = Transform3D(-0.0472659, 0.02747, -0.998504, 0.161533, -0.986255, -0.0347793, -0.985735, -0.162934, 0.0421788, 0, 0, 0)
+transform = Transform3D(-0.7394712, 0.59624696, -0.31252366, 0.08962832, -0.3729115, -0.9235281, -0.6671953, -0.7109331, 0.22231756, 7.453144, -4.6613812, -8.886709)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation02/Beams/Beam"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 8.56452e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.6547, 6.25, -7.65472)
+transform = Transform3D(0.70710677, 0.61237204, -0.35355362, 8.564517e-08, 0.50000006, 0.8660252, 0.7071067, -0.6123721, 0.35355353, -1.9073486e-06, 1.9073486e-06, 0)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
 [node name="Beam3" type="Node3D" parent="Environment/ControlStation02/Beams"]
-transform = Transform3D(-0.998504, 0.02747, 0.0472659, -0.0347793, -0.986255, -0.161533, 0.0421788, -0.162934, 0.985735, 0, 0, 0)
+transform = Transform3D(-0.6726273, -0.6266655, 0.39352486, -0.13881387, -0.41550726, -0.89893574, 0.7268453, -0.6592748, 0.19249229, -7.833378, -5.193831, -8.240985)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation02/Beams/Beam3"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 5.0071e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.65471, 6.25, -7.65471)
+transform = Transform3D(0.99999976, -2.9802315e-08, -8.881784e-16, 2.9802322e-08, 0.9999995, 1.4901167e-08, 4.440889e-16, -1.4901161e-08, 0.9999999, 0, 0, -9.536743e-07)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
 [node name="Beam6" type="Node3D" parent="Environment/ControlStation02/Beams"]
-transform = Transform3D(0.000754479, -0.190028, 0.981778, 0.135843, 0.972698, 0.188165, -0.99073, 0.133225, 0.0265477, 0, 0, 0)
+transform = Transform3D(0.69475573, -0.6957655, 0.18227485, 0.2291084, 0.45430863, 0.8608795, -0.6817803, -0.55634004, 0.4750378, -8.697105, 5.678854, -6.954298)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation02/Beams/Beam6"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 3.72529e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.6547, 6.25, -7.65469)
+transform = Transform3D(0.99999976, 8.940697e-08, -5.960465e-08, -8.940697e-08, 0.99999976, 2.9802322e-08, 5.9604645e-08, -2.9802314e-08, 0.9999999, 0, 0, 4.7683716e-07)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
 [node name="Beam8" type="Node3D" parent="Environment/ControlStation02/Beams"]
-transform = Transform3D(1, -4.65661e-10, 0, 6.0536e-09, 1, 4.47035e-08, 3.72529e-09, -1.49012e-08, 1, 0, 0, 0)
+transform = Transform3D(0.70710707, 0.6123721, -0.35355303, 1.5646219e-07, 0.5000001, 0.8660251, 0.7071071, -0.6123722, 0.35355294, 7.654724, 6.249998, -7.654709)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/ControlStation02/Beams/Beam8"]
-transform = Transform3D(0.707107, 0.612372, -0.353553, 8.9407e-08, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 7.65472, 6.25, -7.65471)
+transform = Transform3D(0.99999976, -2.9802322e-08, 4.4703487e-08, 2.9802322e-08, 0.99999964, 4.4703484e-08, -4.4703484e-08, -4.4703473e-08, 0.9999998, 0, 0, 1.9073486e-06)
 mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/ControlStation02/Beams"]
+root_node = NodePath("../../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1qui3")
+}
+autoplay = "Rotate"
 
 [node name="Catwalk" type="CSGBox3D" parent="Environment/ControlStation02"]
 transform = Transform3D(-1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, -1, 1.875, -1.575, 0.598099)
