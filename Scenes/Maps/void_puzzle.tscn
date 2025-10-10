@@ -1,6 +1,6 @@
 [gd_scene load_steps=128 format=4 uid="uid://bfu0gom7n1ke7"]
 
-[ext_resource type="Environment" uid="uid://cr3md08i8p3o" path="res://Assets/Materials/VoidSky.tres" id="1_pvt14"]
+[ext_resource type="Environment" uid="uid://cr3md08i8p3o" path="res://Assets/Environments/VoidSky.tres" id="1_pvt14"]
 [ext_resource type="AudioStream" uid="uid://ba28n47wa34gf" path="res://Assets/Sounds/wind1.wav" id="1_tmify"]
 [ext_resource type="Texture2D" uid="uid://bw1get01wwcyp" path="res://Assets/Textures/grate_albedo.png" id="1_u55aj"]
 [ext_resource type="Script" uid="uid://b5q7mph3ynvcj" path="res://Scripts/fall_pit_checkpoints.gd" id="5_2j0ag"]

@@ -235,7 +235,6 @@ flat = true
 alignment = 0
 
 [node name="SettingsMenu" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_left = 330.0
 offset_top = 120.0
@@ -263,6 +262,7 @@ layout_mode = 2
 metadata/_tab_index = 0
 
 [node name="DebugMode" type="Label" parent="SettingsMenu/TabContainer/General"]
+visible = false
 layout_mode = 2
 text = "Debug Mode (Basically sv_cheats)"
 label_settings = SubResource("LabelSettings_aobxe")

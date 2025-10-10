@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byp6lglw5nj83" path="res://Scripts/SceneManager.gd" id="1_hjya1"]
 [ext_resource type="PackedScene" uid="uid://30qufw5s2dgm" path="res://Scenes/Player.tscn" id="2_ebsso"]
-[ext_resource type="Environment" uid="uid://bee8wbjwdbhfl" path="res://Assets/Materials/Skybox.tres" id="2_hjya1"]
+[ext_resource type="Environment" uid="uid://bee8wbjwdbhfl" path="res://Assets/Environments/Skybox.tres" id="2_hjya1"]
 [ext_resource type="Script" uid="uid://cumh5fg82g820" path="res://Scripts/QuantRandRot.gd" id="3_7xrkh"]
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="3_83gc0"]
 [ext_resource type="Material" uid="uid://ctvi3beh1qugf" path="res://Assets/Materials/PlanetSurface.tres" id="4_8ysa5"]

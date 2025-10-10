@@ -8,7 +8,7 @@ signal load_objects
 signal startwarp
 signal ChangeMap
 
-var player : CharacterBody3D
+var player : Player
 @onready var root = get_tree().root.get_node("/root/SceneManager")
 var current_map : Node3D
 var current_map_name : String
@@ -35,10 +35,10 @@ func _ready() -> void:
 	spawnplayer(current_map.get_node("SpawnPoint").global_transform)
 	await get_tree().create_timer(1).timeout
 	#--Launch Options--#
-	Global.change_map("mp_05")
-	await get_tree().process_frame
-	Global.root.usemapenv(false, load("res://Assets/Materials/SurfaceSky.tres"))
-	Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
+	#Global.change_map("mp_05")
+	#await get_tree().process_frame
+	#Global.root.usemapenv(false, load("res://Assets/Materials/SurfaceSky.tres"))
+	#Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 
 func change_map(mapname : String):
 	ChangeMap.emit()

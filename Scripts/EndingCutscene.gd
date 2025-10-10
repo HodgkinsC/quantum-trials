@@ -21,4 +21,5 @@ func cutscene():
 	$"../Environment/Core/TheDarkCrystal(TM)/Audio".play(pos)
 	$Audio.stop()
 	Global.root.get_node("Skybox/Orbit/PlanetDestination").visible = true
+	Global.root.get_node("Skybox/Orbit/PlanetDestination").scale = Vector3(1, 1, 1)
 	Global.root.get_node("Skybox/Orbit/Planet").visible = false

@@ -37,7 +37,7 @@ func activate():
 		Global.root.add_child(instance)
 		instance.global_position = Vector3(100, 0, 0)
 		Global.root.sun.visible = false
-		Global.root.env.environment = load("res://Assets/Materials/VoidSky.tres")
+		Global.root.env.environment = load("res://Assets/Environments/VoidSky.tres")
 		blasting = false
 		Global.player.global_position = instance.get_node("SpawnPoint").global_position
 		get_parent().get_node("Beams").visible = true

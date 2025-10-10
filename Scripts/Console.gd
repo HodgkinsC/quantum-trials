@@ -1,68 +1,29 @@
 extends Node
 
 func cmd(input : String):
-	if input.contains("map"):
-		if input.contains("devtest"):
-			Global.change_map("dev_test")
+	var words : Array = input.split(" ", false)
+	if words.has("map"):
+		if ResourceLoader.exists("res://Scenes/Maps/" + words.get(words.find("map") + 1) + ".tscn"):
+			Global.change_map(words.get(words.find("map") + 1))
 			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("mp_01"):
-			Global.change_map("mp_01")
-			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("mp_02"):
-			Global.change_map("mp_02")
-			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("mp_03"):
-			Global.change_map("mp_03")
-			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("mp_04"):
-			Global.change_map("mp_04")
-			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("mp_05"):
-			Global.change_map("mp_05")
-			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("full_station"):
-			Global.change_map("full_station")
-			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("secret"):
-			Global.change_map("secret")
-			await get_tree().process_frame
-			Global.root.sun.visible = false
-			Global.root.usemapenv(true, Global.current_map.get_node("WorldEnvironment").environment)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("cutscenetest"):
-			Global.change_map("cutscenetest")
-			await get_tree().process_frame
-			Global.root.usemapenv(false)
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("surf_puzzle"):
-			Global.change_map("surf_puzzle")
-			await get_tree().process_frame
-			Global.root.usemapenv(true, load("res://Assets/Materials/SurfaceSky.tres"))
-			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
-		elif input.contains("void_puzzle"):
-			Global.change_map("void_puzzle")
-			await get_tree().process_frame
-			Global.root.usemapenv(true, load("res://Assets/Materials/VoidSky.tres"))
+			Global.root.usemapenv(true)
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		else:
-			print("Not a valid map name")
-	#elif input.contains("env"):
-		#var env
-		#input.
-		#Global.root.usemapenv(true, load("res://Assets/Materials/" + str(input)))
+			print("Not a valid map id")
+	elif words.has("env"):
+		if ResourceLoader.exists("res://Assets/Environments/" + words.get(words.find("env") + 1) + ".tres"):
+			Global.root.usemapenv(true, load("res://Assets/Environments/" + words.get(words.find("env") + 1) + ".tres"))
+		else:
+			print("Not a valid environment id")
+	elif words.has("sv_cheats"):
+		if words.get(words.find("sv_cheats") + 1) == "1":
+			Global.player.debug_mode = true
+		elif words.get(words.find("sv_cheats") + 1) == "0":
+			Global.player.debug_mode = false
+	elif words.has("silly_mode"):
+		if words.get(words.find("silly_mode") + 1) == "1":
+			Global.root.usemapenv(true,load("res://Assets/Environments/Silly.tres"))
+		elif words.get(words.find("silly_mode") + 1) == "0":
+			Global.root.usemapenv(true)
 	else:
 		print("Not a valid command")

@@ -964,7 +964,7 @@ mesh = SubResource("CylinderMesh_fwegi")
 skeleton = NodePath("")
 
 [node name="Crystal" type="MeshInstance3D" parent="Cutscenehandler/Camera3D/Sprite3D/SubViewport/Camera3D"]
-transform = Transform3D(-0.892515, -0.5176383, 1.3952013e-07, -0.239149, 1.9318498, 2.0907018e-08, -1.4017715e-07, -3.4449936e-08, -0.924, 9.536743e-07, -0.5, -11.375)
+transform = Transform3D(-0.892515, -0.51763827, 1.3952013e-07, -0.239149, 1.9318498, 2.0907018e-08, -1.4017715e-07, -3.4449933e-08, -0.924, 9.536743e-07, -0.5, -11.375)
 layers = 2
 mesh = SubResource("ArrayMesh_fwegi")
 skeleton = NodePath("")

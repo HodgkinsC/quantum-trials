@@ -58,9 +58,13 @@ func process_debug():
 	CurrentMap.text = "Current Map: " + str(Global.current_map)
 
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("esc") and !Global.usingcomputer and !Global.current_map.is_in_group("Menu"):
-		Global.paused = !Global.paused
-		self.visible = !self.visible
+	if Input.is_action_just_pressed("esc") and !Global.usingcomputer:
+		if Global.current_map and !Global.current_map.is_in_group("Menu"):
+			Global.paused = !Global.paused
+			self.visible = !self.visible
+		elif !Global.current_map:
+			Global.paused = !Global.paused
+			self.visible = !self.visible
 	
 	get_tree().paused = Global.paused
 
