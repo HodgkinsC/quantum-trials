@@ -24,7 +24,7 @@ func activate():
 		audio.play()
 		await get_tree().create_timer(0.5).timeout
 		Global.root.sun.visible = true
-		Global.root.env.environment = load("res://Assets/Materials/Skybox.tres")
+		Global.root.env.environment = load("res://Assets/Environments/Skybox.tres")
 		blasting = false
 		Global.player.global_position = location
 		Global.current_map.visible = true

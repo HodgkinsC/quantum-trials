@@ -1,0 +1,21 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://dy5p638xhvpit"]
+
+[ext_resource type="Texture2D" uid="uid://c2j6c58ohcvon" path="res://icon.svg" id="1_mumm4"]
+
+[resource]
+background_mode = 4
+ambient_light_source = 2
+ambient_light_color = Color(0.5750444, 0.30995783, 0.4163871, 1)
+tonemap_mode = 2
+tonemap_exposure = 2.0
+tonemap_white = 0.53
+glow_enabled = true
+glow_intensity = 8.0
+glow_strength = 2.0
+glow_bloom = 0.04
+glow_blend_mode = 4
+glow_map = ExtResource("1_mumm4")
+adjustment_enabled = true
+adjustment_brightness = 1.18
+adjustment_contrast = 8.0
+adjustment_saturation = 2.33
