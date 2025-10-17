@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccltoonrlb2au"
 path.s3tc="res://.godot/imported/lowlasers.png-b35b6423df68700d54fb81b4a0ac3c14.s3tc.ctex"
+path.etc2="res://.godot/imported/lowlasers.png-b35b6423df68700d54fb81b4a0ac3c14.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/lowlasers.png"
-dest_files=["res://.godot/imported/lowlasers.png-b35b6423df68700d54fb81b4a0ac3c14.s3tc.ctex"]
+dest_files=["res://.godot/imported/lowlasers.png-b35b6423df68700d54fb81b4a0ac3c14.s3tc.ctex", "res://.godot/imported/lowlasers.png-b35b6423df68700d54fb81b4a0ac3c14.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://8aaej5vkp4d3"
 path.s3tc="res://.godot/imported/lightthingy.png-78611a3ea417e4c6fee6c4e275866162.s3tc.ctex"
+path.etc2="res://.godot/imported/lightthingy.png-78611a3ea417e4c6fee6c4e275866162.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/lightthingy.png"
-dest_files=["res://.godot/imported/lightthingy.png-78611a3ea417e4c6fee6c4e275866162.s3tc.ctex"]
+dest_files=["res://.godot/imported/lightthingy.png-78611a3ea417e4c6fee6c4e275866162.s3tc.ctex", "res://.godot/imported/lightthingy.png-78611a3ea417e4c6fee6c4e275866162.etc2.ctex"]
 
 [params]
 
