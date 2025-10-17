@@ -20,11 +20,11 @@ func startwarp():
 func usemapenv(use : bool, environment : Environment = preload("res://Assets/Environments/Skybox.tres")):
 	await get_tree().process_frame
 	if use == true:
-		if Global.current_map.has_node("DirectionalLight3D"):
+		if Global.current_map and Global.current_map.has_node("DirectionalLight3D"):
 			sun.visible = false
 		else:
 			sun.visible = true
-		if Global.current_map.has_node("WorldEnvironment"):
+		if Global.current_map and Global.current_map.has_node("WorldEnvironment"):
 			env.environment = Global.current_map.get_node("WorldEnvironment").environment
 		else:
 			env.environment = environment
