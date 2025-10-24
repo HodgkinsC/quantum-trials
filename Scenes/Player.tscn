@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://30qufw5s2dgm"]
+[gd_scene load_steps=11 format=3 uid="uid://30qufw5s2dgm"]
 
 [ext_resource type="Script" uid="uid://bv46265ed7uty" path="res://Scripts/Player.gd" id="1_bfmnv"]
 [ext_resource type="Texture2D" uid="uid://c5w4sfl4y270h" path="res://Assets/Textures/Spooky.png" id="1_jlsf4"]
 [ext_resource type="Script" uid="uid://dmrgabhd7cfeo" path="res://Scripts/Interact.gd" id="3_dewec"]
 [ext_resource type="PackedScene" uid="uid://78nastiglwp7" path="res://Scenes/Menu.tscn" id="4_dewec"]
+[ext_resource type="Script" uid="uid://50tfv4mvwrtj" path="res://Scripts/crosshair.gd" id="5_5ixxa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_if0ag"]
 radius = 0.3
@@ -98,6 +99,7 @@ visible = false
 in_game = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 149.0
@@ -111,3 +113,57 @@ offset_right = 100.0
 offset_bottom = 40.0
 text = "FPS: 000.0"
 label_settings = SubResource("LabelSettings_dewec")
+
+[node name="Crosshair" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+script = ExtResource("5_5ixxa")
+
+[node name="Crosshair" type="ColorRect" parent="CanvasLayer/Crosshair"]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 358.0
+offset_right = 642.0
+offset_bottom = 362.0
+mouse_filter = 2
+color = Color(1, 0.811, 0.37, 1)
+
+[node name="Crosshair4" type="ColorRect" parent="CanvasLayer/Crosshair"]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 354.0
+offset_right = 641.0
+offset_bottom = 356.0
+mouse_filter = 2
+color = Color(1, 0.811, 0.37, 1)
+
+[node name="Crosshair5" type="ColorRect" parent="CanvasLayer/Crosshair"]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 364.0
+offset_right = 641.0
+offset_bottom = 366.0
+mouse_filter = 2
+color = Color(1, 0.811, 0.37, 1)
+
+[node name="Crosshair2" type="ColorRect" parent="CanvasLayer/Crosshair"]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 359.0
+offset_right = 636.0
+offset_bottom = 361.0
+mouse_filter = 2
+color = Color(1, 0.811, 0.37, 1)
+
+[node name="Crosshair3" type="ColorRect" parent="CanvasLayer/Crosshair"]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 359.0
+offset_right = 646.0
+offset_bottom = 361.0
+mouse_filter = 2
+color = Color(1, 0.811, 0.37, 1)
