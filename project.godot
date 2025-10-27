@@ -17,6 +17,7 @@ _esc={
 [application]
 
 config/name="Quantum Trials"
+config/version="1.0"
 run/main_scene="uid://rscipotivdde"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Quantum Trials"
