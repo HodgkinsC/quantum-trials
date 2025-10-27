@@ -35,7 +35,7 @@ func _ready() -> void:
 	paused = true
 	await get_tree().create_timer(1).timeout
 	#--Launch Options--#
-	Console.cmd("map mp_05")
+	Console.cmd("map surf_puzzle")
 
 func change_map(mapname : String):
 	ChangeMap.emit()
