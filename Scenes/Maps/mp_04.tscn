@@ -1839,7 +1839,6 @@ omni_attenuation = 0.192
 
 [node name="FallPit" type="Area3D" parent="Environment/LongerHall/puzzle"]
 transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, -23, -19.425, 23.625)
-visible = false
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("14_n15qg")
@@ -1860,7 +1859,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.204
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17.2335, 18.125, 0)
 
 [node name="PlrAcross" type="Area3D" parent="Environment/LongerHall/puzzle/FallPit"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.625, 17.25, -0.125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.001141, 17.25, -0.125)
 collision_layer = 0
 collision_mask = 5
 

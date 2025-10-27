@@ -1,4 +1,4 @@
-[gd_scene load_steps=312 format=4 uid="uid://cijo1i123438v"]
+[gd_scene load_steps=314 format=4 uid="uid://cijo1i123438v"]
 
 [ext_resource type="Material" uid="uid://bel4griigla08" path="res://Assets/Materials/GrayDevTex.tres" id="1_fi4a4"]
 [ext_resource type="Material" uid="uid://b7oxajmbsuewj" path="res://Assets/Materials/SteelPlate.tres" id="2_ar717"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://l2u5g0wf6g77" path="res://Scenes/PuzzleElements/Cube.tscn" id="22_c7f46"]
 [ext_resource type="PackedScene" uid="uid://yblk1iood2a1" path="res://Scenes/PuzzleElements/Button.tscn" id="23_bxoy1"]
 [ext_resource type="Script" uid="uid://cheg3ddkw364t" path="res://Scripts/LevelEndTrigger.gd" id="24_bxoy1"]
+[ext_resource type="Texture2D" uid="uid://8aaej5vkp4d3" path="res://Assets/Textures/lightthingy.png" id="30_pr6r3"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_11p23"]
 data = PackedVector3Array(-2, -0.5, 2, -2, -0.5, -2, -2, 0.5, -2, 2, -0.5, -2, -2, -0.5, -2, -2, -0.5, 2, -2, 0.5, -2, -2, -0.5, -2, 2, -0.5, -2, -2, 0.5, -2, -2, 0.5, 2, -2, -0.5, 2, -2, -0.5, 2, -2, 0.5, 2, 2, 0.5, 2, 2, 0.5, 2, -2, 0.5, 2, -2, 0.5, -2, -2, -0.5, 2, 2, -0.5, 2, 2, -0.5, -2, 2, 0.5, 2, 2, -0.5, 2, -2, -0.5, 2, 2, -0.5, -2, 2, -0.5, 2, 2, 0.5, 2, 2, -0.5, -2, 2, 0.5, -2, -2, 0.5, -2, -2, 0.5, -2, 2, 0.5, -2, 2, 0.5, 2, 2, 0.5, 2, 2, 0.5, -2, 2, -0.5, -2)
@@ -1887,6 +1888,15 @@ _surfaces = [{
 "vertex_count": 36,
 "vertex_data": PackedByteArray("7FE4vQAAgL8AADBB7FE4vQAAgL8AADDB7FE4vQAAgD8AADDB7FE4PQAAgL8AADDB7FE4vQAAgL8AADDB7FE4vQAAgL8AADBB7FE4vQAAgD8AADDB7FE4vQAAgL8AADDB7FE4PQAAgL8AADDB7FE4vQAAgD8AADDB7FE4vQAAgD8AADBB7FE4vQAAgL8AADBB7FE4vQAAgL8AADBB7FE4vQAAgD8AADBB7FE4PQAAgD8AADBB7FE4PQAAgD8AADBB7FE4vQAAgD8AADBB7FE4vQAAgD8AADDB7FE4vQAAgL8AADBB7FE4PQAAgL8AADBB7FE4PQAAgL8AADDB7FE4PQAAgD8AADBB7FE4PQAAgL8AADBB7FE4vQAAgL8AADBB7FE4PQAAgL8AADDB7FE4PQAAgL8AADBB7FE4PQAAgD8AADBB7FE4PQAAgL8AADDB7FE4PQAAgD8AADDB7FE4vQAAgD8AADDB7FE4vQAAgD8AADDB7FE4PQAAgD8AADDB7FE4PQAAgD8AADBB7FE4PQAAgD8AADBB7FE4PQAAgD8AADDB7FE4PQAAgL8AADDBAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkfcu"]
+shading_mode = 0
+albedo_texture = ExtResource("30_pr6r3")
+uv1_scale = Vector3(1, 4.5, 0.635)
+uv1_offset = Vector3(0, 0, -0.265)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
 
 [node name="Mp02" type="Node3D"]
 
@@ -4076,6 +4086,12 @@ shape = SubResource("ConcavePolygonShape3D_t4ya0")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SkyboxStation/mp_01/Window3"]
 material_override = ExtResource("15_2vgpe")
 mesh = SubResource("ArrayMesh_81v5j")
+
+[node name="Main7" type="CSGBox3D" parent="SkyboxStation"]
+transform = Transform3D(-4.3711395e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.37114e-08, 0, 8.036058, 0.09999969, -35.355507)
+use_collision = true
+size = Vector3(0.9139404, 27.963867, 0.2)
+material = SubResource("StandardMaterial3D_nkfcu")
 
 [connection signal="body_entered" from="Environment/Tutorial Popup" to="Environment/Tutorial Popup" method="_on_body_entered"]
 [connection signal="body_entered" from="LevelEndTrigger" to="LevelEndTrigger" method="_on_body_entered"]

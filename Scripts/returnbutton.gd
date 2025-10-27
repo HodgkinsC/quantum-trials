@@ -29,6 +29,7 @@ func activate():
 		Global.player.global_position = location
 		Global.current_map.visible = true
 		parent.queue_free()
+		Global.startcutscene.emit()
 
 func beamlock():
 	beam.visible = true

@@ -17,6 +17,11 @@ var corepos = Vector3(14.875, 3.625, 0.0)
 @onready var ui = $Decal
 @onready var ui2 = $Decal2
 
+@export var door1 : Node3D
+@export var door2 : Node3D
+
+signal cutscenestart
+
 var working = 0
 
 func _ready() -> void:
@@ -52,9 +57,12 @@ func update():
 	elif working == 1:
 		ui.texture_albedo = med
 		ui2.texture_albedo = med
+		door1.activate()
 	elif working == 2:
 		ui.texture_albedo = high
 		ui2.texture_albedo = high
+		door2.activate()
+		cutscenestart.emit()
 
 func beamlock():
 	beam.visible = true

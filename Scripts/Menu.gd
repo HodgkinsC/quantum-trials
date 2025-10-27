@@ -10,6 +10,7 @@ var disabled = false
 
 func _ready() -> void:
 	SaveSystem.container = $SaveMenu/ScrollContainer/VBoxContainer
+	Global.menu = self
 	if Global.current_map_name == "menu":
 		await get_tree().process_frame
 		changemenu(0)

@@ -17,13 +17,14 @@ func teleport(current_building : Node3D, objects : Array):
 	for node in nodes:
 		if node.is_in_group("Building"):
 			node.get_node("OmniLight3D").visible = false
+	await get_tree().create_timer(1).timeout
 	# Actually Teleport
 	
 	var new_pos = possible_positions.get(randi_range(0, possible_positions.size() - 1))
 	
 	for obj : Node3D in objects:
-		var offset = obj.to_local(current_building.global_position)
-		obj.global_position = new_pos + offset
+		var offset = current_building.global_position - obj.global_position
+		obj.global_position = new_pos - offset + Vector3(0,0.01,0)
 	
 	# More Animation
 	await get_tree().create_timer(1).timeout

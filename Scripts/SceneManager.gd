@@ -1,4 +1,5 @@
 extends Node3D
+class_name SceneManager
 
 @onready var env : WorldEnvironment = $WorldEnvironment
 @onready var sun : Node3D = $Skybox
@@ -6,6 +7,8 @@ extends Node3D
 @onready var orbit = $Skybox/Orbit
 
 var mainskybox = preload("res://Assets/Environments/Skybox.tres")
+
+var skyboxrotate = true
 
 func _ready() -> void:
 	Global.root = self
@@ -36,7 +39,7 @@ func usemapenv(use : bool, environment : Environment = preload("res://Assets/Env
 			if Global.current_map.has_node("DirectionalLight3D"): Global.current_map.get_node("DirectionalLight3D").queue_free()
 
 func _process(_delta: float) -> void:
-	if env.environment == mainskybox:
+	if env.environment == mainskybox and skyboxrotate:
 		env.environment.sky_rotation.y += 0.0005
 		env.environment.sky_rotation.x += 0.0003
 		sun.rotation.y += 0.0005
