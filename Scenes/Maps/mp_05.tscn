@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=4 uid="uid://bpbijsjqdaffx"]
+[gd_scene load_steps=104 format=4 uid="uid://bpbijsjqdaffx"]
 
 [ext_resource type="Script" uid="uid://bv7c0to8gaxdm" path="res://Scripts/EndingCutscene.gd" id="1_8jnrt"]
 [ext_resource type="Material" uid="uid://dmfhviqnmjiay" path="res://Assets/Materials/Steel.tres" id="1_llgp0"]
@@ -1129,6 +1129,9 @@ size = Vector3(4.5, 13.828369, 4)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8jnrt"]
 viewport_path = NodePath("Environment/Exit/Sign/SubViewport")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g48ov"]
+size = Vector3(0.625, 3.125, 2.875)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jrxby"]
 render_priority = 0
@@ -2482,6 +2485,13 @@ size = Vector2i(95, 23)
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Escape Pods"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Exit"]
+transform = Transform3D(0.99694467, -0.078111105, 4.3711385e-08, 0.078111105, 0.99694467, 0, -4.357783e-08, 3.4143446e-09, 1, 5.8394012, -1.5500002, 2.9374971)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/Exit/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18750381, 1.0624995, 9.536743e-07)
+shape = SubResource("BoxShape3D_g48ov")
 
 [node name="EndButton" parent="Environment/Exit" instance=ExtResource("23_g48ov")]
 transform = Transform3D(0.99694467, -0.078111105, 4.3711385e-08, 0.078111105, 0.99694467, 0, -4.357783e-08, 3.4143446e-09, 1, 5.8394012, -1.5500002, 2.937499)

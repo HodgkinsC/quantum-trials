@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://c8gp2x72fia4u"]
+[gd_scene load_steps=58 format=4 uid="uid://c8gp2x72fia4u"]
 
 [ext_resource type="Script" uid="uid://ligpig52kemt" path="res://Scripts/credits.gd" id="1_38o7e"]
 [ext_resource type="PackedScene" uid="uid://c32623xiovm3v" path="res://Scenes/PuzzleElements/Door.tscn" id="1_ecg8n"]
@@ -106,6 +106,9 @@ _surfaces = [{
 "vertex_count": 36,
 "vertex_data": PackedByteArray("AACgvwAAAL4AANA/AACgvwAAAL4AANC/AACgvwAAAD4AANC/AACgPwAAAL4AANC/AACgvwAAAL4AANC/AACgvwAAAL4AANA/AACgvwAAAD4AANC/AACgvwAAAL4AANC/AACgPwAAAL4AANC/AACgvwAAAD4AANC/AACgvwAAAD4AANA/AACgvwAAAL4AANA/AACgvwAAAL4AANA/AACgvwAAAD4AANA/AACgPwAAAD4AANA/AACgPwAAAD4AANA/AACgvwAAAD4AANA/AACgvwAAAD4AANC/AACgvwAAAL4AANA/AACgPwAAAL4AANA/AACgPwAAAL4AANC/AACgPwAAAD4AANA/AACgPwAAAL4AANA/AACgvwAAAL4AANA/AACgPwAAAL4AANC/AACgPwAAAL4AANA/AACgPwAAAD4AANA/AACgPwAAAL4AANC/AACgPwAAAD4AANC/AACgvwAAAD4AANC/AACgvwAAAD4AANC/AACgPwAAAD4AANC/AACgPwAAAD4AANA/AACgPwAAAD4AANA/AACgPwAAAD4AANC/AACgPwAAAL4AANC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ecg8n"]
+size = Vector3(0.625, 3.125, 2.875)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q1h4p"]
 data = PackedVector3Array(-12.490399, -2, 2, -12.490399, -2, -2, -12.490399, 2, -2, 12.490399, -2, -2, -12.490399, -2, -2, -12.490399, -2, 2, -12.490399, 2, -2, -12.490399, -2, -2, 12.490399, -2, -2, -12.490399, 2, -2, -12.490399, 2, 2, -12.490399, -2, 2, -12.490399, -2, 2, -12.490399, 2, 2, 12.490399, 2, 2, 12.490399, 2, 2, -12.490399, 2, 2, -12.490399, 2, -2, -12.490399, -2, 2, 12.490399, -2, 2, 12.490399, -2, -2, 12.490399, 2, 2, 12.490399, -2, 2, -12.490399, -2, 2, 12.490399, -2, -2, 12.490399, -2, 2, 12.490399, 2, 2, 12.490399, -2, -2, 12.490399, 2, -2, -12.490399, 2, -2, -12.490399, 2, -2, 12.490399, 2, -2, 12.490399, 2, 2, 12.490399, 2, 2, 12.490399, 2, -2, 12.490399, -2, -2)
@@ -602,6 +605,13 @@ spot_angle = 83.92
 [node name="EndButton" parent="Pod" instance=ExtResource("8_g0hby")]
 transform = Transform3D(0.99694467, -0.078111105, 4.3711385e-08, 0.078111105, 0.99694467, 0, -4.357783e-08, 3.4143446e-09, 1, 1.8516235, -1.6124446, 0.93749905)
 script = null
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pod"]
+transform = Transform3D(0.99694467, -0.078111105, 4.3711385e-08, 0.078111105, 0.99694467, 0, -4.357783e-08, 3.4143446e-09, 1, 1.8394012, -1.5500002, 1.0624971)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Pod/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18750381, 1.0624995, 9.536743e-07)
+shape = SubResource("BoxShape3D_ecg8n")
 
 [node name="SkyboxStation" type="Node3D" parent="."]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -1, 0, -8.742278e-08, 0, 0, 0)
