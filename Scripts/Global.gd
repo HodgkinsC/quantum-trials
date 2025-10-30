@@ -31,11 +31,12 @@ func _process(_delta: float) -> void:
 func _ready() -> void:
 	load_objects.connect(shutup)
 	startwarp.connect(shutup)
+	startcutscene.connect(shutup)
 	Console.cmd("map menu")
 	paused = true
 	await get_tree().create_timer(1).timeout
 	#--Launch Options--#
-	Console.cmd("map surf_puzzle")
+	#Console.cmd("map surf_puzzle")
 
 func change_map(mapname : String):
 	ChangeMap.emit()

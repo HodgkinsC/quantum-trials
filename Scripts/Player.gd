@@ -3,7 +3,7 @@ class_name Player
 
 @onready var fpscounter = $CanvasLayer/ColorRect/Label
 
-var debug_mode = true
+var debug_mode = false
 var disabled = false
 
 @onready var camera = %Camera3D
@@ -64,8 +64,8 @@ func _ready():
 
 func _unhandled_input(event):
 	if !disabled:
-		#if Input.is_action_just_pressed("flashlight"):
-			#Flashlightm.visible = !Flashlightm.visible
+		if Input.is_action_just_pressed("flashlight"):
+			Flashlightm.visible = !Flashlightm.visible
 		
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			if event is InputEventMouseMotion:

@@ -86,7 +86,10 @@ func _on_resume_pressed() -> void:
 	visible = !visible
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	if in_game:
+		Console.cmd("map menu")
+	else:
+		get_tree().quit()
 
 func _on_sens_slider_value_changed(value: float) -> void:
 	Global.player.look_sensitivity = value / 1000

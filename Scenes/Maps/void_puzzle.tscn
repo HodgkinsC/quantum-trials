@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=4 uid="uid://bfu0gom7n1ke7"]
+[gd_scene load_steps=127 format=4 uid="uid://bfu0gom7n1ke7"]
 
 [ext_resource type="Environment" uid="uid://cr3md08i8p3o" path="res://Assets/Environments/VoidSky.tres" id="1_pvt14"]
 [ext_resource type="AudioStream" uid="uid://ba28n47wa34gf" path="res://Assets/Sounds/wind1.wav" id="1_tmify"]
@@ -27,9 +27,6 @@ size = Vector3(200, 5, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wa4v8"]
 size = Vector3(11, 4.67517, 10.4063)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tmify"]
-size = Vector3(30, 4.67517, 30)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bxcfy"]
 size = Vector3(10, 10, 10)
@@ -1039,7 +1036,6 @@ environment = ExtResource("1_pvt14")
 
 [node name="FallPit" type="Area3D" parent="Environment"]
 transform = Transform3D(-3.55271e-15, 0, -1, 0, 1, 0, 1, 0, -3.55271e-15, 0, -35, 0)
-visible = false
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("5_2j0ag")
@@ -1047,18 +1043,6 @@ script = ExtResource("5_2j0ag")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FallPit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
 shape = SubResource("BoxShape3D_2j0ag")
-
-[node name="PlrCheck" type="Node3D" parent="Environment/FallPit"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.875, 18.125, 0)
-
-[node name="PlrCheck2" type="Node3D" parent="Environment/FallPit"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.25, 18.125, 0)
-
-[node name="CubeCheck" type="Node3D" parent="Environment/FallPit"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.2048, 18.125, 0)
-
-[node name="CubeCheck2" type="Node3D" parent="Environment/FallPit"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17.2335, 18.125, 0)
 
 [node name="Checkpoint1" type="Area3D" parent="Environment/FallPit"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.013, 35, 0.025)
@@ -1069,16 +1053,6 @@ script = ExtResource("6_p5pj8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/FallPit/Checkpoint1"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.625, 0)
 shape = SubResource("BoxShape3D_wa4v8")
-
-[node name="Checkpoint2" type="Area3D" parent="Environment/FallPit"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.75, 35, -5.59552e-14)
-collision_layer = 0
-collision_mask = 5
-script = ExtResource("6_p5pj8")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Environment/FallPit/Checkpoint2"]
-transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 10.025, 1.625, -14.1849)
-shape = SubResource("BoxShape3D_tmify")
 
 [node name="Checkpoint3" type="Area3D" parent="Environment/FallPit"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 55.5, 38.25, 20)
@@ -1657,10 +1631,6 @@ stream = ExtResource("14_ryxpc")
 pitch_scale = 0.01
 autoplay = true
 
-[node name="Button2" parent="puzzle2" node_paths=PackedStringArray("target") instance=ExtResource("10_itgob")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0.3018, -4.25)
-target = NodePath("../Bridge")
-
 [node name="Cube" parent="puzzle2" instance=ExtResource("5_pbnp5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
 
@@ -1909,8 +1879,8 @@ target1 = NodePath("..")
 target2 = NodePath("../../Bridge")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="puzzle2/TopBridge/Button"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.375, 2.125, 0)
-omni_range = 3.5078914
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 2.1250002, 0)
+omni_range = 4.5678253
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="puzzle2/TopBridge"]
 shape = SubResource("ConcavePolygonShape3D_5n1rc")
@@ -1933,7 +1903,6 @@ mesh = SubResource("ArrayMesh_y0eup")
 
 [connection signal="body_entered" from="Environment/FallPit" to="Environment/FallPit" method="_on_body_entered"]
 [connection signal="body_entered" from="Environment/FallPit/Checkpoint1" to="Environment/FallPit/Checkpoint1" method="_on_body_entered"]
-[connection signal="body_entered" from="Environment/FallPit/Checkpoint2" to="Environment/FallPit/Checkpoint2" method="_on_body_entered"]
 [connection signal="body_entered" from="Environment/FallPit/Checkpoint3" to="Environment/FallPit/Checkpoint3" method="_on_body_entered"]
 [connection signal="body_entered" from="puzzle1/Button/Detector" to="puzzle1/Button" method="_on_detector_body_entered"]
 [connection signal="body_exited" from="puzzle1/Button/Detector" to="puzzle1/Button" method="_on_detector_body_exited"]

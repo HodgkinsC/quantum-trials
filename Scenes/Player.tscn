@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://30qufw5s2dgm"]
+[gd_scene load_steps=12 format=3 uid="uid://30qufw5s2dgm"]
 
 [ext_resource type="Script" uid="uid://bv46265ed7uty" path="res://Scripts/Player.gd" id="1_bfmnv"]
 [ext_resource type="Texture2D" uid="uid://c5w4sfl4y270h" path="res://Assets/Textures/Spooky.png" id="1_jlsf4"]
 [ext_resource type="Script" uid="uid://dmrgabhd7cfeo" path="res://Scripts/Interact.gd" id="3_dewec"]
+[ext_resource type="Texture2D" uid="uid://bmjf0edk14a7l" path="res://Assets/Textures/flashlight.jpg" id="3_nn08x"]
 [ext_resource type="PackedScene" uid="uid://78nastiglwp7" path="res://Scenes/Menu.tscn" id="4_dewec"]
 [ext_resource type="Script" uid="uid://50tfv4mvwrtj" path="res://Scripts/crosshair.gd" id="5_5ixxa"]
 
@@ -63,10 +64,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_8j2mw")
 [node name="Flashlight" type="SpotLight3D" parent="HeadOriginalPosition/Head/CamSmooth/Camera3D"]
 unique_name_in_owner = true
 visible = false
-light_energy = 15.0
+light_energy = 5.0
 light_indirect_energy = 10.0
+light_projector = ExtResource("3_nn08x")
 shadow_enabled = true
-spot_range = 20.0
+spot_range = 10.0
 spot_angle = 30.0
 
 [node name="InterCast" type="RayCast3D" parent="HeadOriginalPosition/Head/CamSmooth/Camera3D"]

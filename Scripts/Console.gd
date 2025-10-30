@@ -13,6 +13,10 @@ func cmd(input : String):
 			Global.spawnplayer(Global.current_map.get_node("SpawnPoint").global_transform)
 		else:
 			print("Not a valid map id")
+	
+	elif words.has("retry"):
+		Console.cmd("map " + Global.current_map_name)
+	
 	elif words.has("env"):
 		if ResourceLoader.exists("res://Assets/Environments/" + words.get(words.find("env") + 1) + ".tres"):
 			Global.root.usemapenv(true, load("res://Assets/Environments/" + words.get(words.find("env") + 1) + ".tres"))

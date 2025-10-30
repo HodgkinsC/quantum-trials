@@ -17,11 +17,10 @@ func _ready() -> void:
 func get_files():
 	await get_tree().process_frame
 	savecount = DirAccess.open("user://saves").get_files().size()
-	print(DirAccess.open("user://saves").get_files())
+	#print(DirAccess.open("user://saves").get_files())
 	var i = 0
 	while i < savecount:
 		i += 1
-		print(i)
 		if ready_save(i):
 			var savefile = load("res://Scenes/SaveFile.tscn")
 			var instance = savefile.instantiate()
