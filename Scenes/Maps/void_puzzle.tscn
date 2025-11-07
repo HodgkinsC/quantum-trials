@@ -1882,6 +1882,10 @@ target2 = NodePath("../../Bridge")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 2.1250002, 0)
 omni_range = 4.5678253
 
+[node name="OmniLight3D2" type="OmniLight3D" parent="puzzle2/TopBridge/Button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2.1250002, 20.125)
+omni_range = 4.5678253
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="puzzle2/TopBridge"]
 shape = SubResource("ConcavePolygonShape3D_5n1rc")
 

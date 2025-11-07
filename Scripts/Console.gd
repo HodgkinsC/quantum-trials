@@ -37,6 +37,7 @@ func cmd(input : String):
 	
 	elif words.has("andrew"):
 		print("andrew")
+		Global.paused = false
 		Global.root.queue_free()
 		print("hee hee")
 		await get_tree().create_timer(5).timeout

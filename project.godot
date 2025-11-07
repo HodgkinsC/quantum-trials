@@ -46,7 +46,8 @@ project/assembly_name="UnnamedProject"
 
 [editor]
 
-movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials Full Game Speedrun.avi"
+movie_writer/movie_file="C:/Users/Callum Hodgkins/Videos/Screen Recordings/Quantum Trials School Recording.avi"
+movie_writer/fps=30
 
 [editor_plugins]
 
